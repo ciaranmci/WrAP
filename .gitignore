@@ -2,3 +2,13 @@
 .Rhistory
 .RData
 .Ruserdata
+.RDataTmp
+.gitignore
+PCD_OA21_LSOA21_MSOA21_LAD_NOV22_UK_LU.csv
+csv_postcodeToLADCD.zip
+xls_Trust_size_2021_03.xlsx
+xls_Trust_size_2022_03.xlsx
+xls_Trust_size_2023_03.xlsx
+xls_churn_from_NHS.xlsx
+xls_churn_within_NHS.xlsx
+xls_ons_rurality.xlsx
