@@ -1,6 +1,8 @@
-# WrAP_Load public data.R
+# WrAP_Load data.R
 #
-# The purpose of this script is to load the data that is publicly available.
+# The purpose of this script is to load the data
+# 
+# The publicly-available data is:
 #
 # The files to be loaded are:
 # 1. Turnover of Allied Health Professionals within the NHS as a whole, from 
@@ -144,14 +146,73 @@ df_deprivation <-
     ,sheet = "Sheet1"
     )
 
+# Load vacancy-rates data.
+# ## This data came from a freedom-of-information request sent by Michaela 
+# ## (Ref: FOI - 2507-2236881 NHSE:0796329).
+filename <- file.path("../../Data/FOI - 2507-2236881 FOI_AHP_Vacancy_22-25.xlsx")
+sheets <- readxl::excel_sheets( filename )
+ls_vacancy <-
+  lapply(
+  sheets
+  ,function(x)
+    readxl::read_xlsx( filename, sheet = x, range = "A1:DH20" ) %>%
+    suppressMessages()
+  )
+names( ls_vacancy ) <- sheets
+ls_vacancy <-
+  lapply(
+    ls_vacancy
+    ,function(x)
+    {
+      within_x <- x[1]
+      x <- tibble::add_column(
+        .data = x
+        ,col = rep( names( x )[1], by = nrow( within_x ) )
+        ,.before = 1
+        ,.name_repair = "minimal"
+        )
+      names( x ) <-
+        c(
+          'Care setting'
+          ,'Trust code'
+          ,'Trust name'
+          ,paste0( "vacancy_rate_", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
+          ,'Staff in post'
+          ,paste0( "staff_count", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
+          ,'Vacancies'
+          ,paste0( "vacancy_count", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
+        )
+      
+      return( x )
+    }
+  )
+rm( sheets, filename )
+
 # Load postcode-to-Trust mapping data.
 # ## This was painstakingly acquired by appending all Trust codes to the URL
 # ## https://uat.directory.spineservices.nhs.uk/STU3/Organization/ and extracting
 # ## the postcode at the bottom. The URL is used as part of the API but I don't
 # ## have the time, skill, or will to sign-up and get the API working. The file
 # ## only contains the postcodes and LAD22CDs for the Trust codes in the
-# ## deprivation file that was given to Michaela.
+# ## deprivation file that was given to Michaela. I will have to assume that the
+# ## LAD has not changed since 2021.
 df_postcodeToTrust <- readr::read_csv( "../../Data/postcode_and_TrustCode.csv" )
 
+
+# Load CQC data.
+# df_CQC <- 
+
+
+# Load patient satisfaction data.
+df_patientSatisfaction <- 
+  readxl::read_xlsx(
+    path = "../../Data/20250909_aip24_Benchmark_TrustLevel.xlsx" 
+    ,sheet = "IP24_trust_results"
+    )
+df_patientSatisfaction_historic <- 
+  readxl::read_xlsx(
+    path = "../../Data/20250909_aip24_Benchmark_TrustLevel.xlsx" 
+    ,sheet = "IP24_trust_historic_results"
+  )
 
 # ----

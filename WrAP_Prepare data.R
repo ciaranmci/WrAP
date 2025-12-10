@@ -31,7 +31,20 @@ ls_churn <-
             `Stability index` = 
               dplyr::if_else( `Stability index` == ".", NA ,`Stability index` )
             ,`Stability index` = as.numeric( `Stability index` )
-          )
+          ) %>%
+          dplyr::mutate(
+            too_small_to_disclose =
+              dplyr::if_else(
+                Joiner <= 5 | Leaver <= 5
+                ,TRUE, FALSE
+              )
+            ,year = dplyr::case_when(
+              Period == '202203 to 202303' ~ "March '22 to March '23"
+              ,Period == '202303 to 202403' ~ "March '23 to March '24"
+              ,Period == '202403 to 202503' ~ "March '24 to March '25"
+              ,.default = NULL
+            )
+            )
         
       }
     
@@ -67,9 +80,84 @@ df_ons_rurality <-
 
 # ----
 
-####################
-## Join datasets. ##
-####################
+#########################
+## Process local data. ##
+#########################
+# ----
+
+# Vacancy rates
+for ( i_element in 1:length( ls_vacancy ) )
+{
+  # Extract the AHP role.
+  ahp_role <- unique( ls_vacancy[[ i_element ]]$`Care setting` )
+    
+  # Extract the columns of interest.
+  new_cols <-
+    ls_vacancy[[ i_element ]] %>%
+      dplyr::select(
+        `Trust code`
+        ,`vacancy_rate_2022-04-01`
+        ,`vacancy_rate_2023-03-01`
+        ,`vacancy_rate_2024-03-01`
+      ) %>%
+    `colnames<-`(
+      c( 'trust_code'
+         ,paste0( "2022_vacancy_rate_", ahp_role)
+         ,paste0( "2023_vacancy_rate_", ahp_role)
+         ,paste0( "2024_vacancy_rate_", ahp_role)
+         )
+    ) 
+    if( i_element == 1)
+    {
+      df_vacancy <- new_cols
+    } else {
+      df_vacancy <-
+        dplyr::full_join(
+          df_vacancy
+          ,new_cols 
+          ,by = join_by( trust_code )
+        )
+      }
+}
+
+
+# Patient satisfaction.
+df_patientSatisfaction <- 
+  df_patientSatisfaction %>%
+  dplyr::select(
+    trust_code, trust_name
+    ,q18_mean_2024 = q18_mean, q21_mean_2024 = q21_mean
+    ,q23_mean_2024 = q23_mean, q30_mean_2024 = q30_mean, q48_mean_2024 = q48_mean
+  )
+df_patientSatisfaction_historic <- 
+  df_patientSatisfaction_historic %>%
+  dplyr::select(
+    trust_code, trust_name, survey_year
+    ,q18_mean = q18_mean_h, q21_mean = q21_mean_h
+    ,q23_mean = q23_mean_h, q30_mean = q30_mean_h, q48_mean = q48_mean_h
+  ) %>%
+  tidyr::pivot_wider(
+    id_cols = c( trust_code, trust_name )
+    ,names_from = survey_year
+    ,values_from = c( q18_mean, q21_mean, q23_mean, q30_mean, q48_mean )
+  )
+df_patientSatisfaction <-
+  dplyr::left_join(
+    df_patientSatisfaction
+    ,df_patientSatisfaction_historic
+    ,by = join_by( trust_code, trust_name )
+  ) %>%
+  dplyr::rename_with(
+    .fn = ~ sub( pattern = "q", replacement = "satisfaction_q", .x )
+    ,.cols = starts_with( 'q' )
+  )
+rm( df_patientSatisfaction_historic )
+
+# ----
+
+#####################
+## Join data sets. ##
+#####################
 # ----
 ls_churn <-
   lapply(
@@ -81,19 +169,36 @@ ls_churn <-
           # Join with deprivation dataset.
           list_element %>%
           dplyr::left_join(
-            df_deprivation
+            df_deprivation %>% dplyr::select( `Trust Code`, `Trust Name`, `IMD Score` )
             ,by = join_by(
               `Organisation name` == `Trust Name`
             )
           ) %>%
+          # Join with vacancy-rates dataset.
+          dplyr::left_join(
+            df_vacancy
+            ,by = join_by(
+              `Org code` == trust_code
+            )
+          ) %>%
           # Join with rurality dataset.
           dplyr::left_join(
-            df_ons_rurality %>% dplyr::select( -ladnm )
+            df_ons_rurality %>%
+              dplyr::select(
+                c(
+                  `Trust code`
+                  ,`Rural Urban flag`
+                  ,`RUC21 settlement class`
+                  ,`RUC21 relative access`
+                  ,`Proportion of population in rural OAs (%)`
+                  ,`Proportion of population in OAs further from a major town or city (%)`
+                  )
+                )
             ,by = join_by(
               `Org code` == `Trust code`
             )
           ) %>%
-          # Join with Trust-size dataset.
+          # Join with Trust-size datasets.
           dplyr::left_join(
             df_Trust_size_2021_03 %>% dplyr::select( - `Trust name 2021 03` )
             ,by = join_by(
@@ -111,7 +216,17 @@ ls_churn <-
             ,by = join_by(
               `Org code` == `Trust code 2023 03`
             )
+          ) %>%
+          # Join with patient satisfaction dataset.
+          dplyr::left_join(
+            df_patientSatisfaction %>% dplyr::select( -trust_name )
+            ,by = join_by(
+              `Org code` == trust_code
+            )
           )
+        processed_list_element <-
+          processed_list_element %>%
+          dplyr::select( -`Trust Code` )
       }
   )
 # ----

@@ -6,7 +6,10 @@
 #
 
 # Access and load the publicly available data.
-source("WrAP_Load public data.R")
+source("WrAP_Load data.R")
 
 # Prepare the data.
 source("WrAP_Prepare data.R")
+
+# Explore the data.
+source("WrAP_Explore.R")
