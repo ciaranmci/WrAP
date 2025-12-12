@@ -63,22 +63,30 @@ curl::curl_download( url_Trust_size_2023_03, "xls_Trust_size_2023_03.xlsx" )
 # Load files.
 # ## Churn from NHS.
 df_churn_from_NHS_Grade <-
-  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Grade" )
+  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Grade" ) %>%
+  dplyr::filter( Type == 'HC' )
 df_churn_from_NHS_Gender <-
-  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Gender" )
+  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Gender" ) %>%
+  dplyr::filter( Type == 'HC' )
 df_churn_from_NHS_AgeBand <-
-  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Age band" )
+  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Age band" ) %>%
+  dplyr::filter( Type == 'HC' )
 df_churn_from_NHS_EthnicGroup <-
-  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Ethnic group" )
+  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Ethnic group" ) %>%
+  dplyr::filter( Type == 'HC' )
 # ## Churn within NHS.
 df_churn_within_NHS_Grade <-
-  readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Grade" )
+  readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Grade" ) %>%
+  dplyr::filter( Type == 'HC' )
 df_churn_within_NHS_Gender <-
-  readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Gender" )
+  readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Gender" ) %>%
+  dplyr::filter( Type == 'HC' )
 df_churn_within_NHS_AgeBand <-
-  readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Age band" )
+  readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Age band" ) %>%
+  dplyr::filter( Type == 'HC' )
 df_churn_within_NHS_EthnicGroup <-
-  readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Ethnic group" )
+  readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Ethnic group" ) %>%
+  dplyr::filter( Type == 'HC' )
 # ## ONS rurality.
 df_ons_rurality <-
   readxl::read_xlsx( path = "xls_ons_rurality.xlsx", sheet = "Table 1D", range = "A3:I334" )
@@ -178,9 +186,9 @@ ls_vacancy <-
           ,'Trust name'
           ,paste0( "vacancy_rate_", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
           ,'Staff in post'
-          ,paste0( "staff_count", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
+          ,paste0( "staff_count_", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
           ,'Vacancies'
-          ,paste0( "vacancy_count", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
+          ,paste0( "vacancy_count_", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
         )
       
       return( x )

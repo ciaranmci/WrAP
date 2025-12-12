@@ -17,392 +17,962 @@
 if( !"pacman" %in% installed.packages() ){ install.packages( "pacman" ) }
 pacman::p_load(
   tidyverse
+  ,janitor
 )
 # ----
 
-########################################################
-## Unstratified distributions of the stability index. ##
-########################################################
-# The take-home messages are:
-# 1. Excluding hospitals with counts that are too small to disclose results in
-#    excluding 'Orthoptics/Optics', 'Call Handling', 'Chiropody/Podiatry', and
-#    'Art/Music/Dramatherapy' roles.
-# 2. The stability index is uni-modally distributed with a small left skew, in
-#    all years.
-# 3. Most AHP roles show very little change in stability index over the years.
-# 4. Only 'Dietetics' show any non-trivial Stability Index less than 0.8.
-# 5. None of the counts stratified by gender, ethnicity, etc are large enough to
-#    be disclosed. 
+##############################
+## Create folder for plots. ##
+##############################
+# ----
+dir.create( file.path( getwd, 'Plots' ) )
 # ----
 
-# Unstratified distribution.
-plot__distribution_of_overall_stability_index <-
-  ls_churn[[1]] %>%
-  # Filter for the overall value for each organisation.
-  dplyr::group_by( `Org code`, Period ) %>%
-  dplyr::filter(
-    `Care setting` == "All care settings" &
-      `Denominator at start of period` == max( `Denominator at start of period` )
-  ) %>% 
-  dplyr::ungroup() %>%
-  # Filter out the values that are calculated from counts too small to disclose.
-  # This has the benefit of removing sites whose overall value is the same as the
-  # stratified values. This stratified values will not have been removed with the
-  # previous function, unfortunately.
-  dplyr::filter( !too_small_to_disclose ) %>%
-  # Plot the distributions as density plots.
-  ggplot(
-    aes(
-      x = `Stability index`
-      ,group = year
-    )
-  ) +
-  geom_density() +
-  labs(
-    title = "Distribution of stability-index scores across Trusts, stratified by year."
-    ,subtitle =
-      paste0(
-        "\u2022 Excludes values calculated from counts too small to disclose.\n"
-        ,"\u2022 Showing values >0.8, only."
-      )
-  ) +
-  facet_grid( rows = vars( year ) ) +
-  theme_minimal() +
-  theme(
-    axis.text.y = element_blank()
-    ,axis.title.y = element_blank()
-    ,strip.text.y = element_text( angle = 0 )
-  )
-ggsave(
-  plot = last_plot()
-  ,filename = "plot__distribution_of_overall_stability_index.png"
-  ,dpi = 300
-  ,width = 15
-  ,height = 20
-  ,units = "cm"
-)
- 
-# Stratified by staff role.
-plot_data <-
-  ls_churn[[1]] %>%
-  # Filter for the overall value for each organisation.
-  dplyr::group_by( `Org code`, Period ) %>%
-  dplyr::filter(
-    `Care setting` != "All care settings" 
-    ,stringr::str_detect( string = `AfC band`, pattern = "All " )
-    ,!`Care setting` %in% c(
-     'Orthoptics/Optics', 'Call Handling', 'Chiropody/Podiatry'
-     ,'Art/Music/Dramatherapy'
-     )
-  ) %>% 
-  dplyr::ungroup() %>%
-  # Filter out the values that are calculated from counts too small to disclose.
-  # This has the benefit of removing sites whose overall value is the same as the
-  # stratified values. This stratified values will not have been removed with the
-  # previous function, unfortunately.
-  dplyr::filter( !too_small_to_disclose ) %>%
-  # Edit the `Care setting` strings so that they can run over multiple lines.
-  dplyr::mutate(
-    `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
-  )
-min_stability_index <- min( plot_data$`Stability index`, na.rm = TRUE ) %>% round( 1 )
-plot__distribution_of_stability_index_by_AHP_role <-
-  plot_data %>% 
-  ggplot(
-    aes(
-      x = `Stability index`
-      ,fill = `Care setting`
-    )
-  ) +
-  geom_density( ) +
-  labs(
-    title =
-      paste0(
-        "Distribution of Stability Index across Trusts, stratified by year"
-        ," and AHP role."
-      )
-    ,subtitle =
-      paste0(
-        "\u2022 Excludes hospitals with counts too small to disclose.\n"
-        ,"\u2022 Excludes 'Orthoptics/Optics', 'Call Handling', 'Chiropody/Podiatry'"
-        ,", and 'Art/Music/Dramatherapy'\n  because of small samplpe size.\n"
-        ,"\u2022 Showing values >", min_stability_index, " only."
-      )
-  ) +
-  facet_grid(
-    cols = vars( `Care setting` )
-    ,rows = vars( year )
-    ,labeller =
-      labeller(
-        `Care setting` = label_wrap_gen( 10 )
-        ,year = label_wrap_gen( 10 )
-      )
-  ) +
-  theme_minimal() +
-  theme(
-    axis.text.y = element_blank()
-    ,axis.title.y = element_blank()
-    ,axis.text.x = element_text( size = 6 )
-    ,legend.position = "None"
-    ,strip.text.y = element_text( angle = 0 )
-    ,strip.text.x = element_text( size = 5 )
-  )
-ggsave(
-  plot = last_plot()
-  ,filename = "plot__distribution_of_stability_index_by_AHP_role.png"
-  ,dpi = 300
-  ,width = 20
-  ,height = 10
-  ,units = "cm"
-)
+#############################################################
+## Make plots for qualitative assessment of distributions. ##
+#############################################################
+# The following function creates plots that show the distribution of a variable
+# of interest unstratified, stratified by AHP role,  stratified by the
+# candidate factors provided in the dataset, and stratified by AHP role and by
+# candidate factors.
+#
+# Findings from these plots.
+# 1. The leaver, joiner, and remainer rates are in a narrow range and don't change
+#    throughout the years.
+#
+# ~ AHP roles ~
+# 2. Except for individual outliers, remainer and joiner rates are in a narrow 
+#    range and don't change throughout the years, irrespective of AHP role.
+# 3. Leaver rates are in a narrow range and don't change throughout the years,
+#    irrespective of AHP role.
+# 4. There is a trend for higher AfC bands to have higher remainer rates within
+#    a narrower range, but outliers exist.
+# 5. There is a trend for higher AfC bands to have lower leaver rates within a
+#    narrower range, but outliers exist.
+#
+# ~ Candidate factors ~
+# 6. Band 5 staff seem to be have markedly higher joiner rates and larger 
+#    range
+# 7. Neither the leaver, joiner, nor remainer rates differ across sexes.
+# 8. Neither the leaver, joiner, nor remainer rates differ across ethnicity,
+#    though 'White' show higher remainer rates and lower leaver and joiner rates.
+# 9. Under-31s have markedly higher leaver rates, higher joiner rates, and lower
+#    remainer rates, but in a wider range. In other words, under-31s are moving 
+#    move.
+#
+# ~ AHP roles and candidate factors ~
+# 10. Males are barely represented in the data set so no conclusions can be made
+#     about sexes.
+# 11. Age is only ever a distinguishing factor in the last year of all rates
+#     for therapeutic radiographers.
+# 12. Joiner rates for under-25s markedly higher for roles in emergency care,
+#     physiotherapy, and diagnostic radiography.
+# 13. Neither the leaver, joiner, nor remainer rates differ across ethnicity.
+# 14. There is a trend for lower AfC bands to have higher leaver and joiner rates.
+# ----
 
-# Generates the density plots for each data set in `ls_churn`, if the counts
-# are large enough to be disclosed.
-lapply(
-  ls_churn
-  ,function(x)
+# Make the function.
+fnc__analyseDistributions <-
+  function(
+    data = NULL # An `ls_churn` object.
+    ,var_of_interest = NULL # A character string of the colunm name.
+    )
   {
-    x<-ls_churn[[2]]
-    # Get name of plot from the stratification.
-    stratification_name <- colnames( x )[11]
-    stratification_name <- sub( pattern = " ", replacement = "_", x = stratification_name )
-    colnames( x )[11] <- stratification_name
+    # Check arguments.
+    if( is.null( data ) ){ stop( "The 'data' arguement was not supplied." ) }
+    if( is.null( var_of_interest ) ){ stop( "The 'var_of_interest' arguement was not supplied." ) }
     
-    # Make plot data.
+    # Create the overall plot data.
     plot_data <-
-      x %>%
+      data[[1]] %>%
       # Filter for the overall value for each organisation.
       dplyr::group_by( `Org code`, Period ) %>%
       dplyr::filter(
-         `Care setting` == "All care settings" &
-           `Denominator at start of period` == max( `Denominator at start of period` )
-        ,!stringr::str_detect( string = !!(sym(stratification_name)), pattern = "All " )
-      ) %>% 
-      dplyr::ungroup() %>% 
+        `Care setting` == "All care settings" &
+          `Denominator at start of period` == max( `Denominator at start of period` )
+      ) %>%
+      dplyr::ungroup() %>%
       # Filter out the values that are calculated from counts too small to disclose.
       # This has the benefit of removing sites whose overall value is the same as the
       # stratified values. This stratified values will not have been removed with the
       # previous function, unfortunately.
       dplyr::filter( !too_small_to_disclose )
-      
-    # Plot the distributions as density plots.
-    if ( nrow( plot_data ) > 0 )
-    {
-      plot <- 
+    message("Overall data made")
+      min_val <-
+        min(
+          plot_data[ ,var_of_interest ]
+          ,na.rm = TRUE
+          )
+      max_val <-
+        max(
+          plot_data[ ,var_of_interest ]
+          ,na.rm = TRUE
+        )
+
+      # Make the overall plot.
+      p <-
         plot_data %>%
-        ggplot( aes( x = `Stability index` ) ) +
-        geom_density( aes_string( fill = stratification_name ), alpha = 0.5 ) +
+        ggplot(
+          aes(
+            x = !!( sym( var_of_interest ) )
+            ,y = year
+          )
+        ) +
+        geom_boxplot( ) +
+        geom_point(
+          position = position_jitter( heigh = 0.2 )
+          ,alpha = 0.5
+          ,colour = "grey") +
         labs(
           title =
             paste0(
-              "Distribution of Stability Index across Trusts, stratified by year\n."
-              ,"and ", stratification_name, "." 
-              )
+              "Distribution of "
+              ,janitor::make_clean_names( var_of_interest, case = "title" )
+              ," across Trusts, stratified by year."
+            )
           ,subtitle =
             paste0(
-              "\u2022 Excludes values calculated from counts too small to disclose."
-              ," This might exlcude\nentire categories.\n"
-              ,"\u2022 Showing values >0.8, only."
+              "\u2022 Excludes values calculated from counts too small to disclose.\n"
+              ,"\u2022 Showing values >", round( min_val, 2 )," and <", round( max_val, 2 ), "."
             )
+          ,x = janitor::make_clean_names( var_of_interest, case = "title" )
         ) +
-        facet_wrap( ~ year, ncol = 1 ) +
+        xlim( min_val * 0.9, max_val * 1.1 ) +
+        facet_grid( rows = vars( year ) ) +
         theme_minimal() +
         theme(
           axis.text.y = element_blank()
           ,axis.title.y = element_blank()
+          ,strip.text.y = element_text( angle = 0 )
         )
+      message("Overall plot made")
+      
+      # Save the overall plot.
       ggsave(
-        plot = last_plot()
-        ,filename =
-          paste0(
-            "plot__distribution_of_stability_index_by_"
-            , stratification_name
-            , ".png"
-            )
+        plot = p
+        ,filename = paste0( "plot__distribution_of_", var_of_interest, ".png" )
         ,dpi = 300
         ,width = 15
-        ,height = 20
+        ,height = 10
         ,units = "cm"
       )
-    }
+      message("Overall plot saved")
+      
+      
+      ###########################
+      ## Stratify by AHP role. ##
+      ###########################
+      # Create the plot data, stratified by staff role.
+      plot_data <-
+        ls_churn[[1]] %>%
+        # Filter for the overall value for each organisation.
+        dplyr::group_by( `Org code`, Period ) %>%
+        dplyr::filter(
+          `Care setting` != "All care settings" 
+          ,stringr::str_detect( string = `AfC band`, pattern = "All " )
+        ) %>% 
+        dplyr::ungroup() %>%
+        # Filter out the values that are calculated from counts too small to disclose.
+        # This has the benefit of removing sites whose overall value is the same as the
+        # stratified values. This stratified values will not have been removed with the
+        # previous function, unfortunately.
+        dplyr::filter( !too_small_to_disclose ) %>%
+        # Edit the `Care setting` strings so that they can run over multiple lines.
+        dplyr::mutate(
+          `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
+        )
+      message('Stratified data made')
+      min_val <-
+        min(
+          plot_data[ ,var_of_interest ]
+          ,na.rm = TRUE
+        )
+      max_val <-
+        max(
+          plot_data[ ,var_of_interest ]
+          ,na.rm = TRUE
+        )
+      
+      # Make the plot, stratified by AHP role.
+      p <-
+        plot_data %>% 
+        ggplot(
+          aes(
+            x = !!( sym( var_of_interest ) )
+            ,y = year
+          )
+        ) +
+        geom_boxplot( size = 0.5 ) +
+        geom_point(
+          position = position_jitter( heigh = 0.2 )
+          ,alpha = 0.5
+          ,size = 0.5
+          ,colour = 'grey'
+          ) +
+        labs(
+          title =
+            paste0(
+              "Distribution of "
+              ,janitor::make_clean_names( var_of_interest, case = "title" )
+              ," across Trusts, stratified by year and AHP role."
+            )
+          ,subtitle =
+            paste0(
+              "\u2022 Excludes values calculated from counts too small to disclose.\n"
+              ,"\u2022 Showing values >", round( min_val, 2 )," and <", round( max_val, 2 ), "."
+            )
+          ,x = janitor::make_clean_names( var_of_interest, case = "title" )
+        ) +
+        facet_grid(
+          cols = vars( `Care setting` )
+          ,rows = vars( year )
+          ,labeller =
+            labeller(
+              `Care setting` = label_wrap_gen( 10 )
+              ,year = label_wrap_gen( 10 )
+            )
+        ) +
+        theme_minimal() +
+        theme(
+          axis.text.y = element_blank()
+          ,axis.title.y = element_blank()
+          ,axis.text.x = element_text( size = 4 )
+          ,legend.position = "None"
+          ,strip.text.y = element_text( angle = 0 )
+          ,strip.text.x = element_text( size = 5 )
+        )
+      message("Stratified plot made")
+      
+      # Save plot, stratified by AHP role.
+      ggsave(
+        plot = last_plot()
+        ,filename = paste0( "plot__distribution_of_", var_of_interest, "_by_AHP_role.png" )
+        ,dpi = 300
+        ,width = 20
+        ,height = 10
+        ,units = "cm"
+      )
+      message("Stratified plot saved")
+      
+      
+      
+      
+      
+      ########################################
+      ## Stratify by candidate factor role. ##
+      ########################################
+      lapply(
+        ls_churn
+        ,function(x)
+        {
+          # Get name of plot from the stratification.
+          stratification_name <- colnames( x )[11]
+          stratification_name <- sub( pattern = " ", replacement = "_", x = stratification_name )
+          colnames( x )[11] <- stratification_name
+          
+          # Make plot data, stratified by candidate factor.
+          plot_data <-
+            x %>%
+            # Filter for the overall value for each organisation.
+            dplyr::group_by( `Org code`, Period ) %>%
+            dplyr::filter(
+              # # Filter for the counts irrespective of the AHP role.
+              `Care setting` == "All care settings"
+              # # Filter out the unstratified counts.
+              ,!stringr::str_detect( string = !!(sym(stratification_name)), pattern = "All " )
+            ) %>% 
+            dplyr::ungroup() %>%
+            # Filter out the values that are calculated from counts too small to disclose.
+            # This has the benefit of removing sites whose overall value is the same as the
+            # stratified values. This stratified values will not have been removed with the
+            # previous function, unfortunately.
+            dplyr::filter( !too_small_to_disclose )
+          message('Factor data made')
+          min_val <-
+            min(
+              plot_data[ ,var_of_interest ]
+              ,na.rm = TRUE
+            )
+          max_val <-
+            max(
+              plot_data[ ,var_of_interest ]
+              ,na.rm = TRUE
+            )
+          
+          # Make plot, stratified by candidate factor.
+          if ( nrow( plot_data ) > 0 )
+          {
+            p <- 
+              plot_data %>%
+              ggplot(
+                aes(
+                  x = !!( sym( var_of_interest ) )
+                  ,y = year
+                  ,fill = !!( sym( stratification_name ) )
+                )
+              ) +
+              geom_boxplot( size = 0.5 ) +
+              geom_point(
+                aes( colour = !!( sym( stratification_name ) ) )
+                ,position = position_jitter( height = 0.15 )
+                ,alpha = 0.5
+                ,size = 0.5
+              ) +
+              labs(
+                title =
+                  paste0(
+                    "Distribution of "
+                    ,janitor::make_clean_names( var_of_interest, case = "title" )
+                    ," across Trusts, stratified by year\n"
+                    ,"and ", stratification_name, "." 
+                  )
+                ,subtitle =
+                  paste0(
+                    "\u2022 Excludes values calculated from counts too small to disclose.\n"
+                    ,"\u2022 Showing values >", round( min_val, 2 )," and <", round( max_val, 2 ), "."
+                  )
+                ,x = janitor::make_clean_names( var_of_interest, case = "title" )
+              ) +
+              facet_grid( rows = vars( year ) ) +
+              theme_minimal() +
+              theme(
+                axis.text.y = element_blank()
+                ,axis.title.y = element_blank()
+                ,strip.text.y = element_text( angle = 0 )
+              )
+            message("Factor plot made")
+            
+            # Save plot, stratified by candidate factor.
+            ggsave(
+              plot = p
+              ,filename =
+                paste0(
+                  "plot__distribution_of_"
+                  ,var_of_interest
+                  ,"_stratified_by_"
+                  ,stratification_name
+                  ,".png"
+                )
+              ,dpi = 300
+              ,width = 20
+              ,height = 20
+              ,units = "cm"
+            )
+            message("Factor plot saved")
+          } else { 
+            message(
+              paste0(
+                '\tInsufficient data to plot stratification by '
+                ,var_of_interest, '.'
+              )
+            )
+          }
+        }
+      )
+      
+      
+      
+      #####################################################
+      ## Stratify by AHP role and candidate factor role. ##
+      #####################################################
+      lapply(
+        ls_churn
+        ,function(x)
+        {
+          # Get name of plot from the stratification.
+          stratification_name <- colnames( x )[11]
+          stratification_name <- sub( pattern = " ", replacement = "_", x = stratification_name )
+          colnames( x )[11] <- stratification_name
+          
+          # Make plot data, stratified by candidate factor.
+          plot_data <-
+            x %>%
+            # Filter for the overall value for each organisation.
+            dplyr::group_by( `Org code`, Period ) %>%
+            dplyr::filter(
+              # # Filter out the counts irrespective of the AHP role.
+              `Care setting` != "All care settings"
+              # # Filter out the unstratified counts.
+              ,!stringr::str_detect( string = !!(sym(stratification_name)), pattern = "All " )
+            ) %>% 
+            dplyr::ungroup() %>%
+            # Filter out the values that are calculated from counts too small to disclose.
+            # This has the benefit of removing sites whose overall value is the same as the
+            # stratified values. This stratified values will not have been removed with the
+            # previous function, unfortunately.
+            dplyr::filter( !too_small_to_disclose ) %>%
+            # Edit the `Care setting` strings so that they can run over multiple lines.
+            dplyr::mutate(
+              `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
+            )
+          message('AHP-Factor data made')
+          min_val <-
+            min(
+              plot_data[ ,var_of_interest ]
+              ,na.rm = TRUE
+            )
+          max_val <-
+            max(
+              plot_data[ ,var_of_interest ]
+              ,na.rm = TRUE
+            )
+          
+          # Make plot, stratified by candidate factor.
+          if ( nrow( plot_data ) > 0 )
+          {
+            p <- 
+              plot_data %>%
+              ggplot(
+                aes(
+                  x = !!( sym( var_of_interest ) )
+                  ,y = year
+                  ,fill = !!( sym( stratification_name ) )
+                )
+              ) +
+              geom_boxplot( size = 0.5 ) +
+              labs(
+                title =
+                  paste0(
+                    "Distribution of "
+                    ,janitor::make_clean_names( var_of_interest, case = "title" )
+                    ," across Trusts, stratified by year and AHP role\n"
+                    ,"and ", stratification_name, "." 
+                  )
+                ,subtitle =
+                  paste0(
+                    "\u2022 Excludes values calculated from counts too small to disclose.\n"
+                    ,"\u2022 Showing values >", round( min_val, 2 )," and <", round( max_val, 2 ), "."
+                  )
+                ,x = janitor::make_clean_names( var_of_interest, case = "title" )
+              ) +
+              facet_grid(
+                cols = vars( `Care setting` )
+                ,rows = vars( year )
+                ,labeller =
+                  labeller(
+                    `Care setting` = label_wrap_gen( 10 )
+                    ,year = label_wrap_gen( 10 )
+                  )
+              ) +
+              theme_minimal() +
+              theme(
+                axis.text.y = element_blank()
+                ,axis.title.y = element_blank()
+                ,strip.text.y = element_text( angle = 0 )
+              )
+            message("AHP-Factor plot made")
+            
+            # Save plot, stratified by candidate factor.
+            ggsave(
+              plot = p
+              ,filename =
+                paste0(
+                  "plot__distribution_of_"
+                  ,var_of_interest
+                  ,"_stratified_by_"
+                  ,stratification_name
+                  ,"_and_AHP_role.png"
+                )
+              ,dpi = 300
+              ,width = 35
+              ,height = 20
+              ,units = "cm"
+            )
+            message("AHP-Factor plot saved")
+          } else { 
+            message(
+              paste0(
+                '\tInsufficient data to plot stratification by '
+                ,var_of_interest, '.'
+              )
+            )
+          }
+        }
+      )
+      
   }
-)
 
-
-
+# Run the function for the three variates of interest.
+fnc__analyseDistributions( data = ls_churn, var_of_interest = 'joiner_rate' )
+fnc__analyseDistributions( data = ls_churn, var_of_interest = 'leaver_rate' )
+fnc__analyseDistributions( data = ls_churn, var_of_interest = 'remainer_rate' )
 # ----
 
 
-################################################
-## Explore associations with other variables. ##
-################################################
-# Given that only one AHP showed any non-trivial Stability Index less than 0.8,
-# I suggest we categorise Stability Index into:
-# - Too small to disclose
-# - Large enough to disclose but <0.8
-# - Large enough to disclose and >=0.8
+
+
+
+
+
+
+
+
+########################################################################
+## Prepare data for unstratified investigation and for AHP-stratified ##
+## investigation.                                                     ##
+########################################################################
+# Findings from these plots are:
+# 1.
 #
-# I justify this categorisation on:
-# 1. Only one AHP showed any non-trivial Stability Index less than 0.8
-# 2. All values for Stability Index >=0.8 are uni-modal.
-# 3. Most values for Stability Index that were too small to disclose.
-#
-# 
-# Findings:
-# 1. No association between IMD Score and Stability Index.
-# 2. No association between the size of the Trust and Stability Index.
-# 3. No association between rural-urban divide and Stability Index.
-# 4. No association between patient satisfaction and Stability Index
 # ----
 df <-
   ls_churn[[1]] %>%
   dplyr::mutate(
-    ST_cate = dplyr::if_else( `Stability index` < 0.8, '1', '2' )
-    ,ST_cate = dplyr::if_else( too_small_to_disclose, '0', ST_cate )
-    )
-
-# IMD looks like nothing
-plot__distribution_of_stability_index_by_IMD <-
-  df %>%
-  dplyr::select( ST_cate, `IMD Score` ) %>%
-  ggplot() +
-  geom_boxplot( aes( x = ST_cate, y = `IMD Score` ) ) +
-  labs(
-    title =
-      paste0(
-        'Distributions of the Index of Multiple Deprivation Score\n'
-        ,'across categories of Stability Index.'
+    `Leaver Rate (categorised)` =
+      dplyr::if_else( leaver_rate < 0.1, 'Smaller', 'Larger' )
+    ,`Leaver Rate (categorised)` =
+      dplyr::if_else( too_small_to_disclose, 'Undisclosed', `Leaver Rate (categorised)` )
+    ,`Joiner Rate (categorised)` =
+      dplyr::if_else( joiner_rate < 0.14, 'Smaller', 'Larger' )
+    ,`Joiner Rate (categorised)` =
+      dplyr::if_else( too_small_to_disclose, 'Undisclosed', `Joiner Rate (categorised)` )
+    ,`Remainer Rate (categorised)` =
+      dplyr::if_else( remainer_rate < 0.9, 'Smaller', 'Larger' )
+    ,`Remainer Rate (categorised)` =
+      dplyr::if_else( too_small_to_disclose, 'Undisclosed', `Remainer Rate (categorised)` )
+    ) %>%
+  dplyr::select(
+    year
+    ,`Org code`
+    ,`Care setting`
+    ,`IMD Score`
+    ,`RUC21 settlement class`
+    ,contains( "satisfaction" )
+    ,`Leaver Rate (categorised)`
+    ,`Joiner Rate (categorised)`
+    ,`Remainer Rate (categorised)`
+  ) %>%
+  dplyr::mutate(
+    `RUC21 settlement class` =
+      factor(
+        `RUC21 settlement class`
+        ,levels = c( "Rural", "Intermediate rural"
+                     ,"Intermediate urban", "Urban")
       )
-    ,subtitle = 'There are no differences across categories of Stability Index.'
-    ,x = 'Stability-Index category'
-    ,y = 'Index of Multiple Deprivation Score'
-  ) +
-  theme_minimal() +
-  theme(
-    axis.title = element_text( size = 15 )
-    ,axis.text = element_text( size = 10 )
-    ,plot.title = element_text( size = 20 )
-    ,plot.subtitle = element_text( size = 15 )
-  )
-ggsave(
-  plot = plot__distribution_of_stability_index_by_IMD
-  ,filename = "plot__IMD_and_StabilityIndex_are_not_associated.png"
-  ,dpi = 300
-  ,width = 20
-  ,height = 20
-  ,units = "cm"
-)
-
-# Rurality looks like nothing. 'Urban' overwhelms.
-df %>% dplyr::select(ST_cate, `Rural Urban flag`) %>% table() -> a
-round( a / rowSums(a), 2 )
-df %>% dplyr::select(ST_cate, `Rural Urban flag`) %>% infotheo::mutinformation() %>% `[`(2) %>% max(.,0)
-df %>% dplyr::select(ST_cate, `RUC21 settlement class`) %>% infotheo::mutinformation()%>% `[`(2) %>% max(.,0)
-df %>% dplyr::select(ST_cate, `RUC21 relative access`) %>% infotheo::mutinformation()%>% `[`(2) %>% max(.,0)
-plot__distribution_of_stability_index_by_pctOfRural <-
-  df %>%
-  dplyr::select( ST_cate, `Proportion of population in rural OAs (%)` ) %>%
-  ggplot() +
-  geom_boxplot( aes( x = ST_cate, y = `Proportion of population in rural OAs (%)` ) ) +
-  labs(
-    title =
-      paste0(
-        'Distributions of the percent of population in rural OAs (%)\n'
-        ,'across categories of Stability Index.'
-      )
-    ,subtitle = 'There are no differences across categories of Stability Index.'
-    ,x = 'Stability-Index category'
-    ,y = 'Percentage of population in rural OAs (%)'
-  ) +
-  theme_minimal() +
-  theme(
-    axis.title = element_text( size = 15 )
-    ,axis.text = element_text( size = 10 )
-    ,plot.title = element_text( size = 20 )
-    ,plot.subtitle = element_text( size = 15 )
-  )
-ggsave(
-  plot = plot__distribution_of_stability_index_by_pctOfRural
-  ,filename = "plot__pctOfRural_and_StabilityIndex_are_not_associated.png"
-  ,dpi = 300
-  ,width = 20
-  ,height = 20
-  ,units = "cm"
-)
-
-# Trust size looks like nothing
-plot__distribution_of_stability_index_by_Trust_size <-
-  df %>%
-  dplyr::select(ST_cate, `Trust size 2021 03`, `Trust size 2022 03`, `Trust size 2023 03`) %>%
+    ) %>%
   tidyr::pivot_longer(
-    cols = contains('Trust')
-    ,names_to = 'Year'
-    ,values_to = 'Size'
+    cols = contains( "categorised" )
+    ,names_to = "statistic"
+    ,values_to = "category"
+  )
+
+stratified_df <-
+  df %>%
+  dplyr::filter( `Care setting` != "All care settings" ) %>%
+  dplyr::mutate( AHP_role = `Care setting` ) %>%
+  tidyr::nest(
+    .by = `Care setting`
+  ) %>%
+  dplyr::mutate(
+    `Care setting` =
+      stringr::str_replace_all(
+        string = `Care setting`
+        ,pattern = "/"
+        ,replacement = " or "
+      )
+  )
+# ----
+
+####################
+## Plots for IMD. ##
+####################
+# ----
+# Unstratified.
+p <-
+  df %>%
+  dplyr::filter( `Care setting` == "All care settings" ) %>%
+  ggplot() +
+    geom_boxplot( 
+      aes(
+        x = category
+        ,y = `IMD Score`
+        ) 
+      ) +
+    labs(
+      title =
+        paste0(
+          'Distributions of the Index of Multiple Deprivation Score\n'
+          ,'for each rate of interest, across categories of that rate.'
+        )
+      ,subtitle =
+        paste0(
+          "\u2022 'Undisclosed' means staff counts were too small to disclose.\n"
+          ,"\u2022 Missing categories indicate counts were too small to disclose.\n"
+          ,"\u2022 Missing boxes indicate missing data for the variable of interest."
+        )
+      ,y = 'Index of Multiple Deprivation Score'
+    ) +
+    facet_grid( cols = vars( statistic ), rows = vars( year ) ) +
+    theme(
+      axis.title.x = element_blank()
+      ,axis.text = element_text( size = 10 )
+      ,plot.title = element_text( size = 20 )
+      ,plot.subtitle = element_text( size = 15 )
+    )
+ggsave(
+  plot = p
+  ,filename = "plot__rates_stratified_by_IMD.png"
+  ,dpi = 300
+  ,width = 20
+  ,height = 20
+  ,units = "cm"
+)
+
+# Stratified by AHP role.
+# # Make plots.
+p <-
+  stratified_df %>%
+  dplyr::mutate(
+    plots =
+      lapply(
+        data
+        ,function(x)
+        {
+          x %>%  
+            ggplot() +
+            geom_boxplot( 
+              aes(
+                x = category
+                ,y = `IMD Score`
+              ) 
+            ) +
+            labs(
+              title =
+                paste0(
+                   x$AHP_role
+                  ,':\nDistributions of the Index of Multiple Deprivation Score\n'
+                  ,'for each rate of interest, across categories of that rate.'
+                )
+              ,subtitle =
+                paste0(
+                  "\u2022 'Undisclosed' means staff counts were too small to disclose.\n"
+                  ,"\u2022 Missing categories indicate counts were too small to disclose.an"
+                  ,"\u2022 Missing boxes indicate missing data for the variable of interest."
+                )
+              ,y = 'Index of Multiple Deprivation Score'
+            ) +
+            facet_grid( cols = vars( statistic ), rows = vars( year ) ) +
+            theme(
+              axis.title.x = element_blank()
+              ,axis.text = element_text( size = 10 )
+              ,plot.title = element_text( size = 20 )
+              ,plot.subtitle = element_text( size = 15 )
+            )
+        }
+      )
+  )
+# # Save plots.
+for( i in 1:nrow( stratified_df ) )
+{
+  ggsave(
+    plot = p$plots[[ i ]]
+    ,filename =
+      paste0(
+        "plot__"
+        ,p$`Care setting`[ i ]
+        ,"_rates_stratified_by_IMD.png"
+      )
+    ,dpi = 300
+    ,width = 20
+    ,height = 21
+    ,units = "cm"
+  )
+}
+  
+  # ----
+
+########################
+## Plots for rurality ##
+########################
+# ----
+# Unstratified.
+p <-
+  df %>%
+  dplyr::filter( `Care setting` == "All care settings" ) %>%
+  dplyr::reframe(
+    n = n()
+    ,.by = c( year, statistic, category, `RUC21 settlement class` )
   ) %>%
   ggplot() +
-  geom_boxplot( aes( x = ST_cate, y = Size ) ) +
+  geom_point( 
+    aes(
+      x = category
+      ,y = `RUC21 settlement class`
+      ,size = n
+    ) 
+  ) +
   labs(
     title =
       paste0(
-        'Distributions of the sizes of Trusts across\n'
-        ,'categories of Stability Index.'
+        'Distributions of Rural Settlement Class\n'
+        ,'for each rate of interest, across categories of that rate.'
       )
-    ,subtitle = 'There are no differences across categories of Stability Index.'
-    ,x = 'Stability-Index category'
-    ,y = 'Count of employees\nin the Trust'
+    ,subtitle =
+      paste0(
+        "\u2022 'Undisclosed' means staff counts were too small to disclose.\n"
+        ,"\u2022 Missing categories indicate counts were too small to disclose.\n"
+        ,"\u2022 Missing circles indicate missing data for the variable of interest."
+      )
   ) +
-  facet_wrap( ~ Year ) +
-  theme_bw() +
+  facet_grid( cols = vars( statistic ), rows = vars( year ) ) +
   theme(
-    axis.title = element_text( size = 15 )
+    axis.title = element_blank()
     ,axis.text = element_text( size = 10 )
     ,plot.title = element_text( size = 20 )
     ,plot.subtitle = element_text( size = 15 )
   )
 ggsave(
-  plot = plot__distribution_of_stability_index_by_Trust_size
-  ,filename = "plot__Trust_size_and_StabilityIndex_are_not_associated.png"
+  plot = p
+  ,filename = "plot__rates_stratified_by_rurality.png"
   ,dpi = 300
-  ,width = 20
-  ,height = 20
+  ,width = 25
+  ,height = 15
   ,units = "cm"
 )
 
-# Patient satisfaction
-plot__distribution_of_stability_index_by_patientSatisfaction_score <-
+# Stratified by AHP role.
+# # Make plots.
+p <-
+  stratified_df %>%
+  dplyr::mutate(
+    plots =
+      lapply(
+        data
+        ,function(x)
+        {
+          x %>%
+          dplyr::reframe(
+            n = n()
+            ,.by = c( year, statistic, category, `RUC21 settlement class` )
+          ) %>%
+            ggplot() +
+            geom_point( 
+              aes(
+                x = category
+                ,y = `RUC21 settlement class`
+                ,size = n
+              ) 
+            ) +
+            labs(
+              title =
+                paste0(
+                  x$AHP_role
+                  ,':\nDistributions of the Rural Settlement Class\n'
+                  ,'for each rate of interest, across categories of that rate.'
+                )
+              ,subtitle =
+                paste0(
+                  "\u2022 'Undisclosed' means staff counts were too small to disclose.\n"
+                  ,"\u2022 Missing categories indicate counts were too small to disclose.\n"
+                  ,"\u2022 Missing circles indicate missing data for the variable of interest."
+                )
+              ,y = 'Index of Multiple Deprivation Score'
+            ) +
+            facet_grid( cols = vars( statistic ), rows = vars( year ) ) +
+            theme(
+              axis.title.x = element_blank()
+              ,axis.text = element_text( size = 10 )
+              ,plot.title = element_text( size = 20 )
+              ,plot.subtitle = element_text( size = 15 )
+            )
+        }
+      )
+  )
+# # Save plots.
+for( i in 1:nrow( stratified_df ) )
+{
+  ggsave(
+    plot = p$plots[[ i ]]
+    ,filename =
+      paste0(
+        "plot__"
+        ,p$`Care setting`[ i ]
+        ,"_rates_stratified_by_rurality.png"
+      )
+    ,dpi = 300
+    ,width = 25
+    ,height = 15
+    ,units = "cm"
+  )
+}
+
+# ----
+
+#####################################
+## Plots for patient satisfaction. ##
+#####################################
+# ----
+# Unstratified.
+# # Make data set.
+ps_data <-
   df %>%
-  dplyr::select(ST_cate, contains( "satisfaction" ) ) %>%
+  dplyr::select(
+    `Org code`, `Care setting`, category, statistic 
+    ,contains( "satisfaction" ) ) %>%
   tidyr::pivot_longer(
     cols = contains('satisfaction')
     ,names_to = 'Question'
     ,values_to = 'Score'
+  ) %>% 
+  tidyr::separate_wider_delim(
+      cols = Question
+      ,delim = "_"
+      ,names = c(NA, "Q", NA, "Year")
   ) %>%
-  ggplot() +
-  geom_boxplot( aes( x = ST_cate, y = Score ) ) +
-  labs(
-    title =
-      paste0(
-        'Distributions of patient satisfaction of Trusts across '
-        ,'categories of Stability Index.'
+  dplyr::mutate( Year = as.double( Year ) ) %>%
+  dplyr::distinct()
+ps_data <-
+  df %>%
+    dplyr::mutate(
+      Year = dplyr::case_when(
+        stringr::str_detect( year, "25" ) ~ 2024
+        ,stringr::str_detect( year, "22" ) ~ 2022
+        ,.default = 2023
       )
-    ,subtitle = 'There are no differences across categories of Stability Index.'
-    ,x = 'Stability-Index category'
-    ,y = 'Satisfaction'
-  ) +
-  facet_wrap( ~ Question, nrow = 5 ) +
-  theme_bw() +
-  theme(
-    axis.title = element_text( size = 15 )
-    ,axis.text = element_text( size = 10 )
-    ,plot.title = element_text( size = 20 )
-    ,plot.subtitle = element_text( size = 15 )
-  )
+    ) %>%
+    dplyr::distinct(
+      year, `Org code`, `Care setting`, Year, category, statistic 
+      ) %>% 
+    dplyr::left_join(
+      ps_data
+      ,by = join_by( Year, `Org code`, `Care setting`, category, statistic   )
+    ) 
+# # Plot satisfaction scores for all care settings.
+p <-
+  ps_data %>%
+  dplyr::filter( `Care setting` == "All care settings" ) %>%
+  ggplot() +
+    geom_boxplot( 
+      aes(
+        x = category
+        ,y = Score
+        ,fill = Q
+      ) 
+    )+
+    labs(
+      title =
+        paste0(
+          'Distributions of Patient Satisfaction Scores\n'
+          ,'for each rate of interest, across categories of that rate.'
+        )
+      ,subtitle =
+        paste0(
+          "\u2022 'Undisclosed' means staff counts were too small to disclose.\n"
+          ,"\u2022 Missing categories indicate counts were too small to disclose.\n"
+          ,"\u2022 Missing boxes indicate missing data for the variable of interest."
+        )
+    ) +
+    facet_grid( cols = vars( statistic ), rows = vars( year ) ) +
+    theme(
+      axis.title.x = element_blank()
+      ,axis.text = element_text( size = 10 )
+      ,plot.title = element_text( size = 20 )
+      ,plot.subtitle = element_text( size = 15 )
+    )
 ggsave(
-  plot = plot__distribution_of_stability_index_by_patientSatisfaction_score
-  ,filename = "plot__satisfaction_and_StabilityIndex_are_not_associated.png"
+  plot = p
+  ,filename = "plot__rates_stratified_by_PatientSatisfaction.png"
   ,dpi = 300
   ,width = 30
   ,height = 20
   ,units = "cm"
 )
+
+# Stratified by AHP role.
+# # Make plots.
+p <-
+  stratified_df %>%
+  dplyr::mutate(
+    plots =
+      lapply(
+        data
+        ,function(x)
+        {
+            # # Make data set.
+            ps_data <-
+              x %>%
+              dplyr::select(
+                `Org code`, category, statistic 
+                ,contains( "satisfaction" ) ) %>%
+              tidyr::pivot_longer(
+                cols = contains('satisfaction')
+                ,names_to = 'Question'
+                ,values_to = 'Score'
+              ) %>% 
+              tidyr::separate_wider_delim(
+                cols = Question
+                ,delim = "_"
+                ,names = c(NA, "Q", NA, "Year")
+              ) %>%
+              dplyr::mutate( Year = as.double( Year ) ) %>%
+              dplyr::distinct()
+            ps_data <-
+              df %>%
+              dplyr::mutate(
+                Year = dplyr::case_when(
+                  stringr::str_detect( year, "25" ) ~ 2024
+                  ,stringr::str_detect( year, "22" ) ~ 2022
+                  ,.default = 2023
+                )
+              ) %>%
+              dplyr::distinct(
+                year, `Org code`, Year, category, statistic 
+              ) %>% 
+              dplyr::left_join(
+                ps_data
+                ,by = join_by( Year, `Org code`, category, statistic   )
+              ) 
+
+            # # Make the plot
+            ps_data %>%
+            ggplot() +
+            geom_boxplot( 
+              aes(
+                x = category
+                ,y = Score
+                ,fill = Q
+              ) 
+            ) +
+            labs(
+              title =
+                paste0(
+                  x$AHP_role
+                  ,':\nDistributions of the Patient Satisfaction Scores\n'
+                  ,'for each rate of interest, across categories of that rate.'
+                )
+              ,subtitle =
+                paste0(
+                  "\u2022 'Undisclosed' means staff counts were too small to disclose.\n"
+                  ,"\u2022 Missing categories indicate counts were too small to disclose.\n"
+                  ,"\u2022 Missing boxes indicate missing data for the variable of interest."
+                )
+              ,y = 'Score'
+            ) +
+            facet_grid( cols = vars( statistic ), rows = vars( year ) ) +
+            theme(
+              axis.title.x = element_blank()
+              ,axis.text = element_text( size = 10 )
+              ,plot.title = element_text( size = 20 )
+              ,plot.subtitle = element_text( size = 15 )
+            )
+        }
+      )
+  )
+# # Save plots.
+for( i in 1:nrow( stratified_df ) )
+{
+  ggsave(
+    plot = p$plots[[ i ]]
+    ,filename =
+      paste0(
+        "plot__"
+        ,p$`Care setting`[ i ]
+        ,"_rates_stratified_by_PatientSatisfaction.png"
+      )
+    ,dpi = 300
+    ,width = 20
+    ,height = 21
+    ,units = "cm"
+  )
+}
 # ----

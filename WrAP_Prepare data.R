@@ -27,13 +27,15 @@ ls_churn <-
       {
         processed_list_element <-
           list_element %>%
-          dplyr::mutate(
-            `Stability index` = 
-              dplyr::if_else( `Stability index` == ".", NA ,`Stability index` )
-            ,`Stability index` = as.numeric( `Stability index` )
+          dplyr::rename(
+            joiner_rate = `Joiner rate`
+            ,leaver_rate = `Leaver rate`
           ) %>%
           dplyr::mutate(
-            too_small_to_disclose =
+            remainer_rate = 
+              ( `Denominator at start of period` - Leaver ) /
+              `Denominator at start of period`
+            ,too_small_to_disclose =
               dplyr::if_else(
                 Joiner <= 5 | Leaver <= 5
                 ,TRUE, FALSE
@@ -44,10 +46,8 @@ ls_churn <-
               ,Period == '202403 to 202503' ~ "March '24 to March '25"
               ,.default = NULL
             )
-            )
-        
+          )
       }
-    
   )
 
 # Deprivation data.
@@ -96,18 +96,22 @@ for ( i_element in 1:length( ls_vacancy ) )
     ls_vacancy[[ i_element ]] %>%
       dplyr::select(
         `Trust code`
-        ,`vacancy_rate_2022-04-01`
-        ,`vacancy_rate_2023-03-01`
-        ,`vacancy_rate_2024-03-01`
+        ,`vacancy_count_2022-04-01`
+        ,`vacancy_count_2023-03-01`
+        ,`vacancy_count_2024-03-01`
       ) %>%
     `colnames<-`(
       c( 'trust_code'
-         ,paste0( "2022_vacancy_rate_", ahp_role)
-         ,paste0( "2023_vacancy_rate_", ahp_role)
-         ,paste0( "2024_vacancy_rate_", ahp_role)
+         ,paste0( "2022_vacancy_count_", ahp_role)
+         ,paste0( "2023_vacancy_count_", ahp_role)
+         ,paste0( "2024_vacancy_count_", ahp_role)
          )
-    ) 
-    if( i_element == 1)
+    ) %>%
+    dplyr::mutate_at(
+      .vars = vars( contains( "vacancy" ) )
+      ,.funs = abs
+    )
+    if( i_element == 1 )
     {
       df_vacancy <- new_cols
     } else {
