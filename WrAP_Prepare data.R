@@ -35,6 +35,8 @@ ls_churn <-
             remainer_rate = 
               ( `Denominator at start of period` - Leaver ) /
               `Denominator at start of period`
+            ,churn_rate =
+              
             ,too_small_to_disclose =
               dplyr::if_else(
                 Joiner <= 5 | Leaver <= 5

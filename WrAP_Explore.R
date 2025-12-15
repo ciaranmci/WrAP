@@ -33,15 +33,15 @@ dir.create( file.path( getwd, 'Plots' ) )
 #############################################################
 # The following function creates plots that show the distribution of a variable
 # of interest unstratified, stratified by AHP role,  stratified by the
-# candidate factors provided in the dataset, and stratified by AHP role and by
+# candidate factors provided in the data set, and stratified by AHP role and by
 # candidate factors.
 #
 # Findings from these plots.
 # 1. The leaver, joiner, and remainer rates are in a narrow range and don't change
 #    throughout the years.
-#
+# 
 # ~ AHP roles ~
-# 2. Except for individual outliers, remainer and joiner rates are in a narrow 
+# 2. Except for individual outliers, remainer and joiner rates are in a narrow
 #    range and don't change throughout the years, irrespective of AHP role.
 # 3. Leaver rates are in a narrow range and don't change throughout the years,
 #    irrespective of AHP role.
@@ -49,17 +49,17 @@ dir.create( file.path( getwd, 'Plots' ) )
 #    a narrower range, but outliers exist.
 # 5. There is a trend for higher AfC bands to have lower leaver rates within a
 #    narrower range, but outliers exist.
-#
+# 
 # ~ Candidate factors ~
-# 6. Band 5 staff seem to be have markedly higher joiner rates and larger 
-#    range
+# 6. Band 5 staff seem to be have markedly higher joiner rates and larger
+#    range compared to the other bands.
 # 7. Neither the leaver, joiner, nor remainer rates differ across sexes.
 # 8. Neither the leaver, joiner, nor remainer rates differ across ethnicity,
-#    though 'White' show higher remainer rates and lower leaver and joiner rates.
+#    though 'White' show higher average remainer rates and lower leaver and joiner rates.
 # 9. Under-31s have markedly higher leaver rates, higher joiner rates, and lower
-#    remainer rates, but in a wider range. In other words, under-31s are moving 
+#    remainer rates, but in a wider range. In other words, under-31s are moving
 #    move.
-#
+# 
 # ~ AHP roles and candidate factors ~
 # 10. Males are barely represented in the data set so no conclusions can be made
 #     about sexes.
@@ -150,7 +150,7 @@ fnc__analyseDistributions <-
       # Save the overall plot.
       ggsave(
         plot = p
-        ,filename = paste0( "plot__distribution_of_", var_of_interest, ".png" )
+        ,filename = paste0( "Plots/plot__distribution_of_", var_of_interest, ".png" )
         ,dpi = 300
         ,width = 15
         ,height = 10
@@ -246,7 +246,7 @@ fnc__analyseDistributions <-
       # Save plot, stratified by AHP role.
       ggsave(
         plot = last_plot()
-        ,filename = paste0( "plot__distribution_of_", var_of_interest, "_by_AHP_role.png" )
+        ,filename = paste0( "Plots/plot__distribution_of_", var_of_interest, "_by_AHP_role.png" )
         ,dpi = 300
         ,width = 20
         ,height = 10
@@ -347,7 +347,7 @@ fnc__analyseDistributions <-
               plot = p
               ,filename =
                 paste0(
-                  "plot__distribution_of_"
+                  "Plots/plot__distribution_of_"
                   ,var_of_interest
                   ,"_stratified_by_"
                   ,stratification_name
@@ -467,7 +467,7 @@ fnc__analyseDistributions <-
               plot = p
               ,filename =
                 paste0(
-                  "plot__distribution_of_"
+                  "Plots/plot__distribution_of_"
                   ,var_of_interest
                   ,"_stratified_by_"
                   ,stratification_name
@@ -611,7 +611,7 @@ p <-
     )
 ggsave(
   plot = p
-  ,filename = "plot__rates_stratified_by_IMD.png"
+  ,filename = "Plots/plot__rates_stratified_by_IMD.png"
   ,dpi = 300
   ,width = 20
   ,height = 20
@@ -668,7 +668,7 @@ for( i in 1:nrow( stratified_df ) )
     plot = p$plots[[ i ]]
     ,filename =
       paste0(
-        "plot__"
+        "Plots/plot__"
         ,p$`Care setting`[ i ]
         ,"_rates_stratified_by_IMD.png"
       )
@@ -723,7 +723,7 @@ p <-
   )
 ggsave(
   plot = p
-  ,filename = "plot__rates_stratified_by_rurality.png"
+  ,filename = "Plots/plot__rates_stratified_by_rurality.png"
   ,dpi = 300
   ,width = 25
   ,height = 15
@@ -766,7 +766,7 @@ p <-
                   ,"\u2022 Missing categories indicate counts were too small to disclose.\n"
                   ,"\u2022 Missing circles indicate missing data for the variable of interest."
                 )
-              ,y = 'Index of Multiple Deprivation Score'
+              ,y = 'Rural Settlement Class'
             ) +
             facet_grid( cols = vars( statistic ), rows = vars( year ) ) +
             theme(
@@ -785,7 +785,7 @@ for( i in 1:nrow( stratified_df ) )
     plot = p$plots[[ i ]]
     ,filename =
       paste0(
-        "plot__"
+        "Plots/plot__"
         ,p$`Care setting`[ i ]
         ,"_rates_stratified_by_rurality.png"
       )
@@ -871,7 +871,7 @@ p <-
     )
 ggsave(
   plot = p
-  ,filename = "plot__rates_stratified_by_PatientSatisfaction.png"
+  ,filename = "Plots/plot__rates_stratified_by_PatientSatisfaction.png"
   ,dpi = 300
   ,width = 30
   ,height = 20
@@ -965,7 +965,7 @@ for( i in 1:nrow( stratified_df ) )
     plot = p$plots[[ i ]]
     ,filename =
       paste0(
-        "plot__"
+        "Plots/plot__"
         ,p$`Care setting`[ i ]
         ,"_rates_stratified_by_PatientSatisfaction.png"
       )
