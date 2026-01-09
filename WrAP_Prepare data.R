@@ -19,37 +19,48 @@ pacman::p_load(
 ######################################
 # ----
 # Churn data.
-ls_churn <-
+
+# Create function to process churn data.
+fnc__processChurnData <-
+  function( list_element )
+{
+  processed_list_element <-
+    list_element %>%
+    dplyr::rename(
+      joiner_rate = `Joiner rate`
+      ,leaver_rate = `Leaver rate`
+    ) %>%
+    dplyr::mutate(
+      remainer_rate = 
+        ( `Denominator at start of period` - Leaver ) /
+        `Denominator at start of period`
+        ,too_small_to_disclose =
+        dplyr::if_else(
+          Joiner <= 5 | Leaver <= 5
+          ,TRUE, FALSE
+        )
+      ,year = dplyr::case_when(
+        Period == '202203 to 202303' ~ "March '22 to March '23"
+        ,Period == '202303 to 202403' ~ "March '23 to March '24"
+        ,Period == '202403 to 202503' ~ "March '24 to March '25"
+        ,.default = NULL
+      )
+    ) %>%
+    # Exclude London. This is part of Michaela's 5-point plan. She wants to exclude London because
+    # she believes it is an outlier.
+    dplyr::filter( !`NHSE region name` == "London" )
+}
+
+# Apply function.
+ls_churn_from_NHS <-
   lapply(
-    X = ls_churn
-    ,FUN = 
-      function( list_element )
-      {
-        processed_list_element <-
-          list_element %>%
-          dplyr::rename(
-            joiner_rate = `Joiner rate`
-            ,leaver_rate = `Leaver rate`
-          ) %>%
-          dplyr::mutate(
-            remainer_rate = 
-              ( `Denominator at start of period` - Leaver ) /
-              `Denominator at start of period`
-            ,churn_rate =
-              
-            ,too_small_to_disclose =
-              dplyr::if_else(
-                Joiner <= 5 | Leaver <= 5
-                ,TRUE, FALSE
-              )
-            ,year = dplyr::case_when(
-              Period == '202203 to 202303' ~ "March '22 to March '23"
-              ,Period == '202303 to 202403' ~ "March '23 to March '24"
-              ,Period == '202403 to 202503' ~ "March '24 to March '25"
-              ,.default = NULL
-            )
-          )
-      }
+    X = ls_churn_from_NHS
+    ,FUN = fnc__processChurnData
+  )
+ls_churn_within_NHS <-
+  lapply(
+    X = ls_churn_within_NHS
+    ,FUN = fnc__processChurnData
   )
 
 # Deprivation data.
@@ -60,6 +71,11 @@ ls_churn <-
 # ## need to find out the LAD21CD for all the Trusts. The best I could do was to
 # ## get the LAD22CD for 2022 and map it to postcodes from 2021. I then need to
 # ## match that with postcodes of the Trusts.
+# ## Note that the following LADCDs contain Trusts with two post codes@
+# ## - E06000058
+# ## - E06000023
+# ## - E08000032
+# ## - E06000049
 # # Get postcode-LAD mapping.
 df_postcodeToLADCD <- dplyr::select( df_postcodeToLADCD, pcds, ladcd, ladnm )
 # # Join Trusts to LAD codes.
@@ -75,6 +91,7 @@ df_ons_rurality <-
   dplyr::left_join(
     df_TrustToLACDC
     ,by = join_by( LAD21CD == ladcd )
+    ,relationship = "many-to-many"
   )
 
 # Trust-size data.
@@ -165,74 +182,84 @@ rm( df_patientSatisfaction_historic )
 ## Join data sets. ##
 #####################
 # ----
-ls_churn <-
-  lapply(
-    X = ls_churn
-    ,FUN = 
-      function( list_element )
-      {
-        processed_list_element <-
-          # Join with deprivation dataset.
-          list_element %>%
-          dplyr::left_join(
-            df_deprivation %>% dplyr::select( `Trust Code`, `Trust Name`, `IMD Score` )
-            ,by = join_by(
-              `Organisation name` == `Trust Name`
-            )
-          ) %>%
-          # Join with vacancy-rates dataset.
-          dplyr::left_join(
-            df_vacancy
-            ,by = join_by(
-              `Org code` == trust_code
-            )
-          ) %>%
-          # Join with rurality dataset.
-          dplyr::left_join(
-            df_ons_rurality %>%
-              dplyr::select(
-                c(
-                  `Trust code`
-                  ,`Rural Urban flag`
-                  ,`RUC21 settlement class`
-                  ,`RUC21 relative access`
-                  ,`Proportion of population in rural OAs (%)`
-                  ,`Proportion of population in OAs further from a major town or city (%)`
-                  )
-                )
-            ,by = join_by(
-              `Org code` == `Trust code`
-            )
-          ) %>%
-          # Join with Trust-size datasets.
-          dplyr::left_join(
-            df_Trust_size_2021_03 %>% dplyr::select( - `Trust name 2021 03` )
-            ,by = join_by(
-              `Org code` == `Trust code 2021 03`
-            )
-          ) %>%
-          dplyr::left_join(
-            df_Trust_size_2022_03 %>% dplyr::select( - `Trust name 2022 03` )
-            ,by = join_by(
-              `Org code` == `Trust code 2022 03`
-            )
-          ) %>%
-          dplyr::left_join(
-            df_Trust_size_2023_03 %>% dplyr::select( - `Trust name 2023 03` )
-            ,by = join_by(
-              `Org code` == `Trust code 2023 03`
-            )
-          ) %>%
-          # Join with patient satisfaction dataset.
-          dplyr::left_join(
-            df_patientSatisfaction %>% dplyr::select( -trust_name )
-            ,by = join_by(
-              `Org code` == trust_code
-            )
+
+# Create function for joining.
+fnc__joinToChurnData <-
+  function( list_element )
+{
+  processed_list_element <-
+    # Join with deprivation dataset.
+    list_element %>%
+    dplyr::left_join(
+      df_deprivation %>% dplyr::select( `Trust Code`, `Trust Name`, `IMD Score` )
+      ,by = join_by(
+        `Organisation name` == `Trust Name`
+      )
+    ) %>%
+    # Join with vacancy-rates dataset.
+    dplyr::left_join(
+      df_vacancy
+      ,by = join_by(
+        `Org code` == trust_code
+      )
+    ) %>%
+    # Join with rurality dataset.
+    dplyr::left_join(
+      df_ons_rurality %>%
+        dplyr::select(
+          c(
+            `Trust code`
+            ,`Rural Urban flag`
+            ,`RUC21 settlement class`
+            ,`RUC21 relative access`
+            ,`Proportion of population in rural OAs (%)`
+            ,`Proportion of population in OAs further from a major town or city (%)`
           )
-        processed_list_element <-
-          processed_list_element %>%
-          dplyr::select( -`Trust Code` )
-      }
+        )
+      ,by = join_by(
+        `Org code` == `Trust code`
+      )
+    ) %>%
+    # Join with Trust-size datasets.
+    dplyr::left_join(
+      df_Trust_size_2021_03 %>% dplyr::select( - `Trust name 2021 03` )
+      ,by = join_by(
+        `Org code` == `Trust code 2021 03`
+      )
+    ) %>%
+    dplyr::left_join(
+      df_Trust_size_2022_03 %>% dplyr::select( - `Trust name 2022 03` )
+      ,by = join_by(
+        `Org code` == `Trust code 2022 03`
+      )
+    ) %>%
+    dplyr::left_join(
+      df_Trust_size_2023_03 %>% dplyr::select( - `Trust name 2023 03` )
+      ,by = join_by(
+        `Org code` == `Trust code 2023 03`
+      )
+    ) %>%
+    # Join with patient satisfaction dataset.
+    dplyr::left_join(
+      df_patientSatisfaction %>% dplyr::select( -trust_name )
+      ,by = join_by(
+        `Org code` == trust_code
+      )
+    )
+  processed_list_element <-
+    processed_list_element %>%
+    dplyr::select( -`Trust Code` )
+}
+
+# Applying function.
+ls_churn_within_NHS <-
+  lapply(
+    X = ls_churn_within_NHS
+    ,FUN = fnc__joinToChurnData
+  )
+ls_churn_from_NHS <-
+  lapply(
+    X = ls_churn_from_NHS
+    ,FUN = fnc__joinToChurnData
   )
 # ----

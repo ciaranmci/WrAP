@@ -60,33 +60,42 @@ curl::curl_download( url = url_postcodeToLADCD, destfile = "csv_postcodeToLADCD.
 curl::curl_download( url_Trust_size_2021_03, "xls_Trust_size_2021_03.xlsx" )
 curl::curl_download( url_Trust_size_2022_03, "xls_Trust_size_2022_03.xlsx" )
 curl::curl_download( url_Trust_size_2023_03, "xls_Trust_size_2023_03.xlsx" )
-# Load files.
+# Load files. Focus on head-count values ("HC") and exclude call handlers
+# and paramedics.
 # ## Churn from NHS.
 df_churn_from_NHS_Grade <-
   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Grade" ) %>%
-  dplyr::filter( Type == 'HC' )
+  dplyr::filter( Type == 'HC' ) %>%
+  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_from_NHS_Gender <-
   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Gender" ) %>%
-  dplyr::filter( Type == 'HC' )
+  dplyr::filter( Type == 'HC' ) %>%
+  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_from_NHS_AgeBand <-
   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Age band" ) %>%
-  dplyr::filter( Type == 'HC' )
+  dplyr::filter( Type == 'HC' ) %>%
+  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_from_NHS_EthnicGroup <-
   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Ethnic group" ) %>%
-  dplyr::filter( Type == 'HC' )
+  dplyr::filter( Type == 'HC' ) %>%
+  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 # ## Churn within NHS.
 df_churn_within_NHS_Grade <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Grade" ) %>%
-  dplyr::filter( Type == 'HC' )
+  dplyr::filter( Type == 'HC' ) %>%
+  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_within_NHS_Gender <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Gender" ) %>%
-  dplyr::filter( Type == 'HC' )
+  dplyr::filter( Type == 'HC' ) %>%
+  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_within_NHS_AgeBand <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Age band" ) %>%
-  dplyr::filter( Type == 'HC' )
+  dplyr::filter( Type == 'HC' ) %>%
+  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_within_NHS_EthnicGroup <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Ethnic group" ) %>%
-  dplyr::filter( Type == 'HC' )
+  dplyr::filter( Type == 'HC' ) %>%
+  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 # ## ONS rurality.
 df_ons_rurality <-
   readxl::read_xlsx( path = "xls_ons_rurality.xlsx", sheet = "Table 1D", range = "A3:I334" )
@@ -117,16 +126,19 @@ df_Trust_size_2023_03 <-
   dplyr::filter( !stringr::str_detect( ...1, pattern = "ICB" ) ) %>%
   `colnames<-`( c( 'Trust name 2023 03', 'Trust code 2023 03', 'Trust size 2023 03' ) )
 # Tidy up.
-ls_churn <-
+ls_churn_from_NHS <-
   list(
     df_churn_from_NHS_Grade = df_churn_from_NHS_Grade
     ,df_churn_from_NHS_Gender = df_churn_from_NHS_Gender
     ,df_churn_from_NHS_AgeBand = df_churn_from_NHS_AgeBand
     ,df_churn_from_NHS_EthnicGroup = df_churn_from_NHS_EthnicGroup
-    ,df_churn_within_NHS_Grade = df_churn_within_NHS_Grade
-    ,df_churn_within_NHS_Gender = df_churn_within_NHS_Gender
-    ,df_churn_within_NHS_AgeBand = df_churn_within_NHS_AgeBand
-    ,df_churn_within_NHS_EthnicGroup = df_churn_within_NHS_EthnicGroup
+  )
+ls_churn_within_NHS <-
+  list(
+    df_churn_from_NHS_Grade = df_churn_from_NHS_Grade
+    ,df_churn_from_NHS_Gender = df_churn_from_NHS_Gender
+    ,df_churn_from_NHS_AgeBand = df_churn_from_NHS_AgeBand
+    ,df_churn_from_NHS_EthnicGroup = df_churn_from_NHS_EthnicGroup
   )
 rm(
   df_churn_from_NHS_Grade
@@ -159,11 +171,12 @@ df_deprivation <-
 # ## (Ref: FOI - 2507-2236881 NHSE:0796329).
 filename <- file.path("../../Data/FOI - 2507-2236881 FOI_AHP_Vacancy_22-25.xlsx")
 sheets <- readxl::excel_sheets( filename )
+sheets <- sheets[ !sheets %in% c( "Paramedic" ) ] 
 ls_vacancy <-
   lapply(
   sheets
   ,function(x)
-    readxl::read_xlsx( filename, sheet = x, range = "A1:DH20" ) %>%
+    readxl::read_xlsx( filename, sheet = x, range = "A1:DH214" ) %>%
     suppressMessages()
   )
 names( ls_vacancy ) <- sheets
@@ -205,10 +218,20 @@ rm( sheets, filename )
 # ## deprivation file that was given to Michaela. I will have to assume that the
 # ## LAD has not changed since 2021.
 df_postcodeToTrust <- readr::read_csv( "../../Data/postcode_and_TrustCode.csv" )
-
-
-# Load CQC data.
-# df_CQC <- 
+# ## Exclude London post codes.
+# ## I've assumed the complete list of postcodes are those coloured at
+# ## https://www.doogal.co.uk/london_postcodes.
+# ## This is part of Michaela's 5-point plan. She wants to exclude London because
+# ## she believes it is an outlier.
+df_postcodeToTrust <-
+  df_postcodeToTrust %>%
+  dplyr::filter(
+    !stringr::str_detect(
+      string = substr(pcds, start = 1, stop = 3)
+      ,pattern = 
+          "NW[0-9]|N[0-9] |N[0-9][0-9]|E[0-9] |E[0-9][0-9]|SE[0-9]|W[0-9] |W[0-9][0-9]|SW[0-9]|WC[0-9]|EC[0-9]"
+    )
+  )
 
 
 # Load patient satisfaction data.
