@@ -30,33 +30,47 @@ fnc__processChurnData <-
       joiner_rate = `Joiner rate`
       ,leaver_rate = `Leaver rate`
     ) %>%
+
     dplyr::mutate(
+      # Calculate the stability index using the rounded counts and call it
+      # the `reaminer_rate`.
       remainer_rate = 
         ( `Denominator at start of period` - Leaver ) /
         `Denominator at start of period`
+      # Define a variable that indicates when a number too small to be disclosed
+      # was used in a calculation.
         ,too_small_to_disclose =
         dplyr::if_else(
           Joiner <= 5 | Leaver <= 5
           ,TRUE, FALSE
         )
+      # Make a new variable called `year` that explains the `Period` variable
+      # a bit better.
       ,year = dplyr::case_when(
         Period == '202203 to 202303' ~ "March '22 to March '23"
         ,Period == '202303 to 202403' ~ "March '23 to March '24"
         ,Period == '202403 to 202503' ~ "March '24 to March '25"
         ,.default = NULL
       )
+      # Process the stability index so that it behaves like a number.
+      ,`Stability index` = dplyr::if_else( `Stability index` == ".", NA, `Stability index` )
+      ,`Stability index` = as.numeric( `Stability index` ) 
+      # Standardise the case sensitivity of `Organisation name` so that it joins
+      # with the deprivation data.
+      ,`Organisation name` = tolower( `Organisation name` )
     ) %>%
-    # Exclude London. This is part of Michaela's 5-point plan. She wants to exclude London because
-    # she believes it is an outlier.
-    dplyr::filter( !`NHSE region name` == "London" )
+    dplyr::filter(
+      # Exclude rows referring to Integrated Care Boards and Clinical Commissioning Groups
+      !`Benchmark group` %in% c( "Integrated Care Board", "Clinical Commissioning Group")
+      )
 }
 
 # Apply function.
-ls_churn_from_NHS <-
-  lapply(
-    X = ls_churn_from_NHS
-    ,FUN = fnc__processChurnData
-  )
+# ls_churn_from_NHS <-
+#   lapply(
+#     X = ls_churn_from_NHS
+#     ,FUN = fnc__processChurnData
+#   )
 ls_churn_within_NHS <-
   lapply(
     X = ls_churn_within_NHS
@@ -64,7 +78,9 @@ ls_churn_within_NHS <-
   )
 
 # Deprivation data.
-# None
+df_deprivation <- 
+  df_deprivation %>%
+  dplyr::mutate( `Trust Name` = tolower( `Trust Name` ) )
 
 # Rurality data.
 # ## The rurality data is by local authority district (LAD) in 2021 (LAD21CD). I
@@ -93,7 +109,12 @@ df_ons_rurality <-
     ,by = join_by( LAD21CD == ladcd )
     ,relationship = "many-to-many"
   )
-
+# # Set factor orders.
+df_ons_rurality$`RUC21 settlement class` <-
+  factor(
+    df_ons_rurality$`RUC21 settlement class`
+    ,levels = c( 'Urban', 'Intermediate urban', 'Intermediate rural', 'Rural')
+    )
 # Trust-size data.
 # None
 
@@ -176,6 +197,62 @@ df_patientSatisfaction <-
   )
 rm( df_patientSatisfaction_historic )
 
+
+# Staff survey.
+df_staff_survey <-
+  df_staff_survey_main %>%
+  # Define a column that will match with the `Period` column in the turnover data, later.
+  dplyr::mutate(
+    Period = dplyr::case_when(
+      year_date == "01/12/2023" ~ "March '22 to March '23"
+      ,year_date == "01/12/2024" ~ "March '23 to March '24"
+      ,.default = NULL
+    )
+  ) %>%
+  tidyr::drop_na( Period ) %>%
+  # Select only the columns of interest.
+  dplyr::select(
+    c(
+      Period
+      ,org_id
+      ,org_name
+      ,region_code
+      ,region_name
+      ,job_role
+      ,area_of_work
+      ,q2a    
+      ,q3i
+      ,q4d
+      ,q5a
+      ,q4c
+      ,q9a
+      ,q9i
+      ,q11c
+      ,q21
+      ,q24d
+      ,q25d
+      ,q25f
+      ,q26c
+      ,q26a
+    )
+  ) %>%
+  # Rename columns to match turnover data.
+  dplyr::rename(
+    `Org code` = org_id
+    ,`Organisation name` = org_name
+    ,`NHSE code` = region_code
+    ,`NHSE region name`= region_name
+    ,`Care setting` = job_role
+  ) %>%
+  # Rename question columns to be more explicit
+  dplyr::rename_with(
+    .fn = ~ sub( pattern = "q", replacement = "staffSurvey_q", .x )
+    ,.cols = starts_with( 'q' )
+  )
+  # Tidy up
+  dplyr::distinct() %>%
+  dplyr::arrange( `Org code`, `Care setting` )
+
 # ----
 
 #####################
@@ -245,6 +322,13 @@ fnc__joinToChurnData <-
       ,by = join_by(
         `Org code` == trust_code
       )
+    ) %>%
+    # Join with staff survey.
+    dplyr::left_join(
+      df_staff_survey
+      ,by = join_by(
+        `Org code` == `ord_id`
+      )
     )
   processed_list_element <-
     processed_list_element %>%
@@ -257,9 +341,9 @@ ls_churn_within_NHS <-
     X = ls_churn_within_NHS
     ,FUN = fnc__joinToChurnData
   )
-ls_churn_from_NHS <-
-  lapply(
-    X = ls_churn_from_NHS
-    ,FUN = fnc__joinToChurnData
-  )
+# ls_churn_from_NHS <-
+#   lapply(
+#     X = ls_churn_from_NHS
+#     ,FUN = fnc__joinToChurnData
+#   )
 # ----

@@ -25,7 +25,8 @@
 # ----
 if( !"pacman" %in% installed.packages() ){ install.packages( "pacman" ) }
 pacman::p_load(
-  tidyverse
+  haven
+  ,tidyverse
 )
 # ----
 
@@ -52,33 +53,33 @@ url_postcodeToLADCD <- "https://www.arcgis.com/sharing/rest/content/items/bcfc75
 url_Trust_size_2021_03 <- "https://files.digital.nhs.uk/C4/453C24/NHS%20Workforce%20Statistics%2C%20March%202021%20England%20and%20Organisation.xlsx"
 url_Trust_size_2022_03 <- "https://files.digital.nhs.uk/C3/488527/NHS%20Workforce%20Statistics%2C%20March%202022%20England%20and%20Organisation.xlsx"
 url_Trust_size_2023_03 <- "https://files.digital.nhs.uk/07/6F3BE5/NHS%20Workforce%20Statistics%2C%20March%202023%20England%20and%20Organisation.xlsx"
-# Download files from URL.
-curl::curl_download( url_churn_from_NHS, "xls_churn_from_NHS.xlsx" )
-curl::curl_download( url_churn_within_NHS, "xls_churn_within_NHS.xlsx" )
-curl::curl_download( url_ons_rurality, "xls_ons_rurality.xlsx" )
-curl::curl_download( url = url_postcodeToLADCD, destfile = "csv_postcodeToLADCD.zip" )
-curl::curl_download( url_Trust_size_2021_03, "xls_Trust_size_2021_03.xlsx" )
-curl::curl_download( url_Trust_size_2022_03, "xls_Trust_size_2022_03.xlsx" )
-curl::curl_download( url_Trust_size_2023_03, "xls_Trust_size_2023_03.xlsx" )
-# Load files. Focus on head-count values ("HC") and exclude call handlers
-# and paramedics.
-# ## Churn from NHS.
-df_churn_from_NHS_Grade <-
-  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Grade" ) %>%
-  dplyr::filter( Type == 'HC' ) %>%
-  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
-df_churn_from_NHS_Gender <-
-  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Gender" ) %>%
-  dplyr::filter( Type == 'HC' ) %>%
-  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
-df_churn_from_NHS_AgeBand <-
-  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Age band" ) %>%
-  dplyr::filter( Type == 'HC' ) %>%
-  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
-df_churn_from_NHS_EthnicGroup <-
-  readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Ethnic group" ) %>%
-  dplyr::filter( Type == 'HC' ) %>%
-  dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+# # Download files from URL.
+# curl::curl_download( url_churn_from_NHS, "xls_churn_from_NHS.xlsx" )
+# curl::curl_download( url_churn_within_NHS, "xls_churn_within_NHS.xlsx" )
+# curl::curl_download( url_ons_rurality, "xls_ons_rurality.xlsx" )
+# curl::curl_download( url = url_postcodeToLADCD, destfile = "csv_postcodeToLADCD.zip" )
+# curl::curl_download( url_Trust_size_2021_03, "xls_Trust_size_2021_03.xlsx" )
+# curl::curl_download( url_Trust_size_2022_03, "xls_Trust_size_2022_03.xlsx" )
+# curl::curl_download( url_Trust_size_2023_03, "xls_Trust_size_2023_03.xlsx" )
+# # Load files. Focus on head-count values ("HC") and exclude call handlers
+# # and paramedics.
+# # ## Churn from NHS.
+# df_churn_from_NHS_Grade <-
+#   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Grade" ) %>%
+#   dplyr::filter( Type == 'HC' ) %>%
+#   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+# df_churn_from_NHS_Gender <-
+#   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Gender" ) %>%
+#   dplyr::filter( Type == 'HC' ) %>%
+#   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+# df_churn_from_NHS_AgeBand <-
+#   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Age band" ) %>%
+#   dplyr::filter( Type == 'HC' ) %>%
+#   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+# df_churn_from_NHS_EthnicGroup <-
+#   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Ethnic group" ) %>%
+#   dplyr::filter( Type == 'HC' ) %>%
+#   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 # ## Churn within NHS.
 df_churn_within_NHS_Grade <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Grade" ) %>%
@@ -126,19 +127,19 @@ df_Trust_size_2023_03 <-
   dplyr::filter( !stringr::str_detect( ...1, pattern = "ICB" ) ) %>%
   `colnames<-`( c( 'Trust name 2023 03', 'Trust code 2023 03', 'Trust size 2023 03' ) )
 # Tidy up.
-ls_churn_from_NHS <-
-  list(
-    df_churn_from_NHS_Grade = df_churn_from_NHS_Grade
-    ,df_churn_from_NHS_Gender = df_churn_from_NHS_Gender
-    ,df_churn_from_NHS_AgeBand = df_churn_from_NHS_AgeBand
-    ,df_churn_from_NHS_EthnicGroup = df_churn_from_NHS_EthnicGroup
-  )
+# ls_churn_from_NHS <-
+#   list(
+#     df_churn_from_NHS_Grade = df_churn_from_NHS_Grade
+#     ,df_churn_from_NHS_Gender = df_churn_from_NHS_Gender
+#     ,df_churn_from_NHS_AgeBand = df_churn_from_NHS_AgeBand
+#     ,df_churn_from_NHS_EthnicGroup = df_churn_from_NHS_EthnicGroup
+#   )
 ls_churn_within_NHS <-
   list(
-    df_churn_from_NHS_Grade = df_churn_from_NHS_Grade
-    ,df_churn_from_NHS_Gender = df_churn_from_NHS_Gender
-    ,df_churn_from_NHS_AgeBand = df_churn_from_NHS_AgeBand
-    ,df_churn_from_NHS_EthnicGroup = df_churn_from_NHS_EthnicGroup
+    df_churn_within_NHS_Grade = df_churn_within_NHS_Grade
+    ,df_churn_within_NHS_Gender = df_churn_within_NHS_Gender
+    ,df_churn_within_NHS_AgeBand = df_churn_within_NHS_AgeBand
+    ,df_churn_within_NHS_EthnicGroup = df_churn_within_NHS_EthnicGroup
   )
 rm(
   df_churn_from_NHS_Grade
@@ -159,7 +160,7 @@ rm(
 # Load deprivation data.
 # ## This data was given by Julie Nightingale in an email to Michaela on the 9th
 # ## of October. The only provenance to speak of is that the data are based on
-# ## based on their catchment area rather than the hospital postcode.
+# ## their catchment area rather than the hospital postcode.
 df_deprivation <-
   readxl::read_xlsx(
     path = file.path("../../Data/Hospital trusts and deprivation.xlsx")
@@ -171,7 +172,7 @@ df_deprivation <-
 # ## (Ref: FOI - 2507-2236881 NHSE:0796329).
 filename <- file.path("../../Data/FOI - 2507-2236881 FOI_AHP_Vacancy_22-25.xlsx")
 sheets <- readxl::excel_sheets( filename )
-sheets <- sheets[ !sheets %in% c( "Paramedic" ) ] 
+sheets <- sheets[ !sheets %in% c( "Paramedic" ) ] # There are no call handlers to remove.
 ls_vacancy <-
   lapply(
   sheets
@@ -218,20 +219,20 @@ rm( sheets, filename )
 # ## deprivation file that was given to Michaela. I will have to assume that the
 # ## LAD has not changed since 2021.
 df_postcodeToTrust <- readr::read_csv( "../../Data/postcode_and_TrustCode.csv" )
-# ## Exclude London post codes.
-# ## I've assumed the complete list of postcodes are those coloured at
-# ## https://www.doogal.co.uk/london_postcodes.
-# ## This is part of Michaela's 5-point plan. She wants to exclude London because
-# ## she believes it is an outlier.
-df_postcodeToTrust <-
-  df_postcodeToTrust %>%
-  dplyr::filter(
-    !stringr::str_detect(
-      string = substr(pcds, start = 1, stop = 3)
-      ,pattern = 
-          "NW[0-9]|N[0-9] |N[0-9][0-9]|E[0-9] |E[0-9][0-9]|SE[0-9]|W[0-9] |W[0-9][0-9]|SW[0-9]|WC[0-9]|EC[0-9]"
-    )
-  )
+# # ## Exclude London post codes.
+# # ## I've assumed the complete list of postcodes are those coloured at
+# # ## https://www.doogal.co.uk/london_postcodes.
+# # ## This is part of Michaela's 5-point plan. She wants to exclude London because
+# # ## she believes it is an outlier.
+# df_postcodeToTrust <-
+#   df_postcodeToTrust %>%
+#   dplyr::filter(
+#     !stringr::str_detect(
+#       string = substr(pcds, start = 1, stop = 3)
+#       ,pattern = 
+#           "NW[0-9]|N[0-9] |N[0-9][0-9]|E[0-9] |E[0-9][0-9]|SE[0-9]|W[0-9] |W[0-9][0-9]|SW[0-9]|WC[0-9]|EC[0-9]"
+#     )
+#   )
 
 
 # Load patient satisfaction data.
@@ -245,5 +246,11 @@ df_patientSatisfaction_historic <-
     path = "../../Data/20250909_aip24_Benchmark_TrustLevel.xlsx" 
     ,sheet = "IP24_trust_historic_results"
   )
+
+# Load staff-survey data.
+df_staff_survey_main <-
+  haven::read_sav( "../../Data/NSS24_main_AN001_data v1.0.sav" )
+df_staff_survey_bank <-
+  haven::read_sav( "../../Data/NSS24_bank_AN001_data v1.0.sav" )
 
 # ----
