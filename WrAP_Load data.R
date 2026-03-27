@@ -84,18 +84,22 @@ url_Trust_size_2023_03 <- "https://files.digital.nhs.uk/07/6F3BE5/NHS%20Workforc
 df_churn_within_NHS_Grade <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Grade" ) %>%
   dplyr::filter( Type == 'HC' ) %>%
+  dplyr::select( -Type ) %>%
   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_within_NHS_Gender <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Gender" ) %>%
   dplyr::filter( Type == 'HC' ) %>%
+  dplyr::select( -Type ) %>%
   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_within_NHS_AgeBand <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Age band" ) %>%
   dplyr::filter( Type == 'HC' ) %>%
+  dplyr::select( -Type ) %>%
   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 df_churn_within_NHS_EthnicGroup <-
   readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Ethnic group" ) %>%
   dplyr::filter( Type == 'HC' ) %>%
+  dplyr::select( -Type ) %>%
   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
 # ## ONS rurality.
 df_ons_rurality <-
@@ -156,8 +160,8 @@ rm(
 #######################
 ## Load local files. ##
 #######################
-# ----
 # Load deprivation data.
+# ----
 # ## This data was given by Julie Nightingale in an email to Michaela on the 9th
 # ## of October. The only provenance to speak of is that the data are based on
 # ## their catchment area rather than the hospital postcode.
@@ -166,8 +170,10 @@ df_deprivation <-
     path = file.path("../../Data/Hospital trusts and deprivation.xlsx")
     ,sheet = "Sheet1"
     )
+# ----
 
 # Load vacancy-rates data.
+# ----
 # ## This data came from a freedom-of-information request sent by Michaela 
 # ## (Ref: FOI - 2507-2236881 NHSE:0796329).
 filename <- file.path("../../Data/FOI - 2507-2236881 FOI_AHP_Vacancy_22-25.xlsx")
@@ -186,6 +192,7 @@ ls_vacancy <-
     ls_vacancy
     ,function(x)
     {
+      # Make column names.
       within_x <- x[1]
       x <- tibble::add_column(
         .data = x
@@ -205,12 +212,94 @@ ls_vacancy <-
           ,paste0( "vacancy_count_", as.character( seq( as.Date( "2022-04-01" ), as.Date( "2025-03-01" ), by = "month" ) ) )
         )
       
+      # Structure the data.frame so that there is only one column with the
+      # statistic value, with another showing what the statistic is.
+      # Data for all months are left in even though we only have yearly 
+      # data for other variables. Only the appropriate annual value will be
+      # included in the main data set.
+      x <-
+        dplyr::bind_cols(
+    
+          x %>%
+            dplyr::select(
+            `Care setting`, `Trust code`, `Trust name`
+            ,contains( "vacancy_rate" ) ) %>%
+            tidyr::pivot_longer(
+              cols = contains( "vacancy_rate")
+              ,names_to = "stat_name"
+              ,values_to = "stat_value"
+            ) %>%
+            tidyr::separate_wider_delim(
+              cols = stat_name
+              ,delim = "rate_"
+              ,names = c( "stat_name", "stat_date")
+            ) %>%
+            tidyr::separate_wider_delim(
+              cols = stat_date
+              ,delim = "-"
+              ,names = c( "vacancy_year", "vacancy_month", "Day")
+            ) %>%
+            dplyr::select( -c( stat_name, Day ) ) %>%
+            dplyr::rename( vacancy_rate = stat_value )
+        
+          ,x %>%
+            dplyr::select(
+              `Care setting`, `Trust code`, `Trust name`
+              ,contains( "staff_count" ) ) %>%
+            tidyr::pivot_longer(
+              cols = contains( "staff_count")
+              ,names_to = "stat_name"
+              ,values_to = "stat_value"
+            ) %>%
+            tidyr::separate_wider_delim(
+              cols = stat_name
+              ,delim = "count_"
+              ,names = c( "stat_name", "stat_date")
+            ) %>%
+            tidyr::separate_wider_delim(
+              cols = stat_date
+              ,delim = "-"
+              ,names = c( "vacancy_year", "vacancy_month", "Day")
+            ) %>%
+            dplyr::rename( staff_count = stat_value ) %>%
+            dplyr::select( staff_count )
+        
+          ,x %>%
+            dplyr::select(
+              `Care setting`, `Trust code`, `Trust name`
+              ,contains( "vacancy_count" ) ) %>%
+            tidyr::pivot_longer(
+              cols = contains( "vacancy_count")
+              ,names_to = "stat_name"
+              ,values_to = "stat_value"
+            ) %>%
+            tidyr::separate_wider_delim(
+              cols = stat_name
+              ,delim = "count_"
+              ,names = c( "stat_name", "stat_date")
+            ) %>%
+            tidyr::separate_wider_delim(
+              cols = stat_date
+              ,delim = "-"
+              ,names = c( "vacancy_year", "vacancy_month", "Day")
+            ) %>%
+            dplyr::rename( vacancy_count = stat_value ) %>%
+            dplyr::select( vacancy_count )
+        
+          ) %>%
+        dplyr::mutate(
+          vacancy_year = as.integer( vacancy_year )
+          ,vacancy_month = as.integer( vacancy_month )
+        )
+      
       return( x )
     }
   )
 rm( sheets, filename )
+# ----
 
 # Load postcode-to-Trust mapping data.
+# ----
 # ## This was painstakingly acquired by appending all Trust codes to the URL
 # ## https://uat.directory.spineservices.nhs.uk/STU3/Organization/ and extracting
 # ## the postcode at the bottom. The URL is used as part of the API but I don't
@@ -233,9 +322,10 @@ df_postcodeToTrust <- readr::read_csv( "../../Data/postcode_and_TrustCode.csv" )
 #           "NW[0-9]|N[0-9] |N[0-9][0-9]|E[0-9] |E[0-9][0-9]|SE[0-9]|W[0-9] |W[0-9][0-9]|SW[0-9]|WC[0-9]|EC[0-9]"
 #     )
 #   )
-
+# ----
 
 # Load patient satisfaction data.
+# ----
 df_patientSatisfaction <- 
   readxl::read_xlsx(
     path = "../../Data/20250909_aip24_Benchmark_TrustLevel.xlsx" 
@@ -246,11 +336,26 @@ df_patientSatisfaction_historic <-
     path = "../../Data/20250909_aip24_Benchmark_TrustLevel.xlsx" 
     ,sheet = "IP24_trust_historic_results"
   )
+# ----
 
 # Load staff-survey data.
-df_staff_survey_main <-
+# ----
+# See the survey technical guide for details:
+# https://www.nhsstaffsurveys.com/static/ea079b722ad235a21b0356670766a33b/NHS-Staff-Survey-2025-Technical-Guide-V1.pdf
+# I cannot find any explanation of what the `main_or_bank_indicator` column
+# means.
+df_staff_survey_main2 <-
   haven::read_sav( "../../Data/NSS24_main_AN001_data v1.0.sav" )
 df_staff_survey_bank <-
   haven::read_sav( "../../Data/NSS24_bank_AN001_data v1.0.sav" )
+# ----
 
+# Load job role-to-care setting mapping data.
+# ----
+# This was painstaking to create. There were small differences between the
+# `job_role` column in the staff-survey data and the `Care setting` column in
+# the churn data. I needed to map between the two. I figured the best way was to
+# create a mapping table. I create maps for every `job_role` value except the
+# managers, whom I don't want to keep.
+df_jobroleToCaresetting <- readr::read_csv( "../../Data/job_role_to_care_setting_map.csv" )
 # ----

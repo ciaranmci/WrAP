@@ -22,7 +22,8 @@ fnc__analyseDistributions <-
     if( is.null( var_of_interest ) ){ stop( "The 'var_of_interest' argument was not supplied." ) }
     if( is.null( dataset_id ) ){ stop( "The 'dataset_id' arguement was not supplied." ) }
     
-    
+    # Extract the set of professions in the data.
+    roles <- unique( data[[1]]$`Care setting` )[-1]
     
     ###################################
     ## Create the overall plot data. ##
@@ -155,17 +156,13 @@ fnc__analyseDistributions <-
     #############################
     # Create the plot data, stratified by staff role.
     plot_data <-
-      # Arbitrarily use the payband data sheet to look at the totals.
+      # Arbitrarily use the first data sheet to look at the totals.
       data[[1]] %>%
       dplyr::filter(
         `Care setting` != "All care settings" 
         ,stringr::str_detect( string = `AfC band`, pattern = "All " )
         # Remove SI = 0%.
         ,!`Stability index` %in% c(0)
-      ) %>% 
-      # Edit the `Care setting` strings so that they can run over multiple lines.
-      dplyr::mutate(
-        `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
       )
     
     # Make the plot for each AHP role.
@@ -173,7 +170,7 @@ fnc__analyseDistributions <-
     {
       i_plot_data <-
         plot_data %>% 
-        dplyr::filter( `Care setting` == gsub( pattern = "/", replacement = " / ", x = roles[ i_role ] ) ) 
+        dplyr::filter( `Care setting` == roles[ i_role ] )
       
       if ( nrow( i_plot_data ) > 0 )
       {
@@ -286,7 +283,7 @@ fnc__analyseDistributions <-
       ,function(x)
       {
         # Get name of plot from the stratification.
-        stratification_name <- colnames( x )[11]
+        stratification_name <- colnames( x )[which( "Care setting" == colnames( x ) ) + 1]
         # Remove paybands that are not of interest.
         if( stratification_name == "AfC band" )
         {
@@ -297,7 +294,7 @@ fnc__analyseDistributions <-
             )
         }
         stratification_name <- sub( pattern = " ", replacement = "_", x = stratification_name )
-        colnames( x )[11] <- stratification_name
+        colnames( x )[which( "Care setting" == colnames( x ) ) + 1] <- stratification_name
         
         # Make plot data, stratified by candidate factor.
         plot_data <-
@@ -307,10 +304,6 @@ fnc__analyseDistributions <-
             ,!stringr::str_detect( string = !!( sym( stratification_name ) ), pattern = "All " )
             # Remove SI = 0%.
             ,!`Stability index` %in% c(0)
-          ) %>%
-          # Edit the `Care setting` strings so that they can run over multiple lines.
-          dplyr::mutate(
-            `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
           )
         
         # Make table of summary statistics.
@@ -348,7 +341,7 @@ fnc__analyseDistributions <-
         {
           i_plot_data <-
             plot_data %>%
-            dplyr::filter( `Care setting` == gsub( pattern = "/", replacement = " / ", x = roles[ i_role ] ) )
+            dplyr::filter( `Care setting` == roles[ i_role ] )
           
           if ( nrow( i_plot_data ) > 0 )
           {
@@ -465,15 +458,15 @@ fnc__analyseDistributions <-
 
 # Run the function for the variates of interest.
 # ----
-# # Using the `ls_churn_from_NHS` dataset.
-fnc__analyseDistributions(
-  data = ls_churn_from_NHS, var_of_interest = 'joiner_rate', dataset_id = "FROM_NHS" )
-fnc__analyseDistributions(
-  data = ls_churn_from_NHS, var_of_interest = 'leaver_rate', dataset_id = "FROM_NHS" )
-fnc__analyseDistributions(
-  data = ls_churn_from_NHS, var_of_interest = 'remainer_rate', dataset_id = "FROM_NHS" )
-fnc__analyseDistributions(
-  data = ls_churn_from_NHS, var_of_interest = 'Stability index', dataset_id = "FROM_NHS" )
+# # # Using the `ls_churn_from_NHS` dataset.
+# fnc__analyseDistributions(
+#   data = ls_churn_from_NHS, var_of_interest = 'joiner_rate', dataset_id = "FROM_NHS" )
+# fnc__analyseDistributions(
+#   data = ls_churn_from_NHS, var_of_interest = 'leaver_rate', dataset_id = "FROM_NHS" )
+# fnc__analyseDistributions(
+#   data = ls_churn_from_NHS, var_of_interest = 'remainer_rate', dataset_id = "FROM_NHS" )
+# fnc__analyseDistributions(
+#   data = ls_churn_from_NHS, var_of_interest = 'Stability index', dataset_id = "FROM_NHS" )
 # # Using the `ls_churn_within_NHS` dataset.
 fnc__analyseDistributions(
   data = ls_churn_within_NHS, var_of_interest = 'joiner_rate', dataset_id = "WITHIN_NHS" )

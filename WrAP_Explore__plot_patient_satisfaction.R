@@ -32,54 +32,20 @@ fnc__ps_SI_plots <-
         # Remove SI = 0%.
         ,!`Stability index` %in% c(0)
       ) %>%
-      # Format the text of the profession values.
-      dplyr::mutate(
-        `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
-      ) %>%
-      # Collate the satisfaction variables.
+      dplyr::filter( year_end > 2022 ) %>%
       dplyr::select(
-        `Org code`, `Care setting`, 
-        ,contains( "satisfaction" ) ) %>%
+        `Org code`, `Care setting`, year_end, `Stability index`
+        ,contains( "ps_" ) ) %>%
       tidyr::pivot_longer(
-        cols = contains('satisfaction')
+        cols = contains('ps_')
         ,names_to = 'Question'
         ,values_to = 'Score'
       ) %>%
       tidyr::separate_wider_delim(
         cols = Question
         ,delim = "_"
-        ,names = c(NA, "Q", NA, "Year")
-      ) %>%
-      dplyr::mutate( Year = as.double( Year ) ) %>%
-      dplyr::filter( Year > 2022 ) %>%
-      dplyr::distinct()
-    
-    ps_data <-
-      data[[1]] %>%
-      dplyr::filter(
-        stringr::str_detect( string = `AfC band`, pattern = "All " )
-        # Remove SI = 0%.
-        ,!`Stability index` %in% c(0)
-      ) %>%
-      dplyr::mutate(
-        Year = dplyr::case_when(
-          stringr::str_detect( year, "25" ) ~ 2024
-          ,stringr::str_detect( year, "22" ) ~ 2022
-          ,.default = 2023
-        )
-      ) %>%
-      dplyr::filter( Year > 2022 ) %>%
-      dplyr::distinct(
-        `Org code`, `Care setting`, Year, `Stability index`
-      ) %>%
-      dplyr::left_join(
-        ps_data
-        ,by = join_by( Year, `Org code`, `Care setting` )
-        ,relationship = "one-to-many"
-      ) %>%
-      # Remove Trusts with no satisfaction scores.
-      dplyr::filter( !is.na( Score ) )
-    
+        ,names = c(NA, "Q", NA)
+      )
     
     # Make table of summary statistics.
     save_directory <- 
@@ -96,9 +62,9 @@ fnc__ps_SI_plots <-
         ,median = median( `Stability index`, na.rm = T )
         ,mean = mean( `Stability index`, na.rm = T )            
         ,max = max( `Stability index`, na.rm = T )
-        ,.by = c( `Care setting`, Q, Year )
+        ,.by = c( `Care setting`, Q, year_end )
       ) %>%
-      dplyr::arrange( `Care setting`, Q, Year ) %>%
+      dplyr::arrange( `Care setting`, Q, year_end ) %>%
       write.csv( file =
                    paste0(
                      save_directory
@@ -116,7 +82,7 @@ fnc__ps_SI_plots <-
         class_median = median( `Stability index`, na.rm = TRUE )
         ,class_min = min( `Stability index`, na.rm = TRUE )
         ,class_max = max( `Stability index`, na.rm = TRUE )
-        ,.by = c( Q, Year )
+        ,.by = c( Q, year_end )
       )
     
     min_val <-
@@ -134,7 +100,7 @@ fnc__ps_SI_plots <-
         ,na.rm = TRUE
       )
     
-    # # Plot satisfaction scores for all care settings, unstratfied.
+    # # Plot satisfaction scores for all care settings, unstratified.
     p <-
       ps_data %>%
       dplyr::filter( `Care setting` == "All care settings" ) %>%
@@ -154,12 +120,12 @@ fnc__ps_SI_plots <-
         ,subtitle =
           paste0(
             "\u2022 Using ", dataset_id," dataset.\n"
-            ,"\u2022 Showing values \u2265", round( min_val, 2 )
+            ,"\u2022 Showing stability-index values \u2265", round( min_val, 2 )
             ," and \u2264", round( max_val, 2 ), ".\n"
             ,"\u2022 Red line shows the median."
           )
       ) +
-      facet_grid(  Q ~ Year ) +
+      facet_grid(  Q ~ year_end ) +
       geom_vline(
         data = sumstat_plot_data
         ,aes( xintercept = class_median )
@@ -174,7 +140,9 @@ fnc__ps_SI_plots <-
       plot = p
       ,filename =
         paste0(
-          "Plots/Stability index/"
+          "Plots/"
+          ,var_of_interest
+          ,"/"
           ,dataset_id
           ,"/Patient satisfaction/"
           ,"plot__ps_vs_SI_all_professions_"
@@ -206,7 +174,7 @@ fnc__ps_SI_plots <-
             class_median = median( `Stability index`, na.rm = TRUE )
             ,class_min = min( `Stability index`, na.rm = TRUE )
             ,class_max = max( `Stability index`, na.rm = TRUE )
-            ,.by = c( Q, Year )
+            ,.by = c( Q, year_end )
           )
         
         min_val <-
@@ -244,7 +212,7 @@ fnc__ps_SI_plots <-
                 ,"\u2022 Red line shows the median."
               )
           ) +
-          facet_grid(  Q ~ Year ) +
+          facet_grid(  Q ~ year_end ) +
           geom_vline(
             data = sumstat_plot_data
             ,aes( xintercept = class_median )
@@ -259,7 +227,9 @@ fnc__ps_SI_plots <-
           plot = p
           ,filename =
             paste0(
-              "Plots/Stability index/"
+              "Plots/"
+              ,var_of_interest
+              ,"/"
               ,dataset_id
               ,"/Patient satisfaction/plot__ps_vs_SI_"
               ,gsub(roles[ i_role ], pattern = "/", replacement = " & ")
@@ -280,6 +250,6 @@ fnc__ps_SI_plots <-
 
 # Apply the functions.
 # ----
-fnc__ps_SI_plots( data = ls_churn_within_NHS, dataset_id = 'WITHIN_NHS' )
-# fnc__ps_SI_plots( data = ls_churn_from_NHS, dataset_id = 'FROM_NHS' )
+fnc__ps_SI_plots( data = ls_churn_within_NHS, var_of_interest = "Stability index", dataset_id = 'WITHIN_NHS' )
+# fnc__ps_SI_plots( data = ls_churn_from_NHS, var_of_interest = "Stability index", dataset_id = 'FROM_NHS' )
 # ----

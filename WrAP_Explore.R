@@ -37,26 +37,11 @@ dir.create( file.path( getwd(), 'Tables/Stability index/FROM NHS' ), recursive =
 ###########################################################
 # This section produces "tallies of sites with X-many professions, by period.csv"
 # ----
-
-# Add a column marking the remainer-rate values that are within the 90th
-# percentile for that period and profession. Do the same for the 10th
-# percentile.
-x <-
-  ls_churn_within_NHS[[1]] %>% 
-  dplyr::group_by( `Org code`, Period ) %>%
+ls_churn_within_NHS[[1]] %>%
   dplyr::filter(
     `Care setting` != "All care settings" 
     ,stringr::str_detect( string = `AfC band`, pattern = "All " )
   ) %>%
-  dplyr::ungroup() %>%
-  # Format the text of the profession values.
-  dplyr::mutate(
-    `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
-  ) 
-
-
-# How many sites are represented by only 1, 2, 3 etc professions?
-x %>%
   dplyr::group_by( Period, `Org code` ) %>%
   dplyr::summarise( n_roles = length( unique( `Care setting` ) ) ) %>%
   dplyr::ungroup() %>%
@@ -108,10 +93,7 @@ trust_selection_data <-
     `Care setting` != "All care settings"
     # Remove SI = 0 and SI = 1
     ,!`Stability index` %in% c(0,1)
-    ) %>%
-  dplyr::mutate(
-    `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
-  )
+    )
 # ## Select 2 Trusts for each profession.
 trust_selection_data %>%
   dplyr::select( `Care setting`, Period, `Org code`, `Organisation name`, `Stability index` ) %>%
@@ -166,6 +148,11 @@ source('WrAP_Explore__plot_rurality.R')
 #####################################
 source('WrAP_Explore__plot_patient_satisfaction.R')
 
+#############################
+## Plots for staff survey. ##
+#############################
+source('WrAP_Explore__plot_staff_survey.R')
+
 #########################################
 ## Correlation between SI and factors. ##
 #########################################
@@ -192,7 +179,7 @@ df <-
     ,!`Stability index` %in% c(0)
   ) %>%
   dplyr::select(
-    year
+    year_end
     ,`Org code`
     ,`Stability index`
   ) 
@@ -200,7 +187,7 @@ df %>%
   tidyr::pivot_wider(
     id_cols = `Org code`
     ,values_from = `Stability index`
-    ,names_from = year
+    ,names_from = year_end
   ) %>%
   tidyr::drop_na() %>%
   dplyr::select( -`Org code`) %>%
@@ -209,7 +196,7 @@ df %>%
 # Post-hoc test.
 pairwise.wilcox.test(
   df$`Stability index`
-  ,df$year
+  ,df$year_end
   ,p.adj = "bonf"
 )
 
@@ -224,7 +211,7 @@ df <-
     ,!`Stability index` %in% c(0)
   ) %>%
   dplyr::select(
-    year
+    year_end
     ,`Org code`
     ,`Stability index`
   ) 
@@ -232,7 +219,7 @@ df %>%
   tidyr::pivot_wider(
     id_cols = `Org code`
     ,values_from = `Stability index`
-    ,names_from = year
+    ,names_from = year_end
   ) %>%
   tidyr::drop_na() %>%
   dplyr::select( -`Org code`) %>%
@@ -241,7 +228,7 @@ df %>%
 # Post-hoc test.
 pairwise.wilcox.test(
   df$`Stability index`
-  ,df$year
+  ,df$year_end
   ,p.adj = "bonf"
 )
 # ----
@@ -290,4 +277,3 @@ ls_churn_within_NHS[[1]] %>%
   write.csv( "Tables/median_SI_of_profession_with_largest_headcount.csv")
 
 # ----
-

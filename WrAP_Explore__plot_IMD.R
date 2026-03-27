@@ -31,10 +31,6 @@ fnc__IMD_SI_plots <-
         # Remove SI = 0%.
         ,!`Stability index` %in% c(0)
       ) %>%
-      # Format the text of the profession values.
-      dplyr::mutate(
-        `Care setting` = gsub( pattern = "/", replacement = " / ", x = `Care setting` )
-      ) %>%
       # Remove Trusts with no IMD score.
       dplyr::filter( !is.na( `IMD Score` ) )
     
