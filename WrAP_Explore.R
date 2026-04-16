@@ -277,3 +277,13 @@ ls_churn_within_NHS[[1]] %>%
   write.csv( "Tables/median_SI_of_profession_with_largest_headcount.csv")
 
 # ----
+
+#################################
+## Study of staff-survey data. ##
+#################################
+# This study uses the staff-survey data, only. The motivation is that this data
+# set is self-contained, has been processed less than the other datasets, and 
+# it represents self-reported information rather than organisationally-reported
+# information. This final point is important because we are interested in staff's
+# experiences.
+source('WrAP_Explore__staff_suvery_study.R')

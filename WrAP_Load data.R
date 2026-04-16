@@ -344,7 +344,7 @@ df_patientSatisfaction_historic <-
 # https://www.nhsstaffsurveys.com/static/ea079b722ad235a21b0356670766a33b/NHS-Staff-Survey-2025-Technical-Guide-V1.pdf
 # I cannot find any explanation of what the `main_or_bank_indicator` column
 # means.
-df_staff_survey_main2 <-
+df_staff_survey_main <-
   haven::read_sav( "../../Data/NSS24_main_AN001_data v1.0.sav" )
 df_staff_survey_bank <-
   haven::read_sav( "../../Data/NSS24_bank_AN001_data v1.0.sav" )

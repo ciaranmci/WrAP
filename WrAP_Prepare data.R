@@ -207,7 +207,8 @@ rm( df_patientSatisfaction_historic )
 
 df_staff_survey_main <-
   df_staff_survey_main %>%
-  # Re-code the `job_role` column to match the `Care setting` options.
+  # Match `job_role` column to the `Care setting` options found in the main
+  # churn data.
   dplyr::left_join(
     df_jobroleToCaresetting 
     ,by = join_by( job_role )
@@ -230,15 +231,13 @@ df_staff_survey_main <-
       ,`Care setting`
       ,org_id
       ,org_name
-      ,region_code
-      ,region_name
       ,job_role
       ,area_of_work
       ,q2a    
       ,q3i
       ,q4d
-      ,q5a
       ,q4c
+      ,q5a
       ,q9a
       ,q9i
       ,q11c
@@ -249,7 +248,7 @@ df_staff_survey_main <-
       ,q26a
       ,q26c
     )
-  ) %>%
+  ) %>% 
   # Convert Likert scaling to scores as per Table 2 in the technical specification
   # for the survey.
   # (https://www.nhsstaffsurveys.com/static/ea079b722ad235a21b0356670766a33b/NHS-Staff-Survey-2025-Technical-Guide-V1.pdf)
@@ -260,7 +259,7 @@ df_staff_survey_main <-
   # - q26c : 1 = 10, 2 = 7.5, 3 = 5, 4 = 2.5 , 5 = 0
   dplyr::mutate(
     across(
-      c( q2a, q3i, q4d, q5a, q4c, q9a, q9i, q21, q24d, q25d, q25f )
+      .cols = starts_with( "q" )
       ,function(x){
         dplyr::case_when(
           x == 1 ~ 0
@@ -270,7 +269,8 @@ df_staff_survey_main <-
           ,x == 5 ~ 10
           ,.default = NULL
           )
-        }
+      }
+      ,.names = '{.col}_ResponseScore'
       )
   ) %>%
   dplyr::mutate(
@@ -283,6 +283,7 @@ df_staff_survey_main <-
           ,.default = NULL
         )
       }
+      ,.names = '{.col}_ResponseScore'
     )
   ) %>%
   dplyr::mutate(
@@ -298,7 +299,68 @@ df_staff_survey_main <-
           ,.default = NULL
         )
       }
+      ,.names = '{.col}_ResponseScore'
     )
+  ) %>%  
+  # Convert the Likert scale columns to factor data type. Factor labels are from
+  # the survey guide:
+  # https://www.nhsstaffsurveys.com/static/958853e094733756687a78aa3d8cb36c/NSS2025-Questionnaire.zip
+  dplyr::mutate(
+    across(
+      starts_with( "q" ) & !ends_with( "Score" )
+      ,as.factor
+    )
+  ) %>% 
+  dplyr::mutate(
+    across(
+      c( q2a, q5a )
+      ,~forcats::fct_recode(
+        .x
+        ,"Never" = "1"
+        ,"Rarely"= "2"
+        ,"Sometimes" = "3"
+        ,"Often" = "4"
+        ,"Always" = "5"
+      )
+    )
+  ) %>% 
+  dplyr::mutate(
+    across(
+      c( q3i, starts_with( "q9" ), starts_with( "q2" ), -q2a, -ends_with( "Score" ) )
+      ,~forcats::fct_recode(
+        .x
+        ,"Strongly disagree" = "1"
+        ,"Disagree"= "2"
+        ,"Neither agree nor disagree" = "3"
+        ,"Agree" = "4"
+        ,"Strongly agree" = "5"
+      )
+    )
+  ) %>%
+  dplyr::mutate(
+    across(
+      starts_with( "q4" ) & !ends_with( "Score" )
+      ,~forcats::fct_recode(
+        .x
+        ,"Very dissatisfied" = "1"
+        ,"Dissatisfied"= "2"
+        ,"Neither satisfied nor dissatisfied" = "3"
+        ,"Satisfied" = "4"
+        ,"Very satisfied" = "5"
+      )
+    )
+  ) %>% 
+  dplyr::mutate(
+    q11c = 
+      forcats::fct_recode(
+        q11c
+        ,"Yes" = "1"
+        ,"No"= "2"
+      )
+  ) %>%
+  dplyr::rename_with(
+    .cols = starts_with( "q" ) & !ends_with( "Score" )
+    ,.f = ~paste0( .x, "_LikertScore")
   ) %>%
   # Rename columns to match turnover data.
   dplyr::rename( `Org code` = org_id ) %>%
@@ -307,22 +369,28 @@ df_staff_survey_main <-
     .fn = ~ sub( pattern = "q", replacement = "ss_q", .x )
     ,.cols = starts_with( 'q' )
   ) %>% 
-  # Collapse rows for professions within an organisation.
-  dplyr::select( -c( area_of_work, job_role, org_name, region_code, region_name ) ) %>%
-  dplyr::reframe(
-    across( contains( "ss_q"), median )
-    ,.by = !contains( "ss_q")
-  ) %>%
+  #### This cannot be done if we are maintaining the factor-level Likert values. ####
+  # # Collapse rows for professions within an organisation.
+  # dplyr::select( -c( area_of_work, job_role, org_name ) ) %>%
+  # dplyr::reframe(
+  #   across( contains( "Response"), ~median(as.integer(.x)) )
+  #   ,.by = !contains( "ss_q")
+  # ) %>%
   # Tidy up.
   dplyr::distinct() %>%
   dplyr::arrange( `Org code`, `Care setting` )
 
+###
+###
+### This doesn't apply if we are keeping the survevy responses as ordinal.
+###
+###
 # Unlike with the patient satisfaction scores, there is no staff survey 
 # score that applies to the "All care settings" `Care setting`. Instead, to 
 # get a summary for all care settings, I compute the median value for every
 # staff survey question separately across all the professionals within each
 # Trust.
-df_staff_survey_main <-
+#df_staff_survey_main <-
   df_staff_survey_main %>%
     tidyr::pivot_longer(
       cols = c( contains('ss_'), -one_of( "ss_year" ) )
@@ -342,7 +410,7 @@ df_staff_survey_main <-
       ,names_from = Question
       ,values_from = Score
     ) %>%
-    dplyr::bind_rows( df_staff_survey_main )
+    dplyr::bind_rows( df_staff_survey_main ) 
 
 
 
