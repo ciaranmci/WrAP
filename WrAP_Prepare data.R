@@ -369,6 +369,31 @@ df_staff_survey_main <-
     .fn = ~ sub( pattern = "q", replacement = "ss_q", .x )
     ,.cols = starts_with( 'q' )
   ) %>% 
+  # Create a dichotomous version of Likert questions, where appropriate.
+  dplyr::mutate(
+    across(
+      contains( "Likert" )
+      ,function(x){
+        dplyr::case_when(
+          x == "Strongly disagree" ~ "Negative"
+          ,x == "Disagree"~ "Negative"
+          ,x == "Neither agree nor disagree" ~ NA
+          ,x == "Agree" ~ "Positive"
+          ,x == "Strongly agree" ~ "Positive"
+          ,x == "Very dissatisfied" ~ "Negative"
+          ,x == "Dissatisfied" ~ "Negative"
+          ,x == "Neither satisfied nor dissatisfied" ~ NA
+          ,x == "Satisfied" ~ "Positive"
+          ,x == "Very satisfied" ~ "Positive"
+          ,x == "No" ~ "Negative"
+          ,x == "Yes" ~ "Positive"
+          ,.default = NULL
+        )
+      }
+      ,.names = '{.col}_binary'
+    )
+  ) %>%
+  dplyr::select( -( ( contains( "2a" ) | contains( "q5" ) ) & contains( "binary" ) ) ) %>%
   #### This cannot be done if we are maintaining the factor-level Likert values. ####
   # # Collapse rows for professions within an organisation.
   # dplyr::select( -c( area_of_work, job_role, org_name ) ) %>%
@@ -382,7 +407,7 @@ df_staff_survey_main <-
 
 ###
 ###
-### This doesn't apply if we are keeping the survevy responses as ordinal.
+### This doesn't apply if we are keeping the survey responses as ordinal.
 ###
 ###
 # Unlike with the patient satisfaction scores, there is no staff survey 
@@ -390,27 +415,27 @@ df_staff_survey_main <-
 # get a summary for all care settings, I compute the median value for every
 # staff survey question separately across all the professionals within each
 # Trust.
-#df_staff_survey_main <-
-  df_staff_survey_main %>%
-    tidyr::pivot_longer(
-      cols = c( contains('ss_'), -one_of( "ss_year" ) )
-      ,names_to = 'Question'
-      ,values_to = 'Score'
-    ) %>%
-    dplyr::reframe(
-      Score = median( Score, na.rm = T )
-      ,.by = c( ss_year, `Org code`, Question )
-    ) %>%
-    tibble::add_column(
-      `Care setting` = "All care settings"
-      ,.after = "ss_year"
-    ) %>% 
-    tidyr::pivot_wider(
-      id_cols = everything()
-      ,names_from = Question
-      ,values_from = Score
-    ) %>%
-    dplyr::bind_rows( df_staff_survey_main ) 
+# #df_staff_survey_main <-
+#   df_staff_survey_main %>%
+#     tidyr::pivot_longer(
+#       cols = c( contains('ss_'), -one_of( "ss_year" ) )
+#       ,names_to = 'Question'
+#       ,values_to = 'Score'
+#     ) %>%
+#     dplyr::reframe(
+#       Score = median( Score, na.rm = T )
+#       ,.by = c( ss_year, `Org code`, Question )
+#     ) %>%
+#     tibble::add_column(
+#       `Care setting` = "All care settings"
+#       ,.after = "ss_year"
+#     ) %>%
+#     tidyr::pivot_wider(
+#       id_cols = everything()
+#       ,names_from = Question
+#       ,values_from = Score
+#     ) %>%
+#     dplyr::bind_rows( df_staff_survey_main )
 
 
 
