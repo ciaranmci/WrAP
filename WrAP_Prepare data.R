@@ -375,18 +375,18 @@ df_staff_survey_main <-
       contains( "Likert" )
       ,function(x){
         dplyr::case_when(
-          x == "Strongly disagree" ~ "Negative"
-          ,x == "Disagree"~ "Negative"
+          x == "Strongly disagree" ~ "Disagree"
+          ,x == "Disagree"~ "Disagree"
           ,x == "Neither agree nor disagree" ~ NA
-          ,x == "Agree" ~ "Positive"
-          ,x == "Strongly agree" ~ "Positive"
-          ,x == "Very dissatisfied" ~ "Negative"
-          ,x == "Dissatisfied" ~ "Negative"
+          ,x == "Agree" ~ "Agree"
+          ,x == "Strongly agree" ~ "Agree"
+          ,x == "Very dissatisfied" ~ "Dissatisfied"
+          ,x == "Dissatisfied" ~ "Dissatisfied"
           ,x == "Neither satisfied nor dissatisfied" ~ NA
-          ,x == "Satisfied" ~ "Positive"
-          ,x == "Very satisfied" ~ "Positive"
-          ,x == "No" ~ "Negative"
-          ,x == "Yes" ~ "Positive"
+          ,x == "Satisfied" ~ "Satisfied"
+          ,x == "Very satisfied" ~ "Satisfied"
+          ,x == "No" ~ "No"
+          ,x == "Yes" ~ "Yes"
           ,.default = NULL
         )
       }

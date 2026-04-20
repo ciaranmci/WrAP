@@ -62,7 +62,7 @@ fnc__analyseDistributions <-
       suppressWarnings()
     
     plot_data <-
-      data[[1]] %>%
+     data[[1]] %>%
       dplyr::filter(
         `Care setting` == "All care settings"
         ,stringr::str_detect( string = `AfC band`, pattern = "All " )

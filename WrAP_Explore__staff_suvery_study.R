@@ -53,7 +53,7 @@ pacman::p_load(
 ## Requisites. ##
 #################
 # ----
-# Set the list of questions of interets.
+# Set the list of questions of interest.
 q_lookup <-
   data.frame(
     q_num = 
@@ -90,7 +90,7 @@ q_lookup_other <-
   dplyr::filter( !q_num %in% q_lookup_outcomes ) %>%
   dplyr::pull( q_num )
 
-# Remove rows from staff that we are not interetsed in.
+# Remove rows from staff that we are not interested in.
 df_staff_survey_main<-
   df_staff_survey_main %>%
   tidyr::drop_na( `Care setting`)
@@ -320,7 +320,7 @@ for( i_role in 1:length( roles )+1 )
         ) %>%
         `colnames<-`( c( outcome_var_name, other_var_name) ) %>%
         dplyr::group_by_all() %>%
-        dplyr::summarise( n = n() ) 
+        dplyr::summarise( n = n() )
       
       # Make the plot.
       p <-
