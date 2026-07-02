@@ -83,27 +83,6 @@ q_lookup_other <-
 
 # Set the year of interest.
 year_of_interest <- 2025
-
-
-# Determine the five largest professions, nationally.
-professions_of_interest <-
-  df_churn_within_NHS_Grade %>% 
-  dplyr::filter(
-    `AfC band` %in% c( 'All AfC bands' )
-    ,!`Care setting` %in% c( 'All care settings' )
-    # Only use data for the non-specialist acute Trusts.
-    ,`Cluster group` == "Acute"
-    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
-    # Select year of interest
-    ,year_end %in% year_of_interest
-  ) %>% 
-  dplyr::reframe(
-    N = sum( `Denominator at start of period` )
-    ,.by = `Care setting`
-  ) %>%
-  dplyr::arrange( -N ) %>%
-  head( 5 ) %>%
-  dplyr::pull( `Care setting` )
 # ----
 
 ################
@@ -486,6 +465,29 @@ roles <-  c( "All care settings", unique( df_staff_survey_main$`Care setting` ) 
 # stability-index values. Delimit to the year ending 2025.
 # ----
 
+
+# Determine the five largest professions, nationally.
+professions_of_interest <-
+  df_churn_within_NHS_Grade %>% 
+  dplyr::filter(
+    `AfC band` %in% c( 'All AfC bands' )
+    ,!`Care setting` %in% c( 'All care settings' )
+    # Only use data for the non-specialist acute Trusts.
+    ,`Cluster group` == "Acute"
+    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+    # Select year of interest
+    ,year_end %in% year_of_interest
+  ) %>% 
+  dplyr::reframe(
+    N = sum( `Denominator at start of period` )
+    ,.by = `Care setting`
+  ) %>%
+  dplyr::arrange( -N ) %>%
+  head( 6 ) %>%
+  dplyr::pull( `Care setting` )
+professions_of_interest <-
+  professions_of_interest[ !professions_of_interest %in% 'Operating Theatres' ]
+
 # Make plot data.
 plot_data <-
   df_churn_within_NHS_Grade %>% 
@@ -596,9 +598,9 @@ ggsave(
 )
 # ----
 
-###############################################################
-## Plot of stability index for the five largest professions. ##
-###############################################################
+############################################################################
+## Plot of stability index for the five largest professions by agea band. ##
+############################################################################
 # A Tukey-style boxplot that shows stability-index values across age bands,
 # using data from the five largest professions, only. Delimit to the year
 # ending 2025.
