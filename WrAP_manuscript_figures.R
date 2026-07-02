@@ -458,15 +458,11 @@ df_staff_survey_main <-
 roles <-  c( "All care settings", unique( df_staff_survey_main$`Care setting` ) )
 # ----
 
-###############################################################
-## Plot of stability index for the five largest professions. ##
-###############################################################
-# A Tukey-style boxplot that shows 5 largest professions distribution of
-# stability-index values. Delimit to the year ending 2025.
-# ----
 
-
-# Determine the five largest professions, nationally.
+#######################################################
+# Determine the five largest professions, nationally. #
+#######################################################
+# -----
 professions_of_interest <-
   df_churn_within_NHS_Grade %>% 
   dplyr::filter(
@@ -487,120 +483,12 @@ professions_of_interest <-
   dplyr::pull( `Care setting` )
 professions_of_interest <-
   professions_of_interest[ !professions_of_interest %in% 'Operating Theatres' ]
+# -----
 
-# Make plot data.
-plot_data <-
-  df_churn_within_NHS_Grade %>% 
-  dplyr::filter(
-    # Remove pay-bands that are not of interest.
-    !`AfC band` %in% c( 'All AfC bands', 'Non AfC band', 'Band 4' )
-    # Only use data for the non-specialist acute Trusts.
-    ,`Cluster group` == "Acute"
-    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
-    # Remove SI = 0%.
-    ,!`Stability index` %in% c(0)
-    # Select year of interest
-    ,year_end %in% year_of_interest
-    # Select professions of interest
-    ,`Care setting` %in% professions_of_interest
-  ) %>%
-  dplyr::select( `Care setting`, `AfC band`, `Stability index` ) %>%
-  dplyr::rename( Profession = `Care setting` )
 
-sumstat_plot_data <-
-  plot_data %>%
-  dplyr::reframe(
-    class_median = median( `Stability index`, na.rm = TRUE )
-    ,class_min = min( `Stability index`, na.rm = TRUE )
-    ,class_max = max( `Stability index`, na.rm = TRUE )
-    ,test_position = 1.05
-    ,.by = c( Profession, `AfC band` )
-  )
-
-# Make plot.
-p <- 
-  plot_data %>%
-  ggplot(
-    aes(
-      x = `Stability index`
-      ,y = `AfC band`
-    ) ) +
- geom_boxplot(
-    aes( fill = Profession )
-    ,alpha = 0.3
-    ,outlier.colour = "grey"
-    ) +
-  guides(
-    fill = guide_legend( reverse = T )
-    ) +
-  scale_fill_discrete( labels = function(x) str_wrap( x, width = 10 ) ) +
-  geom_text(
-    data = sumstat_plot_data
-    ,aes( x = test_position, y = `AfC band`, group = Profession )
-    ,label = round( sumstat_plot_data$class_median, 2 )
-    ,size = 3
-    ,position = position_dodge( width = 0.9 )
-    ,hjust = 0
-  ) +
-  annotate( "text", x = 1.1, y = 8.8, label = "Median", hjust = 1 ) +
-  scale_x_continuous(
-    limits = c( 0, 1.1 )
-    ,breaks = c( 0, 0.25, 0.5, 0.75, 1.0 )
-  ) +
-  scale_y_discrete(
-    expand = expansion(add = c(0, 1.3))
-  ) +
-  labs(
-    title =
-      stringr::str_wrap(
-        paste0(
-          "Distribution of stability index for the 5 largest* professions"
-          ," in 2025, stratified by Agenda - for - Change (AfC) pay band."
-        )
-        ,55
-      )
-    ,subtitle =
-      paste0(
-        "\u2022 Median stablity index is shown in the right-side column."
-        ,"\n\u2022 The 5 largest professions are:"
-      )
-    ,caption =
-      stringr::str_wrap(
-        paste0(  
-          "*Size of profession was determined as the count of that staff role"
-          ," at the start of the year."
-          )
-        ,100
-        )
-  ) +
-  theme_minimal() +
-  theme(
-    axis.title.y = element_blank()
-    ,axis.text = element_text( size = 10 )
-    ,plot.title = element_text( size = 20 )
-    ,plot.subtitle = element_text( size = 15, face = "italic" )
-    ,plot.caption = element_text( hjust = 0, face = "italic" )
-    ,legend.position = "top"
-    ,legend.title = element_blank()
-  )
-
-# Save plot.
-ggsave(
-  plot = p
-  ,filename =
-    paste0(
-      "Plots/Paper 1/plot__distribution_of_si_stratified_by_payband__top5.png"
-    )
-  ,dpi = 300
-  ,width = 17
-  ,height = 22
-  ,units = "cm"
-)
-# ----
-
-############################################################################
-## Plot of stability index for the five largest professions by agea band. ##
-############################################################################
+###########################################################################
+## Plot of stability index for the five largest professions by age band. ##
+###########################################################################
 # A Tukey-style boxplot that shows stability-index values across age bands,
 # using data from the five largest professions, only. Delimit to the year
 # ending 2025.
@@ -625,17 +513,16 @@ plot_data <-
   dplyr::select( `Care setting`, `Age band`, `Stability index` ) %>%
   dplyr::rename( Profession = `Care setting` )
 
+
 sumstat_plot_data <-
   plot_data %>%
   dplyr::reframe(
     class_median = median( `Stability index`, na.rm = TRUE )
     ,class_min = min( `Stability index`, na.rm = TRUE )
     ,class_max = max( `Stability index`, na.rm = TRUE )
-    ,test_position = 1.05
     ,.by = c( Profession, `Age band` )
   )
 
-# Make plot.
 p <- 
   plot_data %>%
   ggplot(
@@ -643,31 +530,33 @@ p <-
       x = `Stability index`
       ,y = `Age band`
     ) ) +
+  geom_point(
+    position = position_jitter( height = 0.1 )
+    ,alpha = 0.2
+    ,colour = "grey"
+  ) +
   geom_boxplot(
-    aes( fill = Profession )
+    fill = "grey"
     ,alpha = 0.3
+    ,width = 0.2
     ,outlier.colour = "grey"
   ) +
-  guides(
-    fill = guide_legend( reverse = T )
+  geom_point(
+    data = sumstat_plot_data
+    ,aes( x = class_median, y = `Age band` )
+    ,colour = "coral"
+    ,size = 5
   ) +
-  scale_fill_discrete( labels = function(x) str_wrap( x, width = 10 ) ) +
   geom_text(
     data = sumstat_plot_data
-    ,aes( x = test_position, y = `Age band`, group = Profession )
+    ,aes( x = class_median, y = `Age band` )
     ,label = round( sumstat_plot_data$class_median, 2 )
-    ,size = 3
-    ,position = position_dodge( width = 0.9 )
-    ,hjust = 0
+    ,colour = "coral"
+    ,size = 5
+    ,vjust = -1
   ) +
-  annotate( "text", x = 1.1, y = 6.7, label = "Median", hjust = 1 ) +
-  scale_x_continuous(
-    limits = c( 0, 1.1 )
-    ,breaks = c( 0, 0.25, 0.5, 0.75, 1.0 )
-  ) +
-  scale_y_discrete(
-    expand = expansion(add = c(0, 1.3))
-  ) +
+  xlim( 0, 1 ) +
+  facet_wrap( ~Profession, labeller = label_wrap_gen( 20 ) ) +
   labs(
     title =
       stringr::str_wrap(
@@ -676,11 +565,6 @@ p <-
           ," in 2025, stratified by age band."
         )
         ,55
-      )
-    ,subtitle =
-      paste0(
-        "\u2022 Median stablity index is shown in the right-side column."
-        ,"\n\u2022 The 5 largest professions are:"
       )
     ,caption =
       stringr::str_wrap(
@@ -696,12 +580,10 @@ p <-
     axis.title.y = element_blank()
     ,axis.text = element_text( size = 10 )
     ,plot.title = element_text( size = 20 )
-    ,plot.subtitle = element_text( size = 15, face = "italic" )
     ,plot.caption = element_text( hjust = 0, face = "italic" )
-    ,legend.position = "top"
-    ,legend.title = element_blank()
+    ,strip.text.x = element_text( size = 15 )
   )
-
+  
 # Save plot.
 ggsave(
   plot = p
@@ -710,10 +592,121 @@ ggsave(
       "Plots/Paper 1/plot__distribution_of_si_stratified_by_age__top5.png"
     )
   ,dpi = 300
-  ,width = 17
-  ,height = 22
+  ,width = 20
+  ,height = 20
   ,units = "cm"
 )
+# ----  
 
+
+###########################################################################
+## Plot of stability index for the five largest professions by pay band. ##
+###########################################################################
+# A Tukey-style boxplot that shows stability-index values across pay bands,
+# using data from the five largest professions, only. Delimit to the year
+# ending 2025.
 # ----
-  
+
+# Make plot data.
+plot_data <-
+  df_churn_within_NHS_Grade %>% 
+  dplyr::filter(
+    # Remove pay-bands that are not of interest.
+    !`AfC band` %in% c( 'All AfC bands', 'Non AfC band', 'Band 4' )
+    # Only use data for the non-specialist acute Trusts.
+    ,`Cluster group` == "Acute"
+    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+    # Remove SI = 0%.
+    ,!`Stability index` %in% c(0)
+    # Select year of interest
+    ,year_end %in% year_of_interest
+    # Select professions of interest
+    ,`Care setting` %in% professions_of_interest
+  ) %>%
+  dplyr::select( `Care setting`, `AfC band`, `Stability index` ) %>%
+  dplyr::rename( Profession = `Care setting` )
+
+
+sumstat_plot_data <-
+  plot_data %>%
+  dplyr::reframe(
+    class_median = median( `Stability index`, na.rm = TRUE )
+    ,class_min = min( `Stability index`, na.rm = TRUE )
+    ,class_max = max( `Stability index`, na.rm = TRUE )
+    ,.by = c( Profession, `AfC band` )
+  )
+
+p <- 
+  plot_data %>%
+  ggplot(
+    aes(
+      x = `Stability index`
+      ,y = `AfC band`
+    ) ) +
+  geom_point(
+    position = position_jitter( height = 0.1 )
+    ,alpha = 0.2
+    ,colour = "grey"
+  ) +
+  geom_boxplot(
+    fill = "grey"
+    ,alpha = 0.3
+    ,width = 0.2
+    ,outlier.colour = "grey"
+    ) +
+  geom_point(
+    data = sumstat_plot_data
+    ,aes( x = class_median, y = `AfC band` )
+    ,colour = "coral"
+    ,size = 4
+  ) +
+  geom_text(
+    data = sumstat_plot_data
+    ,aes( x = class_median, y = `AfC band` )
+    ,label = round( sumstat_plot_data$class_median, 2 )
+    ,colour = "coral"
+    ,size = 4
+    ,vjust = -1
+  ) +
+  xlim( 0, 1 ) +
+  facet_wrap( ~Profession, labeller = label_wrap_gen( 20 ) ) +
+  labs(
+    title =
+      stringr::str_wrap(
+        paste0(
+          "Distribution of stability index for the 5 largest* professions"
+          ," in 2025, stratified by Agenda-for-Change (AfC) pay band."
+        )
+        ,55
+      )
+    ,caption =
+      stringr::str_wrap(
+        paste0(  
+          "*Size of profession was determined as the count of that staff role"
+          ," at the start of the year."
+        )
+        ,100
+      )
+  ) +
+  theme_minimal() +
+  theme(
+    axis.title.y = element_blank()
+    ,axis.text = element_text( size = 10 )
+    ,plot.title = element_text( size = 20 )
+    ,plot.caption = element_text( hjust = 0, face = "italic" )
+    ,strip.text.x = element_text( size = 15 )
+  )
+
+# Save plot.
+ggsave(
+  plot = p
+  ,filename =
+    paste0(
+      "Plots/Paper 1/plot__distribution_of_si_stratified_by_pay__top5.png"
+    )
+  ,dpi = 300
+  ,width = 20
+  ,height = 20
+  ,units = "cm"
+)
+# ----  
