@@ -1,0 +1,265 @@
+"","Care setting","year","Age_band","min","median","mean","max"
+"1","Art / Music / Dramatherapy","March '22 to March '23","25 to 34",0.333333333333333,1,0.844197224344283,1
+"2","Art / Music / Dramatherapy","March '22 to March '23","35 to 44",0.25,1,0.844605943152455,1
+"3","Art / Music / Dramatherapy","March '22 to March '23","45 to 54",0.5,1,0.927023009651789,1
+"4","Art / Music / Dramatherapy","March '22 to March '23","55 to 64",0.4,1,0.936715997181113,1
+"5","Art / Music / Dramatherapy","March '22 to March '23","65 and over",0.333333333333333,1,0.829166666666667,1
+"6","Art / Music / Dramatherapy","March '22 to March '23","Under 25",1,1,1,1
+"7","Art / Music / Dramatherapy","March '23 to March '24","25 to 34",0.333333333333333,1,0.855479242979243,1
+"8","Art / Music / Dramatherapy","March '23 to March '24","35 to 44",0.5,1,0.872222222222222,1
+"9","Art / Music / Dramatherapy","March '23 to March '24","45 to 54",0.5,1,0.922067196443795,1
+"10","Art / Music / Dramatherapy","March '23 to March '24","55 to 64",0.333333333333333,1,0.921804782519068,1
+"11","Art / Music / Dramatherapy","March '23 to March '24","65 and over",0.666666666666667,1,0.92948717948718,1
+"12","Art / Music / Dramatherapy","March '23 to March '24","Under 25",1,1,1,1
+"13","Art / Music / Dramatherapy","March '24 to March '25","25 to 34",0.333333333333333,1,0.876720991426874,1
+"14","Art / Music / Dramatherapy","March '24 to March '25","35 to 44",0.333333333333333,0.8875,0.832923081513307,1
+"15","Art / Music / Dramatherapy","March '24 to March '25","45 to 54",0.5,1,0.955932423651722,1
+"16","Art / Music / Dramatherapy","March '24 to March '25","55 to 64",0.666666666666667,1,0.952083333333333,1
+"17","Art / Music / Dramatherapy","March '24 to March '25","65 and over",0.5,1,0.966666666666667,1
+"18","Art / Music / Dramatherapy","March '24 to March '25","Under 25",Inf,NA,NA,-Inf
+"19","Chiropody / Podiatry","March '22 to March '23","25 to 34",0.25,0.773504273504273,0.776987984678602,1
+"20","Chiropody / Podiatry","March '22 to March '23","35 to 44",0.5,0.933333333333333,0.884980342118836,1
+"21","Chiropody / Podiatry","March '22 to March '23","45 to 54",0.5,1,0.941647028863415,1
+"22","Chiropody / Podiatry","March '22 to March '23","55 to 64",0.5,0.924285714285714,0.872129868377237,1
+"23","Chiropody / Podiatry","March '22 to March '23","65 and over",0.333333333333333,1,0.867424242424242,1
+"24","Chiropody / Podiatry","March '22 to March '23","Under 25",0.25,1,0.79936974789916,1
+"25","Chiropody / Podiatry","March '23 to March '24","25 to 34",0.25,0.8,0.811262711963071,1
+"26","Chiropody / Podiatry","March '23 to March '24","35 to 44",0.5,0.916666666666667,0.892645074405761,1
+"27","Chiropody / Podiatry","March '23 to March '24","45 to 54",0.5,1,0.942751556231731,1
+"28","Chiropody / Podiatry","March '23 to March '24","55 to 64",0.4,1,0.91667384468594,1
+"29","Chiropody / Podiatry","March '23 to March '24","65 and over",0.5,1,0.928571428571429,1
+"30","Chiropody / Podiatry","March '23 to March '24","Under 25",0.333333333333333,1,0.886231884057971,1
+"31","Chiropody / Podiatry","March '24 to March '25","25 to 34",0.333333333333333,0.881944444444444,0.824445789586385,1
+"32","Chiropody / Podiatry","March '24 to March '25","35 to 44",0.333333333333333,1,0.910438145791407,1
+"33","Chiropody / Podiatry","March '24 to March '25","45 to 54",0.416666666666667,1,0.924498582908259,1
+"34","Chiropody / Podiatry","March '24 to March '25","55 to 64",0.5,1,0.921352199056679,1
+"35","Chiropody / Podiatry","March '24 to March '25","65 and over",0.25,1,0.78968253968254,1
+"36","Chiropody / Podiatry","March '24 to March '25","Under 25",0.333333333333333,1,0.920068027210884,1
+"37","Dietetics","March '22 to March '23","25 to 34",0.285714285714286,0.75,0.736765244426286,1
+"38","Dietetics","March '22 to March '23","35 to 44",0.333333333333333,0.88,0.856962663427698,1
+"39","Dietetics","March '22 to March '23","45 to 54",0.25,1,0.91347020107622,1
+"40","Dietetics","March '22 to March '23","55 to 64",0.25,1,0.882594870177652,1
+"41","Dietetics","March '22 to March '23","65 and over",0.5,1,0.9375,1
+"42","Dietetics","March '22 to March '23","Under 25",0.25,1,0.814522247511938,1
+"43","Dietetics","March '23 to March '24","25 to 34",0.25,0.75,0.728965151716273,1
+"44","Dietetics","March '23 to March '24","35 to 44",0.25,0.866666666666667,0.851678485107741,1
+"45","Dietetics","March '23 to March '24","45 to 54",0.333333333333333,1,0.941208156212109,1
+"46","Dietetics","March '23 to March '24","55 to 64",0.333333333333333,1,0.915220461596173,1
+"47","Dietetics","March '23 to March '24","65 and over",0.5,1,0.981481481481482,1
+"48","Dietetics","March '23 to March '24","Under 25",0.2,1,0.832056913674561,1
+"49","Dietetics","March '24 to March '25","25 to 34",0.25,0.75,0.744127318293389,1
+"50","Dietetics","March '24 to March '25","35 to 44",0.333333333333333,0.909090909090909,0.879559813051476,1
+"51","Dietetics","March '24 to March '25","45 to 54",0.5,1,0.934600538764293,1
+"52","Dietetics","March '24 to March '25","55 to 64",0.25,1,0.889008751105525,1
+"53","Dietetics","March '24 to March '25","65 and over",0.5,1,0.946428571428571,1
+"54","Dietetics","March '24 to March '25","Under 25",0.333333333333333,1,0.814465214736954,1
+"55","Education","March '22 to March '23","25 to 34",0.688888888888889,1,0.952525252525253,1
+"56","Education","March '22 to March '23","35 to 44",0.892857142857143,1,0.981168831168831,1
+"57","Education","March '22 to March '23","45 to 54",0.666666666666667,1,0.965925844021819,1
+"58","Education","March '22 to March '23","55 to 64",0.5,1,0.88125,1
+"59","Education","March '22 to March '23","65 and over",1,1,1,1
+"60","Education","March '22 to March '23","Under 25",1,1,1,1
+"61","Education","March '23 to March '24","25 to 34",0.897435897435897,1,0.983553483553484,1
+"62","Education","March '23 to March '24","35 to 44",0.875,1,0.97662037037037,1
+"63","Education","March '23 to March '24","45 to 54",0.928571428571429,1,0.996031746031746,1
+"64","Education","March '23 to March '24","55 to 64",0.666666666666667,1,0.952380952380952,1
+"65","Education","March '23 to March '24","65 and over",1,1,1,1
+"66","Education","March '23 to March '24","Under 25",1,1,1,1
+"67","Education","March '24 to March '25","25 to 34",0.8,1,0.943632075471698,1
+"68","Education","March '24 to March '25","35 to 44",0.666666666666667,1,0.95954415954416,1
+"69","Education","March '24 to March '25","45 to 54",0.884615384615385,1,0.994230769230769,1
+"70","Education","March '24 to March '25","55 to 64",0.8,1,0.96,1
+"71","Education","March '24 to March '25","65 and over",1,1,1,1
+"72","Education","March '24 to March '25","Under 25",1,1,1,1
+"73","Hazardous Area Response Team","March '22 to March '23","25 to 34",0.9,1,0.968095238095238,1
+"74","Hazardous Area Response Team","March '22 to March '23","35 to 44",0.870967741935484,0.956521739130435,0.954399851754625,1
+"75","Hazardous Area Response Team","March '22 to March '23","45 to 54",0.4,1,0.88939883645766,1
+"76","Hazardous Area Response Team","March '22 to March '23","55 to 64",0.714285714285714,0.875,0.858908948194662,1
+"77","Hazardous Area Response Team","March '22 to March '23","65 and over",Inf,NA,NA,-Inf
+"78","Hazardous Area Response Team","March '23 to March '24","25 to 34",0.625,0.903225806451613,0.879703669486228,1
+"79","Hazardous Area Response Team","March '23 to March '24","35 to 44",0.84375,0.923076923076923,0.924273498609606,1
+"80","Hazardous Area Response Team","March '23 to March '24","45 to 54",0.961538461538462,1,0.994505494505495,1
+"81","Hazardous Area Response Team","March '23 to March '24","55 to 64",0.75,1,0.906593406593407,1
+"82","Hazardous Area Response Team","March '23 to March '24","Under 25",Inf,NA,NA,-Inf
+"83","Hazardous Area Response Team","March '24 to March '25","25 to 34",0.857142857142857,0.947368421052632,0.943713015011952,1
+"84","Hazardous Area Response Team","March '24 to March '25","35 to 44",0.838709677419355,0.961538461538462,0.951693611687851,1
+"85","Hazardous Area Response Team","March '24 to March '25","45 to 54",0.941176470588235,1,0.982753101240496,1
+"86","Hazardous Area Response Team","March '24 to March '25","55 to 64",0.857142857142857,1,0.955357142857143,1
+"87","Hazardous Area Response Team","March '24 to March '25","Under 25",1,1,1,1
+"88","Occupational Therapy","March '22 to March '23","25 to 34",0.363636363636364,0.722068965517241,0.717819205651056,1
+"89","Occupational Therapy","March '22 to March '23","35 to 44",0.333333333333333,0.84,0.828755954809878,1
+"90","Occupational Therapy","March '22 to March '23","45 to 54",0.5,0.9,0.898242748359918,1
+"91","Occupational Therapy","March '22 to March '23","55 to 64",0.25,0.875,0.861519000385094,1
+"92","Occupational Therapy","March '22 to March '23","65 and over",0.333333333333333,1,0.897435897435897,1
+"93","Occupational Therapy","March '22 to March '23","Under 25",0.25,0.75,0.763570344976054,1
+"94","Occupational Therapy","March '23 to March '24","25 to 34",0.285714285714286,0.75,0.742046874969774,1
+"95","Occupational Therapy","March '23 to March '24","35 to 44",0.333333333333333,0.868421052631579,0.84788265460254,1
+"96","Occupational Therapy","March '23 to March '24","45 to 54",0.25,0.923076923076923,0.904702269322326,1
+"97","Occupational Therapy","March '23 to March '24","55 to 64",0.2,0.909090909090909,0.878710550173424,1
+"98","Occupational Therapy","March '23 to March '24","65 and over",0.333333333333333,1,0.869345238095238,1
+"99","Occupational Therapy","March '23 to March '24","Under 25",0.2,0.818181818181818,0.802781685769851,1
+"100","Occupational Therapy","March '24 to March '25","25 to 34",0.333333333333333,0.764705882352941,0.753292755947674,1
+"101","Occupational Therapy","March '24 to March '25","35 to 44",0.5,0.888888888888889,0.878094926878053,1
+"102","Occupational Therapy","March '24 to March '25","45 to 54",0.25,0.933333333333333,0.91460372169321,1
+"103","Occupational Therapy","March '24 to March '25","55 to 64",0.5,0.898717948717949,0.886081266712078,1
+"104","Occupational Therapy","March '24 to March '25","65 and over",0.333333333333333,1,0.916949152542373,1
+"105","Occupational Therapy","March '24 to March '25","Under 25",0.2,0.8,0.803604560788355,1
+"106","Operating Theatres","March '22 to March '23","25 to 34",0.4,0.833333333333333,0.820458481457952,1
+"107","Operating Theatres","March '22 to March '23","35 to 44",0.5,0.894736842105263,0.887457798301039,1
+"108","Operating Theatres","March '22 to March '23","45 to 54",0.333333333333333,0.932183908045977,0.916788974053423,1
+"109","Operating Theatres","March '22 to March '23","55 to 64",0.5,0.916666666666667,0.896588647149311,1
+"110","Operating Theatres","March '22 to March '23","65 and over",0.2,1,0.861904761904762,1
+"111","Operating Theatres","March '22 to March '23","Under 25",0.5,1,0.869615299473254,1
+"112","Operating Theatres","March '23 to March '24","25 to 34",0.5,0.857142857142857,0.831360603467882,1
+"113","Operating Theatres","March '23 to March '24","35 to 44",0.5,0.92530657748049,0.905390205003548,1
+"114","Operating Theatres","March '23 to March '24","45 to 54",0.6,0.973251748251748,0.944523262426946,1
+"115","Operating Theatres","March '23 to March '24","55 to 64",0.5,1,0.917814902293164,1
+"116","Operating Theatres","March '23 to March '24","65 and over",0.333333333333333,1,0.873333333333333,1
+"117","Operating Theatres","March '23 to March '24","Under 25",0.5,1,0.882619528619529,1
+"118","Operating Theatres","March '24 to March '25","25 to 34",0.333333333333333,0.8775,0.849653504017884,1
+"119","Operating Theatres","March '24 to March '25","35 to 44",0.5,0.944444444444444,0.918918830314973,1
+"120","Operating Theatres","March '24 to March '25","45 to 54",0.5,1,0.955153003370557,1
+"121","Operating Theatres","March '24 to March '25","55 to 64",0.333333333333333,0.95,0.921710279977237,1
+"122","Operating Theatres","March '24 to March '25","65 and over",0.25,1,0.833963585434174,1
+"123","Operating Theatres","March '24 to March '25","Under 25",0.333333333333333,1,0.91219963611268,1
+"124","Orthoptics","March '24 to March '25","25 to 34",Inf,NA,NA,-Inf
+"125","Orthoptics","March '24 to March '25","35 to 44",Inf,NA,NA,-Inf
+"126","Orthoptics","March '24 to March '25","45 to 54",Inf,NA,NA,-Inf
+"127","Orthoptics","March '24 to March '25","55 to 64",Inf,NA,NA,-Inf
+"128","Orthoptics","March '24 to March '25","65 and over",Inf,NA,NA,-Inf
+"129","Orthoptics","March '24 to March '25","Under 25",Inf,NA,NA,-Inf
+"130","Orthoptics / Optics","March '22 to March '23","25 to 34",0.25,0.8,0.770397155612827,1
+"131","Orthoptics / Optics","March '22 to March '23","35 to 44",0.333333333333333,1,0.915347831440268,1
+"132","Orthoptics / Optics","March '22 to March '23","45 to 54",0.5,1,0.939599142687378,1
+"133","Orthoptics / Optics","March '22 to March '23","55 to 64",0.5,1,0.945265972417675,1
+"134","Orthoptics / Optics","March '22 to March '23","65 and over",0.5,1,0.974358974358974,1
+"135","Orthoptics / Optics","March '22 to March '23","Under 25",0.166666666666667,1,0.842755681818182,1
+"136","Orthoptics / Optics","March '23 to March '24","25 to 34",0.25,0.833333333333333,0.789990205149191,1
+"137","Orthoptics / Optics","March '23 to March '24","35 to 44",0.333333333333333,1,0.895203305497423,1
+"138","Orthoptics / Optics","March '23 to March '24","45 to 54",0.2,1,0.947152439064204,1
+"139","Orthoptics / Optics","March '23 to March '24","55 to 64",0.333333333333333,1,0.921592210767469,1
+"140","Orthoptics / Optics","March '23 to March '24","65 and over",0.5,1,0.955747126436782,1
+"141","Orthoptics / Optics","March '23 to March '24","Under 25",0.25,1,0.834240362811791,1
+"142","Orthoptics / Optics","March '24 to March '25","25 to 34",0.333333333333333,0.833333333333333,0.803511720754737,1
+"143","Orthoptics / Optics","March '24 to March '25","35 to 44",0.4,1,0.910279233354283,1
+"144","Orthoptics / Optics","March '24 to March '25","45 to 54",0.5,1,0.958417277167277,1
+"145","Orthoptics / Optics","March '24 to March '25","55 to 64",0.333333333333333,1,0.865781760271892,1
+"146","Orthoptics / Optics","March '24 to March '25","65 and over",0.5,1,0.950980392156863,1
+"147","Orthoptics / Optics","March '24 to March '25","Under 25",0.25,1,0.885802469135803,1
+"148","Osteopathy","March '22 to March '23","25 to 34",1,1,1,1
+"149","Osteopathy","March '22 to March '23","35 to 44",1,1,1,1
+"150","Osteopathy","March '22 to March '23","45 to 54",1,1,1,1
+"151","Osteopathy","March '22 to March '23","55 to 64",1,1,1,1
+"152","Osteopathy","March '22 to March '23","Under 25",Inf,NA,NA,-Inf
+"153","Osteopathy","March '23 to March '24","25 to 34",0.75,1,0.95,1
+"154","Osteopathy","March '23 to March '24","35 to 44",0.75,1,0.95,1
+"155","Osteopathy","March '23 to March '24","45 to 54",0.666666666666667,0.833333333333333,0.833333333333333,1
+"156","Osteopathy","March '23 to March '24","55 to 64",1,1,1,1
+"157","Osteopathy","March '23 to March '24","65 and over",Inf,NA,NA,-Inf
+"158","Osteopathy","March '23 to March '24","Under 25",1,1,1,1
+"159","Osteopathy","March '24 to March '25","25 to 34",0.5,1,0.82,1
+"160","Osteopathy","March '24 to March '25","35 to 44",0.5,1,0.833333333333333,1
+"161","Osteopathy","March '24 to March '25","45 to 54",1,1,1,1
+"162","Osteopathy","March '24 to March '25","55 to 64",1,1,1,1
+"163","Patient Transport Service","March '22 to March '23","25 to 34",0.777777777777778,0.777777777777778,0.777777777777778,0.777777777777778
+"164","Patient Transport Service","March '22 to March '23","35 to 44",1,1,1,1
+"165","Patient Transport Service","March '22 to March '23","45 to 54",Inf,NA,NA,-Inf
+"166","Patient Transport Service","March '22 to March '23","55 to 64",Inf,NA,NA,-Inf
+"167","Patient Transport Service","March '22 to March '23","Under 25",1,1,1,1
+"168","Patient Transport Service","March '23 to March '24","25 to 34",0.5,0.65,0.65,0.8
+"169","Patient Transport Service","March '23 to March '24","35 to 44",0.25,1,0.75,1
+"170","Patient Transport Service","March '23 to March '24","45 to 54",0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667
+"171","Patient Transport Service","March '23 to March '24","55 to 64",1,1,1,1
+"172","Patient Transport Service","March '24 to March '25","25 to 34",0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667
+"173","Patient Transport Service","March '24 to March '25","35 to 44",1,1,1,1
+"174","Patient Transport Service","March '24 to March '25","45 to 54",1,1,1,1
+"175","Patient Transport Service","March '24 to March '25","55 to 64",0.6,0.6,0.6,0.6
+"176","Physiotherapy","March '22 to March '23","25 to 34",0.333333333333333,0.735849056603774,0.731295529618482,1
+"177","Physiotherapy","March '22 to March '23","35 to 44",0.4,0.869126043039087,0.862098373466479,1
+"178","Physiotherapy","March '22 to March '23","45 to 54",0.333333333333333,0.941176470588235,0.923562968317967,1
+"179","Physiotherapy","March '22 to March '23","55 to 64",0.375,0.857142857142857,0.850267120966829,1
+"180","Physiotherapy","March '22 to March '23","65 and over",0.5,1,0.924882629107981,1
+"181","Physiotherapy","March '22 to March '23","Under 25",0.166666666666667,0.705882352941176,0.712079805090504,1
+"182","Physiotherapy","March '23 to March '24","25 to 34",0.285714285714286,0.777777777777778,0.770878090570993,1
+"183","Physiotherapy","March '23 to March '24","35 to 44",0.0370370370370371,0.9,0.885179220470094,1
+"184","Physiotherapy","March '23 to March '24","45 to 54",0.0454545454545454,0.955555555555556,0.93125756853003,1
+"185","Physiotherapy","March '23 to March '24","55 to 64",0.5,0.923076923076923,0.890417487129064,1
+"186","Physiotherapy","March '23 to March '24","65 and over",0.5,1,0.909722222222222,1
+"187","Physiotherapy","March '23 to March '24","Under 25",0.333333333333333,0.75,0.75038999102687,1
+"188","Physiotherapy","March '24 to March '25","25 to 34",0.166666666666667,0.785714285714286,0.781663790670575,1
+"189","Physiotherapy","March '24 to March '25","35 to 44",0.0454545454545454,0.907407407407407,0.886565160595721,1
+"190","Physiotherapy","March '24 to March '25","45 to 54",0.15,0.952934662236988,0.929887757488204,1
+"191","Physiotherapy","March '24 to March '25","55 to 64",0.142857142857143,0.916666666666667,0.884136899572207,1
+"192","Physiotherapy","March '24 to March '25","65 and over",0.333333333333333,1,0.893018018018018,1
+"193","Physiotherapy","March '24 to March '25","Under 25",0.2,0.789473684210526,0.783834188375244,1
+"194","Prosthetics and Orthotics","March '22 to March '23","25 to 34",0.428571428571429,0.733333333333333,0.769047619047619,1
+"195","Prosthetics and Orthotics","March '22 to March '23","35 to 44",0.5,1,0.938988095238095,1
+"196","Prosthetics and Orthotics","March '22 to March '23","45 to 54",1,1,1,1
+"197","Prosthetics and Orthotics","March '22 to March '23","55 to 64",0.5,1,0.95,1
+"198","Prosthetics and Orthotics","March '22 to March '23","Under 25",1,1,1,1
+"199","Prosthetics and Orthotics","March '23 to March '24","25 to 34",0.5,0.916666666666667,0.863333333333333,1
+"200","Prosthetics and Orthotics","March '23 to March '24","35 to 44",0.666666666666667,1,0.980392156862745,1
+"201","Prosthetics and Orthotics","March '23 to March '24","45 to 54",0.666666666666667,1,0.928571428571429,1
+"202","Prosthetics and Orthotics","March '23 to March '24","55 to 64",1,1,1,1
+"203","Prosthetics and Orthotics","March '23 to March '24","65 and over",1,1,1,1
+"204","Prosthetics and Orthotics","March '23 to March '24","Under 25",1,1,1,1
+"205","Prosthetics and Orthotics","March '24 to March '25","25 to 34",0.4,1,0.876315789473684,1
+"206","Prosthetics and Orthotics","March '24 to March '25","35 to 44",0.5,1,0.948412698412698,1
+"207","Prosthetics and Orthotics","March '24 to March '25","45 to 54",0.916666666666667,1,0.995833333333333,1
+"208","Prosthetics and Orthotics","March '24 to March '25","55 to 64",0.5,1,0.966666666666667,1
+"209","Prosthetics and Orthotics","March '24 to March '25","65 and over",1,1,1,1
+"210","Prosthetics and Orthotics","March '24 to March '25","Under 25",0.75,1,0.958333333333333,1
+"211","Radiography (diagnostic)","March '22 to March '23","25 to 34",0.4,0.818181818181818,0.813285850998782,1
+"212","Radiography (diagnostic)","March '22 to March '23","35 to 44",0.615384615384615,0.886931818181818,0.887763476882116,1
+"213","Radiography (diagnostic)","March '22 to March '23","45 to 54",0.714285714285714,0.941176470588235,0.931041214525735,1
+"214","Radiography (diagnostic)","March '22 to March '23","55 to 64",0.333333333333333,0.882352941176471,0.873333759149185,1
+"215","Radiography (diagnostic)","March '22 to March '23","65 and over",0.25,0.8,0.798019079685746,1
+"216","Radiography (diagnostic)","March '22 to March '23","Under 25",0.25,0.833333333333333,0.81558566416744,1
+"217","Radiography (diagnostic)","March '23 to March '24","25 to 34",0.5,0.84377990430622,0.828931335489335,1
+"218","Radiography (diagnostic)","March '23 to March '24","35 to 44",0.5,0.911695906432749,0.898871013102208,1
+"219","Radiography (diagnostic)","March '23 to March '24","45 to 54",0.625,0.952380952380952,0.938815690522064,1
+"220","Radiography (diagnostic)","March '23 to March '24","55 to 64",0.333333333333333,0.930952380952381,0.905221886745006,1
+"221","Radiography (diagnostic)","March '23 to March '24","65 and over",0.25,0.944444444444444,0.811800144300144,1
+"222","Radiography (diagnostic)","March '23 to March '24","Under 25",0.5,0.875,0.86251103502902,1
+"223","Radiography (diagnostic)","March '24 to March '25","25 to 34",0.416666666666667,0.846153846153846,0.842197134935568,1
+"224","Radiography (diagnostic)","March '24 to March '25","35 to 44",0.625,0.918918918918919,0.909980963450587,1
+"225","Radiography (diagnostic)","March '24 to March '25","45 to 54",0.5,0.954545454545455,0.942795424156533,1
+"226","Radiography (diagnostic)","March '24 to March '25","55 to 64",0.5,0.909090909090909,0.900957151901537,1
+"227","Radiography (diagnostic)","March '24 to March '25","65 and over",0.333333333333333,1,0.86774600803727,1
+"228","Radiography (diagnostic)","March '24 to March '25","Under 25",0.333333333333333,0.909090909090909,0.888924717432045,1
+"229","Radiography (therapeutic)","March '22 to March '23","25 to 34",0.5,0.791795665634675,0.79104767530954,1
+"230","Radiography (therapeutic)","March '22 to March '23","35 to 44",0.666666666666667,0.916666666666667,0.917474488037266,1
+"231","Radiography (therapeutic)","March '22 to March '23","45 to 54",0.75,1,0.96777866311535,1
+"232","Radiography (therapeutic)","March '22 to March '23","55 to 64",0.6,1,0.92757077991453,1
+"233","Radiography (therapeutic)","March '22 to March '23","65 and over",0.5,1,0.90625,1
+"234","Radiography (therapeutic)","March '22 to March '23","Under 25",0.4,0.83974358974359,0.814305783375476,1
+"235","Radiography (therapeutic)","March '23 to March '24","25 to 34",0.571428571428571,0.833333333333333,0.834958777150527,1
+"236","Radiography (therapeutic)","March '23 to March '24","35 to 44",0.666666666666667,0.927272727272727,0.925530374205991,1
+"237","Radiography (therapeutic)","March '23 to March '24","45 to 54",0.714285714285714,1,0.960602817348246,1
+"238","Radiography (therapeutic)","March '23 to March '24","55 to 64",0.5,1,0.903222191520064,1
+"239","Radiography (therapeutic)","March '23 to March '24","65 and over",0.25,1,0.895833333333333,1
+"240","Radiography (therapeutic)","March '23 to March '24","Under 25",0.555555555555556,0.857142857142857,0.853196608946609,1
+"241","Radiography (therapeutic)","March '24 to March '25","25 to 34",0.647058823529412,0.828947368421053,0.81975471825974,1
+"242","Radiography (therapeutic)","March '24 to March '25","35 to 44",0.8,0.942434210526316,0.943809959556367,1
+"243","Radiography (therapeutic)","March '24 to March '25","45 to 54",0.5,1,0.95161791208613,1
+"244","Radiography (therapeutic)","March '24 to March '25","55 to 64",0.578947368421053,1,0.901197707356722,1
+"245","Radiography (therapeutic)","March '24 to March '25","65 and over",0.5,1,0.964285714285714,1
+"246","Radiography (therapeutic)","March '24 to March '25","Under 25",0.333333333333333,0.8,0.788184161544472,1
+"247","Speech & Language Therapy","March '22 to March '23","25 to 34",0.0909090909090909,0.75,0.736300490979487,1
+"248","Speech & Language Therapy","March '22 to March '23","35 to 44",0.333333333333333,0.875,0.854930024888661,1
+"249","Speech & Language Therapy","March '22 to March '23","45 to 54",0.5,1,0.924233557027287,1
+"250","Speech & Language Therapy","March '22 to March '23","55 to 64",0.25,0.947368421052632,0.864427346498565,1
+"251","Speech & Language Therapy","March '22 to March '23","65 and over",0.5,1,0.886666666666667,1
+"252","Speech & Language Therapy","March '22 to March '23","Under 25",0.2,1,0.822222222222222,1
+"253","Speech & Language Therapy","March '23 to March '24","25 to 34",0.142857142857143,0.754310344827586,0.738743559477519,1
+"254","Speech & Language Therapy","March '23 to March '24","35 to 44",0.0625,0.875,0.858996237458321,1
+"255","Speech & Language Therapy","March '23 to March '24","45 to 54",0.133333333333333,1,0.918476056015161,1
+"256","Speech & Language Therapy","March '23 to March '24","55 to 64",0.25,1,0.892008768440994,1
+"257","Speech & Language Therapy","March '23 to March '24","65 and over",0.5,1,0.977272727272727,1
+"258","Speech & Language Therapy","March '23 to March '24","Under 25",0.25,0.833333333333333,0.81677397709345,1
+"259","Speech & Language Therapy","March '24 to March '25","25 to 34",0.25,0.792207792207792,0.786903640230255,1
+"260","Speech & Language Therapy","March '24 to March '25","35 to 44",0.5,0.875,0.870902393511928,1
+"261","Speech & Language Therapy","March '24 to March '25","45 to 54",0.5,0.965856481481482,0.922915682297548,1
+"262","Speech & Language Therapy","March '24 to March '25","55 to 64",0.333333333333333,1,0.892049865900163,1
+"263","Speech & Language Therapy","March '24 to March '25","65 and over",0.5,1,0.92948717948718,1
+"264","Speech & Language Therapy","March '24 to March '25","Under 25",0.333333333333333,1,0.859704513989504,1

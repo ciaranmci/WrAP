@@ -1,0 +1,163 @@
+"","Care setting","RUC21 settlement class","year","min","median","mean","max"
+"1","All care settings","Urban","March '22 to March '23",0.731578947368421,0.835955056179775,0.826956453788237,0.888563049853372
+"2","All care settings","Urban","March '23 to March '24",0.737089201877934,0.860071639275179,0.850923889668031,0.917627677100494
+"3","All care settings","Urban","March '24 to March '25",0.507552870090634,0.86551724137931,0.858961321100817,0.924731182795699
+"4","All care settings","Intermediate urban","March '22 to March '23",0.795698924731183,0.841354723707665,0.832413130652074,0.883899233296824
+"5","All care settings","Intermediate urban","March '23 to March '24",0.831632653061224,0.852873563218391,0.860709514124323,0.90990990990991
+"6","All care settings","Intermediate urban","March '24 to March '25",0.832271762208068,0.880239520958084,0.875936373704116,0.897849462365591
+"7","All care settings","Intermediate rural","March '22 to March '23",0.810035842293907,0.836624528996211,0.837590141227001,0.867075664621677
+"8","All care settings","Intermediate rural","March '23 to March '24",0.834586466165414,0.863516449410304,0.858325195228806,0.871681415929204
+"9","All care settings","Intermediate rural","March '24 to March '25",0.824701195219123,0.853102577730534,0.850787249434754,0.872242647058824
+"10","All care settings","Rural","March '22 to March '23",0.815109343936382,0.865497076023392,0.857394050012217,0.913194444444444
+"11","All care settings","Rural","March '23 to March '24",0.857142857142857,0.884982851543361,0.879056903677794,0.892436974789916
+"12","All care settings","Rural","March '24 to March '25",0.863930885529158,0.883111514508838,0.881918424893582,0.900641025641026
+"13","Art / Music / Dramatherapy","Urban","March '22 to March '23",0.857142857142857,1,0.989010989010989,1
+"14","Art / Music / Dramatherapy","Urban","March '23 to March '24",0.625,1,0.940972222222222,1
+"15","Art / Music / Dramatherapy","Urban","March '24 to March '25",0.5,1,0.9,1
+"16","Art / Music / Dramatherapy","Intermediate rural","March '22 to March '23",1,1,1,1
+"17","Art / Music / Dramatherapy","Intermediate rural","March '23 to March '24",0.727272727272727,0.727272727272727,0.727272727272727,0.727272727272727
+"18","Art / Music / Dramatherapy","Intermediate rural","March '24 to March '25",0.7,0.7,0.7,0.7
+"19","Chiropody / Podiatry","Urban","March '22 to March '23",0.555555555555556,0.875,0.879556533288603,1
+"20","Chiropody / Podiatry","Urban","March '23 to March '24",0.714285714285714,0.916666666666667,0.906124572225532,1
+"21","Chiropody / Podiatry","Urban","March '24 to March '25",0.5,0.903846153846154,0.881752716696467,1
+"22","Chiropody / Podiatry","Intermediate urban","March '22 to March '23",0.785714285714286,0.92741935483871,0.908842165898618,1
+"23","Chiropody / Podiatry","Intermediate urban","March '23 to March '24",0.8,0.842431761786601,0.884732155889651,1
+"24","Chiropody / Podiatry","Intermediate urban","March '24 to March '25",0.777777777777778,0.911184210526316,0.897643414090783,1
+"25","Chiropody / Podiatry","Intermediate rural","March '22 to March '23",0.777777777777778,1,0.944444444444444,1
+"26","Chiropody / Podiatry","Intermediate rural","March '23 to March '24",0.851851851851852,1,0.962962962962963,1
+"27","Chiropody / Podiatry","Intermediate rural","March '24 to March '25",0.793103448275862,1,0.948275862068966,1
+"28","Chiropody / Podiatry","Rural","March '22 to March '23",0.727272727272727,0.857142857142857,0.861471861471861,1
+"29","Chiropody / Podiatry","Rural","March '23 to March '24",0.833333333333333,0.858552631578947,0.887609649122807,1
+"30","Chiropody / Podiatry","Rural","March '24 to March '25",0.863636363636364,1,0.956439393939394,1
+"31","Dietetics","Urban","March '22 to March '23",0.333333333333333,0.8,0.791572675382727,1
+"32","Dietetics","Urban","March '23 to March '24",0.5,0.818181818181818,0.808991020643868,1
+"33","Dietetics","Urban","March '24 to March '25",0.1,0.835294117647059,0.818490097467489,1
+"34","Dietetics","Intermediate urban","March '22 to March '23",0.555555555555556,0.75609756097561,0.78116336898136,0.935483870967742
+"35","Dietetics","Intermediate urban","March '23 to March '24",0.727272727272727,0.81989247311828,0.823941896160883,1
+"36","Dietetics","Intermediate urban","March '24 to March '25",0.64,0.816666666666667,0.81175974025974,1
+"37","Dietetics","Intermediate rural","March '22 to March '23",0.666666666666667,0.783625730994152,0.808479532163743,1
+"38","Dietetics","Intermediate rural","March '23 to March '24",0.7,0.762422360248447,0.756211180124224,0.8
+"39","Dietetics","Intermediate rural","March '24 to March '25",0.6,0.709615384615385,0.706730769230769,0.807692307692308
+"40","Dietetics","Rural","March '22 to March '23",0.6,0.823529411764706,0.781288000092503,0.923076923076923
+"41","Dietetics","Rural","March '23 to March '24",0.763157894736842,0.845238095238095,0.839887151032662,0.904761904761905
+"42","Dietetics","Rural","March '24 to March '25",0.866666666666667,0.918333333333333,0.925555555555556,1
+"43","Education","Urban","March '22 to March '23",1,1,1,1
+"44","Education","Urban","March '23 to March '24",1,1,1,1
+"45","Education","Urban","March '24 to March '25",0.5,1,0.96875,1
+"46","Education","Intermediate urban","March '22 to March '23",1,1,1,1
+"47","Education","Intermediate urban","March '23 to March '24",1,1,1,1
+"48","Education","Intermediate urban","March '24 to March '25",1,1,1,1
+"49","Education","Intermediate rural","March '22 to March '23",0.5,0.75,0.75,1
+"50","Education","Intermediate rural","March '23 to March '24",1,1,1,1
+"51","Education","Intermediate rural","March '24 to March '25",0.666666666666667,0.833333333333333,0.833333333333333,1
+"52","Education","Rural","March '23 to March '24",Inf,NA,NA,-Inf
+"53","Education","Rural","March '24 to March '25",1,1,1,1
+"54","Occupational Therapy","Urban","March '22 to March '23",0.589285714285714,0.795454545454545,0.784096295928608,0.917525773195876
+"55","Occupational Therapy","Urban","March '23 to March '24",0.428571428571429,0.83130081300813,0.809341636630852,0.952830188679245
+"56","Occupational Therapy","Urban","March '24 to March '25",0.612903225806452,0.834746676248653,0.816327634038733,0.953488372093023
+"57","Occupational Therapy","Intermediate urban","March '22 to March '23",0.580645161290323,0.828282828282828,0.801385909426235,0.929133858267717
+"58","Occupational Therapy","Intermediate urban","March '23 to March '24",0.714285714285714,0.84,0.82864760472388,0.9
+"59","Occupational Therapy","Intermediate urban","March '24 to March '25",0.764705882352941,0.819548872180451,0.836993369062787,0.953488372093023
+"60","Occupational Therapy","Intermediate rural","March '22 to March '23",0.727272727272727,0.82125,0.806360707591378,0.855670103092784
+"61","Occupational Therapy","Intermediate rural","March '23 to March '24",0.769230769230769,0.849524187153053,0.83849835731279,0.885714285714286
+"62","Occupational Therapy","Intermediate rural","March '24 to March '25",0.793103448275862,0.848567086409032,0.841439073323274,0.87551867219917
+"63","Occupational Therapy","Rural","March '22 to March '23",0.695652173913043,0.788461538461538,0.802975124150718,0.916666666666667
+"64","Occupational Therapy","Rural","March '23 to March '24",0.796875,0.872892635314996,0.878465858241634,0.958904109589041
+"65","Occupational Therapy","Rural","March '24 to March '25",0.723404255319149,0.860078277886497,0.84138987504093,0.962962962962963
+"66","Operating Theatres","Urban","March '22 to March '23",0.720930232558139,0.87719298245614,0.872882523025515,1
+"67","Operating Theatres","Urban","March '23 to March '24",0.735294117647059,0.901030507091113,0.895885358115648,1
+"68","Operating Theatres","Urban","March '24 to March '25",0.7,0.917293233082707,0.908817302323937,1
+"69","Operating Theatres","Intermediate urban","March '22 to March '23",0.811320754716981,0.866666666666667,0.864725165053555,0.940594059405941
+"70","Operating Theatres","Intermediate urban","March '23 to March '24",0.792452830188679,0.9,0.901776266213405,0.978260869565217
+"71","Operating Theatres","Intermediate urban","March '24 to March '25",0.818181818181818,0.932038834951456,0.918293494967455,1
+"72","Operating Theatres","Intermediate rural","March '22 to March '23",0.840579710144927,0.89375,0.900609671125975,0.974358974358974
+"73","Operating Theatres","Intermediate rural","March '23 to March '24",0.8,0.837362637362637,0.842365529207634,0.894736842105263
+"74","Operating Theatres","Intermediate rural","March '24 to March '25",0.833333333333333,0.85158686479545,0.855056998289198,0.883720930232558
+"75","Operating Theatres","Rural","March '22 to March '23",0.777777777777778,0.901408450704225,0.874922086881928,0.930635838150289
+"76","Operating Theatres","Rural","March '23 to March '24",0.830985915492958,0.887984981226533,0.888091810004146,0.935483870967742
+"77","Operating Theatres","Rural","March '24 to March '25",0.80952380952381,0.923295454545455,0.904481956317126,0.958904109589041
+"78","Orthoptics","Urban","March '24 to March '25",Inf,NA,NA,-Inf
+"79","Orthoptics","Intermediate urban","March '24 to March '25",Inf,NA,NA,-Inf
+"80","Orthoptics","Intermediate rural","March '24 to March '25",Inf,NA,NA,-Inf
+"81","Orthoptics","Rural","March '24 to March '25",Inf,NA,NA,-Inf
+"82","Orthoptics / Optics","Urban","March '22 to March '23",0.6,0.857142857142857,0.853606027242264,1
+"83","Orthoptics / Optics","Urban","March '23 to March '24",0.347826086956522,0.846153846153846,0.844496759462036,1
+"84","Orthoptics / Optics","Urban","March '24 to March '25",0.2,0.872261072261072,0.848420716115342,1
+"85","Orthoptics / Optics","Intermediate urban","March '22 to March '23",0.7,0.842105263157895,0.840942950811372,1
+"86","Orthoptics / Optics","Intermediate urban","March '23 to March '24",0.714285714285714,0.875,0.861147186147186,1
+"87","Orthoptics / Optics","Intermediate urban","March '24 to March '25",0.6,0.875,0.833872819100092,1
+"88","Orthoptics / Optics","Intermediate rural","March '22 to March '23",0.666666666666667,0.775,0.79375,0.958333333333333
+"89","Orthoptics / Optics","Intermediate rural","March '23 to March '24",0.6,0.775,0.7875,1
+"90","Orthoptics / Optics","Intermediate rural","March '24 to March '25",0.25,0.775,0.679166666666667,0.916666666666667
+"91","Orthoptics / Optics","Rural","March '22 to March '23",0.666666666666667,0.933333333333333,0.889285714285714,1
+"92","Orthoptics / Optics","Rural","March '23 to March '24",0.333333333333333,0.839160839160839,0.763847263847264,1
+"93","Orthoptics / Optics","Rural","March '24 to March '25",0.571428571428571,0.833333333333333,0.83968253968254,1
+"94","Osteopathy","Urban","March '22 to March '23",Inf,NA,NA,-Inf
+"95","Osteopathy","Urban","March '23 to March '24",1,1,1,1
+"96","Osteopathy","Urban","March '24 to March '25",0.5,0.75,0.75,1
+"97","Osteopathy","Intermediate rural","March '22 to March '23",1,1,1,1
+"98","Osteopathy","Intermediate rural","March '23 to March '24",0.857142857142857,0.857142857142857,0.857142857142857,0.857142857142857
+"99","Osteopathy","Intermediate rural","March '24 to March '25",0.7,0.7,0.7,0.7
+"100","Patient Transport Service","Urban","March '22 to March '23",1,1,1,1
+"101","Patient Transport Service","Urban","March '23 to March '24",0.333333333333333,0.666666666666667,0.666666666666667,1
+"102","Patient Transport Service","Urban","March '24 to March '25",0.5,0.75,0.75,1
+"103","Patient Transport Service","Intermediate rural","March '23 to March '24",Inf,NA,NA,-Inf
+"104","Patient Transport Service","Intermediate rural","March '24 to March '25",1,1,1,1
+"105","Physiotherapy","Urban","March '22 to March '23",0.59375,0.80952380952381,0.794702425872295,0.894366197183099
+"106","Physiotherapy","Urban","March '23 to March '24",0.650793650793651,0.84390660801588,0.83359799798607,0.923728813559322
+"107","Physiotherapy","Urban","March '24 to March '25",0.0909090909090909,0.846590909090909,0.831272791234928,0.950413223140496
+"108","Physiotherapy","Intermediate urban","March '22 to March '23",0.6,0.780487804878049,0.767083096504527,0.834645669291339
+"109","Physiotherapy","Intermediate urban","March '23 to March '24",0.740740740740741,0.833333333333333,0.830236418503051,0.931818181818182
+"110","Physiotherapy","Intermediate urban","March '24 to March '25",0.75,0.884615384615385,0.86735710015166,0.917525773195876
+"111","Physiotherapy","Intermediate rural","March '22 to March '23",0.795180722891566,0.827046263345196,0.828813157756314,0.865979381443299
+"112","Physiotherapy","Intermediate rural","March '23 to March '24",0.876543209876543,0.883730158730159,0.889071057272812,0.912280701754386
+"113","Physiotherapy","Intermediate rural","March '24 to March '25",0.833333333333333,0.85763976196463,0.860044780580709,0.891566265060241
+"114","Physiotherapy","Rural","March '22 to March '23",0.755102040816326,0.877049180327869,0.853228184762007,0.900990099009901
+"115","Physiotherapy","Rural","March '23 to March '24",0.828571428571429,0.863411383971064,0.860422842276069,0.892857142857143
+"116","Physiotherapy","Rural","March '24 to March '25",0.8,0.844464414090582,0.85228949682038,0.905027932960894
+"117","Prosthetics and Orthotics","Urban","March '22 to March '23",0.333333333333333,1,0.850714285714286,1
+"118","Prosthetics and Orthotics","Urban","March '23 to March '24",0.5,1,0.901292688792689,1
+"119","Prosthetics and Orthotics","Urban","March '24 to March '25",0.5,1,0.915608465608466,1
+"120","Prosthetics and Orthotics","Intermediate urban","March '22 to March '23",1,1,1,1
+"121","Prosthetics and Orthotics","Intermediate urban","March '23 to March '24",1,1,1,1
+"122","Prosthetics and Orthotics","Intermediate urban","March '24 to March '25",1,1,1,1
+"123","Prosthetics and Orthotics","Intermediate rural","March '22 to March '23",0.75,0.875,0.875,1
+"124","Prosthetics and Orthotics","Intermediate rural","March '23 to March '24",1,1,1,1
+"125","Prosthetics and Orthotics","Intermediate rural","March '24 to March '25",0.8,0.9,0.9,1
+"126","Prosthetics and Orthotics","Rural","March '22 to March '23",1,1,1,1
+"127","Radiography (diagnostic)","Urban","March '22 to March '23",0.741258741258741,0.862068965517241,0.860172863800752,0.941176470588235
+"128","Radiography (diagnostic)","Urban","March '23 to March '24",0.725190839694656,0.885879351740696,0.880340724792471,0.956521739130435
+"129","Radiography (diagnostic)","Urban","March '24 to March '25",0.804347826086957,0.897119341563786,0.893825006985221,0.961538461538462
+"130","Radiography (diagnostic)","Intermediate urban","March '22 to March '23",0.776119402985075,0.858695652173913,0.863191524030048,0.917525773195876
+"131","Radiography (diagnostic)","Intermediate urban","March '23 to March '24",0.811594202898551,0.876288659793814,0.88008478891966,0.926605504587156
+"132","Radiography (diagnostic)","Intermediate urban","March '24 to March '25",0.805194805194805,0.902597402597403,0.90191682047515,0.953488372093023
+"133","Radiography (diagnostic)","Intermediate rural","March '22 to March '23",0.752941176470588,0.829979360165119,0.833224974200206,0.92
+"134","Radiography (diagnostic)","Intermediate rural","March '23 to March '24",0.847457627118644,0.86490359562272,0.873482871257688,0.916666666666667
+"135","Radiography (diagnostic)","Intermediate rural","March '24 to March '25",0.878205128205128,0.884515890613452,0.891354681903462,0.918181818181818
+"136","Radiography (diagnostic)","Rural","March '22 to March '23",0.834254143646409,0.878048780487805,0.883395349188538,0.979166666666667
+"137","Radiography (diagnostic)","Rural","March '23 to March '24",0.897959183673469,0.928773919206237,0.928999204371088,0.967741935483871
+"138","Radiography (diagnostic)","Rural","March '24 to March '25",0.898936170212766,0.919600938967136,0.919322517807162,0.943820224719101
+"139","Radiography (therapeutic)","Urban","March '22 to March '23",0.68,0.866394696583376,0.870048630205076,1
+"140","Radiography (therapeutic)","Urban","March '23 to March '24",0.75,0.883484162895928,0.896875909263823,1
+"141","Radiography (therapeutic)","Urban","March '24 to March '25",0.759398496240602,0.89159891598916,0.898383907252778,1
+"142","Radiography (therapeutic)","Intermediate urban","March '22 to March '23",0.90625,0.960179324894515,0.950838208958885,0.976744186046512
+"143","Radiography (therapeutic)","Intermediate urban","March '23 to March '24",0.876404494382023,0.908730158730159,0.923466202960585,1
+"144","Radiography (therapeutic)","Intermediate urban","March '24 to March '25",0.84070796460177,0.853571428571429,0.853629372102823,0.866666666666667
+"145","Radiography (therapeutic)","Intermediate rural","March '22 to March '23",0.926829268292683,0.926829268292683,0.926829268292683,0.926829268292683
+"146","Radiography (therapeutic)","Intermediate rural","March '23 to March '24",0.833333333333333,0.833333333333333,0.833333333333333,0.833333333333333
+"147","Radiography (therapeutic)","Intermediate rural","March '24 to March '25",0.936170212765957,0.936170212765957,0.936170212765957,0.936170212765957
+"148","Radiography (therapeutic)","Rural","March '22 to March '23",0.8125,0.846153846153846,0.86212156317578,0.927710843373494
+"149","Radiography (therapeutic)","Rural","March '23 to March '24",0.882352941176471,0.901234567901235,0.927862503025902,1
+"150","Radiography (therapeutic)","Rural","March '24 to March '25",0.826086956521739,0.888888888888889,0.876536663917364,0.914634146341463
+"151","Speech & Language Therapy","Urban","March '22 to March '23",0.142857142857143,0.8,0.787409203035008,1
+"152","Speech & Language Therapy","Urban","March '23 to March '24",0.4,0.8,0.789998209865939,1
+"153","Speech & Language Therapy","Urban","March '24 to March '25",0.583333333333333,0.838709677419355,0.831671633236376,1
+"154","Speech & Language Therapy","Intermediate urban","March '22 to March '23",0.4,0.843711843711844,0.776059763649049,0.916666666666667
+"155","Speech & Language Therapy","Intermediate urban","March '23 to March '24",0.629032258064516,0.829787234042553,0.829326142203506,1
+"156","Speech & Language Therapy","Intermediate urban","March '24 to March '25",0.788461538461538,0.883928571428571,0.883651475975005,1
+"157","Speech & Language Therapy","Intermediate rural","March '22 to March '23",0.814285714285714,0.881034482758621,0.879382787597798,0.941176470588235
+"158","Speech & Language Therapy","Intermediate rural","March '23 to March '24",0.777777777777778,0.86203007518797,0.846047717332547,0.882352941176471
+"159","Speech & Language Therapy","Intermediate rural","March '24 to March '25",0.666666666666667,0.785930867192238,0.776298766929452,0.866666666666667
+"160","Speech & Language Therapy","Rural","March '22 to March '23",0.571428571428571,0.815188172043011,0.799153720736913,1
+"161","Speech & Language Therapy","Rural","March '23 to March '24",0.4,0.808608058608059,0.721316322566323,0.818181818181818
+"162","Speech & Language Therapy","Rural","March '24 to March '25",0.714285714285714,0.877777777777778,0.862433862433862,1

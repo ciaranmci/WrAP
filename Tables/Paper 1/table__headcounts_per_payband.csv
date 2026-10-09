@@ -1,0 +1,227 @@
+"","year_end","Care setting","AfC band","N"
+"1",2025,"All care settings","Non AfC band",155
+"2",2025,"All care settings","Band 4",560
+"3",2025,"All care settings","Band 5",15950
+"4",2025,"All care settings","Band 6",29015
+"5",2025,"All care settings","Band 7",23030
+"6",2025,"All care settings","Band 8a",6360
+"7",2025,"All care settings","Band 8b",1280
+"8",2025,"All care settings","Band 8c",555
+"9",2025,"All care settings","Band 8d",270
+"10",2025,"All care settings","Band 9",115
+"11",2025,"All care settings","All AfC bands",75485
+"12",2025,"Dietetics","Non AfC band",10
+"13",2025,"Dietetics","Band 4",15
+"14",2025,"Dietetics","Band 5",695
+"15",2025,"Dietetics","Band 6",1730
+"16",2025,"Dietetics","Band 7",2050
+"17",2025,"Dietetics","Band 8a",560
+"18",2025,"Dietetics","Band 8b",275
+"19",2025,"Dietetics","Band 8c",90
+"20",2025,"Dietetics","Band 8d",15
+"21",2025,"Dietetics","All AfC bands",4670
+"22",2025,"Occupational Therapy","Non AfC band",15
+"23",2025,"Occupational Therapy","Band 4",195
+"24",2025,"Occupational Therapy","Band 5",1805
+"25",2025,"Occupational Therapy","Band 6",4300
+"26",2025,"Occupational Therapy","Band 7",2955
+"27",2025,"Occupational Therapy","Band 8a",695
+"28",2025,"Occupational Therapy","Band 8b",305
+"29",2025,"Occupational Therapy","Band 8c",125
+"30",2025,"Occupational Therapy","Band 8d",45
+"31",2025,"Occupational Therapy","Band 9",5
+"32",2025,"Occupational Therapy","All AfC bands",9735
+"33",2025,"Operating Department Practitioners","Non AfC band",30
+"34",2025,"Operating Department Practitioners","Band 4",70
+"35",2025,"Operating Department Practitioners","Band 5",4645
+"36",2025,"Operating Department Practitioners","Band 6",3130
+"37",2025,"Operating Department Practitioners","Band 7",940
+"38",2025,"Operating Department Practitioners","Band 8a",355
+"39",2025,"Operating Department Practitioners","Band 8b",60
+"40",2025,"Operating Department Practitioners","Band 8c",15
+"41",2025,"Operating Department Practitioners","Band 8d",10
+"42",2025,"Operating Department Practitioners","All AfC bands",8800
+"43",2025,"Physiotherapy","Non AfC band",20
+"44",2025,"Physiotherapy","Band 4",140
+"45",2025,"Physiotherapy","Band 5",3740
+"46",2025,"Physiotherapy","Band 6",7440
+"47",2025,"Physiotherapy","Band 7",6495
+"48",2025,"Physiotherapy","Band 8a",2685
+"49",2025,"Physiotherapy","Band 8b",550
+"50",2025,"Physiotherapy","Band 8c",295
+"51",2025,"Physiotherapy","Band 8d",85
+"52",2025,"Physiotherapy","Band 9",55
+"53",2025,"Physiotherapy","All AfC bands",20430
+"54",2025,"Radiography (diagnostic)","Non AfC band",55
+"55",2025,"Radiography (diagnostic)","Band 4",10
+"56",2025,"Radiography (diagnostic)","Band 5",3510
+"57",2025,"Radiography (diagnostic)","Band 6",8375
+"58",2025,"Radiography (diagnostic)","Band 7",5990
+"59",2025,"Radiography (diagnostic)","Band 8a",1390
+"60",2025,"Radiography (diagnostic)","Band 8b",555
+"61",2025,"Radiography (diagnostic)","Band 8c",335
+"62",2025,"Radiography (diagnostic)","Band 8d",85
+"63",2025,"Radiography (diagnostic)","Band 9",5
+"64",2025,"Radiography (diagnostic)","All AfC bands",19615
+"65",2025,"Speech & Language Therapy","Non AfC band",5
+"66",2025,"Speech & Language Therapy","Band 4",50
+"67",2025,"Speech & Language Therapy","Band 5",855
+"68",2025,"Speech & Language Therapy","Band 6",1715
+"69",2025,"Speech & Language Therapy","Band 7",1905
+"70",2025,"Speech & Language Therapy","Band 8a",680
+"71",2025,"Speech & Language Therapy","Band 8b",235
+"72",2025,"Speech & Language Therapy","Band 8c",60
+"73",2025,"Speech & Language Therapy","Band 8d",35
+"74",2025,"Speech & Language Therapy","Band 9",5
+"75",2025,"Speech & Language Therapy","All AfC bands",4735
+"76",2024,"All care settings","Non AfC band",165
+"77",2024,"All care settings","Band 4",585
+"78",2024,"All care settings","Band 5",14795
+"79",2024,"All care settings","Band 6",28170
+"80",2024,"All care settings","Band 7",21635
+"81",2024,"All care settings","Band 8a",5850
+"82",2024,"All care settings","Band 8b",1230
+"83",2024,"All care settings","Band 8c",540
+"84",2024,"All care settings","Band 8d",230
+"85",2024,"All care settings","Band 9",60
+"86",2024,"All care settings","All AfC bands",71430
+"87",2024,"Dietetics","Non AfC band",10
+"88",2024,"Dietetics","Band 4",15
+"89",2024,"Dietetics","Band 5",655
+"90",2024,"Dietetics","Band 6",1710
+"91",2024,"Dietetics","Band 7",1910
+"92",2024,"Dietetics","Band 8a",555
+"93",2024,"Dietetics","Band 8b",260
+"94",2024,"Dietetics","Band 8c",60
+"95",2024,"Dietetics","Band 8d",10
+"96",2024,"Dietetics","All AfC bands",4375
+"97",2024,"Occupational Therapy","Non AfC band",15
+"98",2024,"Occupational Therapy","Band 4",240
+"99",2024,"Occupational Therapy","Band 5",1590
+"100",2024,"Occupational Therapy","Band 6",4220
+"101",2024,"Occupational Therapy","Band 7",2745
+"102",2024,"Occupational Therapy","Band 8a",685
+"103",2024,"Occupational Therapy","Band 8b",255
+"104",2024,"Occupational Therapy","Band 8c",95
+"105",2024,"Occupational Therapy","Band 8d",20
+"106",2024,"Occupational Therapy","Band 9",5
+"107",2024,"Occupational Therapy","All AfC bands",9185
+"108",2024,"Operating Department Practitioners","Non AfC band",40
+"109",2024,"Operating Department Practitioners","Band 4",80
+"110",2024,"Operating Department Practitioners","Band 5",4655
+"111",2024,"Operating Department Practitioners","Band 6",3075
+"112",2024,"Operating Department Practitioners","Band 7",925
+"113",2024,"Operating Department Practitioners","Band 8a",340
+"114",2024,"Operating Department Practitioners","Band 8b",60
+"115",2024,"Operating Department Practitioners","Band 8c",10
+"116",2024,"Operating Department Practitioners","Band 8d",5
+"117",2024,"Operating Department Practitioners","All AfC bands",8705
+"118",2024,"Physiotherapy","Non AfC band",30
+"119",2024,"Physiotherapy","Band 4",165
+"120",2024,"Physiotherapy","Band 5",3440
+"121",2024,"Physiotherapy","Band 6",7045
+"122",2024,"Physiotherapy","Band 7",6185
+"123",2024,"Physiotherapy","Band 8a",2520
+"124",2024,"Physiotherapy","Band 8b",530
+"125",2024,"Physiotherapy","Band 8c",290
+"126",2024,"Physiotherapy","Band 8d",90
+"127",2024,"Physiotherapy","Band 9",10
+"128",2024,"Physiotherapy","All AfC bands",19230
+"129",2024,"Radiography (diagnostic)","Non AfC band",65
+"130",2024,"Radiography (diagnostic)","Band 4",35
+"131",2024,"Radiography (diagnostic)","Band 5",3110
+"132",2024,"Radiography (diagnostic)","Band 6",7905
+"133",2024,"Radiography (diagnostic)","Band 7",5625
+"134",2024,"Radiography (diagnostic)","Band 8a",1325
+"135",2024,"Radiography (diagnostic)","Band 8b",530
+"136",2024,"Radiography (diagnostic)","Band 8c",325
+"137",2024,"Radiography (diagnostic)","Band 8d",45
+"138",2024,"Radiography (diagnostic)","Band 9",0
+"139",2024,"Radiography (diagnostic)","All AfC bands",18245
+"140",2024,"Speech & Language Therapy","Non AfC band",5
+"141",2024,"Speech & Language Therapy","Band 4",25
+"142",2024,"Speech & Language Therapy","Band 5",860
+"143",2024,"Speech & Language Therapy","Band 6",1715
+"144",2024,"Speech & Language Therapy","Band 7",1765
+"145",2024,"Speech & Language Therapy","Band 8a",650
+"146",2024,"Speech & Language Therapy","Band 8b",230
+"147",2024,"Speech & Language Therapy","Band 8c",65
+"148",2024,"Speech & Language Therapy","Band 8d",25
+"149",2024,"Speech & Language Therapy","Band 9",5
+"150",2024,"Speech & Language Therapy","All AfC bands",4520
+"151",2023,"All care settings","Non AfC band",165
+"152",2023,"All care settings","Band 4",760
+"153",2023,"All care settings","Band 5",14670
+"154",2023,"All care settings","Band 6",27825
+"155",2023,"All care settings","Band 7",20380
+"156",2023,"All care settings","Band 8a",5410
+"157",2023,"All care settings","Band 8b",1160
+"158",2023,"All care settings","Band 8c",530
+"159",2023,"All care settings","Band 8d",235
+"160",2023,"All care settings","Band 9",75
+"161",2023,"All care settings","All AfC bands",69295
+"162",2023,"Dietetics","Non AfC band",5
+"163",2023,"Dietetics","Band 4",20
+"164",2023,"Dietetics","Band 5",630
+"165",2023,"Dietetics","Band 6",1805
+"166",2023,"Dietetics","Band 7",1795
+"167",2023,"Dietetics","Band 8a",530
+"168",2023,"Dietetics","Band 8b",245
+"169",2023,"Dietetics","Band 8c",65
+"170",2023,"Dietetics","Band 8d",15
+"171",2023,"Dietetics","Band 9",5
+"172",2023,"Dietetics","All AfC bands",4255
+"173",2023,"Occupational Therapy","Non AfC band",20
+"174",2023,"Occupational Therapy","Band 4",325
+"175",2023,"Occupational Therapy","Band 5",1580
+"176",2023,"Occupational Therapy","Band 6",4320
+"177",2023,"Occupational Therapy","Band 7",2495
+"178",2023,"Occupational Therapy","Band 8a",660
+"179",2023,"Occupational Therapy","Band 8b",275
+"180",2023,"Occupational Therapy","Band 8c",105
+"181",2023,"Occupational Therapy","Band 8d",15
+"182",2023,"Occupational Therapy","Band 9",0
+"183",2023,"Occupational Therapy","All AfC bands",9040
+"184",2023,"Operating Department Practitioners","Non AfC band",25
+"185",2023,"Operating Department Practitioners","Band 4",80
+"186",2023,"Operating Department Practitioners","Band 5",4905
+"187",2023,"Operating Department Practitioners","Band 6",2890
+"188",2023,"Operating Department Practitioners","Band 7",905
+"189",2023,"Operating Department Practitioners","Band 8a",355
+"190",2023,"Operating Department Practitioners","Band 8b",60
+"191",2023,"Operating Department Practitioners","Band 8c",5
+"192",2023,"Operating Department Practitioners","Band 8d",5
+"193",2023,"Operating Department Practitioners","All AfC bands",8735
+"194",2023,"Physiotherapy","Non AfC band",40
+"195",2023,"Physiotherapy","Band 4",280
+"196",2023,"Physiotherapy","Band 5",3315
+"197",2023,"Physiotherapy","Band 6",7085
+"198",2023,"Physiotherapy","Band 7",5795
+"199",2023,"Physiotherapy","Band 8a",2235
+"200",2023,"Physiotherapy","Band 8b",520
+"201",2023,"Physiotherapy","Band 8c",260
+"202",2023,"Physiotherapy","Band 8d",95
+"203",2023,"Physiotherapy","Band 9",5
+"204",2023,"Physiotherapy","All AfC bands",18545
+"205",2023,"Radiography (diagnostic)","Non AfC band",55
+"206",2023,"Radiography (diagnostic)","Band 4",60
+"207",2023,"Radiography (diagnostic)","Band 5",2880
+"208",2023,"Radiography (diagnostic)","Band 6",7700
+"209",2023,"Radiography (diagnostic)","Band 7",5330
+"210",2023,"Radiography (diagnostic)","Band 8a",1250
+"211",2023,"Radiography (diagnostic)","Band 8b",535
+"212",2023,"Radiography (diagnostic)","Band 8c",305
+"213",2023,"Radiography (diagnostic)","Band 8d",25
+"214",2023,"Radiography (diagnostic)","Band 9",10
+"215",2023,"Radiography (diagnostic)","All AfC bands",17320
+"216",2023,"Speech & Language Therapy","Non AfC band",5
+"217",2023,"Speech & Language Therapy","Band 4",55
+"218",2023,"Speech & Language Therapy","Band 5",825
+"219",2023,"Speech & Language Therapy","Band 6",1680
+"220",2023,"Speech & Language Therapy","Band 7",1700
+"221",2023,"Speech & Language Therapy","Band 8a",620
+"222",2023,"Speech & Language Therapy","Band 8b",260
+"223",2023,"Speech & Language Therapy","Band 8c",80
+"224",2023,"Speech & Language Therapy","Band 8d",25
+"225",2023,"Speech & Language Therapy","Band 9",0
+"226",2023,"Speech & Language Therapy","All AfC bands",4395

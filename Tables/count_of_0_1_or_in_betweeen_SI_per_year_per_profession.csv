@@ -1,0 +1,117 @@
+"","year","Care setting","SI_val_category","n"
+"1","March '22 to March '23","All care settings","0%",1
+"2","March '22 to March '23","All care settings","0% < SI < 100%",121
+"3","March '22 to March '23","Art / Music / Dramatherapy","0%",1
+"4","March '22 to March '23","Art / Music / Dramatherapy","0% < SI < 100%",1
+"5","March '22 to March '23","Art / Music / Dramatherapy","100%",13
+"6","March '22 to March '23","Chiropody / Podiatry","0%",3
+"7","March '22 to March '23","Chiropody / Podiatry","0% < SI < 100%",54
+"8","March '22 to March '23","Chiropody / Podiatry","100%",22
+"9","March '22 to March '23","Dietetics","0%",1
+"10","March '22 to March '23","Dietetics","0% < SI < 100%",114
+"11","March '22 to March '23","Dietetics","100%",3
+"12","March '22 to March '23","Education","0%",2
+"13","March '22 to March '23","Education","0% < SI < 100%",1
+"14","March '22 to March '23","Education","100%",14
+"15","March '22 to March '23","Hazardous Area Response Team","0%",1
+"16","March '22 to March '23","Occupational Therapy","0%",1
+"17","March '22 to March '23","Occupational Therapy","0% < SI < 100%",121
+"18","March '22 to March '23","Operating Department Practitioners","0%",1
+"19","March '22 to March '23","Operating Department Practitioners","0% < SI < 100%",119
+"20","March '22 to March '23","Operating Department Practitioners","100%",2
+"21","March '22 to March '23","Orthoptics / Optics","0%",2
+"22","March '22 to March '23","Orthoptics / Optics","0% < SI < 100%",93
+"23","March '22 to March '23","Orthoptics / Optics","100%",16
+"24","March '22 to March '23","Osteopathy","0%",1
+"25","March '22 to March '23","Osteopathy","100%",1
+"26","March '22 to March '23","Patient Transport Service","100%",2
+"27","March '22 to March '23","Physiotherapy","0%",1
+"28","March '22 to March '23","Physiotherapy","0% < SI < 100%",121
+"29","March '22 to March '23","Prosthetics and Orthotics","0%",2
+"30","March '22 to March '23","Prosthetics and Orthotics","0% < SI < 100%",11
+"31","March '22 to March '23","Prosthetics and Orthotics","100%",15
+"32","March '22 to March '23","Radiography (diagnostic)","0%",1
+"33","March '22 to March '23","Radiography (diagnostic)","0% < SI < 100%",121
+"34","March '22 to March '23","Radiography (therapeutic)","0%",3
+"35","March '22 to March '23","Radiography (therapeutic)","0% < SI < 100%",48
+"36","March '22 to March '23","Radiography (therapeutic)","100%",6
+"37","March '22 to March '23","Speech & Language Therapy","0%",1
+"38","March '22 to March '23","Speech & Language Therapy","0% < SI < 100%",108
+"39","March '22 to March '23","Speech & Language Therapy","100%",4
+"40","March '23 to March '24","All care settings","0%",2
+"41","March '23 to March '24","All care settings","0% < SI < 100%",119
+"42","March '23 to March '24","Art / Music / Dramatherapy","0%",1
+"43","March '23 to March '24","Art / Music / Dramatherapy","0% < SI < 100%",3
+"44","March '23 to March '24","Art / Music / Dramatherapy","100%",10
+"45","March '23 to March '24","Chiropody / Podiatry","0%",1
+"46","March '23 to March '24","Chiropody / Podiatry","0% < SI < 100%",54
+"47","March '23 to March '24","Chiropody / Podiatry","100%",25
+"48","March '23 to March '24","Dietetics","0%",2
+"49","March '23 to March '24","Dietetics","0% < SI < 100%",113
+"50","March '23 to March '24","Dietetics","100%",3
+"51","March '23 to March '24","Education","0%",3
+"52","March '23 to March '24","Education","100%",16
+"53","March '23 to March '24","Occupational Therapy","0%",2
+"54","March '23 to March '24","Occupational Therapy","0% < SI < 100%",119
+"55","March '23 to March '24","Operating Department Practitioners","0%",2
+"56","March '23 to March '24","Operating Department Practitioners","0% < SI < 100%",117
+"57","March '23 to March '24","Operating Department Practitioners","100%",2
+"58","March '23 to March '24","Orthoptics / Optics","0%",2
+"59","March '23 to March '24","Orthoptics / Optics","0% < SI < 100%",87
+"60","March '23 to March '24","Orthoptics / Optics","100%",21
+"61","March '23 to March '24","Osteopathy","0% < SI < 100%",1
+"62","March '23 to March '24","Osteopathy","100%",3
+"63","March '23 to March '24","Patient Transport Service","0% < SI < 100%",1
+"64","March '23 to March '24","Patient Transport Service","100%",1
+"65","March '23 to March '24","Physiotherapy","0%",2
+"66","March '23 to March '24","Physiotherapy","0% < SI < 100%",119
+"67","March '23 to March '24","Prosthetics and Orthotics","0%",2
+"68","March '23 to March '24","Prosthetics and Orthotics","0% < SI < 100%",8
+"69","March '23 to March '24","Prosthetics and Orthotics","100%",17
+"70","March '23 to March '24","Radiography (diagnostic)","0%",2
+"71","March '23 to March '24","Radiography (diagnostic)","0% < SI < 100%",119
+"72","March '23 to March '24","Radiography (therapeutic)","0% < SI < 100%",44
+"73","March '23 to March '24","Radiography (therapeutic)","100%",12
+"74","March '23 to March '24","Speech & Language Therapy","0%",2
+"75","March '23 to March '24","Speech & Language Therapy","0% < SI < 100%",107
+"76","March '23 to March '24","Speech & Language Therapy","100%",5
+"77","March '24 to March '25","All care settings","0%",1
+"78","March '24 to March '25","All care settings","0% < SI < 100%",118
+"79","March '24 to March '25","Art / Music / Dramatherapy","0%",1
+"80","March '24 to March '25","Art / Music / Dramatherapy","0% < SI < 100%",4
+"81","March '24 to March '25","Art / Music / Dramatherapy","100%",9
+"82","March '24 to March '25","Chiropody / Podiatry","0%",3
+"83","March '24 to March '25","Chiropody / Podiatry","0% < SI < 100%",52
+"84","March '24 to March '25","Chiropody / Podiatry","100%",27
+"85","March '24 to March '25","Dietetics","0%",1
+"86","March '24 to March '25","Dietetics","0% < SI < 100%",111
+"87","March '24 to March '25","Dietetics","100%",4
+"88","March '24 to March '25","Education","0%",2
+"89","March '24 to March '25","Education","0% < SI < 100%",2
+"90","March '24 to March '25","Education","100%",20
+"91","March '24 to March '25","Occupational Therapy","0%",2
+"92","March '24 to March '25","Occupational Therapy","0% < SI < 100%",117
+"93","March '24 to March '25","Operating Department Practitioners","0%",1
+"94","March '24 to March '25","Operating Department Practitioners","0% < SI < 100%",114
+"95","March '24 to March '25","Operating Department Practitioners","100%",4
+"96","March '24 to March '25","Orthoptics / Optics","0%",1
+"97","March '24 to March '25","Orthoptics / Optics","0% < SI < 100%",91
+"98","March '24 to March '25","Orthoptics / Optics","100%",16
+"99","March '24 to March '25","Osteopathy","0%",2
+"100","March '24 to March '25","Osteopathy","0% < SI < 100%",2
+"101","March '24 to March '25","Osteopathy","100%",1
+"102","March '24 to March '25","Patient Transport Service","0% < SI < 100%",1
+"103","March '24 to March '25","Patient Transport Service","100%",2
+"104","March '24 to March '25","Physiotherapy","0%",1
+"105","March '24 to March '25","Physiotherapy","0% < SI < 100%",118
+"106","March '24 to March '25","Prosthetics and Orthotics","0%",1
+"107","March '24 to March '25","Prosthetics and Orthotics","0% < SI < 100%",9
+"108","March '24 to March '25","Prosthetics and Orthotics","100%",19
+"109","March '24 to March '25","Radiography (diagnostic)","0%",1
+"110","March '24 to March '25","Radiography (diagnostic)","0% < SI < 100%",118
+"111","March '24 to March '25","Radiography (therapeutic)","0%",2
+"112","March '24 to March '25","Radiography (therapeutic)","0% < SI < 100%",45
+"113","March '24 to March '25","Radiography (therapeutic)","100%",9
+"114","March '24 to March '25","Speech & Language Therapy","0%",2
+"115","March '24 to March '25","Speech & Language Therapy","0% < SI < 100%",103
+"116","March '24 to March '25","Speech & Language Therapy","100%",8

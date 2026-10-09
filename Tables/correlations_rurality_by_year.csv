@@ -1,0 +1,10 @@
+"","Year","term","reg_estimate","reg_p_value"
+"1",2023,"`RUC21 settlement class`Intermediate urban",0.00961059855931446,0.377004628725696
+"2",2023,"`RUC21 settlement class`Intermediate rural",0.007226279663798,0.676669147921154
+"3",2023,"`RUC21 settlement class`Rural",0.0293187049089475,0.0928714920311931
+"4",2024,"`RUC21 settlement class`Intermediate urban",0.00961059855931446,0.377004628725696
+"5",2024,"`RUC21 settlement class`Intermediate rural",0.007226279663798,0.676669147921154
+"6",2024,"`RUC21 settlement class`Rural",0.0293187049089475,0.0928714920311931
+"7",2025,"`RUC21 settlement class`Intermediate urban",0.0178181174464473,0.220545191220216
+"8",2025,"`RUC21 settlement class`Intermediate rural",-0.0073310068229144,0.75107243475782
+"9",2025,"`RUC21 settlement class`Rural",0.0301667942295632,0.193599959801778

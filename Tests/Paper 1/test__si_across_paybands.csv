@@ -1,0 +1,26 @@
+"","Profession","comparison","signif"
+"1","Dietetics","5vAll",TRUE
+"2","Dietetics","5v6",TRUE
+"3","Dietetics","6v7",TRUE
+"4","Dietetics","7v8a",TRUE
+"5","Occupational Therapy","5vAll",TRUE
+"6","Occupational Therapy","5v6",TRUE
+"7","Occupational Therapy","6v7",TRUE
+"8","Occupational Therapy","7v8a",TRUE
+"9","Operating Department Practitioners","5vAll",TRUE
+"10","Operating Department Practitioners","5v6",TRUE
+"11","Operating Department Practitioners","6v7",TRUE
+"12","Operating Department Practitioners","7v8a",FALSE
+"13","Physiotherapy","5vAll",TRUE
+"14","Physiotherapy","5v6",TRUE
+"15","Physiotherapy","6v7",TRUE
+"16","Physiotherapy","7v8a",TRUE
+"17","Physiotherapy","8dv9",FALSE
+"18","Radiography (diagnostic)","5vAll",TRUE
+"19","Radiography (diagnostic)","5v6",FALSE
+"20","Radiography (diagnostic)","6v7",FALSE
+"21","Radiography (diagnostic)","7v8a",TRUE
+"22","Speech & Language Therapy","5vAll",TRUE
+"23","Speech & Language Therapy","5v6",FALSE
+"24","Speech & Language Therapy","6v7",FALSE
+"25","Speech & Language Therapy","7v8a",TRUE

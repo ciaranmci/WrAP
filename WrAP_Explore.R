@@ -55,17 +55,58 @@ ls_churn_within_NHS[[1]] %>%
 #################################################
 # This section produces "count_of_0_or_1_SI_per_year.csv"
 # ----
-ls_churn_within_NHS[[1]] %>% 
+df_churn_within_NHS_Grade %>%
   dplyr::filter(
-    `Care setting` == "All care settings"
-    ,`AfC band` == "All AfC bands"
-    ) %>%
-  filter( `Stability index` %in% c(0,1) ) %>% 
+    # Remove pay-bands that are not of interest.
+    `AfC band` %in% c( 'All AfC bands' )
+    # Only use data for the non-specialist acute Trusts.
+    ,`Cluster group` == "Acute"
+    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+  ) %>%
+  filter( `Stability index` %in% c(0,1) ) %>%
   dplyr::reframe(
     n = n()
     ,.by = c( year, `Stability index` )
   ) %>%
-  write.csv( file = "Tables/count_of_0_or_1_SI_per_year.csv")
+  write.csv( file = "Tables/count_of_0_or_1_SI_per_year_.csv")
+
+df_churn_within_NHS_Grade %>%
+  dplyr::filter(
+    # Remove pay-bands that are not of interest.
+    `AfC band` %in% c( 'All AfC bands' )
+    # Only use data for the non-specialist acute Trusts.
+    ,`Cluster group` == "Acute"
+    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+  ) %>%
+  filter( `Stability index` %in% c(0,1) ) %>%
+  dplyr::reframe(
+    n = n()
+    ,.by = c( year, `Care setting`, `Stability index` )
+  ) %>% 
+  write.csv( file = "Tables/count_of_0_or_1_SI_per_year_per_profession.csv")
+  
+df_churn_within_NHS_Grade %>%
+  dplyr::filter(
+    # Remove pay-bands that are not of interest.
+    `AfC band` %in% c( 'All AfC bands' )
+    # Only use data for the non-specialist acute Trusts.
+    ,`Cluster group` == "Acute"
+    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+  ) %>%
+  dplyr::mutate(
+    SI_val_category = 
+      dplyr::case_when(
+        `Stability index` == 0 ~ "0%"
+        ,`Stability index` == 1 ~ "100%"
+        ,.default = "0% < SI < 100%"
+        )
+    ) %>%
+  dplyr::reframe(
+    n = n()
+    ,.by = c( year, `Care setting`, SI_val_category )
+  ) %>% 
+  dplyr::arrange( year,  `Care setting`, SI_val_category ) %>% View()#dplyr::filter( year == "March '24 to March '25") %>% View()
+  write.csv( file = "Tables/count_of_0_1_or_in_betweeen_SI_per_year_per_profession.csv")
 # ----
 
 ##################################################################
@@ -287,3 +328,93 @@ ls_churn_within_NHS[[1]] %>%
 # information. This final point is important because we are interested in staff's
 # experiences.
 source('WrAP_Explore__staff_suvery_study.R')
+
+#######################
+## Julie's mega plot.##
+#######################
+# Julie wanted a plot of depriviation score across rurality categories, with point
+# size indicating the size of the Trust, and the point colour indicating the
+# stability index.
+# ----
+
+# Collate the required data.
+plot_data <-
+  df_churn_within_NHS_Grade %>%
+  dplyr::filter(
+    # Remove pay-bands that are not of interest.
+    `AfC band` == 'All AfC bands'
+    # Don't distinguish profession.
+    ,`Care setting` == "All care settings"
+    # Select year of interest
+    ,year_end %in% year_of_interest
+    # Only use data for the non-specialist acute Trusts.
+    ,`Cluster group` == "Acute"
+    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+  ) %>%
+  dplyr::select( `Org code`, `Stability index` ) %>%
+  dplyr::left_join(
+    df_deprivation %>% dplyr::distinct( `Trust Code`, `IMD Score` )
+    ,by = join_by( `Org code` == `Trust Code` )
+  ) %>%
+  dplyr::left_join(
+    df_ons_rurality %>% dplyr::distinct( `Trust code`, `RUC21 settlement class` )
+    ,by = join_by( `Org code` == `Trust code` )
+  ) %>%
+  dplyr::left_join(
+    df_Trust_size_2023_03 %>% dplyr::distinct( `Trust code 2023 03`, `Trust size 2023 03` )
+    ,by = join_by( `Org code` == `Trust code 2023 03` )
+  ) %>%
+  dplyr::arrange( `Stability index` )
+
+# Make plot
+p <-
+plot_data %>%
+  ggplot() +
+  geom_point(
+    aes(
+      x = `IMD Score`
+      ,y = `RUC21 settlement class`
+      ,size = `Trust size 2023 03`
+      ,colour = `Stability index`
+      )
+    ,position = position_jitter( height = 0.2 )
+    ) +
+  scale_x_continuous( limits = c( 0, 50 ) ) +
+  labs(
+      title =
+        paste0(
+        "Depriviation score across rurality categories in non-specialist acute"
+        ,"\nTrusts in NHS England."
+        )
+      ,subtitle =
+        paste0(
+          "Explanation of variables:"
+          ,"\n\u2022 Larger deprivation score indicates greater deprivation."
+          ,"\n\u2022 Lighter-coloured stability index indicates more staff retention."
+          ,"\n\u2022 Bigger circle indicates larger Trust size (by staff head count)."
+          )
+      ,caption =
+        paste0(
+          "Stability index from ", year_of_interest,"."
+          ,"\nRurality category from 2021."
+          ,"\nTrust size is staff head count from March 2023."
+        )
+      ,x = "Deprivation score"
+      ,y = "Rurality category"
+      ,size = "Trust size"
+    ) +
+  theme_minimal()
+
+ggsave(
+  plot = p
+  ,filename =
+    paste0(
+      "Plots/plot__Julie's mega plot.png"
+    )
+  ,dpi = 300
+  ,width = 20
+  ,height = 11
+  ,units = "cm"
+)
+
+# ----

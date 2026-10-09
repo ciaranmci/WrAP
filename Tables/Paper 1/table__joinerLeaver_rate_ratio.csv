@@ -1,0 +1,101 @@
+"","Care setting","AfC band","Min","qtr1","Median","Mean","qtr3","Max","IQR"
+"1","Art / Music / Dramatherapy","Band 5",0,0,0,0,0,0,0
+"2","Art / Music / Dramatherapy","Band 6",0,0.75,1.5,1.5,2.25,3,1.5
+"3","Art / Music / Dramatherapy","Band 7",0,0,0,0,0,0,0
+"4","Art / Music / Dramatherapy","Band 8a",Inf,NA,NA,NA,NA,-Inf,NA
+"5","Chiropody / Podiatry","Band 5",0,0.5,1,1.36904761904762,2,7,1.5
+"6","Chiropody / Podiatry","Band 6",0,0,0.4,0.766666666666667,1,10,1
+"7","Chiropody / Podiatry","Band 7",0,0,0.5,0.656190476190476,1,3,1
+"8","Chiropody / Podiatry","Band 8a",0,0,0,0.285714285714286,0.75,1,0.75
+"9","Chiropody / Podiatry","Band 8b",0,0,0,0,0,0,0
+"10","Chiropody / Podiatry","Band 8c",0,0,0,0,0,0,0
+"11","Chiropody / Podiatry","Band 8d",0,0,0,0,0,0,0
+"12","Chiropody / Podiatry","Band 9",Inf,NA,NA,NA,NA,-Inf,NA
+"13","Dietetics","Band 5",0,1,1.5,1.984229390681,2.5,7,1.5
+"14","Dietetics","Band 6",0,0.571428571428571,1,1.18124134199134,1.35,5,0.778571428571429
+"15","Dietetics","Band 7",0,0.333333333333333,1,1.23977617264134,2,5.25,1.66666666666667
+"16","Dietetics","Band 8a",0,0,0,0.492063492063492,1,5,1
+"17","Dietetics","Band 8b",0,0,0,0.142857142857143,0,1,0
+"18","Dietetics","Band 8c",0,0,0,0.333333333333333,0.5,1,0.5
+"19","Dietetics","Band 8d",0,0,0,0,0,0,0
+"20","Education","Band 5",Inf,NA,NA,NA,NA,-Inf,NA
+"21","Education","Band 6",0,0,0,0,0,0,0
+"22","Education","Band 7",0,0,0,0,0,0,0
+"23","Education","Band 8a",0,0,0,0,0,0,0
+"24","Education","Band 8b",Inf,NA,NA,NA,NA,-Inf,NA
+"25","Education","Band 8c",Inf,NA,NA,NA,NA,-Inf,NA
+"26","Education","Band 8d",Inf,NA,NA,NA,NA,-Inf,NA
+"27","Occupational Therapy","Band 5",0,1.2,1.83333333333333,2.37440104143644,2.75,19,1.55
+"28","Occupational Therapy","Band 6",0,0.5,0.941176470588235,1.07429126682423,1.4,4,0.9
+"29","Occupational Therapy","Band 7",0,0.333333333333333,0.714285714285714,1.17187983973698,1.2,15,0.866666666666667
+"30","Occupational Therapy","Band 8a",0,0,0,0.314166666666667,0.35,2,0.35
+"31","Occupational Therapy","Band 8b",0,0,0,0.181818181818182,0,2,0
+"32","Occupational Therapy","Band 8c",0,0.25,0.5,0.5,0.75,1,0.5
+"33","Occupational Therapy","Band 8d",1,1,1,1,1,1,0
+"34","Occupational Therapy","Band 9",Inf,NA,NA,NA,NA,-Inf,NA
+"35","Operating Department Practitioners","Band 5",0,1,1.5,2.1354799093225,2.63541666666667,11,1.63541666666667
+"36","Operating Department Practitioners","Band 6",0,0,0.583333333333333,0.834362310815799,1,4,1
+"37","Operating Department Practitioners","Band 7",0,0,0,0.228260869565217,0,2,0
+"38","Operating Department Practitioners","Band 8a",0,0,0,0.4,1,1,1
+"39","Operating Department Practitioners","Band 8b",0,0,0,0,0,0,0
+"40","Operating Department Practitioners","Band 8c",Inf,NA,NA,NA,NA,-Inf,NA
+"41","Operating Department Practitioners","Band 8d",0,0,0,0,0,0,0
+"42","Orthoptics","Band 5",Inf,NA,NA,NA,NA,-Inf,NA
+"43","Orthoptics","Band 6",Inf,NA,NA,NA,NA,-Inf,NA
+"44","Orthoptics","Band 7",Inf,NA,NA,NA,NA,-Inf,NA
+"45","Orthoptics","Band 8a",Inf,NA,NA,NA,NA,-Inf,NA
+"46","Orthoptics","Band 8b",Inf,NA,NA,NA,NA,-Inf,NA
+"47","Orthoptics","Band 8c",Inf,NA,NA,NA,NA,-Inf,NA
+"48","Orthoptics","Band 8d",Inf,NA,NA,NA,NA,-Inf,NA
+"49","Orthoptics / Optics","Band 5",0,0,0,0,0,0,0
+"50","Orthoptics / Optics","Band 6",0,0,0,0,0,0,0
+"51","Orthoptics / Optics","Band 7",0,0,0,0,0,0,0
+"52","Orthoptics / Optics","Band 8a",0,0,0,0,0,0,0
+"53","Orthoptics / Optics","Band 8b",0,0,0,0,0,0,0
+"54","Orthoptics / Optics","Band 8c",0,0,0,0,0,0,0
+"55","Orthoptics / Optics","Band 8d",0,0,0,0,0,0,0
+"56","Osteopathy","Band 5",0,0,0,0,0,0,0
+"57","Osteopathy","Band 6",0,0,0,0.666666666666667,1,2,1
+"58","Osteopathy","Band 7",Inf,NA,NA,NA,NA,-Inf,NA
+"59","Osteopathy","Band 8a",1,1,1,1,1,1,0
+"60","Patient Transport Service","Band 6",Inf,NA,NA,NA,NA,-Inf,NA
+"61","Patient Transport Service","Band 7",0,0,0,0,0,0,0
+"62","Patient Transport Service","Band 8a",Inf,NA,NA,NA,NA,-Inf,NA
+"63","Patient Transport Service","Band 8b",Inf,NA,NA,NA,NA,-Inf,NA
+"64","Physiotherapy","Band 5",0,1.21739130434783,2,2.18531368759067,2.63636363636364,9.5,1.41897233201581
+"65","Physiotherapy","Band 6",0,0.625,0.904545454545455,1.05488173408611,1.25,5.85714285714286,0.625
+"66","Physiotherapy","Band 7",0,0.533422459893048,0.876262626262626,1.05883432811553,1.24305555555556,7.33333333333333,0.709633095662507
+"67","Physiotherapy","Band 8a",0,0,0.45,0.84084008097166,1,13.5,1
+"68","Physiotherapy","Band 8b",0,0,0,0.270833333333333,0.125,2,0.125
+"69","Physiotherapy","Band 8c",0,0,0,0,0,0,0
+"70","Physiotherapy","Band 8d",Inf,NA,NA,NA,NA,-Inf,NA
+"71","Physiotherapy","Band 9",0,0,0,0,0,0,0
+"72","Prosthetics and Orthotics","Band 5",0,0.5,1,1,1.5,2,1
+"73","Prosthetics and Orthotics","Band 6",0,0,0,0.4,1,1,1
+"74","Prosthetics and Orthotics","Band 7",0,0,0,0.333333333333333,0,2,0
+"75","Prosthetics and Orthotics","Band 8a",Inf,NA,NA,NA,NA,-Inf,NA
+"76","Prosthetics and Orthotics","Band 8b",0,0,0,0,0,0,0
+"77","Prosthetics and Orthotics","Band 8d",0,0,0,0,0,0,0
+"78","Radiography (diagnostic)","Band 5",0,2,3.5,4.27184343434343,5.5,19,3.5
+"79","Radiography (diagnostic)","Band 6",0,0.689935064935065,1.09307359307359,1.51759298802858,2,6,1.31006493506493
+"80","Radiography (diagnostic)","Band 7",0,0.5,0.8,1.06703170840407,1.375,8,0.875
+"81","Radiography (diagnostic)","Band 8a",0,0,0.5,0.80469387755102,1,5,1
+"82","Radiography (diagnostic)","Band 8b",0,0,0,0.137931034482759,0,1,0
+"83","Radiography (diagnostic)","Band 8c",0,0,0,0.111111111111111,0,1,0
+"84","Radiography (diagnostic)","Band 8d",0,0,0,0,0,0,0
+"85","Radiography (diagnostic)","Band 9",Inf,NA,NA,NA,NA,-Inf,NA
+"86","Radiography (therapeutic)","Band 5",0,1.3125,2,2.6880291005291,3.375,11,2.0625
+"87","Radiography (therapeutic)","Band 6",0,0.55,1,1.19154953573558,1.8,5,1.25
+"88","Radiography (therapeutic)","Band 7",0,0,0.55,0.76630291005291,1,3,1
+"89","Radiography (therapeutic)","Band 8a",0,0,0,0.833333333333333,1,6,1
+"90","Radiography (therapeutic)","Band 8b",0,0,0,0.2,0,1,0
+"91","Radiography (therapeutic)","Band 8c",0,0,0,0,0,0,0
+"92","Radiography (therapeutic)","Band 8d",Inf,NA,NA,NA,NA,-Inf,NA
+"93","Speech & Language Therapy","Band 5",0,1,1.66666666666667,1.88724569640063,2.325,10,1.325
+"94","Speech & Language Therapy","Band 6",0,0.5,1,1.22400861412489,1.5,9.66666666666667,1
+"95","Speech & Language Therapy","Band 7",0,0.333333333333333,0.775,1.35171524212222,1.25,42,0.916666666666667
+"96","Speech & Language Therapy","Band 8a",0,0,0,0.351626016260163,0.666666666666667,2.5,0.666666666666667
+"97","Speech & Language Therapy","Band 8b",0,0,0,0.142857142857143,0,1,0
+"98","Speech & Language Therapy","Band 8c",Inf,NA,NA,NA,NA,-Inf,NA
+"99","Speech & Language Therapy","Band 8d",Inf,NA,NA,NA,NA,-Inf,NA
+"100","Speech & Language Therapy","Band 9",Inf,NA,NA,NA,NA,-Inf,NA

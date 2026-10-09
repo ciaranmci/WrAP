@@ -23,7 +23,8 @@ fnc__analyseDistributions <-
     if( is.null( dataset_id ) ){ stop( "The 'dataset_id' arguement was not supplied." ) }
     
     # Extract the set of professions in the data.
-    roles <- unique( data[[1]]$`Care setting` )[-1]
+    roles <- unique( data[[1]]$`Care setting` )
+    #roles <- unique( data$`Care setting` )
     
     ###################################
     ## Create the overall plot data. ##
@@ -37,7 +38,8 @@ fnc__analyseDistributions <-
         ,dataset_id
       )
     dir.create( file.path( getwd(), save_directory ), recursive = TRUE ) %>% suppressWarnings()
-    data[[1]] %>%
+    #data[[1]] %>%
+    data %>%
       dplyr::filter(
         stringr::str_detect( string = `AfC band`, pattern = "All " )
         # Remove SI = 0%.
@@ -63,6 +65,7 @@ fnc__analyseDistributions <-
     
     plot_data <-
      data[[1]] %>%
+     # data %>%
       dplyr::filter(
         `Care setting` == "All care settings"
         ,stringr::str_detect( string = `AfC band`, pattern = "All " )
@@ -158,11 +161,17 @@ fnc__analyseDistributions <-
     plot_data <-
       # Arbitrarily use the first data sheet to look at the totals.
       data[[1]] %>%
+      #data %>%
       dplyr::filter(
-        `Care setting` != "All care settings" 
-        ,stringr::str_detect( string = `AfC band`, pattern = "All " )
+        # Remove pay-bands that are not of interest.
+        !`AfC band` %in% c( 'All AfC bands', 'Non AfC band', 'Band 4' )
         # Remove SI = 0%.
         ,!`Stability index` %in% c(0)
+        # Select year of interest
+        ,year_end %in% year_of_interest
+        # Only use data for the non-specialist acute Trusts.
+        ,`Cluster group` == "Acute"
+        ,!stringr::str_detect( `Benchmark group`, "Specialist" )
       )
     
     # Make the plot for each AHP role.
@@ -300,10 +309,16 @@ fnc__analyseDistributions <-
         plot_data <-
           x %>%
           dplyr::filter(
-            `Care setting` != "All care settings"
-            ,!stringr::str_detect( string = !!( sym( stratification_name ) ), pattern = "All " )
+            #`Care setting` != "All care settings"
+            !stringr::str_detect( string = !!( sym( stratification_name ) ), pattern = "All " )
             # Remove SI = 0%.
             ,!`Stability index` %in% c(0)
+            # Only use data for the non-specialist acute Trusts.
+            ,`Cluster group` == "Acute"
+            ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+            
+            # Select year of interest
+            ,year_end %in% "2024"#year_of_interest
           )
         
         # Make table of summary statistics.
@@ -341,7 +356,12 @@ fnc__analyseDistributions <-
         {
           i_plot_data <-
             plot_data %>%
-            dplyr::filter( `Care setting` == roles[ i_role ] )
+            dplyr::filter( `Care setting` == roles[ i_role ] ) %>%
+            dplyr::distinct(
+              !!( sym( var_of_interest ) )
+              ,!!( sym( stratification_name ) )
+              ,year
+            )
           
           if ( nrow( i_plot_data ) > 0 )
           {
@@ -377,39 +397,52 @@ fnc__analyseDistributions <-
               geom_point(
                 position = position_jitter( height = 0.1 )
                 ,alpha = 0.2
+                ,colour = "grey"
               ) +
+              geom_boxplot( fill = "grey", alpha = 0.3, width = 0.2 ) +
               geom_point(
                 data = sumstat_plot_data
                 ,aes( x = class_median, y = !!( sym( stratification_name ) ) )
-                ,colour = "red", shape = "|", size = 15
+                ,colour = "coral"
+                ,size = 5
               ) +
+              geom_text(
+                data = sumstat_plot_data
+                ,aes( x = class_median, y = !!( sym( stratification_name ) ) )
+                ,label = round( sumstat_plot_data$class_median, 2 )
+                ,colour = "coral"
+                ,size = 5
+                ,vjust = -1
+                ) +
+              xlim( 0, 1 ) +
               facet_wrap( vars( year ), nrow = 1 ) +
               labs(
                 title =
-                  paste0(
-                    'Distribution of '
-                    ,var_of_interest
-                    ,' for '
-                    ,roles[ i_role ]
-                    ,'\nstratified by year and '
-                    ,stratification_name
-                    ,'.'
+                  stringr::str_wrap(
+                    paste0(
+                      'Distribution of '
+                      ,var_of_interest
+                      ,' for '
+                      ,roles[ i_role ]
+                      ,' stratified by year and '
+                      ,sub( pattern = "_", replacement = " ", x = stratification_name )
+                      ,'.'
+                    )
+                    ,100
                   )
-                ,subtitle =
+                ,subtitle = "Median stability index shown as a coral dot."
+                ,caption =
                   paste0(
-                    "\u2022 Using ", dataset_id," dataset.\n"
-                    ,"\u2022 Showing values \u2265", round( min_val, 2 )
-                    ," and \u2264", round( max_val, 2 ), ".\n"
-                    ,"\u2022 Red line shows the median."
+                    "(Range: ", round( min_val, 2 ), " to ", round( max_val, 2 ), ")"
                   )
-                , y = stratification_name
               ) +
               theme_minimal() +
               theme(
-                axis.title.x = element_blank()
+                axis.title.y = element_blank()
                 ,axis.text = element_text( size = 10 )
                 ,plot.title = element_text( size = 20 )
-                ,plot.subtitle = element_text( size = 15 )
+                ,plot.subtitle = element_text( size = 15, face = "italic", colour = "navyblue" )
+                ,plot.caption = element_text( hjust = 0, face = "italic" )
               )
             # Save plot, stratified by candidate factor.
             ggsave(
@@ -424,7 +457,7 @@ fnc__analyseDistributions <-
                   ,stratification_name
                   ,"/plot__distribution_of_"
                   ,gsub(roles[ i_role ], pattern = "/", replacement = " & ")
-                  ,"_"
+                  ,"_2_"
                   ,var_of_interest
                   ,"_stratified_by_"
                   ,stratification_name
@@ -468,12 +501,36 @@ fnc__analyseDistributions <-
 # fnc__analyseDistributions(
 #   data = ls_churn_from_NHS, var_of_interest = 'Stability index', dataset_id = "FROM_NHS" )
 # # Using the `ls_churn_within_NHS` dataset.
+# fnc__analyseDistributions(
+#   data = ls_churn_within_NHS, var_of_interest = 'joiner_rate', dataset_id = "WITHIN_NHS" )
+# fnc__analyseDistributions(
+#   data = ls_churn_within_NHS, var_of_interest = 'leaver_rate', dataset_id = "WITHIN_NHS" )
+ fnc__analyseDistributions(
+   data = ls_churn_within_NHS, var_of_interest = 'remainer_rate', dataset_id = "WITHIN_NHS" )
 fnc__analyseDistributions(
-  data = ls_churn_within_NHS, var_of_interest = 'joiner_rate', dataset_id = "WITHIN_NHS" )
+  data =
+    df_churn_within_NHS_Grade %>%
+    dplyr::filter(
+      # Remove SI = 0%.
+      ,!`Stability index` %in% c(0)
+      # Only use data for the non-specialist acute Trusts.
+      ,`Cluster group` == "Acute"
+      ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+    )
+  ,var_of_interest = 'Stability index'
+  ,dataset_id = "WITHIN_NHS" 
+  )
 fnc__analyseDistributions(
-  data = ls_churn_within_NHS, var_of_interest = 'leaver_rate', dataset_id = "WITHIN_NHS" )
-fnc__analyseDistributions(
-  data = ls_churn_within_NHS, var_of_interest = 'remainer_rate', dataset_id = "WITHIN_NHS" )
-fnc__analyseDistributions(
-  data = ls_churn_within_NHS, var_of_interest = 'Stability index', dataset_id = "WITHIN_NHS" )
+  data =
+    df_churn_within_NHS_AgeBand %>%
+    dplyr::filter(
+      # Remove SI = 0%.
+      ,!`Stability index` %in% c(0)
+      # Only use data for the non-specialist acute Trusts.
+      ,`Cluster group` == "Acute"
+      ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+    )
+  ,var_of_interest = 'Stability index'
+  ,dataset_id = "WITHIN_NHS" 
+)
 # ----

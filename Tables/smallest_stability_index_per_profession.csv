@@ -1,0 +1,58 @@
+"","Care setting","Period","Org code","Organisation name","Stability index"
+"1","Art / Music / Dramatherapy","202303 to 202403","RQM","chelsea and westminster hospital nhs foundation trust",0.333333333333333
+"2","Art / Music / Dramatherapy","202303 to 202403","RRP","barnet, enfield and haringey mental health nhs trust",0.333333333333333
+"3","Art / Music / Dramatherapy","202403 to 202503","RXE","rotherham doncaster and south humber nhs foundation trust",0.333333333333333
+"4","Chiropody / Podiatry","202203 to 202303","RA2","royal surrey county hospital nhs foundation trust",0.2
+"5","Chiropody / Podiatry","202203 to 202303","RW1","hampshire and isle of wight healthcare nhs foundation trust",0.25
+"6","Dietetics","202303 to 202403","RRP","barnet, enfield and haringey mental health nhs trust",0.105263157894737
+"7","Dietetics","202403 to 202503","R1F","isle of wight nhs trust",0.1
+"8","Education","202203 to 202303","RH5","somerset nhs foundation trust",0.5
+"9","Education","202203 to 202303","RYA","west midlands ambulance service university nhs foundation trust",0.5
+"10","Education","202303 to 202403","RYW","birmingham community healthcare nhs foundation trust",0.5
+"11","Education","202303 to 202403","RYW","birmingham community healthcare nhs foundation trust",0.5
+"12","Education","202403 to 202503","RH5","somerset nhs foundation trust",0.5
+"13","Education","202403 to 202503","RLT","george eliot hospital nhs trust",0.5
+"14","Education","202403 to 202503","RW1","hampshire and isle of wight healthcare nhs foundation trust",0.5
+"15","Education","202403 to 202503","RW1","hampshire and isle of wight healthcare nhs foundation trust",0.5
+"16","Education","202403 to 202503","RYA","west midlands ambulance service university nhs foundation trust",0.5
+"17","Education","202403 to 202503","RYW","birmingham community healthcare nhs foundation trust",0.5
+"18","Hazardous Area Response Team","202203 to 202303","RYA","west midlands ambulance service university nhs foundation trust",0.423076923076923
+"19","Hazardous Area Response Team","202303 to 202403","RX7","north west ambulance service nhs trust",0.5
+"20","Occupational Therapy","202203 to 202303","RCU","sheffield children's nhs foundation trust",0.25
+"21","Occupational Therapy","202203 to 202303","REN","clatterbridge cancer centre nhs foundation trust",0.25
+"22","Occupational Therapy","202203 to 202303","RET","walton centre nhs foundation trust",0.25
+"23","Occupational Therapy","202203 to 202303","RL1","robert jones and agnes hunt orthopaedic hospital nhs foundation trust",0.25
+"24","Occupational Therapy","202303 to 202403","RAX","kingston and richmond nhs foundation trust",0.166666666666667
+"25","Operating Theatres","202203 to 202303","RWP","worcestershire acute hospitals nhs trust",0.333333333333333
+"26","Operating Theatres","202303 to 202403","R1C","solent nhs trust",0.333333333333333
+"27","Operating Theatres","202403 to 202503","RAS","hillingdon hospitals nhs foundation trust",0.333333333333333
+"28","Operating Theatres","202403 to 202503","RPY","royal marsden nhs foundation trust",0.333333333333333
+"29","Operating Theatres","202403 to 202503","RTQ","gloucestershire health and care nhs foundation trust",0.333333333333333
+"30","Orthoptics / Optics","202303 to 202403","RXF","mid yorkshire teaching nhs trust",0.2
+"31","Orthoptics / Optics","202403 to 202503","RQW","princess alexandra hospital nhs trust",0.2
+"32","Osteopathy","202303 to 202403","RWX","berkshire healthcare nhs foundation trust",0.5
+"33","Osteopathy","202303 to 202403","RWX","berkshire healthcare nhs foundation trust",0.5
+"34","Osteopathy","202403 to 202503","R1L","essex partnership university nhs foundation trust",0.5
+"35","Osteopathy","202403 to 202503","RDR","sussex community nhs foundation trust",0.5
+"36","Osteopathy","202403 to 202503","RH5","somerset nhs foundation trust",0.333333333333333
+"37","Osteopathy","202403 to 202503","RVR","epsom and st helier university hospitals nhs trust",0.5
+"38","Patient Transport Service","202303 to 202403","RA7","university hospitals bristol and weston nhs foundation trust",0.2
+"39","Patient Transport Service","202303 to 202403","RA7","university hospitals bristol and weston nhs foundation trust",0.333333333333333
+"40","Physiotherapy","202303 to 202403","RRP","barnet, enfield and haringey mental health nhs trust",0.021505376344086
+"41","Physiotherapy","202303 to 202403","RRP","barnet, enfield and haringey mental health nhs trust",0.027027027027027
+"42","Prosthetics and Orthotics","202203 to 202303","R0A","manchester university nhs foundation trust",0.333333333333333
+"43","Prosthetics and Orthotics","202303 to 202403","RBS","alder hey children's nhs foundation trust",0.333333333333333
+"44","Prosthetics and Orthotics","202303 to 202403","RTK","ashford and st. peter's hospitals nhs foundation trust",0.333333333333333
+"45","Prosthetics and Orthotics","202303 to 202403","RX1","nottingham university hospitals nhs trust",0.333333333333333
+"46","Radiography (diagnostic)","202203 to 202303","RCB","york and scarborough teaching hospitals nhs foundation trust",0.333333333333333
+"47","Radiography (diagnostic)","202203 to 202303","RKB","university hospitals coventry and warwickshire nhs trust",0.333333333333333
+"48","Radiography (diagnostic)","202203 to 202303","RTX","university hospitals of morecambe bay nhs foundation trust",0.333333333333333
+"49","Radiography (diagnostic)","202303 to 202403","RBS","alder hey children's nhs foundation trust",0.333333333333333
+"50","Radiography (diagnostic)","202303 to 202403","RPC","queen victoria hospital nhs foundation trust",0.333333333333333
+"51","Radiography (diagnostic)","202403 to 202503","RA2","royal surrey county hospital nhs foundation trust",0.333333333333333
+"52","Radiography (diagnostic)","202403 to 202503","RWA","hull university teaching hospitals nhs trust",0.333333333333333
+"53","Radiography (therapeutic)","202203 to 202303","RAP","north middlesex university hospital nhs trust",0.285714285714286
+"54","Radiography (therapeutic)","202203 to 202303","RWP","worcestershire acute hospitals nhs trust",0.25
+"55","Radiography (therapeutic)","202403 to 202503","RAL","royal free london nhs foundation trust",0.285714285714286
+"56","Speech & Language Therapy","202303 to 202403","RRP","barnet, enfield and haringey mental health nhs trust",0.0714285714285714
+"57","Speech & Language Therapy","202303 to 202403","RRP","barnet, enfield and haringey mental health nhs trust",0.125
