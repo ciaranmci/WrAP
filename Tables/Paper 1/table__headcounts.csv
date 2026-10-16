@@ -1,0 +1,48 @@
+"","year_end","Care setting","N","Min","qtr1","Median","qtr3","Max"
+"1",2023,"All care settings",73260,0,5,27.5,125,760
+"2",2023,"Dietetics",5185,0,5,5,10,75
+"3",2023,"Occupational Therapy",9870,0,5,10,20,125
+"4",2023,"Operating Department Practitioners",9190,0,5,10,20,160
+"5",2023,"Orthoptics / Optics",2990,0,5,5,5,35
+"6",2023,"Physiotherapy",20305,0,5,20,40,220
+"7",2023,"Radiography (diagnostic)",18965,0,5,15,40,205
+"8",2023,"Radiography (therapeutic)",3130,0,5,5,15,65
+"9",2023,"Speech & Language Therapy",5345,0,5,5,10,75
+"10",2023,"Art / Music / Dramatherapy",100,0,5,5,5,5
+"11",2023,"Chiropody / Podiatry",2165,0,5,5,5,45
+"12",2023,"Osteopathy",25,0,5,5,5,5
+"13",2023,"Prosthetics and Orthotics",285,0,5,5,5,10
+"14",2023,"Education",100,0,0,5,5,5
+"15",2023,"Patient Transport Service",15,5,5,5,5,5
+"16",2023,"Hazardous Area Response Team",0,0,0,0,0,0
+"17",2024,"All care settings",77290,0,5,30,135,750
+"18",2024,"Dietetics",5440,0,5,5,10,80
+"19",2024,"Occupational Therapy",10445,0,5,10,20,125
+"20",2024,"Operating Department Practitioners",9255,0,5,10,25,175
+"21",2024,"Orthoptics / Optics",3030,0,5,5,5,35
+"22",2024,"Physiotherapy",21505,0,5,20,45,235
+"23",2024,"Radiography (diagnostic)",20310,0,5,15,40,245
+"24",2024,"Radiography (therapeutic)",3265,0,5,5,15,60
+"25",2024,"Speech & Language Therapy",5545,0,5,5,10,80
+"26",2024,"Art / Music / Dramatherapy",105,0,5,5,5,10
+"27",2024,"Chiropody / Podiatry",2185,0,5,5,5,40
+"28",2024,"Osteopathy",35,5,5,5,5,5
+"29",2024,"Prosthetics and Orthotics",395,0,5,5,5,10
+"30",2024,"Education",160,0,5,5,5,5
+"31",2024,"Patient Transport Service",20,0,5,5,5,5
+"32",2025,"All care settings",80210,0,5,30,140,825
+"33",2025,"Dietetics",5640,0,5,5,10,80
+"34",2025,"Occupational Therapy",10750,0,5,10,25,130
+"35",2025,"Operating Department Practitioners",9775,0,5,10,25,190
+"36",2025,"Orthoptics",2730,5,5,5,5,40
+"37",2025,"Orthoptics / Optics",0,0,0,0,0,0
+"38",2025,"Physiotherapy",22115,0,5,20,45,255
+"39",2025,"Radiography (diagnostic)",21400,0,5,15,45,245
+"40",2025,"Radiography (therapeutic)",3360,0,5,10,15,60
+"41",2025,"Speech & Language Therapy",5780,0,5,5,15,95
+"42",2025,"Art / Music / Dramatherapy",95,0,5,5,5,5
+"43",2025,"Chiropody / Podiatry",2220,0,5,5,5,45
+"44",2025,"Education",210,0,5,5,5,5
+"45",2025,"Osteopathy",40,0,5,5,5,5
+"46",2025,"Prosthetics and Orthotics",415,0,5,5,5,10
+"47",2025,"Patient Transport Service",30,0,5,5,5,5

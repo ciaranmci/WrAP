@@ -1,0 +1,101 @@
+"","Care setting","year","AfC_band","min","median","mean","max"
+"1","All care settings","March '23 to March '24","Band 5",0.56,0.818181818181818,0.804416873876843,0.944444444444444
+"2","All care settings","March '23 to March '24","Band 6",0.688796680497925,0.850746268656716,0.839569959252029,0.928571428571429
+"3","All care settings","March '23 to March '24","Band 7",0.764705882352941,0.893854748603352,0.883758641872289,0.962616822429907
+"4","All care settings","March '23 to March '24","Band 8a",0.727272727272727,0.923076923076923,0.913492790292177,1
+"5","All care settings","March '23 to March '24","Band 8b",0.333333333333333,1,0.923794864597476,1
+"6","All care settings","March '23 to March '24","Band 8c",0.5,1,0.943203799877701,1
+"7","All care settings","March '23 to March '24","Band 8d",1,1,1,1
+"8","All care settings","March '23 to March '24","Band 9",1,1,1,1
+"9","Art / Music / Dramatherapy","March '23 to March '24","Band 5",1,1,1,1
+"10","Art / Music / Dramatherapy","March '23 to March '24","Band 6",0.333333333333333,0.5,0.569444444444444,1
+"11","Art / Music / Dramatherapy","March '23 to March '24","Band 7",0.5,0.857142857142857,0.820861678004535,1
+"12","Art / Music / Dramatherapy","March '23 to March '24","Band 8a",0.5,1,0.785714285714286,1
+"13","Art / Music / Dramatherapy","March '23 to March '24","Band 8b",1,1,1,1
+"14","Chiropody / Podiatry","March '23 to March '24","Band 5",0.5,0.8,0.815528227480282,1
+"15","Chiropody / Podiatry","March '23 to March '24","Band 6",0.571428571428571,0.875,0.864296867969065,1
+"16","Chiropody / Podiatry","March '23 to March '24","Band 7",0.5,0.888888888888889,0.911381679494039,1
+"17","Chiropody / Podiatry","March '23 to March '24","Band 8a",0.5,1,0.975239338555265,1
+"18","Chiropody / Podiatry","March '23 to March '24","Band 8b",1,1,1,1
+"19","Chiropody / Podiatry","March '23 to March '24","Band 8c",1,1,1,1
+"20","Chiropody / Podiatry","March '23 to March '24","Band 8d",1,1,1,1
+"21","Chiropody / Podiatry","March '23 to March '24","Band 9",1,1,1,1
+"22","Dietetics","March '23 to March '24","Band 5",0.2,0.75,0.746988042089737,1
+"23","Dietetics","March '23 to March '24","Band 6",0.333333333333333,0.781818181818182,0.779548983479566,1
+"24","Dietetics","March '23 to March '24","Band 7",0.5,0.872340425531915,0.864969276096724,1
+"25","Dietetics","March '23 to March '24","Band 8a",0.333333333333333,1,0.907214653001496,1
+"26","Dietetics","March '23 to March '24","Band 8b",0.5,1,0.966885441527446,1
+"27","Dietetics","March '23 to March '24","Band 8c",0.5,1,0.916049382716049,1
+"28","Dietetics","March '23 to March '24","Band 8d",1,1,1,1
+"29","Education","March '23 to March '24","Band 5",1,1,1,1
+"30","Education","March '23 to March '24","Band 6",1,1,1,1
+"31","Education","March '23 to March '24","Band 7",1,1,1,1
+"32","Education","March '23 to March '24","Band 8a",1,1,1,1
+"33","Education","March '23 to March '24","Band 8b",1,1,1,1
+"34","Education","March '23 to March '24","Band 8c",1,1,1,1
+"35","Education","March '23 to March '24","Band 8d",Inf,NA,NA,-Inf
+"36","Occupational Therapy","March '23 to March '24","Band 5",0.166666666666667,0.758620689655172,0.747777385942193,1
+"37","Occupational Therapy","March '23 to March '24","Band 6",0.428571428571429,0.836065573770492,0.80108070282594,1
+"38","Occupational Therapy","March '23 to March '24","Band 7",0.4,0.9,0.877687692940386,1
+"39","Occupational Therapy","March '23 to March '24","Band 8a",0.5,1,0.916137339769481,1
+"40","Occupational Therapy","March '23 to March '24","Band 8b",0.5,1,0.982982344182089,1
+"41","Occupational Therapy","March '23 to March '24","Band 8c",1,1,1,1
+"42","Occupational Therapy","March '23 to March '24","Band 8d",1,1,1,1
+"43","Occupational Therapy","March '23 to March '24","Band 9",1,1,1,1
+"44","Operating Theatres","March '23 to March '24","Band 5",0.5,0.884615384615385,0.870974306715791,1
+"45","Operating Theatres","March '23 to March '24","Band 6",0.727272727272727,0.939393939393939,0.930139278572256,1
+"46","Operating Theatres","March '23 to March '24","Band 7",0.5,1,0.945222075217191,1
+"47","Operating Theatres","March '23 to March '24","Band 8a",0.5,1,0.966162406537993,1
+"48","Operating Theatres","March '23 to March '24","Band 8b",1,1,1,1
+"49","Operating Theatres","March '23 to March '24","Band 8c",1,1,1,1
+"50","Operating Theatres","March '23 to March '24","Band 8d",1,1,1,1
+"51","Orthoptics / Optics","March '23 to March '24","Band 5",0.2,1,0.826942355889724,1
+"52","Orthoptics / Optics","March '23 to March '24","Band 6",0.25,0.881944444444444,0.841528171243245,1
+"53","Orthoptics / Optics","March '23 to March '24","Band 7",0.333333333333333,0.857142857142857,0.844886875458039,1
+"54","Orthoptics / Optics","March '23 to March '24","Band 8a",0.5,1,0.957023355901065,1
+"55","Orthoptics / Optics","March '23 to March '24","Band 8b",0.5,1,0.955128205128205,1
+"56","Orthoptics / Optics","March '23 to March '24","Band 8c",1,1,1,1
+"57","Orthoptics / Optics","March '23 to March '24","Band 8d",1,1,1,1
+"58","Osteopathy","March '23 to March '24","Band 5",1,1,1,1
+"59","Osteopathy","March '23 to March '24","Band 6",0.8,0.8,0.875,1
+"60","Osteopathy","March '23 to March '24","Band 8a",1,1,1,1
+"61","Patient Transport Service","March '23 to March '24","Band 7",0.2,0.2,0.2,0.2
+"62","Patient Transport Service","March '23 to March '24","Band 8a",1,1,1,1
+"63","Patient Transport Service","March '23 to March '24","Band 8b",Inf,NA,NA,-Inf
+"64","Physiotherapy","March '23 to March '24","Band 5",0.291666666666667,0.756756756756757,0.751095647847109,1
+"65","Physiotherapy","March '23 to March '24","Band 6",0.537037037037037,0.80952380952381,0.806141248634402,0.967741935483871
+"66","Physiotherapy","March '23 to March '24","Band 7",0.666666666666667,0.9,0.883187097691156,1
+"67","Physiotherapy","March '23 to March '24","Band 8a",0.724137931034483,0.933333333333333,0.920976552644091,1
+"68","Physiotherapy","March '23 to March '24","Band 8b",0.666666666666667,1,0.950602065898051,1
+"69","Physiotherapy","March '23 to March '24","Band 8c",0.666666666666667,1,0.989463456491016,1
+"70","Physiotherapy","March '23 to March '24","Band 8d",1,1,1,1
+"71","Physiotherapy","March '23 to March '24","Band 9",1,1,1,1
+"72","Prosthetics and Orthotics","March '23 to March '24","Band 5",0.333333333333333,1,0.908333333333333,1
+"73","Prosthetics and Orthotics","March '23 to March '24","Band 6",0.5,1,0.96,1
+"74","Prosthetics and Orthotics","March '23 to March '24","Band 7",0.333333333333333,0.9,0.845410628019324,1
+"75","Prosthetics and Orthotics","March '23 to March '24","Band 8a",1,1,1,1
+"76","Prosthetics and Orthotics","March '23 to March '24","Band 8b",1,1,1,1
+"77","Prosthetics and Orthotics","March '23 to March '24","Band 8d",1,1,1,1
+"78","Radiography (diagnostic)","March '23 to March '24","Band 5",0.571428571428571,0.862745098039216,0.856274094529888,1
+"79","Radiography (diagnostic)","March '23 to March '24","Band 6",0.648648648648649,0.89010989010989,0.873025716494999,0.96875
+"80","Radiography (diagnostic)","March '23 to March '24","Band 7",0.733333333333333,0.903846153846154,0.898185483843411,1
+"81","Radiography (diagnostic)","March '23 to March '24","Band 8a",0.666666666666667,0.925925925925926,0.921821072617082,1
+"82","Radiography (diagnostic)","March '23 to March '24","Band 8b",0.5,1,0.944708852071791,1
+"83","Radiography (diagnostic)","March '23 to March '24","Band 8c",0.666666666666667,1,0.982319942091929,1
+"84","Radiography (diagnostic)","March '23 to March '24","Band 8d",1,1,1,1
+"85","Radiography (diagnostic)","March '23 to March '24","Band 9",Inf,NA,NA,-Inf
+"86","Radiography (therapeutic)","March '23 to March '24","Band 5",0.5,0.818181818181818,0.821180744884632,1
+"87","Radiography (therapeutic)","March '23 to March '24","Band 6",0.571428571428571,0.851851851851852,0.849195927490582,1
+"88","Radiography (therapeutic)","March '23 to March '24","Band 7",0.804347826086957,0.921052631578947,0.9185768234259,1
+"89","Radiography (therapeutic)","March '23 to March '24","Band 8a",0.666666666666667,1,0.954963136615134,1
+"90","Radiography (therapeutic)","March '23 to March '24","Band 8b",0.5,1,0.961509992598075,1
+"91","Radiography (therapeutic)","March '23 to March '24","Band 8c",1,1,1,1
+"92","Radiography (therapeutic)","March '23 to March '24","Band 8d",1,1,1,1
+"93","Speech & Language Therapy","March '23 to March '24","Band 5",0.2,0.787593984962406,0.75864677108726,1
+"94","Speech & Language Therapy","March '23 to March '24","Band 6",0.25,0.8,0.780324012435271,1
+"95","Speech & Language Therapy","March '23 to March '24","Band 7",0.25,0.857142857142857,0.847453102949166,1
+"96","Speech & Language Therapy","March '23 to March '24","Band 8a",0.4,1,0.891606703737371,1
+"97","Speech & Language Therapy","March '23 to March '24","Band 8b",0.5,1,0.943239411660464,1
+"98","Speech & Language Therapy","March '23 to March '24","Band 8c",0.5,1,0.942934782608696,1
+"99","Speech & Language Therapy","March '23 to March '24","Band 8d",1,1,1,1
+"100","Speech & Language Therapy","March '23 to March '24","Band 9",1,1,1,1

@@ -1,0 +1,1233 @@
+"","Trust","Profession","question","n_response","n_staff","proportion_response","proportion_agree"
+"1","north london nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",21,45,0.466666666666667,0.0476190476190476
+"2","north london nhs foundation trust","Dietetics","ss_q26c_LikertScore",1,5,0.2,1
+"3","north london nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",68,180,0.377777777777778,0.220588235294118
+"4","north london nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",8,15,0.533333333333333,0
+"5","manchester university nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",25,70,0.357142857142857,0.2
+"6","manchester university nhs foundation trust","Dietetics","ss_q26c_LikertScore",69,145,0.475862068965517,0.130434782608696
+"7","manchester university nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",123,320,0.384375,0.121951219512195
+"8","manchester university nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",71,185,0.383783783783784,0.183098591549296
+"9","manchester university nhs foundation trust","Orthoptics","ss_q26c_LikertScore",19,35,0.542857142857143,0
+"10","manchester university nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",277,645,0.429457364341085,0.075812274368231
+"11","manchester university nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",76,185,0.410810810810811,0.105263157894737
+"12","south tyneside and sunderland nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",34,45,0.755555555555556,0.147058823529412
+"13","south tyneside and sunderland nhs foundation trust","Dietetics","ss_q26c_LikertScore",28,40,0.7,0.0714285714285714
+"14","south tyneside and sunderland nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",77,85,0.905882352941176,0.0649350649350649
+"15","south tyneside and sunderland nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",25,75,0.333333333333333,0.2
+"16","south tyneside and sunderland nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,35,0.142857142857143,0
+"17","south tyneside and sunderland nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",100,170,0.588235294117647,0.11
+"18","south tyneside and sunderland nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",41,145,0.282758620689655,0.146341463414634
+"19","south tyneside and sunderland nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",61,85,0.717647058823529,0.163934426229508
+"20","university hospitals dorset nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",4,5,0.8,0.25
+"21","university hospitals dorset nhs foundation trust","Dietetics","ss_q26c_LikertScore",19,25,0.76,0.157894736842105
+"22","university hospitals dorset nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",77,120,0.641666666666667,0.155844155844156
+"23","university hospitals dorset nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",54,95,0.568421052631579,0.185185185185185
+"24","university hospitals dorset nhs foundation trust","Orthoptics","ss_q26c_LikertScore",6,10,0.6,0
+"25","university hospitals dorset nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",161,225,0.715555555555556,0.124223602484472
+"26","university hospitals dorset nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",7,215,0.0325581395348837,0
+"27","university hospitals dorset nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",13,45,0.288888888888889,0
+"28","university hospitals dorset nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",21,25,0.84,0.0476190476190476
+"29","herefordshire and worcestershire health and care nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",2,5,0.4,0.5
+"30","herefordshire and worcestershire health and care nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",16,35,0.457142857142857,0.25
+"31","herefordshire and worcestershire health and care nhs trust","Dietetics","ss_q26c_LikertScore",4,10,0.4,0.25
+"32","herefordshire and worcestershire health and care nhs trust","Occupational Therapy","ss_q26c_LikertScore",92,210,0.438095238095238,0.130434782608696
+"33","herefordshire and worcestershire health and care nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",1,5,0.2,0
+"34","herefordshire and worcestershire health and care nhs trust","Physiotherapy","ss_q26c_LikertScore",77,160,0.48125,0.12987012987013
+"35","herefordshire and worcestershire health and care nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",32,75,0.426666666666667,0.09375
+"36","shropshire community health nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",10,25,0.4,0.1
+"37","shropshire community health nhs trust","Occupational Therapy","ss_q26c_LikertScore",41,60,0.683333333333333,0.0731707317073171
+"38","shropshire community health nhs trust","Physiotherapy","ss_q26c_LikertScore",50,85,0.588235294117647,0.06
+"39","shropshire community health nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",27,35,0.771428571428571,0.0740740740740741
+"40","barts health nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"41","barts health nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",1,5,0.2,1
+"42","barts health nhs trust","Dietetics","ss_q26c_LikertScore",67,100,0.67,0.208955223880597
+"43","barts health nhs trust","Occupational Therapy","ss_q26c_LikertScore",68,100,0.68,0.220588235294118
+"44","barts health nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",44,125,0.352,0.204545454545455
+"45","barts health nhs trust","Orthoptics","ss_q26c_LikertScore",11,35,0.314285714285714,0.0909090909090909
+"46","barts health nhs trust","Physiotherapy","ss_q26c_LikertScore",188,285,0.659649122807018,0.212765957446809
+"47","barts health nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,345,0.00289855072463768,0
+"48","barts health nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,80,0.0125,1
+"49","barts health nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",68,115,0.591304347826087,0.205882352941176
+"50","london north west university healthcare nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",2,5,0.4,0
+"51","london north west university healthcare nhs trust","Dietetics","ss_q26c_LikertScore",27,45,0.6,0.407407407407407
+"52","london north west university healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",37,60,0.616666666666667,0.27027027027027
+"53","london north west university healthcare nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",17,40,0.425,0.294117647058824
+"54","london north west university healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",84,140,0.6,0.392857142857143
+"55","london north west university healthcare nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",22,205,0.107317073170732,0.318181818181818
+"56","london north west university healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",17,30,0.566666666666667,0
+"57","essex partnership university nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",5,10,0.5,0.4
+"58","essex partnership university nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",14,45,0.311111111111111,0.0714285714285714
+"59","essex partnership university nhs foundation trust","Dietetics","ss_q26c_LikertScore",14,20,0.7,0.0714285714285714
+"60","essex partnership university nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",127,200,0.635,0.149606299212598
+"61","essex partnership university nhs foundation trust","Osteopathy","ss_q26c_LikertScore",5,5,1,0.2
+"62","essex partnership university nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",56,105,0.533333333333333,0.196428571428571
+"63","essex partnership university nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",28,50,0.56,0.214285714285714
+"64","royal surrey county hospital nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",4,10,0.4,0
+"65","royal surrey county hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",16,35,0.457142857142857,0.1875
+"66","royal surrey county hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",28,60,0.466666666666667,0.142857142857143
+"67","royal surrey county hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",12,40,0.3,0.25
+"68","royal surrey county hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,5,0.6,0
+"69","royal surrey county hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",67,135,0.496296296296296,0.119402985074627
+"70","royal surrey county hospital nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,95,0.0105263157894737,0
+"71","royal surrey county hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",18,20,0.9,0
+"72","university hospitals bristol and weston nhs foundation trust","Dietetics","ss_q26c_LikertScore",70,85,0.823529411764706,0.0571428571428571
+"73","university hospitals bristol and weston nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",57,80,0.7125,0.0526315789473684
+"74","university hospitals bristol and weston nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",28,75,0.373333333333333,0.285714285714286
+"75","university hospitals bristol and weston nhs foundation trust","Orthoptics","ss_q26c_LikertScore",8,50,0.16,0
+"76","university hospitals bristol and weston nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",158,220,0.718181818181818,0.0886075949367089
+"77","university hospitals bristol and weston nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",7,210,0.0333333333333333,0
+"78","university hospitals bristol and weston nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",16,65,0.246153846153846,0.0625
+"79","university hospitals bristol and weston nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",40,50,0.8,0.025
+"80","torbay and south devon nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",20,30,0.666666666666667,0.2
+"81","torbay and south devon nhs foundation trust","Dietetics","ss_q26c_LikertScore",21,35,0.6,0.0952380952380952
+"82","torbay and south devon nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",68,155,0.438709677419355,0.161764705882353
+"83","torbay and south devon nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",12,55,0.218181818181818,0.25
+"84","torbay and south devon nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,10,0.2,0.5
+"85","torbay and south devon nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",65,150,0.433333333333333,0.123076923076923
+"86","torbay and south devon nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",44,80,0.55,0.136363636363636
+"87","bradford teaching hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",52,75,0.693333333333333,0.0384615384615385
+"88","bradford teaching hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",25,45,0.555555555555556,0.08
+"89","bradford teaching hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",17,55,0.309090909090909,0.0588235294117647
+"90","bradford teaching hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",67,125,0.536,0.17910447761194
+"91","bradford teaching hospitals nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",1,5,0.2,0
+"92","bradford teaching hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",8,155,0.0516129032258065,0.125
+"93","bradford teaching hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",7,15,0.466666666666667,0
+"94","mid and south essex nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",2,5,0.4,0.5
+"95","mid and south essex nhs foundation trust","Dietetics","ss_q26c_LikertScore",30,60,0.5,0.233333333333333
+"96","mid and south essex nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",38,75,0.506666666666667,0.236842105263158
+"97","mid and south essex nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",50,115,0.434782608695652,0.28
+"98","mid and south essex nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,15,0.2,0
+"99","mid and south essex nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",132,265,0.49811320754717,0.25
+"100","mid and south essex nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",10,310,0.032258064516129,0.2
+"101","mid and south essex nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",2,40,0.05,0
+"102","mid and south essex nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",12,20,0.6,0.416666666666667
+"103","royal free london nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",13,15,0.866666666666667,0.307692307692308
+"104","royal free london nhs foundation trust","Dietetics","ss_q26c_LikertScore",55,95,0.578947368421053,0.290909090909091
+"105","royal free london nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",81,140,0.578571428571429,0.209876543209877
+"106","royal free london nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",20,70,0.285714285714286,0.1
+"107","royal free london nhs foundation trust","Orthoptics","ss_q26c_LikertScore",9,15,0.6,0.111111111111111
+"108","royal free london nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",185,195,0.948717948717949,0.2
+"109","royal free london nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",7,270,0.0259259259259259,0
+"110","royal free london nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",60,105,0.571428571428571,0.0166666666666667
+"111","royal national orthopaedic hospital nhs trust","Dietetics","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"112","royal national orthopaedic hospital nhs trust","Occupational Therapy","ss_q26c_LikertScore",17,35,0.485714285714286,0
+"113","royal national orthopaedic hospital nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",7,15,0.466666666666667,0.571428571428571
+"114","royal national orthopaedic hospital nhs trust","Physiotherapy","ss_q26c_LikertScore",42,90,0.466666666666667,0.0952380952380952
+"115","royal national orthopaedic hospital nhs trust","Prosthetics and Orthotics","ss_q26c_LikertScore",6,10,0.6,0
+"116","north east london nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",8,20,0.4,0.375
+"117","north east london nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",35,40,0.875,0.114285714285714
+"118","north east london nhs foundation trust","Dietetics","ss_q26c_LikertScore",27,50,0.54,0.259259259259259
+"119","north east london nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",160,225,0.711111111111111,0.09375
+"120","north east london nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",149,215,0.693023255813954,0.161073825503356
+"121","north east london nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",89,145,0.613793103448276,0.123595505617978
+"122","kingston and richmond nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",3,10,0.3,0
+"123","kingston and richmond nhs foundation trust","Dietetics","ss_q26c_LikertScore",19,20,0.95,0
+"124","kingston and richmond nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",34,45,0.755555555555556,0.294117647058824
+"125","kingston and richmond nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",11,15,0.733333333333333,0.0909090909090909
+"126","kingston and richmond nhs foundation trust","Orthoptics","ss_q26c_LikertScore",4,5,0.8,0
+"127","kingston and richmond nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",89,140,0.635714285714286,0.123595505617978
+"128","kingston and richmond nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",10,70,0.142857142857143,0.1
+"129","kingston and richmond nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",26,35,0.742857142857143,0.115384615384615
+"130","dorset county hospital nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",1,5,0.2,0
+"131","dorset county hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",13,20,0.65,0.0769230769230769
+"132","dorset county hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",14,30,0.466666666666667,0
+"133","dorset county hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",25,45,0.555555555555556,0.4
+"134","dorset county hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",1,5,0.2,0
+"135","dorset county hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",41,65,0.630769230769231,0.0731707317073171
+"136","dorset county hospital nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",1,5,0.2,0
+"137","dorset county hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",3,65,0.0461538461538462,0
+"138","dorset county hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",4,10,0.4,0
+"139","walsall healthcare nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",5,20,0.25,0.4
+"140","walsall healthcare nhs trust","Dietetics","ss_q26c_LikertScore",6,15,0.4,0.5
+"141","walsall healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",11,50,0.22,0.272727272727273
+"142","walsall healthcare nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",5,40,0.125,0
+"143","walsall healthcare nhs trust","Orthoptics","ss_q26c_LikertScore",1,5,0.2,0
+"144","walsall healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",35,95,0.368421052631579,0.257142857142857
+"145","walsall healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",14,30,0.466666666666667,0.0714285714285714
+"146","wirral university teaching hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",17,20,0.85,0.0588235294117647
+"147","wirral university teaching hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",45,65,0.692307692307692,0.133333333333333
+"148","wirral university teaching hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",28,70,0.4,0.428571428571429
+"149","wirral university teaching hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",1,10,0.1,0
+"150","wirral university teaching hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",87,135,0.644444444444444,0.103448275862069
+"151","wirral university teaching hospital nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",8,5,1.6,0.25
+"152","wirral university teaching hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",4,140,0.0285714285714286,0.25
+"153","wirral university teaching hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",8,10,0.8,0.125
+"154","mersey and west lancashire teaching hospitals nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",2,5,0.4,0
+"155","mersey and west lancashire teaching hospitals nhs trust","Dietetics","ss_q26c_LikertScore",16,30,0.533333333333333,0.25
+"156","mersey and west lancashire teaching hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",54,105,0.514285714285714,0.222222222222222
+"157","mersey and west lancashire teaching hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",36,140,0.257142857142857,0.194444444444444
+"158","mersey and west lancashire teaching hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",6,20,0.3,0
+"159","mersey and west lancashire teaching hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",82,190,0.431578947368421,0.109756097560976
+"160","mersey and west lancashire teaching hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",5,180,0.0277777777777778,0
+"161","mersey and west lancashire teaching hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",8,15,0.533333333333333,0.375
+"162","liverpool heart and chest hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",5,5,1,0.2
+"163","liverpool heart and chest hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",4,10,0.4,0
+"164","liverpool heart and chest hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",42,45,0.933333333333333,0.0952380952380952
+"165","liverpool heart and chest hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",2,5,0.4,0
+"166","alder hey children's nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",2,5,0.4,0
+"167","alder hey children's nhs foundation trust","Dietetics","ss_q26c_LikertScore",26,35,0.742857142857143,0.153846153846154
+"168","alder hey children's nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",28,40,0.7,0.0714285714285714
+"169","alder hey children's nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",22,65,0.338461538461538,0.136363636363636
+"170","alder hey children's nhs foundation trust","Orthoptics","ss_q26c_LikertScore",7,15,0.466666666666667,0.285714285714286
+"171","alder hey children's nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",67,85,0.788235294117647,0.0746268656716418
+"172","alder hey children's nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",4,5,0.8,0.25
+"173","alder hey children's nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",4,45,0.0888888888888889,0
+"174","alder hey children's nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",72,95,0.757894736842105,0.0833333333333333
+"175","mid cheshire hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",12,20,0.6,0.0833333333333333
+"176","mid cheshire hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",22,25,0.88,0.136363636363636
+"177","mid cheshire hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",31,75,0.413333333333333,0.0967741935483871
+"178","mid cheshire hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",24,55,0.436363636363636,0.291666666666667
+"179","mid cheshire hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,10,0.3,0
+"180","mid cheshire hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",44,155,0.283870967741935,0.0909090909090909
+"181","mid cheshire hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",5,100,0.05,0.2
+"182","mid cheshire hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",52,85,0.611764705882353,0.0961538461538462
+"183","bedfordshire hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",25,45,0.555555555555556,0.08
+"184","bedfordshire hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",13,50,0.26,0.0769230769230769
+"185","bedfordshire hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",4,65,0.0615384615384615,0.5
+"186","bedfordshire hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",76,175,0.434285714285714,0.210526315789474
+"187","bedfordshire hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",2,195,0.0102564102564103,0
+"188","bedfordshire hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",8,10,0.8,0
+"189","york and scarborough teaching hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",22,25,0.88,0.136363636363636
+"190","york and scarborough teaching hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",71,120,0.591666666666667,0.126760563380282
+"191","york and scarborough teaching hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",7,90,0.0777777777777778,0.142857142857143
+"192","york and scarborough teaching hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",6,65,0.0923076923076923,0
+"193","york and scarborough teaching hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",138,245,0.563265306122449,0.0942028985507246
+"194","york and scarborough teaching hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",6,150,0.04,0
+"195","york and scarborough teaching hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",38,50,0.76,0.0789473684210526
+"196","harrogate and district nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",30,65,0.461538461538462,0.233333333333333
+"197","harrogate and district nhs foundation trust","Dietetics","ss_q26c_LikertScore",13,20,0.65,0
+"198","harrogate and district nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",28,45,0.622222222222222,0.0714285714285714
+"199","harrogate and district nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",20,40,0.5,0.3
+"200","harrogate and district nhs foundation trust","Orthoptics","ss_q26c_LikertScore",6,10,0.6,0
+"201","harrogate and district nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",72,95,0.757894736842105,0.138888888888889
+"202","harrogate and district nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",15,75,0.2,0
+"203","harrogate and district nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",35,50,0.7,0.0285714285714286
+"204","airedale nhs foundation trust","Dietetics","ss_q26c_LikertScore",15,20,0.75,0.0666666666666667
+"205","airedale nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",24,40,0.6,0.125
+"206","airedale nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",19,30,0.633333333333333,0.263157894736842
+"207","airedale nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",59,100,0.59,0.135593220338983
+"208","airedale nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",4,65,0.0615384615384615,0
+"209","airedale nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",25,30,0.833333333333333,0
+"210","sheffield children's nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",2,10,0.2,0
+"211","sheffield children's nhs foundation trust","Dietetics","ss_q26c_LikertScore",23,25,0.92,0.0434782608695652
+"212","sheffield children's nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",34,55,0.618181818181818,0.117647058823529
+"213","sheffield children's nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",27,55,0.490909090909091,0.222222222222222
+"214","sheffield children's nhs foundation trust","Orthoptics","ss_q26c_LikertScore",6,20,0.3,0
+"215","sheffield children's nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",34,70,0.485714285714286,0.117647058823529
+"216","sheffield children's nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",67,100,0.67,0.0447761194029851
+"217","royal united hospitals bath nhs foundation trust","Dietetics","ss_q26c_LikertScore",18,25,0.72,0.277777777777778
+"218","royal united hospitals bath nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",43,65,0.661538461538462,0.0697674418604651
+"219","royal united hospitals bath nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",17,50,0.34,0.294117647058824
+"220","royal united hospitals bath nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"221","royal united hospitals bath nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",65,130,0.5,0.138461538461538
+"222","royal united hospitals bath nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",2,145,0.0137931034482759,0
+"223","royal united hospitals bath nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",11,15,0.733333333333333,0.0909090909090909
+"224","milton keynes university hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",25,25,1,0.12
+"225","milton keynes university hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",17,25,0.68,0.294117647058824
+"226","milton keynes university hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",27,40,0.675,0.148148148148148
+"227","milton keynes university hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,20,0.1,0
+"228","milton keynes university hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",48,55,0.872727272727273,0.145833333333333
+"229","milton keynes university hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",23,90,0.255555555555556,0.130434782608696
+"230","east suffolk and north essex nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",17,20,0.85,0
+"231","east suffolk and north essex nhs foundation trust","Dietetics","ss_q26c_LikertScore",32,40,0.8,0.125
+"232","east suffolk and north essex nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",86,135,0.637037037037037,0.162790697674419
+"233","east suffolk and north essex nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",60,105,0.571428571428571,0.15
+"234","east suffolk and north essex nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,15,0.2,0
+"235","east suffolk and north essex nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",186,290,0.641379310344828,0.123655913978495
+"236","east suffolk and north essex nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",7,225,0.0311111111111111,0.285714285714286
+"237","east suffolk and north essex nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",10,75,0.133333333333333,0.1
+"238","east suffolk and north essex nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",44,50,0.88,0.113636363636364
+"239","sussex community nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",38,75,0.506666666666667,0.184210526315789
+"240","sussex community nhs foundation trust","Dietetics","ss_q26c_LikertScore",4,10,0.4,0
+"241","sussex community nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",158,210,0.752380952380952,0.107594936708861
+"242","sussex community nhs foundation trust","Osteopathy","ss_q26c_LikertScore",6,10,0.6,0
+"243","sussex community nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",252,330,0.763636363636364,0.138888888888889
+"244","sussex community nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",94,145,0.648275862068965,0.106382978723404
+"245","frimley health nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",5,5,1,0
+"246","frimley health nhs foundation trust","Dietetics","ss_q26c_LikertScore",30,45,0.666666666666667,0.166666666666667
+"247","frimley health nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",63,85,0.741176470588235,0.174603174603175
+"248","frimley health nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",38,85,0.447058823529412,0.157894736842105
+"249","frimley health nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,5,0.6,0
+"250","frimley health nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",164,220,0.745454545454545,0.128048780487805
+"251","frimley health nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",21,190,0.110526315789474,0.142857142857143
+"252","frimley health nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,5,0.2,1
+"253","frimley health nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",14,20,0.7,0.142857142857143
+"254","dorset healthcare university nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",7,5,1.4,0.285714285714286
+"255","dorset healthcare university nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",24,40,0.6,0.291666666666667
+"256","dorset healthcare university nhs foundation trust","Dietetics","ss_q26c_LikertScore",11,15,0.733333333333333,0.0909090909090909
+"257","dorset healthcare university nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",108,215,0.502325581395349,0.0648148148148148
+"258","dorset healthcare university nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,5,0.2,0
+"259","dorset healthcare university nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",100,165,0.606060606060606,0.11
+"260","dorset healthcare university nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,10,0.1,0
+"261","dorset healthcare university nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",63,105,0.6,0.0158730158730159
+"262","royal cornwall hospitals nhs trust","Dietetics","ss_q26c_LikertScore",33,50,0.66,0.181818181818182
+"263","royal cornwall hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",37,75,0.493333333333333,0.351351351351351
+"264","royal cornwall hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",51,75,0.68,0.156862745098039
+"265","royal cornwall hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",2,15,0.133333333333333,0
+"266","royal cornwall hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",63,105,0.6,0.26984126984127
+"267","royal cornwall hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",60,140,0.428571428571429,0.2
+"268","royal cornwall hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",13,15,0.866666666666667,0.307692307692308
+"269","liverpool university hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",5,15,0.333333333333333,0.4
+"270","liverpool university hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",40,80,0.5,0.225
+"271","liverpool university hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",42,155,0.270967741935484,0.166666666666667
+"272","liverpool university hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",25,125,0.2,0.12
+"273","liverpool university hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,45,0.111111111111111,0.4
+"274","liverpool university hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",94,310,0.303225806451613,0.159574468085106
+"275","liverpool university hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",2,305,0.00655737704918033,0
+"276","liverpool university hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",14,40,0.35,0.142857142857143
+"277","liverpool women's nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",2,5,0.4,0
+"278","liverpool women's nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",10,35,0.285714285714286,0.2
+"279","liverpool women's nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",2,5,0.4,0
+"280","liverpool women's nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",18,30,0.6,0.166666666666667
+"281","barking, havering and redbridge university hospitals nhs trust","Dietetics","ss_q26c_LikertScore",15,25,0.6,0.2
+"282","barking, havering and redbridge university hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",47,80,0.5875,0.25531914893617
+"283","barking, havering and redbridge university hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",17,30,0.566666666666667,0.176470588235294
+"284","barking, havering and redbridge university hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",5,15,0.333333333333333,0.4
+"285","barking, havering and redbridge university hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",122,150,0.813333333333333,0.204918032786885
+"286","barking, havering and redbridge university hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",21,25,0.84,0.142857142857143
+"287","barnsley hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",11,15,0.733333333333333,0.454545454545455
+"288","barnsley hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",27,45,0.6,0.296296296296296
+"289","barnsley hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",17,40,0.425,0.117647058823529
+"290","barnsley hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,5,1,0
+"291","barnsley hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",42,65,0.646153846153846,0.0714285714285714
+"292","barnsley hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",4,90,0.0444444444444444,0
+"293","barnsley hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",17,20,0.85,0.176470588235294
+"294","chesterfield royal hospital nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"295","chesterfield royal hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",18,20,0.9,0
+"296","chesterfield royal hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",44,45,0.977777777777778,0.113636363636364
+"297","chesterfield royal hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",16,55,0.290909090909091,0.375
+"298","chesterfield royal hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",4,15,0.266666666666667,0.25
+"299","chesterfield royal hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",72,85,0.847058823529412,0.152777777777778
+"300","chesterfield royal hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",13,35,0.371428571428571,0.0769230769230769
+"301","leeds and york partnership nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",4,5,0.8,0.25
+"302","leeds and york partnership nhs foundation trust","Dietetics","ss_q26c_LikertScore",10,20,0.5,0.1
+"303","leeds and york partnership nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",59,145,0.406896551724138,0.186440677966102
+"304","leeds and york partnership nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",8,10,0.8,0.125
+"305","leeds and york partnership nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",8,15,0.533333333333333,0.25
+"306","royal papworth hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",7,10,0.7,0
+"307","royal papworth hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",9,10,0.9,0.111111111111111
+"308","royal papworth hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",7,20,0.35,0.285714285714286
+"309","royal papworth hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",23,30,0.766666666666667,0.0869565217391304
+"310","royal papworth hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",7,40,0.175,0
+"311","royal papworth hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",2,5,0.4,0
+"312","north west anglia nhs foundation trust","Dietetics","ss_q26c_LikertScore",11,20,0.55,0.181818181818182
+"313","north west anglia nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",20,40,0.5,0.15
+"314","north west anglia nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",31,95,0.326315789473684,0.258064516129032
+"315","north west anglia nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,10,0.5,0
+"316","north west anglia nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",49,95,0.515789473684211,0.102040816326531
+"317","north west anglia nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",14,160,0.0875,0.0714285714285714
+"318","north west anglia nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",4,30,0.133333333333333,0.25
+"319","north west anglia nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",12,15,0.8,0.0833333333333333
+"320","james paget university hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",3,10,0.3,0
+"321","james paget university hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",18,35,0.514285714285714,0.166666666666667
+"322","james paget university hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",14,60,0.233333333333333,0.357142857142857
+"323","james paget university hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,5,0.4,0.5
+"324","james paget university hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",31,55,0.563636363636364,0.0645161290322581
+"325","james paget university hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",3,85,0.0352941176470588,0
+"326","james paget university hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",2,5,0.4,0
+"327","west suffolk nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",2,5,0.4,0
+"328","west suffolk nhs foundation trust","Dietetics","ss_q26c_LikertScore",15,25,0.6,0.2
+"329","west suffolk nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",53,100,0.53,0.150943396226415
+"330","west suffolk nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",28,70,0.4,0.178571428571429
+"331","west suffolk nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,5,0.4,0
+"332","west suffolk nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",75,125,0.6,0.04
+"333","west suffolk nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",9,110,0.0818181818181818,0.222222222222222
+"334","west suffolk nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",74,95,0.778947368421053,0.0810810810810811
+"335","cambridge university hospitals nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"336","cambridge university hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",5,10,0.5,0
+"337","cambridge university hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",61,85,0.717647058823529,0.163934426229508
+"338","cambridge university hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",44,75,0.586666666666667,0.159090909090909
+"339","cambridge university hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",22,80,0.275,0.409090909090909
+"340","cambridge university hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",8,30,0.266666666666667,0.125
+"341","cambridge university hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",108,170,0.635294117647059,0.111111111111111
+"342","cambridge university hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,205,0.0048780487804878,0
+"343","cambridge university hospitals nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",3,60,0.05,0
+"344","cambridge university hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",30,60,0.5,0.0333333333333333
+"345","somerset nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",5,10,0.5,0.4
+"346","somerset nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",15,30,0.5,0.266666666666667
+"347","somerset nhs foundation trust","Dietetics","ss_q26c_LikertScore",36,50,0.72,0.166666666666667
+"348","somerset nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",111,240,0.4625,0.108108108108108
+"349","somerset nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",31,80,0.3875,0.129032258064516
+"350","somerset nhs foundation trust","Orthoptics","ss_q26c_LikertScore",4,15,0.266666666666667,0
+"351","somerset nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",153,330,0.463636363636364,0.0849673202614379
+"352","somerset nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",5,5,1,0
+"353","somerset nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",7,155,0.0451612903225806,0.142857142857143
+"354","somerset nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",58,75,0.773333333333333,0.0689655172413793
+"355","royal devon university healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",18,35,0.514285714285714,0.111111111111111
+"356","royal devon university healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",24,50,0.48,0.0833333333333333
+"357","royal devon university healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",71,220,0.322727272727273,0.0985915492957746
+"358","royal devon university healthcare nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",49,155,0.316129032258064,0.163265306122449
+"359","royal devon university healthcare nhs foundation trust","Orthoptics","ss_q26c_LikertScore",7,35,0.2,0.142857142857143
+"360","royal devon university healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",161,400,0.4025,0.130434782608696
+"361","royal devon university healthcare nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",13,180,0.0722222222222222,0.0769230769230769
+"362","royal devon university healthcare nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",9,35,0.257142857142857,0.111111111111111
+"363","royal devon university healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",34,50,0.68,0.0588235294117647
+"364","nottinghamshire healthcare nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",2,10,0.2,0.5
+"365","nottinghamshire healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",26,60,0.433333333333333,0.153846153846154
+"366","nottinghamshire healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",24,25,0.96,0.125
+"367","nottinghamshire healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",140,320,0.4375,0.157142857142857
+"368","nottinghamshire healthcare nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,5,0.2,0
+"369","nottinghamshire healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",100,155,0.645161290322581,0.14
+"370","nottinghamshire healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",69,135,0.511111111111111,0.101449275362319
+"371","university hospital southampton nhs foundation trust","Dietetics","ss_q26c_LikertScore",46,85,0.541176470588235,0.0217391304347826
+"372","university hospital southampton nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",34,70,0.485714285714286,0.0588235294117647
+"373","university hospital southampton nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",40,110,0.363636363636364,0.175
+"374","university hospital southampton nhs foundation trust","Orthoptics","ss_q26c_LikertScore",14,25,0.56,0.0714285714285714
+"375","university hospital southampton nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",86,195,0.441025641025641,0.127906976744186
+"376","university hospital southampton nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",64,250,0.256,0.109375
+"377","university hospital southampton nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",20,85,0.235294117647059,0.15
+"378","university hospital southampton nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",20,30,0.666666666666667,0.15
+"379","sheffield teaching hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",23,45,0.511111111111111,0.260869565217391
+"380","sheffield teaching hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",52,70,0.742857142857143,0.0576923076923077
+"381","sheffield teaching hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",106,165,0.642424242424242,0.0943396226415094
+"382","sheffield teaching hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",62,200,0.31,0.193548387096774
+"383","sheffield teaching hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",12,35,0.342857142857143,0.166666666666667
+"384","sheffield teaching hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",246,385,0.638961038961039,0.101626016260163
+"385","sheffield teaching hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",11,225,0.0488888888888889,0.181818181818182
+"386","sheffield teaching hospitals nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",16,120,0.133333333333333,0.0625
+"387","sheffield teaching hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",38,55,0.690909090909091,0.105263157894737
+"388","portsmouth hospitals university nhs trust","Dietetics","ss_q26c_LikertScore",17,35,0.485714285714286,0.235294117647059
+"389","portsmouth hospitals university nhs trust","Occupational Therapy","ss_q26c_LikertScore",26,45,0.577777777777778,0.0384615384615385
+"390","portsmouth hospitals university nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",26,120,0.216666666666667,0.153846153846154
+"391","portsmouth hospitals university nhs trust","Orthoptics","ss_q26c_LikertScore",1,10,0.1,0
+"392","portsmouth hospitals university nhs trust","Physiotherapy","ss_q26c_LikertScore",52,85,0.611764705882353,0.115384615384615
+"393","portsmouth hospitals university nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",6,175,0.0342857142857143,0
+"394","portsmouth hospitals university nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",7,45,0.155555555555556,0.285714285714286
+"395","portsmouth hospitals university nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",11,10,1.1,0.545454545454545
+"396","royal berkshire nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",41,50,0.82,0.24390243902439
+"397","royal berkshire nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",22,45,0.488888888888889,0.0909090909090909
+"398","royal berkshire nhs foundation trust","Orthoptics","ss_q26c_LikertScore",12,15,0.8,0.0833333333333333
+"399","royal berkshire nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",73,85,0.858823529411765,0.136986301369863
+"400","royal berkshire nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",5,5,1,0.4
+"401","royal berkshire nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",5,155,0.032258064516129,0.2
+"402","royal berkshire nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,50,0.02,0
+"403","royal berkshire nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",13,15,0.866666666666667,0
+"404","guy's and st thomas' nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",10,40,0.25,0.1
+"405","guy's and st thomas' nhs foundation trust","Dietetics","ss_q26c_LikertScore",108,160,0.675,0.12037037037037
+"406","guy's and st thomas' nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",133,215,0.618604651162791,0.18796992481203
+"407","guy's and st thomas' nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",5,75,0.0666666666666667,0.8
+"408","guy's and st thomas' nhs foundation trust","Orthoptics","ss_q26c_LikertScore",7,60,0.116666666666667,0
+"409","guy's and st thomas' nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",305,535,0.570093457943925,0.118032786885246
+"410","guy's and st thomas' nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",4,10,0.4,0
+"411","guy's and st thomas' nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",5,335,0.0149253731343284,0
+"412","guy's and st thomas' nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,115,0.00869565217391304,0
+"413","guy's and st thomas' nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",140,200,0.7,0.0285714285714286
+"414","lewisham and greenwich nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",17,30,0.566666666666667,0.235294117647059
+"415","lewisham and greenwich nhs trust","Dietetics","ss_q26c_LikertScore",37,40,0.925,0.216216216216216
+"416","lewisham and greenwich nhs trust","Occupational Therapy","ss_q26c_LikertScore",68,75,0.906666666666667,0.147058823529412
+"417","lewisham and greenwich nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",10,15,0.666666666666667,0.1
+"418","lewisham and greenwich nhs trust","Physiotherapy","ss_q26c_LikertScore",140,160,0.875,0.185714285714286
+"419","lewisham and greenwich nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",7,125,0.056,0.285714285714286
+"420","lewisham and greenwich nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",63,70,0.9,0.0476190476190476
+"421","croydon health services nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",4,5,0.8,0
+"422","croydon health services nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",10,15,0.666666666666667,0
+"423","croydon health services nhs trust","Dietetics","ss_q26c_LikertScore",11,20,0.55,0.454545454545455
+"424","croydon health services nhs trust","Occupational Therapy","ss_q26c_LikertScore",20,50,0.4,0.1
+"425","croydon health services nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",7,20,0.35,0.285714285714286
+"426","croydon health services nhs trust","Physiotherapy","ss_q26c_LikertScore",42,75,0.56,0.357142857142857
+"427","croydon health services nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",16,40,0.4,0.375
+"428","st george's university hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",2,5,0.4,0.5
+"429","st george's university hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",31,65,0.476923076923077,0.32258064516129
+"430","st george's university hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",75,125,0.6,0.213333333333333
+"431","st george's university hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",7,40,0.175,0.285714285714286
+"432","st george's university hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",143,240,0.595833333333333,0.174825174825175
+"433","st george's university hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",11,200,0.055,0.272727272727273
+"434","st george's university hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",70,100,0.7,0.214285714285714
+"435","cornwall partnership nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",2,5,0.4,0.5
+"436","cornwall partnership nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",15,30,0.5,0.2
+"437","cornwall partnership nhs foundation trust","Dietetics","ss_q26c_LikertScore",10,15,0.666666666666667,0
+"438","cornwall partnership nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",94,160,0.5875,0.117021276595745
+"439","cornwall partnership nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,5,0.2,0
+"440","cornwall partnership nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",115,175,0.657142857142857,0.0869565217391304
+"441","cornwall partnership nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",52,80,0.65,0.0769230769230769
+"442","south warwickshire university nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",24,35,0.685714285714286,0.0833333333333333
+"443","south warwickshire university nhs foundation trust","Dietetics","ss_q26c_LikertScore",30,45,0.666666666666667,0.1
+"444","south warwickshire university nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",62,115,0.539130434782609,0.0967741935483871
+"445","south warwickshire university nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",11,40,0.275,0.0909090909090909
+"446","south warwickshire university nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,5,1,0.4
+"447","south warwickshire university nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",100,215,0.465116279069767,0.08
+"448","south warwickshire university nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",2,5,0.4,0
+"449","south warwickshire university nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",4,80,0.05,0.25
+"450","south warwickshire university nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",67,100,0.67,0.0746268656716418
+"451","university hospitals of north midlands nhs trust","Dietetics","ss_q26c_LikertScore",28,45,0.622222222222222,0.107142857142857
+"452","university hospitals of north midlands nhs trust","Occupational Therapy","ss_q26c_LikertScore",25,45,0.555555555555556,0.08
+"453","university hospitals of north midlands nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",71,165,0.43030303030303,0.253521126760563
+"454","university hospitals of north midlands nhs trust","Orthoptics","ss_q26c_LikertScore",10,25,0.4,0.1
+"455","university hospitals of north midlands nhs trust","Physiotherapy","ss_q26c_LikertScore",94,150,0.626666666666667,0.0851063829787234
+"456","university hospitals of north midlands nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",27,245,0.110204081632653,0.0740740740740741
+"457","university hospitals of north midlands nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",16,15,1.06666666666667,0.125
+"458","northern lincolnshire and goole nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",6,15,0.4,0.166666666666667
+"459","northern lincolnshire and goole nhs foundation trust","Dietetics","ss_q26c_LikertScore",13,20,0.65,0.153846153846154
+"460","northern lincolnshire and goole nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",25,55,0.454545454545455,0.08
+"461","northern lincolnshire and goole nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",19,65,0.292307692307692,0.210526315789474
+"462","northern lincolnshire and goole nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,10,0.5,0.2
+"463","northern lincolnshire and goole nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",46,95,0.484210526315789,0.0869565217391304
+"464","northern lincolnshire and goole nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",9,170,0.0529411764705882,0.111111111111111
+"465","northern lincolnshire and goole nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",25,35,0.714285714285714,0.2
+"466","east cheshire nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",6,15,0.4,0.166666666666667
+"467","east cheshire nhs trust","Dietetics","ss_q26c_LikertScore",13,15,0.866666666666667,0.0769230769230769
+"468","east cheshire nhs trust","Occupational Therapy","ss_q26c_LikertScore",22,35,0.628571428571429,0.227272727272727
+"469","east cheshire nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",10,20,0.5,0.1
+"470","east cheshire nhs trust","Physiotherapy","ss_q26c_LikertScore",41,90,0.455555555555556,0.195121951219512
+"471","east cheshire nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",9,45,0.2,0
+"472","east cheshire nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",6,30,0.2,0.166666666666667
+"473","countess of chester hospital nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",3,5,0.6,0
+"474","countess of chester hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",16,35,0.457142857142857,0.125
+"475","countess of chester hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",24,45,0.533333333333333,0.125
+"476","countess of chester hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",12,40,0.3,0.0833333333333333
+"477","countess of chester hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,5,1,0.4
+"478","countess of chester hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",44,90,0.488888888888889,0.181818181818182
+"479","countess of chester hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",9,105,0.0857142857142857,0
+"480","countess of chester hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",7,10,0.7,0.142857142857143
+"481","king's college hospital nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",5,10,0.5,0.2
+"482","king's college hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",61,65,0.938461538461538,0.229508196721311
+"483","king's college hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",74,150,0.493333333333333,0.162162162162162
+"484","king's college hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",50,45,1.11111111111111,0.14
+"485","king's college hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",12,45,0.266666666666667,0.166666666666667
+"486","king's college hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",135,235,0.574468085106383,0.214814814814815
+"487","king's college hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",57,265,0.215094339622642,0.228070175438596
+"488","king's college hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",31,45,0.688888888888889,0.225806451612903
+"489","sherwood forest hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",7,15,0.466666666666667,0.142857142857143
+"490","sherwood forest hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",30,60,0.5,0.2
+"491","sherwood forest hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",32,70,0.457142857142857,0.125
+"492","sherwood forest hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,15,0.333333333333333,0.4
+"493","sherwood forest hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",53,105,0.504761904761905,0.132075471698113
+"494","sherwood forest hospitals nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",4,5,0.8,0
+"495","sherwood forest hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",4,95,0.0421052631578947,0
+"496","sherwood forest hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",3,15,0.2,0
+"497","university hospitals plymouth nhs trust","Dietetics","ss_q26c_LikertScore",35,45,0.777777777777778,0.0857142857142857
+"498","university hospitals plymouth nhs trust","Occupational Therapy","ss_q26c_LikertScore",50,80,0.625,0.14
+"499","university hospitals plymouth nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",31,135,0.22962962962963,0.129032258064516
+"500","university hospitals plymouth nhs trust","Orthoptics","ss_q26c_LikertScore",4,20,0.2,0
+"501","university hospitals plymouth nhs trust","Physiotherapy","ss_q26c_LikertScore",105,170,0.617647058823529,0.123809523809524
+"502","university hospitals plymouth nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",32,200,0.16,0.125
+"503","university hospitals plymouth nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",20,20,1,0.05
+"504","university hospitals coventry and warwickshire nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",10,10,1,0
+"505","university hospitals coventry and warwickshire nhs trust","Dietetics","ss_q26c_LikertScore",48,60,0.8,0.229166666666667
+"506","university hospitals coventry and warwickshire nhs trust","Occupational Therapy","ss_q26c_LikertScore",73,105,0.695238095238095,0.205479452054795
+"507","university hospitals coventry and warwickshire nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",39,120,0.325,0.205128205128205
+"508","university hospitals coventry and warwickshire nhs trust","Orthoptics","ss_q26c_LikertScore",14,35,0.4,0.142857142857143
+"509","university hospitals coventry and warwickshire nhs trust","Physiotherapy","ss_q26c_LikertScore",194,195,0.994871794871795,0.221649484536082
+"510","university hospitals coventry and warwickshire nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",16,210,0.0761904761904762,0
+"511","university hospitals coventry and warwickshire nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",3,50,0.06,0
+"512","university hospitals coventry and warwickshire nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",22,25,0.88,0.0909090909090909
+"513","whittington health nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",18,20,0.9,0.166666666666667
+"514","whittington health nhs trust","Dietetics","ss_q26c_LikertScore",16,30,0.533333333333333,0.0625
+"515","whittington health nhs trust","Occupational Therapy","ss_q26c_LikertScore",48,75,0.64,0.104166666666667
+"516","whittington health nhs trust","Physiotherapy","ss_q26c_LikertScore",100,190,0.526315789473684,0.24
+"517","whittington health nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",155,210,0.738095238095238,0.116129032258065
+"518","west london nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",14,20,0.7,0.142857142857143
+"519","west london nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",6,15,0.4,0
+"520","west london nhs trust","Dietetics","ss_q26c_LikertScore",12,20,0.6,0.25
+"521","west london nhs trust","Occupational Therapy","ss_q26c_LikertScore",128,150,0.853333333333333,0.171875
+"522","west london nhs trust","Physiotherapy","ss_q26c_LikertScore",94,115,0.817391304347826,0.223404255319149
+"523","west london nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",27,40,0.675,0.0740740740740741
+"524","wye valley nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",3,15,0.2,0
+"525","wye valley nhs trust","Dietetics","ss_q26c_LikertScore",7,15,0.466666666666667,0
+"526","wye valley nhs trust","Occupational Therapy","ss_q26c_LikertScore",29,65,0.446153846153846,0.241379310344828
+"527","wye valley nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",11,25,0.44,0.181818181818182
+"528","wye valley nhs trust","Orthoptics","ss_q26c_LikertScore",5,5,1,0
+"529","wye valley nhs trust","Physiotherapy","ss_q26c_LikertScore",61,110,0.554545454545455,0.19672131147541
+"530","wye valley nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,60,0.0166666666666667,0
+"531","wye valley nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",15,25,0.6,0.0666666666666667
+"532","george eliot hospital nhs trust","Occupational Therapy","ss_q26c_LikertScore",17,25,0.68,0.117647058823529
+"533","george eliot hospital nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",27,40,0.675,0.185185185185185
+"534","george eliot hospital nhs trust","Orthoptics","ss_q26c_LikertScore",1,5,0.2,1
+"535","george eliot hospital nhs trust","Physiotherapy","ss_q26c_LikertScore",30,55,0.545454545454545,0.133333333333333
+"536","george eliot hospital nhs trust","Prosthetics and Orthotics","ss_q26c_LikertScore",1,5,0.2,0
+"537","george eliot hospital nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",2,50,0.04,0
+"538","north staffordshire combined healthcare nhs trust","Dietetics","ss_q26c_LikertScore",3,5,0.6,0
+"539","north staffordshire combined healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",38,45,0.844444444444444,0.105263157894737
+"540","north staffordshire combined healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",8,10,0.8,0
+"541","north staffordshire combined healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",4,5,0.8,0
+"542","norfolk and norwich university hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",4,5,0.8,0.5
+"543","norfolk and norwich university hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",29,40,0.725,0.206896551724138
+"544","norfolk and norwich university hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",43,85,0.505882352941176,0.116279069767442
+"545","norfolk and norwich university hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",17,185,0.0918918918918919,0.176470588235294
+"546","norfolk and norwich university hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,10,0.2,0
+"547","norfolk and norwich university hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",75,130,0.576923076923077,0.12
+"548","norfolk and norwich university hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",3,180,0.0166666666666667,0
+"549","norfolk and norwich university hospitals nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",2,80,0.025,0.5
+"550","norfolk and norwich university hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",17,20,0.85,0
+"551","northern care alliance nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",2,5,0.4,0
+"552","northern care alliance nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",45,95,0.473684210526316,0.0888888888888889
+"553","northern care alliance nhs foundation trust","Dietetics","ss_q26c_LikertScore",90,125,0.72,0.111111111111111
+"554","northern care alliance nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",186,275,0.676363636363636,0.123655913978495
+"555","northern care alliance nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",46,125,0.368,0.369565217391304
+"556","northern care alliance nhs foundation trust","Orthoptics","ss_q26c_LikertScore",25,30,0.833333333333333,0.08
+"557","northern care alliance nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",331,550,0.601818181818182,0.13595166163142
+"558","northern care alliance nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",6,10,0.6,0
+"559","northern care alliance nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",166,195,0.851282051282051,0.126506024096386
+"560","bolton nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",22,35,0.628571428571429,0.227272727272727
+"561","bolton nhs foundation trust","Dietetics","ss_q26c_LikertScore",14,25,0.56,0.285714285714286
+"562","bolton nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",44,85,0.517647058823529,0.204545454545455
+"563","bolton nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",13,30,0.433333333333333,0.230769230769231
+"564","bolton nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,10,0.2,0
+"565","bolton nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",89,195,0.456410256410256,0.224719101123595
+"566","bolton nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",3,105,0.0285714285714286,1
+"567","bolton nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",29,60,0.483333333333333,0.137931034482759
+"568","tameside and glossop integrated care nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",19,25,0.76,0.0526315789473684
+"569","tameside and glossop integrated care nhs foundation trust","Dietetics","ss_q26c_LikertScore",17,20,0.85,0.117647058823529
+"570","tameside and glossop integrated care nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",24,35,0.685714285714286,0.166666666666667
+"571","tameside and glossop integrated care nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",3,15,0.2,0
+"572","tameside and glossop integrated care nhs foundation trust","Orthoptics","ss_q26c_LikertScore",1,10,0.1,0
+"573","tameside and glossop integrated care nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",53,85,0.623529411764706,0.207547169811321
+"574","tameside and glossop integrated care nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",6,65,0.0923076923076923,0
+"575","tameside and glossop integrated care nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",27,30,0.9,0.111111111111111
+"576","norfolk and suffolk nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",17,15,1.13333333333333,0.117647058823529
+"577","norfolk and suffolk nhs foundation trust","Dietetics","ss_q26c_LikertScore",7,10,0.7,0.285714285714286
+"578","norfolk and suffolk nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",91,135,0.674074074074074,0.197802197802198
+"579","norfolk and suffolk nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",6,10,0.6,0.166666666666667
+"580","norfolk and suffolk nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",3,5,0.6,0
+"581","great western hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",6,15,0.4,0
+"582","great western hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",15,20,0.75,0.133333333333333
+"583","great western hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",25,65,0.384615384615385,0.12
+"584","great western hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",7,40,0.175,0.285714285714286
+"585","great western hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,10,0.3,0
+"586","great western hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",68,120,0.566666666666667,0.117647058823529
+"587","great western hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",19,75,0.253333333333333,0.105263157894737
+"588","great western hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",8,15,0.533333333333333,0
+"589","hampshire hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",20,25,0.8,0.15
+"590","hampshire hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",24,40,0.6,0.166666666666667
+"591","hampshire hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",9,45,0.2,0
+"592","hampshire hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,5,0.6,0
+"593","hampshire hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",86,130,0.661538461538462,0.22093023255814
+"594","hampshire hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",13,140,0.0928571428571429,0.153846153846154
+"595","hampshire hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",9,15,0.6,0
+"596","dartford and gravesham nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"597","dartford and gravesham nhs trust","Dietetics","ss_q26c_LikertScore",23,25,0.92,0.217391304347826
+"598","dartford and gravesham nhs trust","Occupational Therapy","ss_q26c_LikertScore",23,35,0.657142857142857,0.173913043478261
+"599","dartford and gravesham nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",1,30,0.0333333333333333,0
+"600","dartford and gravesham nhs trust","Physiotherapy","ss_q26c_LikertScore",49,65,0.753846153846154,0.102040816326531
+"601","dartford and gravesham nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",4,105,0.0380952380952381,0.5
+"602","dartford and gravesham nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",8,10,0.8,0.125
+"603","tavistock and portman nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,1
+"604","tavistock and portman nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",4,5,0.8,0
+"605","north cumbria integrated care nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",15,30,0.5,0.333333333333333
+"606","north cumbria integrated care nhs foundation trust","Dietetics","ss_q26c_LikertScore",15,20,0.75,0.333333333333333
+"607","north cumbria integrated care nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",89,130,0.684615384615385,0.179775280898876
+"608","north cumbria integrated care nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",21,30,0.7,0.0952380952380952
+"609","north cumbria integrated care nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,20,0.1,1
+"610","north cumbria integrated care nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",136,200,0.68,0.0882352941176471
+"611","north cumbria integrated care nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",1,5,0.2,0
+"612","north cumbria integrated care nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,120,0.00833333333333333,1
+"613","north cumbria integrated care nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",32,50,0.64,0.28125
+"614","kettering general hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",12,15,0.8,0.333333333333333
+"615","kettering general hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",10,40,0.25,0.1
+"616","kettering general hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,5,0.4,0
+"617","kettering general hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",24,25,0.96,0.375
+"618","kettering general hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",3,90,0.0333333333333333,0.333333333333333
+"619","northampton general hospital nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",2,5,0.4,0
+"620","northampton general hospital nhs trust","Occupational Therapy","ss_q26c_LikertScore",47,55,0.854545454545454,0.127659574468085
+"621","northampton general hospital nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",24,45,0.533333333333333,0.333333333333333
+"622","northampton general hospital nhs trust","Orthoptics","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"623","northampton general hospital nhs trust","Physiotherapy","ss_q26c_LikertScore",47,70,0.671428571428571,0.234042553191489
+"624","northampton general hospital nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",2,105,0.019047619047619,0
+"625","northampton general hospital nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",6,40,0.15,0
+"626","oxford health nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",6,5,1.2,0
+"627","oxford health nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",9,30,0.3,0.222222222222222
+"628","oxford health nhs foundation trust","Dietetics","ss_q26c_LikertScore",26,35,0.742857142857143,0.269230769230769
+"629","oxford health nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",129,210,0.614285714285714,0.0387596899224806
+"630","oxford health nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,5,0.2,0
+"631","oxford health nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",78,120,0.65,0.0769230769230769
+"632","oxford health nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",48,65,0.738461538461539,0.0208333333333333
+"633","salisbury nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",1,5,0.2,0
+"634","salisbury nhs foundation trust","Dietetics","ss_q26c_LikertScore",8,10,0.8,0
+"635","salisbury nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",30,45,0.666666666666667,0.2
+"636","salisbury nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",8,25,0.32,0.25
+"637","salisbury nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,5,0.4,0
+"638","salisbury nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",56,95,0.589473684210526,0.142857142857143
+"639","salisbury nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"640","salisbury nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",27,80,0.3375,0.0740740740740741
+"641","salisbury nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",11,15,0.733333333333333,0.181818181818182
+"642","northamptonshire healthcare nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",2,5,0.4,0.5
+"643","northamptonshire healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",27,35,0.771428571428571,0.0740740740740741
+"644","northamptonshire healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",36,45,0.8,0
+"645","northamptonshire healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",95,135,0.703703703703704,0.0421052631578947
+"646","northamptonshire healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",90,130,0.692307692307692,0.111111111111111
+"647","northamptonshire healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",36,50,0.72,0.0833333333333333
+"648","great ormond street hospital for children nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"649","great ormond street hospital for children nhs foundation trust","Dietetics","ss_q26c_LikertScore",40,45,0.888888888888889,0.05
+"650","great ormond street hospital for children nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",19,30,0.633333333333333,0.263157894736842
+"651","great ormond street hospital for children nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",19,45,0.422222222222222,0.157894736842105
+"652","great ormond street hospital for children nhs foundation trust","Orthoptics","ss_q26c_LikertScore",3,15,0.2,0.666666666666667
+"653","great ormond street hospital for children nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",61,80,0.7625,0.0983606557377049
+"654","great ormond street hospital for children nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",29,40,0.725,0.172413793103448
+"655","doncaster and bassetlaw teaching hospitals nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"656","doncaster and bassetlaw teaching hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"657","doncaster and bassetlaw teaching hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",16,25,0.64,0.125
+"658","doncaster and bassetlaw teaching hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",29,45,0.644444444444444,0.137931034482759
+"659","doncaster and bassetlaw teaching hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",42,80,0.525,0.0952380952380952
+"660","doncaster and bassetlaw teaching hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",5,15,0.333333333333333,0.4
+"661","doncaster and bassetlaw teaching hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",78,120,0.65,0.141025641025641
+"662","doncaster and bassetlaw teaching hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",23,35,0.657142857142857,0.0434782608695652
+"663","moorfields eye hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",6,15,0.4,0.166666666666667
+"664","moorfields eye hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",29,250,0.116,0.241379310344828
+"665","lincolnshire partnership nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"666","lincolnshire partnership nhs foundation trust","Dietetics","ss_q26c_LikertScore",4,5,0.8,0
+"667","lincolnshire partnership nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",46,65,0.707692307692308,0.195652173913043
+"668","lincolnshire partnership nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",5,10,0.5,0
+"669","lincolnshire partnership nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",7,10,0.7,0.142857142857143
+"670","medway nhs foundation trust","Dietetics","ss_q26c_LikertScore",10,10,1,0.5
+"671","medway nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",4,20,0.2,0
+"672","medway nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",12,25,0.48,0.166666666666667
+"673","medway nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",13,55,0.236363636363636,0.307692307692308
+"674","medway nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",22,145,0.151724137931034,0.0454545454545455
+"675","medway nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",1,5,0.2,0
+"676","queen victoria hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",2,5,0.4,0
+"677","queen victoria hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",13,15,0.866666666666667,0.153846153846154
+"678","queen victoria hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",17,30,0.566666666666667,0.176470588235294
+"679","queen victoria hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",9,20,0.45,0.111111111111111
+"680","queen victoria hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,20,0.05,0
+"681","queen victoria hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",3,5,0.6,0
+"682","oxleas nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",32,30,1.06666666666667,0.125
+"683","oxleas nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",15,25,0.6,0.2
+"684","oxleas nhs foundation trust","Dietetics","ss_q26c_LikertScore",10,15,0.666666666666667,0.1
+"685","oxleas nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",98,155,0.632258064516129,0.183673469387755
+"686","oxleas nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",71,145,0.489655172413793,0.154929577464789
+"687","oxleas nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",70,110,0.636363636363636,0.0571428571428571
+"688","birmingham women's and children's nhs foundation trust","Dietetics","ss_q26c_LikertScore",17,35,0.485714285714286,0.0588235294117647
+"689","birmingham women's and children's nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",10,35,0.285714285714286,0.2
+"690","birmingham women's and children's nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",9,65,0.138461538461538,0
+"691","birmingham women's and children's nhs foundation trust","Orthoptics","ss_q26c_LikertScore",10,20,0.5,0.2
+"692","birmingham women's and children's nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",31,55,0.563636363636364,0.161290322580645
+"693","birmingham women's and children's nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,50,0.02,0
+"694","birmingham women's and children's nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",23,25,0.92,0.130434782608696
+"695","chelsea and westminster hospital nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",5,5,1,0.2
+"696","chelsea and westminster hospital nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",1,5,0.2,1
+"697","chelsea and westminster hospital nhs foundation trust","Dietetics","ss_q26c_LikertScore",19,15,1.26666666666667,0.210526315789474
+"698","chelsea and westminster hospital nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",26,35,0.742857142857143,0.269230769230769
+"699","chelsea and westminster hospital nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",17,40,0.425,0.294117647058824
+"700","chelsea and westminster hospital nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,5,0.4,0.5
+"701","chelsea and westminster hospital nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",70,170,0.411764705882353,0.142857142857143
+"702","chelsea and westminster hospital nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,120,0.00833333333333333,0
+"703","chelsea and westminster hospital nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",12,15,0.8,0.333333333333333
+"704","homerton healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",15,20,0.75,0.333333333333333
+"705","homerton healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",22,35,0.628571428571429,0.0454545454545455
+"706","homerton healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",57,90,0.633333333333333,0.140350877192982
+"707","homerton healthcare nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",2,20,0.1,0
+"708","homerton healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",134,175,0.765714285714286,0.111940298507463
+"709","homerton healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",52,100,0.52,0.0192307692307692
+"710","south west london and st george's mental health nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",8,15,0.533333333333333,0.125
+"711","south west london and st george's mental health nhs trust","Dietetics","ss_q26c_LikertScore",8,10,0.8,0.25
+"712","south west london and st george's mental health nhs trust","Occupational Therapy","ss_q26c_LikertScore",58,95,0.610526315789474,0.103448275862069
+"713","south west london and st george's mental health nhs trust","Physiotherapy","ss_q26c_LikertScore",3,5,0.6,1
+"714","south west london and st george's mental health nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",11,10,1.1,0.181818181818182
+"715","gateshead health nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",11,20,0.55,0.0909090909090909
+"716","gateshead health nhs foundation trust","Dietetics","ss_q26c_LikertScore",9,15,0.6,0.111111111111111
+"717","gateshead health nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",33,70,0.471428571428571,0.242424242424242
+"718","gateshead health nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",12,50,0.24,0.416666666666667
+"719","gateshead health nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",33,80,0.4125,0.242424242424242
+"720","gateshead health nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",9,110,0.0818181818181818,0.111111111111111
+"721","gateshead health nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",24,35,0.685714285714286,0.25
+"722","leeds teaching hospitals nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",4,10,0.4,0.25
+"723","leeds teaching hospitals nhs trust","Dietetics","ss_q26c_LikertScore",75,115,0.652173913043478,0.106666666666667
+"724","leeds teaching hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",80,135,0.592592592592593,0.2
+"725","leeds teaching hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",89,300,0.296666666666667,0.213483146067416
+"726","leeds teaching hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",9,45,0.2,0.333333333333333
+"727","leeds teaching hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",166,300,0.553333333333333,0.156626506024096
+"728","leeds teaching hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",74,395,0.187341772151899,0.0810810810810811
+"729","leeds teaching hospitals nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",23,125,0.184,0.217391304347826
+"730","leeds teaching hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",35,65,0.538461538461538,0.114285714285714
+"731","midlands partnership university nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",8,10,0.8,0.125
+"732","midlands partnership university nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",36,80,0.45,0.138888888888889
+"733","midlands partnership university nhs foundation trust","Dietetics","ss_q26c_LikertScore",26,35,0.742857142857143,0.0769230769230769
+"734","midlands partnership university nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",164,275,0.596363636363636,0.0914634146341463
+"735","midlands partnership university nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",147,285,0.515789473684211,0.0952380952380952
+"736","midlands partnership university nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",70,100,0.7,0.114285714285714
+"737","university hospitals birmingham nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",10,20,0.5,0.2
+"738","university hospitals birmingham nhs foundation trust","Dietetics","ss_q26c_LikertScore",89,115,0.773913043478261,0.157303370786517
+"739","university hospitals birmingham nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",94,165,0.56969696969697,0.202127659574468
+"740","university hospitals birmingham nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",78,290,0.268965517241379,0.256410256410256
+"741","university hospitals birmingham nhs foundation trust","Orthoptics","ss_q26c_LikertScore",11,50,0.22,0.181818181818182
+"742","university hospitals birmingham nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",259,445,0.582022471910112,0.177606177606178
+"743","university hospitals birmingham nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",1,5,0.2,0
+"744","university hospitals birmingham nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",7,495,0.0141414141414141,0
+"745","university hospitals birmingham nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",3,80,0.0375,0
+"746","university hospitals birmingham nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",67,80,0.8375,0.149253731343284
+"747","university college london hospitals nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"748","university college london hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",45,65,0.692307692307692,0.111111111111111
+"749","university college london hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",56,75,0.746666666666667,0.0357142857142857
+"750","university college london hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",17,60,0.283333333333333,0.176470588235294
+"751","university college london hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",159,185,0.859459459459459,0.0880503144654088
+"752","university college london hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",32,270,0.118518518518519,0.1875
+"753","university college london hospitals nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",34,135,0.251851851851852,0.294117647058824
+"754","university college london hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",50,65,0.769230769230769,0.06
+"755","cambridgeshire and peterborough nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",7,10,0.7,0
+"756","cambridgeshire and peterborough nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",9,20,0.45,0.444444444444444
+"757","cambridgeshire and peterborough nhs foundation trust","Dietetics","ss_q26c_LikertScore",13,20,0.65,0.0769230769230769
+"758","cambridgeshire and peterborough nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",86,175,0.491428571428571,0.13953488372093
+"759","cambridgeshire and peterborough nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",50,105,0.476190476190476,0.16
+"760","cambridgeshire and peterborough nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",30,45,0.666666666666667,0.1
+"761","pennine care nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"762","pennine care nhs foundation trust","Dietetics","ss_q26c_LikertScore",4,5,0.8,0.25
+"763","pennine care nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",36,80,0.45,0.138888888888889
+"764","pennine care nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,5,0.2,1
+"765","pennine care nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",7,10,0.7,0.142857142857143
+"766","pennine care nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",7,20,0.35,0.285714285714286
+"767","leicestershire partnership nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",24,35,0.685714285714286,0.208333333333333
+"768","leicestershire partnership nhs trust","Dietetics","ss_q26c_LikertScore",46,60,0.766666666666667,0.173913043478261
+"769","leicestershire partnership nhs trust","Occupational Therapy","ss_q26c_LikertScore",145,220,0.659090909090909,0.0896551724137931
+"770","leicestershire partnership nhs trust","Physiotherapy","ss_q26c_LikertScore",155,235,0.659574468085106,0.109677419354839
+"771","leicestershire partnership nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",79,135,0.585185185185185,0.0506329113924051
+"772","gloucestershire hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",38,55,0.690909090909091,0.131578947368421
+"773","gloucestershire hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",26,30,0.866666666666667,0.192307692307692
+"774","gloucestershire hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",42,75,0.56,0.30952380952381
+"775","gloucestershire hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",10,10,1,0
+"776","gloucestershire hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",62,115,0.539130434782609,0.274193548387097
+"777","gloucestershire hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",20,140,0.142857142857143,0
+"778","gloucestershire hospitals nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",24,60,0.4,0.125
+"779","northumbria healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",42,70,0.6,0.119047619047619
+"780","northumbria healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",27,40,0.675,0.148148148148148
+"781","northumbria healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",97,115,0.843478260869565,0.134020618556701
+"782","northumbria healthcare nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",54,85,0.635294117647059,0.148148148148148
+"783","northumbria healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",207,250,0.828,0.0966183574879227
+"784","northumbria healthcare nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",17,105,0.161904761904762,0.0588235294117647
+"785","northumbria healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",65,80,0.8125,0.0153846153846154
+"786","university hospitals of derby and burton nhs foundation trust","Dietetics","ss_q26c_LikertScore",51,60,0.85,0.0588235294117647
+"787","university hospitals of derby and burton nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",132,185,0.713513513513514,0.121212121212121
+"788","university hospitals of derby and burton nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",84,140,0.6,0.214285714285714
+"789","university hospitals of derby and burton nhs foundation trust","Orthoptics","ss_q26c_LikertScore",11,25,0.44,0.0909090909090909
+"790","university hospitals of derby and burton nhs foundation trust","Osteopathy","ss_q26c_LikertScore",1,5,0.2,0
+"791","university hospitals of derby and burton nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",158,240,0.658333333333333,0.132911392405063
+"792","university hospitals of derby and burton nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",2,5,0.4,0.5
+"793","university hospitals of derby and burton nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",15,320,0.046875,0.2
+"794","university hospitals of derby and burton nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",8,60,0.133333333333333,0.125
+"795","university hospitals of derby and burton nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",4,5,0.8,0.25
+"796","oxford university hospitals nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,1
+"797","oxford university hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",4,10,0.4,0
+"798","oxford university hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",34,60,0.566666666666667,0.117647058823529
+"799","oxford university hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",67,125,0.536,0.253731343283582
+"800","oxford university hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",26,130,0.2,0.115384615384615
+"801","oxford university hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",11,45,0.244444444444444,0
+"802","oxford university hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",182,255,0.713725490196078,0.186813186813187
+"803","oxford university hospitals nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",7,10,0.7,0
+"804","oxford university hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",8,310,0.0258064516129032,0.25
+"805","oxford university hospitals nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",2,90,0.0222222222222222,0.5
+"806","oxford university hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",30,40,0.75,0.0666666666666667
+"807","surrey and sussex healthcare nhs trust","Dietetics","ss_q26c_LikertScore",12,15,0.8,0.0833333333333333
+"808","surrey and sussex healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",8,30,0.266666666666667,0.25
+"809","surrey and sussex healthcare nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",6,20,0.3,0
+"810","surrey and sussex healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",36,65,0.553846153846154,0.138888888888889
+"811","surrey and sussex healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",10,10,1,0.1
+"812","gloucestershire health and care nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",8,10,0.8,0.125
+"813","gloucestershire health and care nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",17,45,0.377777777777778,0
+"814","gloucestershire health and care nhs foundation trust","Dietetics","ss_q26c_LikertScore",7,10,0.7,0
+"815","gloucestershire health and care nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",100,210,0.476190476190476,0.09
+"816","gloucestershire health and care nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,10,0.1,0
+"817","gloucestershire health and care nhs foundation trust","Osteopathy","ss_q26c_LikertScore",1,5,0.2,0
+"818","gloucestershire health and care nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",119,210,0.566666666666667,0.0420168067226891
+"819","gloucestershire health and care nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",53,70,0.757142857142857,0.0943396226415094
+"820","south tees hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",11,25,0.44,0.0909090909090909
+"821","south tees hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",18,50,0.36,0.111111111111111
+"822","south tees hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",51,135,0.377777777777778,0.196078431372549
+"823","south tees hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",37,175,0.211428571428571,0.0810810810810811
+"824","south tees hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,20,0.1,0
+"825","south tees hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",109,265,0.411320754716981,0.146788990825688
+"826","south tees hospitals nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",2,5,0.4,0.5
+"827","south tees hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",3,220,0.0136363636363636,0
+"828","south tees hospitals nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",3,75,0.04,0
+"829","south tees hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",18,45,0.4,0.111111111111111
+"830","university hospitals of morecambe bay nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",14,20,0.7,0.357142857142857
+"831","university hospitals of morecambe bay nhs foundation trust","Dietetics","ss_q26c_LikertScore",12,25,0.48,0.333333333333333
+"832","university hospitals of morecambe bay nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",52,105,0.495238095238095,0.25
+"833","university hospitals of morecambe bay nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",21,65,0.323076923076923,0.142857142857143
+"834","university hospitals of morecambe bay nhs foundation trust","Orthoptics","ss_q26c_LikertScore",2,10,0.2,0
+"835","university hospitals of morecambe bay nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",103,180,0.572222222222222,0.106796116504854
+"836","university hospitals of morecambe bay nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",18,30,0.6,0.388888888888889
+"837","central and north west london nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",28,55,0.509090909090909,0.107142857142857
+"838","central and north west london nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",33,50,0.66,0.151515151515152
+"839","central and north west london nhs foundation trust","Dietetics","ss_q26c_LikertScore",26,35,0.742857142857143,0.192307692307692
+"840","central and north west london nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",194,295,0.657627118644068,0.15979381443299
+"841","central and north west london nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",199,280,0.710714285714286,0.185929648241206
+"842","central and north west london nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",134,190,0.705263157894737,0.194029850746269
+"843","south london and maudsley nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",8,15,0.533333333333333,0.375
+"844","south london and maudsley nhs foundation trust","Dietetics","ss_q26c_LikertScore",5,10,0.5,0
+"845","south london and maudsley nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",71,140,0.507142857142857,0.183098591549296
+"846","south london and maudsley nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,5,0.2,0
+"847","south london and maudsley nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",7,10,0.7,0.142857142857143
+"848","south london and maudsley nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"849","humber teaching nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",5,5,1,0.2
+"850","humber teaching nhs foundation trust","Dietetics","ss_q26c_LikertScore",5,10,0.5,0.4
+"851","humber teaching nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",68,90,0.755555555555556,0.117647058823529
+"852","humber teaching nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",44,50,0.88,0.136363636363636
+"853","humber teaching nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",37,55,0.672727272727273,0.0540540540540541
+"854","north bristol nhs trust","Dietetics","ss_q26c_LikertScore",25,40,0.625,0.04
+"855","north bristol nhs trust","Occupational Therapy","ss_q26c_LikertScore",66,105,0.628571428571429,0.121212121212121
+"856","north bristol nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",17,80,0.2125,0.294117647058824
+"857","north bristol nhs trust","Physiotherapy","ss_q26c_LikertScore",105,180,0.583333333333333,0.0952380952380952
+"858","north bristol nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",5,195,0.0256410256410256,0
+"859","north bristol nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",31,35,0.885714285714286,0.0645161290322581
+"860","avon and wiltshire mental health partnership nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",33,50,0.66,0.151515151515152
+"861","avon and wiltshire mental health partnership nhs trust","Dietetics","ss_q26c_LikertScore",3,5,0.6,0
+"862","avon and wiltshire mental health partnership nhs trust","Occupational Therapy","ss_q26c_LikertScore",79,175,0.451428571428571,0.113924050632911
+"863","avon and wiltshire mental health partnership nhs trust","Physiotherapy","ss_q26c_LikertScore",10,20,0.5,0.1
+"864","avon and wiltshire mental health partnership nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",9,10,0.9,0.222222222222222
+"865","epsom and st helier university hospitals nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",18,20,0.9,0.222222222222222
+"866","epsom and st helier university hospitals nhs trust","Dietetics","ss_q26c_LikertScore",26,40,0.65,0.153846153846154
+"867","epsom and st helier university hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",41,60,0.683333333333333,0.170731707317073
+"868","epsom and st helier university hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",9,40,0.225,0.111111111111111
+"869","epsom and st helier university hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",6,10,0.6,0.333333333333333
+"870","epsom and st helier university hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",150,215,0.697674418604651,0.273333333333333
+"871","epsom and st helier university hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",27,30,0.9,0.148148148148148
+"872","east kent hospitals university nhs foundation trust","Dietetics","ss_q26c_LikertScore",21,25,0.84,0.142857142857143
+"873","east kent hospitals university nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",57,110,0.518181818181818,0.192982456140351
+"874","east kent hospitals university nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",65,115,0.565217391304348,0.138461538461538
+"875","east kent hospitals university nhs foundation trust","Orthoptics","ss_q26c_LikertScore",9,25,0.36,0.111111111111111
+"876","east kent hospitals university nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",112,155,0.72258064516129,0.169642857142857
+"877","east kent hospitals university nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",26,255,0.101960784313725,0.230769230769231
+"878","east kent hospitals university nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",44,80,0.55,0.136363636363636
+"879","north tees and hartlepool nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",18,35,0.514285714285714,0.111111111111111
+"880","north tees and hartlepool nhs foundation trust","Dietetics","ss_q26c_LikertScore",9,20,0.45,0.111111111111111
+"881","north tees and hartlepool nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",39,65,0.6,0.128205128205128
+"882","north tees and hartlepool nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",9,40,0.225,0
+"883","north tees and hartlepool nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",79,155,0.509677419354839,0.177215189873418
+"884","north tees and hartlepool nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",4,115,0.0347826086956522,0.5
+"885","north tees and hartlepool nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",10,70,0.142857142857143,0.2
+"886","hampshire and isle of wight healthcare nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",10,20,0.5,0.5
+"887","hampshire and isle of wight healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",39,85,0.458823529411765,0.128205128205128
+"888","hampshire and isle of wight healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",6,15,0.4,0
+"889","hampshire and isle of wight healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",224,380,0.589473684210526,0.120535714285714
+"890","hampshire and isle of wight healthcare nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",3,5,0.6,0.666666666666667
+"891","hampshire and isle of wight healthcare nhs foundation trust","Osteopathy","ss_q26c_LikertScore",1,5,0.2,0
+"892","hampshire and isle of wight healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",271,580,0.467241379310345,0.0848708487084871
+"893","hampshire and isle of wight healthcare nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,40,0.025,0
+"894","hampshire and isle of wight healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",95,135,0.703703703703704,0.126315789473684
+"895","mersey care nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",6,10,0.6,0.166666666666667
+"896","mersey care nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",43,85,0.505882352941176,0.162790697674419
+"897","mersey care nhs foundation trust","Dietetics","ss_q26c_LikertScore",32,50,0.64,0.0625
+"898","mersey care nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",110,230,0.478260869565217,0.145454545454545
+"899","mersey care nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,5,0.2,1
+"900","mersey care nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",96,185,0.518918918918919,0.239583333333333
+"901","mersey care nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",1,5,0.2,0
+"902","mersey care nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",48,85,0.564705882352941,0.229166666666667
+"903","lancashire and south cumbria nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",5,5,1,0
+"904","lancashire and south cumbria nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",5,35,0.142857142857143,0
+"905","lancashire and south cumbria nhs foundation trust","Dietetics","ss_q26c_LikertScore",4,10,0.4,0
+"906","lancashire and south cumbria nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",115,260,0.442307692307692,0.130434782608696
+"907","lancashire and south cumbria nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",40,85,0.470588235294118,0.2
+"908","lancashire and south cumbria nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",32,100,0.32,0.1875
+"909","hull university teaching hospitals nhs trust","Dietetics","ss_q26c_LikertScore",23,40,0.575,0.130434782608696
+"910","hull university teaching hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",39,45,0.866666666666667,0.205128205128205
+"911","hull university teaching hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",71,125,0.568,0.197183098591549
+"912","hull university teaching hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",1,40,0.025,1
+"913","hull university teaching hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",110,190,0.578947368421053,0.2
+"914","hull university teaching hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",22,215,0.102325581395349,0.0454545454545455
+"915","hull university teaching hospitals nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",7,55,0.127272727272727,0
+"916","hull university teaching hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",18,20,0.9,0.111111111111111
+"917","united lincolnshire teaching hospitals nhs trust","Dietetics","ss_q26c_LikertScore",19,30,0.633333333333333,0.105263157894737
+"918","united lincolnshire teaching hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",41,65,0.630769230769231,0.146341463414634
+"919","united lincolnshire teaching hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",37,85,0.435294117647059,0.405405405405405
+"920","united lincolnshire teaching hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",6,20,0.3,0.166666666666667
+"921","united lincolnshire teaching hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",72,90,0.8,0.180555555555556
+"922","united lincolnshire teaching hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",3,230,0.0130434782608696,0
+"923","united lincolnshire teaching hospitals nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",2,45,0.0444444444444444,0
+"924","university hospitals of leicester nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",2,5,0.4,0
+"925","university hospitals of leicester nhs trust","Dietetics","ss_q26c_LikertScore",43,70,0.614285714285714,0.0697674418604651
+"926","university hospitals of leicester nhs trust","Occupational Therapy","ss_q26c_LikertScore",74,105,0.704761904761905,0.121621621621622
+"927","university hospitals of leicester nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",115,170,0.676470588235294,0.217391304347826
+"928","university hospitals of leicester nhs trust","Orthoptics","ss_q26c_LikertScore",12,20,0.6,0.0833333333333333
+"929","university hospitals of leicester nhs trust","Physiotherapy","ss_q26c_LikertScore",160,250,0.64,0.1375
+"930","university hospitals of leicester nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",11,360,0.0305555555555556,0.0909090909090909
+"931","university hospitals of leicester nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,50,0.02,0
+"932","university hospitals of leicester nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",17,25,0.68,0
+"933","maidstone and tunbridge wells nhs trust","Dietetics","ss_q26c_LikertScore",10,25,0.4,0
+"934","maidstone and tunbridge wells nhs trust","Occupational Therapy","ss_q26c_LikertScore",25,70,0.357142857142857,0.16
+"935","maidstone and tunbridge wells nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",29,50,0.58,0.172413793103448
+"936","maidstone and tunbridge wells nhs trust","Orthoptics","ss_q26c_LikertScore",8,25,0.32,0.25
+"937","maidstone and tunbridge wells nhs trust","Physiotherapy","ss_q26c_LikertScore",76,120,0.633333333333333,0.105263157894737
+"938","maidstone and tunbridge wells nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",5,155,0.032258064516129,0.6
+"939","maidstone and tunbridge wells nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",6,115,0.0521739130434783,0.666666666666667
+"940","maidstone and tunbridge wells nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",10,15,0.666666666666667,0.1
+"941","west hertfordshire teaching hospitals nhs trust","Dietetics","ss_q26c_LikertScore",11,15,0.733333333333333,0.181818181818182
+"942","west hertfordshire teaching hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",22,35,0.628571428571429,0.0454545454545455
+"943","west hertfordshire teaching hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",18,40,0.45,0.111111111111111
+"944","west hertfordshire teaching hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",1,5,0.2,0
+"945","west hertfordshire teaching hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",57,70,0.814285714285714,0.192982456140351
+"946","west hertfordshire teaching hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",8,125,0.064,0.125
+"947","west hertfordshire teaching hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",6,5,1.2,0
+"948","stockport nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",8,25,0.32,0.25
+"949","stockport nhs foundation trust","Dietetics","ss_q26c_LikertScore",6,30,0.2,0
+"950","stockport nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",54,90,0.6,0.12962962962963
+"951","stockport nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",13,25,0.52,0.153846153846154
+"952","stockport nhs foundation trust","Orthoptics","ss_q26c_LikertScore",10,15,0.666666666666667,0.1
+"953","stockport nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",94,175,0.537142857142857,0.212765957446809
+"954","stockport nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",42,55,0.763636363636364,0.0714285714285714
+"955","east london nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",27,65,0.415384615384615,0.148148148148148
+"956","east london nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",17,35,0.485714285714286,0.176470588235294
+"957","east london nhs foundation trust","Dietetics","ss_q26c_LikertScore",10,20,0.5,0.3
+"958","east london nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",150,265,0.566037735849057,0.206666666666667
+"959","east london nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",62,100,0.62,0.225806451612903
+"960","east london nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",39,95,0.410526315789474,0.0769230769230769
+"961","worcestershire acute hospitals nhs trust","Dietetics","ss_q26c_LikertScore",22,30,0.733333333333333,0.136363636363636
+"962","worcestershire acute hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",29,45,0.644444444444444,0.275862068965517
+"963","worcestershire acute hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",33,70,0.471428571428571,0.121212121212121
+"964","worcestershire acute hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",3,10,0.3,0.666666666666667
+"965","worcestershire acute hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",79,120,0.658333333333333,0.10126582278481
+"966","worcestershire acute hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",5,180,0.0277777777777778,0
+"967","worcestershire acute hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",11,15,0.733333333333333,0.363636363636364
+"968","hertfordshire partnership university nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",26,35,0.742857142857143,0.115384615384615
+"969","hertfordshire partnership university nhs foundation trust","Dietetics","ss_q26c_LikertScore",9,10,0.9,0.222222222222222
+"970","hertfordshire partnership university nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",89,125,0.712,0.134831460674157
+"971","hertfordshire partnership university nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",16,15,1.06666666666667,0
+"972","hertfordshire partnership university nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",26,25,1.04,0.0384615384615385
+"973","devon partnership nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",9,25,0.36,0.111111111111111
+"974","devon partnership nhs trust","Dietetics","ss_q26c_LikertScore",1,5,0.2,0
+"975","devon partnership nhs trust","Occupational Therapy","ss_q26c_LikertScore",79,165,0.478787878787879,0.164556962025316
+"976","devon partnership nhs trust","Physiotherapy","ss_q26c_LikertScore",9,15,0.6,0.333333333333333
+"977","devon partnership nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"978","warrington and halton teaching hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",11,15,0.733333333333333,0.0909090909090909
+"979","warrington and halton teaching hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",29,55,0.527272727272727,0.172413793103448
+"980","warrington and halton teaching hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",10,45,0.222222222222222,0.3
+"981","warrington and halton teaching hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",9,15,0.6,0.111111111111111
+"982","warrington and halton teaching hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",62,120,0.516666666666667,0.112903225806452
+"983","warrington and halton teaching hospitals nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",2,5,0.4,0
+"984","warrington and halton teaching hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",9,15,0.6,0
+"985","berkshire healthcare nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",4,10,0.4,0
+"986","berkshire healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",19,30,0.633333333333333,0.0526315789473684
+"987","berkshire healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",41,60,0.683333333333333,0.0731707317073171
+"988","berkshire healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",80,125,0.64,0.0875
+"989","berkshire healthcare nhs foundation trust","Osteopathy","ss_q26c_LikertScore",1,5,0.2,0
+"990","berkshire healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",135,215,0.627906976744186,0.0962962962962963
+"991","berkshire healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",75,105,0.714285714285714,0.0666666666666667
+"992","calderdale and huddersfield nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",9,20,0.45,0
+"993","calderdale and huddersfield nhs foundation trust","Dietetics","ss_q26c_LikertScore",15,20,0.75,0.266666666666667
+"994","calderdale and huddersfield nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",43,70,0.614285714285714,0.232558139534884
+"995","calderdale and huddersfield nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",26,65,0.4,0.0769230769230769
+"996","calderdale and huddersfield nhs foundation trust","Orthoptics","ss_q26c_LikertScore",6,15,0.4,0.166666666666667
+"997","calderdale and huddersfield nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",96,190,0.505263157894737,0.166666666666667
+"998","calderdale and huddersfield nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",39,160,0.24375,0.153846153846154
+"999","calderdale and huddersfield nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",22,45,0.488888888888889,0.0909090909090909
+"1000","nottingham university hospitals nhs trust","Dietetics","ss_q26c_LikertScore",88,130,0.676923076923077,0.102272727272727
+"1001","nottingham university hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",80,105,0.761904761904762,0.1375
+"1002","nottingham university hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",11,210,0.0523809523809524,0.0909090909090909
+"1003","nottingham university hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",8,45,0.177777777777778,0.125
+"1004","nottingham university hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",138,285,0.484210526315789,0.101449275362319
+"1005","nottingham university hospitals nhs trust","Prosthetics and Orthotics","ss_q26c_LikertScore",10,10,1,0.4
+"1006","nottingham university hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",17,260,0.0653846153846154,0.0588235294117647
+"1007","nottingham university hospitals nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",3,80,0.0375,0
+"1008","nottingham university hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",45,50,0.9,0.111111111111111
+"1009","sussex partnership nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",10,25,0.4,0.4
+"1010","sussex partnership nhs foundation trust","Dietetics","ss_q26c_LikertScore",3,5,0.6,0
+"1011","sussex partnership nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",129,255,0.505882352941176,0.116279069767442
+"1012","sussex partnership nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",2,5,0.4,0.5
+"1013","sussex partnership nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",10,20,0.5,0.4
+"1014","sussex partnership nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",23,35,0.657142857142857,0
+"1015","tees, esk and wear valleys nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",3,5,0.6,0
+"1016","tees, esk and wear valleys nhs foundation trust","Dietetics","ss_q26c_LikertScore",20,40,0.5,0.25
+"1017","tees, esk and wear valleys nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",146,255,0.572549019607843,0.0821917808219178
+"1018","tees, esk and wear valleys nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",34,50,0.68,0.0882352941176471
+"1019","tees, esk and wear valleys nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",31,55,0.563636363636364,0.193548387096774
+"1020","cumbria, northumberland, tyne and wear nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",7,15,0.466666666666667,0
+"1021","cumbria, northumberland, tyne and wear nhs foundation trust","Dietetics","ss_q26c_LikertScore",20,25,0.8,0.1
+"1022","cumbria, northumberland, tyne and wear nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",192,335,0.573134328358209,0.151041666666667
+"1023","cumbria, northumberland, tyne and wear nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",27,55,0.490909090909091,0.111111111111111
+"1024","cumbria, northumberland, tyne and wear nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",44,70,0.628571428571429,0
+"1025","east midlands ambulance service nhs trust","Occupational Therapy","ss_q26c_LikertScore",2,5,0.4,0
+"1026","cheshire and wirral partnership nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",12,15,0.8,0.25
+"1027","cheshire and wirral partnership nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",7,15,0.466666666666667,0.285714285714286
+"1028","cheshire and wirral partnership nhs foundation trust","Dietetics","ss_q26c_LikertScore",8,10,0.8,0
+"1029","cheshire and wirral partnership nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",61,125,0.488,0.0983606557377049
+"1030","cheshire and wirral partnership nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",28,75,0.373333333333333,0.0714285714285714
+"1031","cheshire and wirral partnership nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",11,20,0.55,0.181818181818182
+"1032","east sussex healthcare nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",32,45,0.711111111111111,0.03125
+"1033","east sussex healthcare nhs trust","Dietetics","ss_q26c_LikertScore",19,35,0.542857142857143,0.210526315789474
+"1034","east sussex healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",85,110,0.772727272727273,0.0470588235294118
+"1035","east sussex healthcare nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",38,55,0.690909090909091,0.289473684210526
+"1036","east sussex healthcare nhs trust","Orthoptics","ss_q26c_LikertScore",4,15,0.266666666666667,0.25
+"1037","east sussex healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",150,210,0.714285714285714,0.113333333333333
+"1038","east sussex healthcare nhs trust","Prosthetics and Orthotics","ss_q26c_LikertScore",2,5,0.4,0
+"1039","east sussex healthcare nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",22,140,0.157142857142857,0.0454545454545455
+"1040","east sussex healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",24,30,0.8,0.0416666666666667
+"1041","rotherham doncaster and south humber nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",5,10,0.5,0
+"1042","rotherham doncaster and south humber nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",8,10,0.8,0.25
+"1043","rotherham doncaster and south humber nhs foundation trust","Dietetics","ss_q26c_LikertScore",4,5,0.8,0
+"1044","rotherham doncaster and south humber nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",56,115,0.48695652173913,0.196428571428571
+"1045","rotherham doncaster and south humber nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",31,60,0.516666666666667,0.129032258064516
+"1046","rotherham doncaster and south humber nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",9,15,0.6,0.111111111111111
+"1047","mid yorkshire teaching nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",25,30,0.833333333333333,0.16
+"1048","mid yorkshire teaching nhs trust","Dietetics","ss_q26c_LikertScore",22,35,0.628571428571429,0.0909090909090909
+"1049","mid yorkshire teaching nhs trust","Occupational Therapy","ss_q26c_LikertScore",81,120,0.675,0.123456790123457
+"1050","mid yorkshire teaching nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",5,70,0.0714285714285714,0.6
+"1051","mid yorkshire teaching nhs trust","Orthoptics","ss_q26c_LikertScore",3,5,0.6,0.666666666666667
+"1052","mid yorkshire teaching nhs trust","Physiotherapy","ss_q26c_LikertScore",132,200,0.66,0.121212121212121
+"1053","mid yorkshire teaching nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",12,215,0.0558139534883721,0
+"1054","mid yorkshire teaching nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",23,45,0.511111111111111,0.130434782608696
+"1055","south west yorkshire partnership nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",5,10,0.5,0.2
+"1056","south west yorkshire partnership nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",15,15,1,0.2
+"1057","south west yorkshire partnership nhs foundation trust","Dietetics","ss_q26c_LikertScore",20,35,0.571428571428571,0.15
+"1058","south west yorkshire partnership nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",106,185,0.572972972972973,0.0660377358490566
+"1059","south west yorkshire partnership nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",61,90,0.677777777777778,0.114754098360656
+"1060","south west yorkshire partnership nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",32,50,0.64,0.03125
+"1061","sandwell and west birmingham hospitals nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",3,25,0.12,0.666666666666667
+"1062","sandwell and west birmingham hospitals nhs trust","Dietetics","ss_q26c_LikertScore",18,30,0.6,0
+"1063","sandwell and west birmingham hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",46,70,0.657142857142857,0.0869565217391304
+"1064","sandwell and west birmingham hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",12,55,0.218181818181818,0.166666666666667
+"1065","sandwell and west birmingham hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",7,35,0.2,0.428571428571429
+"1066","sandwell and west birmingham hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",104,180,0.577777777777778,0.134615384615385
+"1067","sandwell and west birmingham hospitals nhs trust","Prosthetics and Orthotics","ss_q26c_LikertScore",1,5,0.2,0
+"1068","sandwell and west birmingham hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,135,0.00740740740740741,0
+"1069","sandwell and west birmingham hospitals nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,5,0.2,0
+"1070","sandwell and west birmingham hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",38,60,0.633333333333333,0.131578947368421
+"1071","blackpool teaching hospitals nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",13,30,0.433333333333333,0.153846153846154
+"1072","blackpool teaching hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",28,30,0.933333333333333,0.142857142857143
+"1073","blackpool teaching hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",63,110,0.572727272727273,0.222222222222222
+"1074","blackpool teaching hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",1,70,0.0142857142857143,0
+"1075","blackpool teaching hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",6,10,0.6,0
+"1076","blackpool teaching hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",102,175,0.582857142857143,0.127450980392157
+"1077","blackpool teaching hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",23,40,0.575,0.130434782608696
+"1078","derbyshire healthcare nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,0
+"1079","derbyshire healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",5,5,1,0
+"1080","derbyshire healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",118,190,0.621052631578947,0.144067796610169
+"1081","derbyshire healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",21,35,0.6,0.333333333333333
+"1082","derbyshire healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",7,15,0.466666666666667,0.285714285714286
+"1083","lancashire teaching hospitals nhs foundation trust","Dietetics","ss_q26c_LikertScore",21,30,0.7,0.0476190476190476
+"1084","lancashire teaching hospitals nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",42,80,0.525,0.0238095238095238
+"1085","lancashire teaching hospitals nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",39,75,0.52,0.307692307692308
+"1086","lancashire teaching hospitals nhs foundation trust","Orthoptics","ss_q26c_LikertScore",8,20,0.4,0.375
+"1087","lancashire teaching hospitals nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",67,135,0.496296296296296,0.149253731343284
+"1088","lancashire teaching hospitals nhs foundation trust","Prosthetics and Orthotics","ss_q26c_LikertScore",13,25,0.52,0
+"1089","lancashire teaching hospitals nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",25,195,0.128205128205128,0.12
+"1090","lancashire teaching hospitals nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",7,100,0.07,0
+"1091","lancashire teaching hospitals nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",19,25,0.76,0
+"1092","county durham and darlington nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",20,50,0.4,0
+"1093","county durham and darlington nhs foundation trust","Dietetics","ss_q26c_LikertScore",20,40,0.5,0.15
+"1094","county durham and darlington nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",76,115,0.660869565217391,0.131578947368421
+"1095","county durham and darlington nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",31,90,0.344444444444444,0.354838709677419
+"1096","county durham and darlington nhs foundation trust","Orthoptics","ss_q26c_LikertScore",7,5,1.4,0.142857142857143
+"1097","county durham and darlington nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",87,220,0.395454545454545,0.103448275862069
+"1098","county durham and darlington nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,100,0.01,1
+"1099","county durham and darlington nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",44,30,1.46666666666667,0.113636363636364
+"1100","buckinghamshire healthcare nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",10,20,0.5,0
+"1101","buckinghamshire healthcare nhs trust","Dietetics","ss_q26c_LikertScore",20,30,0.666666666666667,0.15
+"1102","buckinghamshire healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",81,105,0.771428571428571,0.0864197530864197
+"1103","buckinghamshire healthcare nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",45,60,0.75,0.222222222222222
+"1104","buckinghamshire healthcare nhs trust","Orthoptics","ss_q26c_LikertScore",5,5,1,0.2
+"1105","buckinghamshire healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",122,170,0.717647058823529,0.139344262295082
+"1106","buckinghamshire healthcare nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",12,120,0.1,0
+"1107","buckinghamshire healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",70,85,0.823529411764706,0.0857142857142857
+"1108","east lancashire hospitals nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",32,55,0.581818181818182,0.15625
+"1109","east lancashire hospitals nhs trust","Dietetics","ss_q26c_LikertScore",27,50,0.54,0.111111111111111
+"1110","east lancashire hospitals nhs trust","Occupational Therapy","ss_q26c_LikertScore",50,110,0.454545454545455,0.14
+"1111","east lancashire hospitals nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",14,60,0.233333333333333,0.357142857142857
+"1112","east lancashire hospitals nhs trust","Orthoptics","ss_q26c_LikertScore",6,20,0.3,0.166666666666667
+"1113","east lancashire hospitals nhs trust","Physiotherapy","ss_q26c_LikertScore",135,255,0.529411764705882,0.207407407407407
+"1114","east lancashire hospitals nhs trust","Prosthetics and Orthotics","ss_q26c_LikertScore",6,5,1.2,0.166666666666667
+"1115","east lancashire hospitals nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",1,180,0.00555555555555556,0
+"1116","east lancashire hospitals nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",18,35,0.514285714285714,0.111111111111111
+"1117","birmingham and solihull mental health nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",4,20,0.2,0.25
+"1118","birmingham and solihull mental health nhs foundation trust","Dietetics","ss_q26c_LikertScore",7,10,0.7,0
+"1119","birmingham and solihull mental health nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",107,135,0.792592592592593,0.11214953271028
+"1120","birmingham and solihull mental health nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",6,10,0.6,0.166666666666667
+"1121","birmingham and solihull mental health nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"1122","greater manchester mental health nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",4,10,0.4,0.5
+"1123","greater manchester mental health nhs foundation trust","Dietetics","ss_q26c_LikertScore",4,10,0.4,0
+"1124","greater manchester mental health nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",70,160,0.4375,0.2
+"1125","greater manchester mental health nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",8,10,0.8,0
+"1126","greater manchester mental health nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",3,5,0.6,0
+"1127","surrey and borders partnership nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",17,30,0.566666666666667,0.0588235294117647
+"1128","surrey and borders partnership nhs foundation trust","Dietetics","ss_q26c_LikertScore",9,10,0.9,0.222222222222222
+"1129","surrey and borders partnership nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",45,65,0.692307692307692,0.244444444444444
+"1130","surrey and borders partnership nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",10,10,1,0.1
+"1131","surrey and borders partnership nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",9,10,0.9,0
+"1132","kent and medway nhs and social care partnership trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"1133","kent and medway nhs and social care partnership trust","Occupational Therapy","ss_q26c_LikertScore",100,220,0.454545454545455,0.14
+"1134","kent and medway nhs and social care partnership trust","Physiotherapy","ss_q26c_LikertScore",4,10,0.4,0.25
+"1135","kent and medway nhs and social care partnership trust","Speech & Language Therapy","ss_q26c_LikertScore",3,5,0.6,0.333333333333333
+"1136","bridgewater community healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",13,25,0.52,0.153846153846154
+"1137","bridgewater community healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",26,50,0.52,0.153846153846154
+"1138","bridgewater community healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",20,60,0.333333333333333,0.2
+"1139","bridgewater community healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",22,35,0.628571428571429,0.181818181818182
+"1140","norfolk community health and care nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",18,20,0.9,0.222222222222222
+"1141","norfolk community health and care nhs trust","Dietetics","ss_q26c_LikertScore",6,20,0.3,0.166666666666667
+"1142","norfolk community health and care nhs trust","Occupational Therapy","ss_q26c_LikertScore",101,155,0.651612903225806,0.0891089108910891
+"1143","norfolk community health and care nhs trust","Physiotherapy","ss_q26c_LikertScore",92,155,0.593548387096774,0.0978260869565217
+"1144","norfolk community health and care nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",23,45,0.511111111111111,0.0869565217391304
+"1145","hertfordshire community nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",15,35,0.428571428571429,0.2
+"1146","hertfordshire community nhs trust","Dietetics","ss_q26c_LikertScore",18,40,0.45,0.0555555555555556
+"1147","hertfordshire community nhs trust","Occupational Therapy","ss_q26c_LikertScore",54,90,0.6,0.111111111111111
+"1148","hertfordshire community nhs trust","Orthoptics","ss_q26c_LikertScore",3,10,0.3,0
+"1149","hertfordshire community nhs trust","Physiotherapy","ss_q26c_LikertScore",75,145,0.517241379310345,0.186666666666667
+"1150","hertfordshire community nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",69,110,0.627272727272727,0.072463768115942
+"1151","lincolnshire community health services nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",15,15,1,0.0666666666666667
+"1152","lincolnshire community health services nhs trust","Occupational Therapy","ss_q26c_LikertScore",48,65,0.738461538461539,0.0833333333333333
+"1153","lincolnshire community health services nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",1,10,0.1,0
+"1154","lincolnshire community health services nhs trust","Physiotherapy","ss_q26c_LikertScore",97,145,0.668965517241379,0.144329896907216
+"1155","lincolnshire community health services nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",42,60,0.7,0.166666666666667
+"1156","leeds community healthcare nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,1
+"1157","leeds community healthcare nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",21,45,0.466666666666667,0.19047619047619
+"1158","leeds community healthcare nhs trust","Dietetics","ss_q26c_LikertScore",25,45,0.555555555555556,0.12
+"1159","leeds community healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",61,95,0.642105263157895,0.19672131147541
+"1160","leeds community healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",108,205,0.526829268292683,0.111111111111111
+"1161","leeds community healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",49,95,0.515789473684211,0.142857142857143
+"1162","wirral community health and care nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",11,20,0.55,0
+"1163","wirral community health and care nhs foundation trust","Dietetics","ss_q26c_LikertScore",14,20,0.7,0.214285714285714
+"1164","wirral community health and care nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",22,40,0.55,0.136363636363636
+"1165","wirral community health and care nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",25,60,0.416666666666667,0.2
+"1166","wirral community health and care nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",15,20,0.75,0.0666666666666667
+"1167","derbyshire community health services nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",62,100,0.62,0.145161290322581
+"1168","derbyshire community health services nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",99,160,0.61875,0.141414141414141
+"1169","derbyshire community health services nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",197,265,0.743396226415094,0.16243654822335
+"1170","derbyshire community health services nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",83,95,0.873684210526316,0.120481927710843
+"1171","south east coast ambulance service nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",1,5,0.2,0
+"1172","coventry and warwickshire partnership nhs trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",9,15,0.6,0.222222222222222
+"1173","coventry and warwickshire partnership nhs trust","Dietetics","ss_q26c_LikertScore",3,5,0.6,0
+"1174","coventry and warwickshire partnership nhs trust","Occupational Therapy","ss_q26c_LikertScore",66,150,0.44,0.181818181818182
+"1175","coventry and warwickshire partnership nhs trust","Physiotherapy","ss_q26c_LikertScore",16,70,0.228571428571429,0.0625
+"1176","coventry and warwickshire partnership nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",40,70,0.571428571428571,0.075
+"1177","imperial college healthcare nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",2,5,0.4,0
+"1178","imperial college healthcare nhs trust","Dietetics","ss_q26c_LikertScore",53,70,0.757142857142857,0.113207547169811
+"1179","imperial college healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",44,85,0.517647058823529,0.204545454545455
+"1180","imperial college healthcare nhs trust","Operating Department Practitioners","ss_q26c_LikertScore",26,45,0.577777777777778,0.153846153846154
+"1181","imperial college healthcare nhs trust","Orthoptics","ss_q26c_LikertScore",8,15,0.533333333333333,0
+"1182","imperial college healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",112,160,0.7,0.205357142857143
+"1183","imperial college healthcare nhs trust","Radiography (diagnostic)","ss_q26c_LikertScore",2,295,0.00677966101694915,0
+"1184","imperial college healthcare nhs trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,70,0.0142857142857143,0
+"1185","imperial college healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",32,40,0.8,0.09375
+"1186","university hospitals sussex nhs foundation trust","Dietetics","ss_q26c_LikertScore",72,100,0.72,0.0972222222222222
+"1187","university hospitals sussex nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",78,125,0.624,0.141025641025641
+"1188","university hospitals sussex nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",45,130,0.346153846153846,0.177777777777778
+"1189","university hospitals sussex nhs foundation trust","Orthoptics","ss_q26c_LikertScore",7,15,0.466666666666667,0.142857142857143
+"1190","university hospitals sussex nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",95,280,0.339285714285714,0.157894736842105
+"1191","university hospitals sussex nhs foundation trust","Radiography (diagnostic)","ss_q26c_LikertScore",16,305,0.0524590163934426,0.0625
+"1192","university hospitals sussex nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",4,55,0.0727272727272727,0.25
+"1193","university hospitals sussex nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",22,35,0.628571428571429,0.0454545454545455
+"1194","cambridgeshire community services nhs trust","Dietetics","ss_q26c_LikertScore",11,25,0.44,0.272727272727273
+"1195","cambridgeshire community services nhs trust","Occupational Therapy","ss_q26c_LikertScore",19,50,0.38,0.210526315789474
+"1196","cambridgeshire community services nhs trust","Orthoptics","ss_q26c_LikertScore",6,10,0.6,0
+"1197","cambridgeshire community services nhs trust","Physiotherapy","ss_q26c_LikertScore",48,120,0.4,0.0833333333333333
+"1198","cambridgeshire community services nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",72,140,0.514285714285714,0.0694444444444444
+"1199","birmingham community healthcare nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",35,60,0.583333333333333,0.114285714285714
+"1200","birmingham community healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",36,50,0.72,0.111111111111111
+"1201","birmingham community healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",98,150,0.653333333333333,0.122448979591837
+"1202","birmingham community healthcare nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",2,5,0.4,0
+"1203","birmingham community healthcare nhs foundation trust","Orthoptics","ss_q26c_LikertScore",4,5,0.8,0.25
+"1204","birmingham community healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",201,270,0.744444444444444,0.154228855721393
+"1205","birmingham community healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",114,155,0.735483870967742,0.0263157894736842
+"1206","central london community healthcare nhs trust","Chiropody / Podiatry","ss_q26c_LikertScore",44,80,0.55,0.204545454545455
+"1207","central london community healthcare nhs trust","Dietetics","ss_q26c_LikertScore",55,85,0.647058823529412,0.254545454545455
+"1208","central london community healthcare nhs trust","Occupational Therapy","ss_q26c_LikertScore",131,170,0.770588235294118,0.236641221374046
+"1209","central london community healthcare nhs trust","Orthoptics","ss_q26c_LikertScore",2,10,0.2,0
+"1210","central london community healthcare nhs trust","Physiotherapy","ss_q26c_LikertScore",208,305,0.681967213114754,0.235576923076923
+"1211","central london community healthcare nhs trust","Speech & Language Therapy","ss_q26c_LikertScore",127,195,0.651282051282051,0.204724409448819
+"1212","kent community health nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",32,60,0.533333333333333,0.09375
+"1213","kent community health nhs foundation trust","Dietetics","ss_q26c_LikertScore",32,40,0.8,0
+"1214","kent community health nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",101,155,0.651612903225806,0.148514851485149
+"1215","kent community health nhs foundation trust","Operating Department Practitioners","ss_q26c_LikertScore",2,5,0.4,0
+"1216","kent community health nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",151,225,0.671111111111111,0.0927152317880795
+"1217","kent community health nhs foundation trust","Radiography (therapeutic)","ss_q26c_LikertScore",1,5,0.2,1
+"1218","kent community health nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",99,160,0.61875,0.0606060606060606
+"1219","bradford district care nhs foundation trust","Chiropody / Podiatry","ss_q26c_LikertScore",25,35,0.714285714285714,0.08
+"1220","bradford district care nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",29,55,0.527272727272727,0.172413793103448
+"1221","bradford district care nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",7,15,0.466666666666667,0
+"1222","bradford district care nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",31,55,0.563636363636364,0.032258064516129
+"1223","sheffield health and social care nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",5,10,0.5,0
+"1224","sheffield health and social care nhs foundation trust","Dietetics","ss_q26c_LikertScore",2,5,0.4,0
+"1225","sheffield health and social care nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",59,75,0.786666666666667,0.169491525423729
+"1226","sheffield health and social care nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",10,20,0.5,0.1
+"1227","sheffield health and social care nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",10,15,0.666666666666667,0.1
+"1228","black country healthcare nhs foundation trust","Art / Music / Dramatherapy","ss_q26c_LikertScore",1,5,0.2,1
+"1229","black country healthcare nhs foundation trust","Dietetics","ss_q26c_LikertScore",5,5,1,0
+"1230","black country healthcare nhs foundation trust","Occupational Therapy","ss_q26c_LikertScore",62,130,0.476923076923077,0.129032258064516
+"1231","black country healthcare nhs foundation trust","Physiotherapy","ss_q26c_LikertScore",21,30,0.7,0.0952380952380952
+"1232","black country healthcare nhs foundation trust","Speech & Language Therapy","ss_q26c_LikertScore",28,55,0.509090909090909,0.142857142857143
