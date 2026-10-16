@@ -1,0 +1,50 @@
+"","Care setting","Period","Org code","Organisation name","Stability index"
+"1","Art / Music / Dramatherapy","202203 to 202303","RXG","south west yorkshire partnership nhs foundation trust",0.5
+"2","Art / Music / Dramatherapy","202203 to 202303","TAH","sheffield health and social care nhs foundation trust",0.5
+"3","Art / Music / Dramatherapy","202303 to 202403","RCU","sheffield children's nhs foundation trust",0.5
+"4","Art / Music / Dramatherapy","202403 to 202503","RTF","northumbria healthcare nhs foundation trust",0.5
+"5","Art / Music / Dramatherapy","202403 to 202503","RXE","rotherham doncaster and south humber nhs foundation trust",0.333333333333333
+"6","Art / Music / Dramatherapy","202403 to 202503","RXG","south west yorkshire partnership nhs foundation trust",0.5
+"7","Art / Music / Dramatherapy","202403 to 202503","TAH","sheffield health and social care nhs foundation trust",0.5
+"8","Chiropody / Podiatry","202203 to 202303","RR8","leeds teaching hospitals nhs trust",0.5
+"9","Chiropody / Podiatry","202203 to 202303","RXE","rotherham doncaster and south humber nhs foundation trust",0.5
+"10","Chiropody / Podiatry","202303 to 202403","RXG","south west yorkshire partnership nhs foundation trust",0.5
+"11","Chiropody / Podiatry","202403 to 202503","RNN","north cumbria integrated care nhs foundation trust",0.333333333333333
+"12","Chiropody / Podiatry","202403 to 202503","RR8","leeds teaching hospitals nhs trust",0.5
+"13","Chiropody / Podiatry","202403 to 202503","RVW","north tees and hartlepool nhs foundation trust",0.5
+"14","Chiropody / Podiatry","202403 to 202503","RY6","leeds community healthcare nhs trust",0.5
+"15","Chiropody / Podiatry","202403 to 202503","TAD","bradford district care nhs foundation trust",0.5
+"16","Dietetics","202203 to 202303","RFR","rotherham nhs foundation trust",0.166666666666667
+"17","Dietetics","202203 to 202303","RP5","doncaster and bassetlaw teaching hospitals nhs foundation trust",0.333333333333333
+"18","Dietetics","202203 to 202303","RR7","gateshead health nhs foundation trust",0.333333333333333
+"19","Dietetics","202303 to 202403","RCB","york and scarborough teaching hospitals nhs foundation trust",0.333333333333333
+"20","Dietetics","202303 to 202403","RFF","barnsley hospital nhs foundation trust",0.333333333333333
+"21","Dietetics","202303 to 202403","RJL","northern lincolnshire and goole nhs foundation trust",0.333333333333333
+"22","Dietetics","202403 to 202503","RWY","calderdale and huddersfield nhs foundation trust",0.333333333333333
+"23","Hazardous Area Response Team","202203 to 202303","RX6","north east ambulance service nhs foundation trust",0.938775510204082
+"24","Hazardous Area Response Team","202203 to 202303","RX6","north east ambulance service nhs foundation trust",0.951219512195122
+"25","Occupational Therapy","202203 to 202303","RCU","sheffield children's nhs foundation trust",0.25
+"26","Occupational Therapy","202203 to 202303","RWA","hull university teaching hospitals nhs trust",0.428571428571429
+"27","Operating Theatres","202303 to 202403","RNN","north cumbria integrated care nhs foundation trust",0.5
+"28","Operating Theatres","202403 to 202503","RAE","bradford teaching hospitals nhs foundation trust",0.5
+"29","Operating Theatres","202403 to 202503","RFR","rotherham nhs foundation trust",0.5
+"30","Orthoptics / Optics","202303 to 202403","RTD","newcastle upon tyne hospitals nhs foundation trust",0.333333333333333
+"31","Orthoptics / Optics","202303 to 202403","RWA","hull university teaching hospitals nhs trust",0.333333333333333
+"32","Orthoptics / Optics","202303 to 202403","RXF","mid yorkshire teaching nhs trust",0.2
+"33","Patient Transport Service","202403 to 202503","RX8","yorkshire ambulance service nhs trust",0.85
+"34","Patient Transport Service","202403 to 202503","RX8","yorkshire ambulance service nhs trust",0.85
+"35","Physiotherapy","202203 to 202303","RAE","bradford teaching hospitals nhs foundation trust",0.5
+"36","Physiotherapy","202203 to 202303","RCB","york and scarborough teaching hospitals nhs foundation trust",0.5
+"37","Physiotherapy","202203 to 202303","RX3","tees, esk and wear valleys nhs foundation trust",0.5
+"38","Physiotherapy","202303 to 202403","RFR","rotherham nhs foundation trust",0.5
+"39","Physiotherapy","202303 to 202403","RGD","leeds and york partnership nhs foundation trust",0.5
+"40","Physiotherapy","202303 to 202403","RV9","humber teaching nhs foundation trust",0.5
+"41","Physiotherapy","202303 to 202403","RXE","rotherham doncaster and south humber nhs foundation trust",0.5
+"42","Physiotherapy","202403 to 202503","TAH","sheffield health and social care nhs foundation trust",0.5
+"43","Prosthetics and Orthotics","202203 to 202303","RAE","bradford teaching hospitals nhs foundation trust",0.5
+"44","Radiography (diagnostic)","202203 to 202303","RCB","york and scarborough teaching hospitals nhs foundation trust",0.333333333333333
+"45","Radiography (diagnostic)","202403 to 202503","RWA","hull university teaching hospitals nhs trust",0.333333333333333
+"46","Radiography (therapeutic)","202403 to 202503","RTD","newcastle upon tyne hospitals nhs foundation trust",0.5
+"47","Radiography (therapeutic)","202403 to 202503","RTR","south tees hospitals nhs foundation trust",0.7
+"48","Speech & Language Therapy","202203 to 202303","RR7","gateshead health nhs foundation trust",0.25
+"49","Speech & Language Therapy","202303 to 202403","RXE","rotherham doncaster and south humber nhs foundation trust",0.25

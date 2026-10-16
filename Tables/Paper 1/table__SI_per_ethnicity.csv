@@ -1,0 +1,146 @@
+"","year_end","Care setting","Ethnic group","Min","qtr1","Median","qtr3","Max","IQR"
+"1",2025,"Dietetics","Any Other Ethnic Group",0,1,1,1,1,0
+"2",2025,"Dietetics","Asian or Asian British",0,0.714285714285714,1,1,1,0.285714285714286
+"3",2025,"Dietetics","Black or Black British",0,0.5,1,1,1,0.5
+"4",2025,"Dietetics","Chinese",0,0.5,1,1,1,0.5
+"5",2025,"Dietetics","Mixed",0,0.733333333333333,1,1,1,0.266666666666667
+"6",2025,"Dietetics","Not Stated",0,1,1,1,1,0
+"7",2025,"Dietetics","Unknown",0,0,0.5,1,1,1
+"8",2025,"Dietetics","White",0,0.76657824933687,0.842431761786601,0.883928571428571,1,0.117350322091701
+"9",2025,"Occupational Therapy","Any Other Ethnic Group",0,0.6375,1,1,1,0.3625
+"10",2025,"Occupational Therapy","Asian or Asian British",0,0.666666666666667,0.875,1,1,0.333333333333333
+"11",2025,"Occupational Therapy","Black or Black British",0,0.666666666666667,0.846153846153846,1,1,0.333333333333333
+"12",2025,"Occupational Therapy","Chinese",0,0.25,1,1,1,0.75
+"13",2025,"Occupational Therapy","Mixed",0,0.5,1,1,1,0.5
+"14",2025,"Occupational Therapy","Not Stated",0,0.666666666666667,1,1,1,0.333333333333333
+"15",2025,"Occupational Therapy","Unknown",0,0.25,0.8375,1,1,0.75
+"16",2025,"Occupational Therapy","White",0,0.785714285714286,0.837209302325581,0.875,0.966666666666667,0.0892857142857143
+"17",2025,"Operating Department Practitioners","Any Other Ethnic Group",0,1,1,1,1,0
+"18",2025,"Operating Department Practitioners","Asian or Asian British",0,0.866666666666667,1,1,1,0.133333333333333
+"19",2025,"Operating Department Practitioners","Black or Black British",0,0.833333333333333,1,1,1,0.166666666666667
+"20",2025,"Operating Department Practitioners","Chinese",0,1,1,1,1,0
+"21",2025,"Operating Department Practitioners","Mixed",0,1,1,1,1,0
+"22",2025,"Operating Department Practitioners","Not Stated",0,0.8,1,1,1,0.2
+"23",2025,"Operating Department Practitioners","Unknown",0,0.877622377622378,1,1,1,0.122377622377622
+"24",2025,"Operating Department Practitioners","White",0,0.882158972578966,0.923566878980892,0.947368421052632,1,0.0652094484736661
+"25",2025,"Physiotherapy","Any Other Ethnic Group",0,0.8,1,1,1,0.2
+"26",2025,"Physiotherapy","Asian or Asian British",0,0.753676470588235,0.857142857142857,0.936458333333333,1,0.182781862745098
+"27",2025,"Physiotherapy","Black or Black British",0,0.666666666666667,0.825757575757576,1,1,0.333333333333333
+"28",2025,"Physiotherapy","Chinese",0,0.5,1,1,1,0.5
+"29",2025,"Physiotherapy","Mixed",0,0.651515151515152,1,1,1,0.348484848484848
+"30",2025,"Physiotherapy","Not Stated",0,0.8,1,1,1,0.2
+"31",2025,"Physiotherapy","Unknown",0,0.75,1,1,1,0.25
+"32",2025,"Physiotherapy","White",0,0.821057692307692,0.85427135678392,0.882937834224599,1,0.0618801419169066
+"33",2025,"Radiography (diagnostic)","Any Other Ethnic Group",0,0.833333333333333,1,1,1,0.166666666666667
+"34",2025,"Radiography (diagnostic)","Asian or Asian British",0,0.857142857142857,0.905660377358491,0.953968253968254,1,0.0968253968253967
+"35",2025,"Radiography (diagnostic)","Black or Black British",0,0.8,0.875,0.9375,1,0.1375
+"36",2025,"Radiography (diagnostic)","Chinese",0,1,1,1,1,0
+"37",2025,"Radiography (diagnostic)","Mixed",0,0.8,1,1,1,0.2
+"38",2025,"Radiography (diagnostic)","Not Stated",0,0.87625,1,1,1,0.12375
+"39",2025,"Radiography (diagnostic)","Unknown",0,0.839285714285714,1,1,1,0.160714285714286
+"40",2025,"Radiography (diagnostic)","White",0,0.878251663641863,0.904306220095694,0.927708219923789,1,0.0494565562819254
+"41",2025,"Speech & Language Therapy","Any Other Ethnic Group",0,1,1,1,1,0
+"42",2025,"Speech & Language Therapy","Asian or Asian British",0,0.666666666666667,1,1,1,0.333333333333333
+"43",2025,"Speech & Language Therapy","Black or Black British",0,0.541666666666667,1,1,1,0.458333333333333
+"44",2025,"Speech & Language Therapy","Chinese",0,0.375,1,1,1,0.625
+"45",2025,"Speech & Language Therapy","Mixed",0,0.8,1,1,1,0.2
+"46",2025,"Speech & Language Therapy","Not Stated",0,0.666666666666667,1,1,1,0.333333333333333
+"47",2025,"Speech & Language Therapy","Unknown",0,0.5,0.716666666666667,1,1,0.5
+"48",2025,"Speech & Language Therapy","White",0,0.785714285714286,0.829179331306991,0.894642857142857,1,0.108928571428571
+"49",2024,"Dietetics","Any Other Ethnic Group",0,0.4375,1,1,1,0.5625
+"50",2024,"Dietetics","Asian or Asian British",0,0.65,0.875,1,1,0.35
+"51",2024,"Dietetics","Black or Black British",0,0.666666666666667,1,1,1,0.333333333333333
+"52",2024,"Dietetics","Chinese",0,0.666666666666667,1,1,1,0.333333333333333
+"53",2024,"Dietetics","Mixed",0,0.5,1,1,1,0.5
+"54",2024,"Dietetics","Not Stated",0,0.666666666666667,1,1,1,0.333333333333333
+"55",2024,"Dietetics","Unknown",0,0.25,0.5,0.916666666666667,1,0.666666666666667
+"56",2024,"Dietetics","White",0,0.75,0.827329192546584,0.882002801120448,1,0.132002801120448
+"57",2024,"Occupational Therapy","Any Other Ethnic Group",0,1,1,1,1,0
+"58",2024,"Occupational Therapy","Asian or Asian British",0,0.666666666666667,0.833333333333333,1,1,0.333333333333333
+"59",2024,"Occupational Therapy","Black or Black British",0,0.6,1,1,1,0.4
+"60",2024,"Occupational Therapy","Chinese",0,0.375,0.708333333333333,1,1,0.625
+"61",2024,"Occupational Therapy","Mixed",0,0.666666666666667,1,1,1,0.333333333333333
+"62",2024,"Occupational Therapy","Not Stated",0,0.5,1,1,1,0.5
+"63",2024,"Occupational Therapy","Unknown",0,0.666666666666667,1,1,1,0.333333333333333
+"64",2024,"Occupational Therapy","White",0,0.788461538461538,0.846153846153846,0.873015873015873,1,0.0845543345543346
+"65",2024,"Operating Department Practitioners","Any Other Ethnic Group",0,1,1,1,1,0
+"66",2024,"Operating Department Practitioners","Asian or Asian British",0,0.756944444444444,0.912878787878788,1,1,0.243055555555556
+"67",2024,"Operating Department Practitioners","Black or Black British",0,0.75,1,1,1,0.25
+"68",2024,"Operating Department Practitioners","Chinese",0,1,1,1,1,0
+"69",2024,"Operating Department Practitioners","Mixed",0,0.775,1,1,1,0.225
+"70",2024,"Operating Department Practitioners","Not Stated",0,0.909090909090909,1,1,1,0.0909090909090909
+"71",2024,"Operating Department Practitioners","Unknown",0,0.6875,1,1,1,0.3125
+"72",2024,"Operating Department Practitioners","White",0,0.866666666666667,0.909090909090909,0.934426229508197,1,0.0677595628415301
+"73",2024,"Physiotherapy","Any Other Ethnic Group",0,0.708333333333333,1,1,1,0.291666666666667
+"74",2024,"Physiotherapy","Asian or Asian British",0,0.666666666666667,0.833333333333333,1,1,0.333333333333333
+"75",2024,"Physiotherapy","Black or Black British",0,0.666666666666667,0.84412955465587,1,1,0.333333333333333
+"76",2024,"Physiotherapy","Chinese",0,0.5,1,1,1,0.5
+"77",2024,"Physiotherapy","Mixed",0,0.666666666666667,0.8875,1,1,0.333333333333333
+"78",2024,"Physiotherapy","Not Stated",0,0.727272727272727,1,1,1,0.272727272727273
+"79",2024,"Physiotherapy","Unknown",0,0.723214285714286,1,1,1,0.276785714285714
+"80",2024,"Physiotherapy","White",0,0.818965517241379,0.850393700787402,0.884057971014493,0.933333333333333,0.0650924537731135
+"81",2024,"Radiography (diagnostic)","Any Other Ethnic Group",0,0.833333333333333,1,1,1,0.166666666666667
+"82",2024,"Radiography (diagnostic)","Asian or Asian British",0,0.808510638297872,0.888888888888889,0.952380952380952,1,0.14387031408308
+"83",2024,"Radiography (diagnostic)","Black or Black British",0,0.75,0.857142857142857,0.916415662650602,1,0.166415662650602
+"84",2024,"Radiography (diagnostic)","Chinese",0,1,1,1,1,0
+"85",2024,"Radiography (diagnostic)","Mixed",0,0.808333333333333,1,1,1,0.191666666666667
+"86",2024,"Radiography (diagnostic)","Not Stated",0,0.75,0.941176470588235,1,1,0.25
+"87",2024,"Radiography (diagnostic)","Unknown",0,0.8,1,1,1,0.2
+"88",2024,"Radiography (diagnostic)","White",0,0.868421052631579,0.900826446280992,0.923076923076923,1,0.0546558704453441
+"89",2024,"Speech & Language Therapy","Any Other Ethnic Group",0,1,1,1,1,0
+"90",2024,"Speech & Language Therapy","Asian or Asian British",0,0.5,0.898989898989899,1,1,0.5
+"91",2024,"Speech & Language Therapy","Black or Black British",0,0.75,1,1,1,0.25
+"92",2024,"Speech & Language Therapy","Chinese",0,1,1,1,1,0
+"93",2024,"Speech & Language Therapy","Mixed",0,0.55,1,1,1,0.45
+"94",2024,"Speech & Language Therapy","Not Stated",0,0.5,1,1,1,0.5
+"95",2024,"Speech & Language Therapy","Unknown",0,0.201219512195122,1,1,1,0.798780487804878
+"96",2024,"Speech & Language Therapy","White",0,0.729567307692308,0.8,0.876053370786517,1,0.146486063094209
+"97",2023,"Dietetics","Any Other Ethnic Group",0,0.571428571428571,1,1,1,0.428571428571429
+"98",2023,"Dietetics","Asian or Asian British",0,0.75,1,1,1,0.25
+"99",2023,"Dietetics","Black or Black British",0,0.541666666666667,1,1,1,0.458333333333333
+"100",2023,"Dietetics","Chinese",0,0.458333333333333,1,1,1,0.541666666666667
+"101",2023,"Dietetics","Mixed",0,0.6,1,1,1,0.4
+"102",2023,"Dietetics","Not Stated",0,0.8,1,1,1,0.2
+"103",2023,"Dietetics","Unknown",0,0.75,1,1,1,0.25
+"104",2023,"Dietetics","White",0,0.737155388471178,0.810072142064373,0.868840579710145,1,0.131685191238967
+"105",2023,"Occupational Therapy","Any Other Ethnic Group",0,0.5,1,1,1,0.5
+"106",2023,"Occupational Therapy","Asian or Asian British",0,0.583333333333333,0.857142857142857,1,1,0.416666666666667
+"107",2023,"Occupational Therapy","Black or Black British",0,0.583333333333333,0.833333333333333,1,1,0.416666666666667
+"108",2023,"Occupational Therapy","Chinese",0,1,1,1,1,0
+"109",2023,"Occupational Therapy","Mixed",0,0.666666666666667,1,1,1,0.333333333333333
+"110",2023,"Occupational Therapy","Not Stated",0,0.5,0.875,1,1,0.5
+"111",2023,"Occupational Therapy","Unknown",0,0.7,1,1,1,0.3
+"112",2023,"Occupational Therapy","White",0,0.740060297719992,0.8,0.852668845315904,0.932773109243697,0.112608547595912
+"113",2023,"Operating Department Practitioners","Any Other Ethnic Group",0,0.8,1,1,1,0.2
+"114",2023,"Operating Department Practitioners","Asian or Asian British",0,0.666666666666667,0.875,1,1,0.333333333333333
+"115",2023,"Operating Department Practitioners","Black or Black British",0,0.75,1,1,1,0.25
+"116",2023,"Operating Department Practitioners","Chinese",0,0.729166666666667,1,1,1,0.270833333333333
+"117",2023,"Operating Department Practitioners","Discontinued codes",1,1,1,1,1,0
+"118",2023,"Operating Department Practitioners","Mixed",0,1,1,1,1,0
+"119",2023,"Operating Department Practitioners","Not Stated",0,0.8,1,1,1,0.2
+"120",2023,"Operating Department Practitioners","Unknown",0,0.666666666666667,1,1,1,0.333333333333333
+"121",2023,"Operating Department Practitioners","White",0,0.850813430252683,0.888888888888889,0.917691256830601,1,0.0668778265779184
+"122",2023,"Physiotherapy","Any Other Ethnic Group",0,0.541666666666667,1,1,1,0.458333333333333
+"123",2023,"Physiotherapy","Asian or Asian British",0.25,0.684210526315789,0.8,1,1,0.315789473684211
+"124",2023,"Physiotherapy","Black or Black British",0,0.5,0.75,1,1,0.5
+"125",2023,"Physiotherapy","Chinese",0,0.5,1,1,1,0.5
+"126",2023,"Physiotherapy","Mixed",0,0.666666666666667,1,1,1,0.333333333333333
+"127",2023,"Physiotherapy","Not Stated",0,0.676470588235294,1,1,1,0.323529411764706
+"128",2023,"Physiotherapy","Unknown",0,0.722222222222222,1,1,1,0.277777777777778
+"129",2023,"Physiotherapy","White",0,0.769369120088545,0.809720582447855,0.845135467980296,0.930769230769231,0.0757663478917511
+"130",2023,"Radiography (diagnostic)","Any Other Ethnic Group",0,0.785714285714286,1,1,1,0.214285714285714
+"131",2023,"Radiography (diagnostic)","Asian or Asian British",0,0.764705882352941,0.84,0.925925925925926,1,0.161220043572985
+"132",2023,"Radiography (diagnostic)","Black or Black British",0,0.730639730639731,0.833333333333333,1,1,0.269360269360269
+"133",2023,"Radiography (diagnostic)","Chinese",0,1,1,1,1,0
+"134",2023,"Radiography (diagnostic)","Mixed",0,0.732142857142857,1,1,1,0.267857142857143
+"135",2023,"Radiography (diagnostic)","Not Stated",0,0.691666666666667,0.875,1,1,0.308333333333333
+"136",2023,"Radiography (diagnostic)","Unknown",0,0.666666666666667,1,1,1,0.333333333333333
+"137",2023,"Radiography (diagnostic)","White",0,0.848484848484849,0.875,0.906038851351351,1,0.0575540028665028
+"138",2023,"Speech & Language Therapy","Any Other Ethnic Group",0,0.625,1,1,1,0.375
+"139",2023,"Speech & Language Therapy","Asian or Asian British",0,0.5,1,1,1,0.5
+"140",2023,"Speech & Language Therapy","Black or Black British",0,0.575,1,1,1,0.425
+"141",2023,"Speech & Language Therapy","Chinese",0,0.916666666666667,1,1,1,0.0833333333333333
+"142",2023,"Speech & Language Therapy","Mixed",0,0.666666666666667,1,1,1,0.333333333333333
+"143",2023,"Speech & Language Therapy","Not Stated",0,0.842857142857143,1,1,1,0.157142857142857
+"144",2023,"Speech & Language Therapy","Unknown",0,0.769589552238806,1,1,1,0.230410447761194
+"145",2023,"Speech & Language Therapy","White",0,0.733333333333333,0.807539682539683,0.872027972027972,1,0.138694638694639
