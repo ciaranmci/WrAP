@@ -24,6 +24,7 @@ pacman::p_load(
   ,cmdstanr
   ,coin
   ,curl
+  ,foreign
   ,haven
   ,sf
   ,tidyverse
@@ -337,9 +338,44 @@ N_profession_ethnicity <-
   ) %>%
   dplyr::arrange( -year_end, `Care setting`, `Ethnic group` )
   
-  # Save to file.
-  write.csv( N_profession_ethnicity, "Tables/Paper 1/table__headcounts_per_ethnicity.csv" )
-  
+# Save to file.
+write.csv( N_profession_ethnicity, "Tables/Paper 1/table__headcounts_per_ethnicity.csv" )
+
+N_profession_ethnicity_binary <-
+  df_churn_within_NHS_EthnicGroup %>% 
+  dplyr::filter(
+    !`Ethnic group` %in% c( 'All ethnic groups' )
+    # Select professions of interest
+    ,`Care setting` %in% professions_of_interest
+    # Only use data for the non-specialist acute Trusts.
+    ,`Cluster group` == "Acute"
+    ,!stringr::str_detect( `Benchmark group`, "Specialist" )
+  )  %>% 
+  dplyr::mutate(
+    Profession = dplyr::if_else(
+      `Care setting` == 'Operating Theatres'
+      ,'Operating Department Practitioners'
+      ,`Care setting`
+    )
+  ) %>%
+  dplyr::rename( ethnicity_binary = `Ethnic group` ) %>%
+  dplyr::mutate(
+    ethnicity_binary = 
+      dplyr::if_else(
+        ethnicity_binary == "White"
+        ,ethnicity_binary
+        ,"Non-white"
+        )
+    ) %>%
+  dplyr::reframe(
+    N = sum( `Denominator at start of period` )
+    ,.by = c( year_end, `Care setting`, ethnicity_binary)
+  ) %>%
+  dplyr::arrange( -year_end, `Care setting`, ethnicity_binary )
+
+# Save to file.
+write.csv( N_profession_ethnicity_binary, "Tables/Paper 1/table__headcounts_per_binary_ethnicity.csv" )
+
 # ----
   
 ############################
@@ -915,154 +951,17 @@ func__make_significance_plot_layer <-
 
 
 # Load the Trust-catchment shape file.
-## https://app.box.com/s/qh8gzpzeo1firv1ezfxx2e6c4tgtrudl/folder/170908955104
-tc_shp <- sf::st_read( "../../Data/FPTP_AllAd22_Full.shp" )
-# Append the names of the Trusts because the SHP file does not contain any
-# meta-data.
-## I need to colour one catchment area at a time and compare it with the
-## PowerBI dashboard to figure out which Trust each area refers to because
-## these areas are not labelled.
-## The dashboard is at https://app.powerbi.com/view?r=eyJrIjoiODZmNGQ0YzItZDAwZi00MzFiLWE4NzAtMzVmNTUwMThmMTVlIiwidCI6ImVlNGUxNDk5LTRhMzUtNGIyZS1hZDQ3LTVmM2NmOWRlODY2NiIsImMiOjh9
-## Note that this dashboard was made in 2022. A more-up-to-date dashboard is
-## available at https://app.powerbi.com/view?r=eyJrIjoiYzg2ODkzODgtMDA3OS00MGVhLTgyNWQtZjg1ZmQ2YWNlY2ZhIiwidCI6ImVlNGUxNDk5LTRhMzUtNGIyZS1hZDQ3LTVmM2NmOWRlODY2NiIsImMiOjh9
-## but the interface is not as helpful for what I'm trying to do.
 tc_shp <-
   dplyr::bind_cols(
-    tc_shp 
-    ,orgname =
-      c(
-        'Manchester University NHS Foundation Trust'
-        ,'South Tyneside And Sunderland NHS Foundation Trust'
-        ,'University Hospitals Dorset NHS Foundation Trust'
-        ,'Isle of Wight NHS Trust'
-        ,'Barts Health NHS Trust'
-        ,'London North West University Healthcare NHS Trust'
-        ,'Royal Surrey County Hospital NHS Foundation Trust'
-        # # Yeovil merged with Somerset NHS FT in April 2023.
-        ,'Yeovil District Hospital NHS Foundation Trust' 
-        ,'University Hospitals Bristol and Weston NHS Foundation Trust'
-        ,'Torbay and South Devon NHS Foundation Trust'
-        ,'Bradford Teaching Hospitals NHS Foundation Trust'
-        ,'Mid and South Essex NHS Foundation Trust'
-        ,'Royal Free London NHS Foundation Trust'
-        ,'North Middlesex University Hospital NHS Trust'
-        ,'Hillingdon Hospitals NHS Foundation Trust'
-        ,'Kingston and Richmond NHS Foundation Trust'
-        ,'Dorset County Hospital NHS Foundation Trust'
-        ,'Walsall Healthcare NHS Trust'
-        ,'Wirral University Teaching Hospital NHS Foundation Trust'
-        ,'Mersey and West Lancashire Teaching Hospitals NHS Trust'
-        ,'Mid Cheshire Hospitals NHS Foundation Trust'
-        # # Northern Devon Healthcare existed in early 2022 but not after April.
-        # # In April 2022, it merged with Royal Devon University Healthcare NHS
-        # # Foundation Trust.
-        ,'Northern Devon Healthcare NHS Trust'
-        ,'Bedfordshire Hospitals NHS Foundation Trust'
-        ,'York and Scarborough Teaching Hospitals NHS Foundation Trust'
-        ,'Harrogate and District NHS Foundation Trust'
-        ,'Airedale NHS Foundation Trust'
-        ,'Queen Elizabeth Hospital King\'s Lynn NHS Foundation Trust'
-        ,'Royal United Hospitals Bath NHS Foundation Trust'
-        ,'Milton Keynes University Hospital NHS Foundation Trust'
-        ,'East Suffolk and North Essex NHS Foundation Trust'
-        ,'Frimley Health NHS Foundation Trust'
-        ,'Royal Cornwall Hospitals NHS Trust'
-        ,'Liverpool University Hospitals NHS Foundation Trust'
-        ,'Barking, Havering and Redbridge University Hospitals NHS Trust'
-        ,'Barnsley Hospital NHS Foundation Trust'
-        ,'Rotherham NHS Foundation Trust'
-        ,'Chesterfield Royal Hospital NHS Foundation Trust'
-        ,'North West Anglia NHS Foundation Trust'
-        ,'James Paget University Hospitals NHS Foundation Trust'
-        ,'West Suffolk NHS Foundation Trust'
-        ,'Cambridge University Hospitals NHS Foundation Trust'
-        ,'Somerset NHS Foundation Trust'
-        ,'Royal Devon University Healthcare NHS Foundation Trust'
-        ,'University Hospital Southampton NHS Foundation Trust'
-        ,'Sheffield Teaching Hospitals NHS Foundation Trust'
-        ,'Portsmouth Hospitals University NHS Trust'
-        ,'Royal Berkshire NHS Foundation Trust'
-        ,'Guy\'s and St Thomas\' NHS Foundation Trust'
-        ,'Lewisham and Greenwich NHS Trust'
-        ,'Croydon Health Services NHS Trust'
-        ,'St George\'s University Hospitals NHS Foundation Trust'
-        ,'South Warwickshire University NHS Foundation Trust'
-        ,'University Hospitals of North Midlands NHS Trust'
-        ,'Northern Lincolnshire and Goole NHS Foundation Trust'
-        ,'East Cheshire NHS Trust'
-        ,'Countess of Chester Hospital NHS Foundation Trust'
-        ,'King\'s College Hospital NHS Foundation Trust'
-        ,'Sherwood Forest Hospitals NHS Foundation Trust'
-        ,'University Hospitals Plymouth NHS Trust'
-        ,'University Hospitals Coventry and Warwickshire NHS Trust'
-        ,'Whittington Health NHS Trust'
-        ,'Royal Wolverhampton NHS Trust'
-        ,'Wye Valley NHS Trust'
-        ,'George Eliot Hospital NHS Trust'
-        ,'Norfolk and Norwich University Hospitals NHS Foundation Trust'
-        ,'Northern Care Alliance NHS Foundation Trust'
-        ,'Bolton NHS Foundation Trust'
-        ,'Tameside and Glossop Integrated Care NHS Foundation Trust'
-        ,'Great Western Hospitals NHS Foundation Trust'
-        ,'Hampshire Hospitals NHS Foundation Trust'
-        ,'Dartford and Gravesham NHS Trust'
-        ,'Dudley Group NHS Foundation Trust'
-        ,'North Cumbria Integrated Care NHS Foundation Trust'
-        ,'Kettering General Hospital NHS Foundation Trust'
-        ,'Northampton General Hospital NHS Trust'
-        ,'Salisbury NHS Foundation Trust'
-        ,'Doncaster and Bassetlaw Teaching Hospitals NHS Foundation Trust'
-        ,'Medway NHS Foundation Trust'
-        ,'Chelsea and Westminster Hospital NHS Foundation Trust'
-        ,'Princess Alexandra Hospital NHS Trust'
-        ,'Homerton Healthcare NHS Foundation Trust'
-        ,'Gateshead Health NHS Foundation Trust'
-        ,'Leeds Teaching Hospitals NHS Trust'
-        ,'Wrightington, Wigan and Leigh NHS Foundation Trust'
-        ,'University Hospitals Birmingham NHS Foundation Trust'
-        ,'University College London Hospitals NHS Foundation Trust'
-        ,'Newcastle Upon Tyne Hospitals NHS Foundation Trust'
-        ,'Gloucestershire Hospitals NHS Foundation Trust'
-        ,'Northumbria Healthcare NHS Foundation Trust'
-        ,'University Hospitals of Derby and Burton NHS Foundation Trust'
-        ,'Oxford University Hospitals NHS Foundation Trust'
-        ,'Ashford and St. Peter\'s Hospitals NHS Foundation Trust'
-        ,'Surrey and Sussex Healthcare NHS Trust'
-        ,'South Tees Hospitals NHS Foundation Trust'
-        ,'University Hospitals of Morecambe Bay NHS Foundation Trust'
-        ,'North Bristol NHS Trust'
-        ,'Epsom and St Helier University Hospitals NHS Trust'
-        ,'East Kent Hospitals University NHS Foundation Trust'
-        ,'North Tees and Hartlepool NHS Foundation Trust'
-        # # Southport and Ormskirk existed in in 2022 but not after 2023. On 1
-        # # July 2023, the Trust merged with St Helens and Knowsley Teaching
-        # # Hospitals NHS Trust to form Mersey and West Lancashire Teaching
-        # # Hospitals NHS Trust.
-        ,'Southport and Ormskirk Hospital NHS Trust' 
-        ,'Hull University Teaching Hospitals NHS Trust'
-        ,'United Lincolnshire Teaching Hospitals NHS Trust'
-        ,'University Hospitals of Leicester NHS Trust'
-        ,'Maidstone and Tunbridge Wells NHS Trust'
-        ,'West Hertfordshire Teaching Hospitals NHS Trust'
-        ,'East and North Hertfordshire NHS Trust'
-        ,'Stockport NHS Foundation Trust'
-        ,'Worcestershire Acute Hospitals NHS Trust'
-        ,'Warrington and Halton Teaching Hospitals NHS Foundation Trust'
-        ,'Calderdale and Huddersfield NHS Foundation Trust'
-        ,'Nottingham University Hospitals NHS Trust'
-        ,'East Sussex Healthcare NHS Trust'
-        ,'Mid Yorkshire Teaching NHS Trust'
-        ,'Sandwell and West Birmingham Hospitals NHS Trust'
-        ,'Blackpool Teaching Hospitals NHS Foundation Trust'
-        ,'Lancashire Teaching Hospitals NHS Foundation Trust'
-        ,'County Durham and Darlington NHS Foundation Trust'
-        ,'Buckinghamshire Healthcare NHS Trust'
-        ,'East Lancashire Hospitals NHS Trust'
-        ,'Shrewsbury and Telford Hospital NHS Trust'
-        ,'Imperial College Healthcare NHS Trust'
-        ,'University Hospitals Sussex NHS Foundation Trust'
-      ) %>% tolower()
-  )
+    # foreign::read.dbf( "../../Data/SHP files/trust_fpp_msoa21_allad24.dbf" )
+    sf::st_read( "../../Data/SHP files/trust_fpp_msoa21_allad24.shp" )
+  ) %>%
+  dplyr::left_join(
+    df_churn_within_NHS_Grade %>%
+      dplyr::distinct( `Org code`, orgname = `Organisation name` )
+    ,by = join_by( TrustCode == `Org code` )
+    ) %>%
+  dplyr::rename( orgcode = TrustCode )
 # ----
 
 
@@ -1646,6 +1545,117 @@ ggsave(
   ,filename =
     paste0(
       "Plots/Paper 1/plot__distribution_of_si_stratified_by_ethnicity__topProfessions.png"
+    )
+  ,dpi = 300
+  ,width = 22
+  ,height = 22
+  ,units = "cm"
+)
+# ----
+
+##################################################
+## Plot of stability index by binary ethnicity. ##
+##################################################
+# A Tukey-style boxplot that shows stability-index values across whites versus
+# non-whites groups, using data from the largest professions, only. Delimit to
+# the year ending 2025.
+# ----
+
+# Make plot data.
+plot_data <-
+  model_data_ethnicity %>% 
+  dplyr::filter( Profession %in% professions_of_interest )
+
+# Extract summary statistics for plotting.
+sumstat_plot_data <-
+  plot_data %>%
+  dplyr::reframe(
+    .by = c( Profession, ethnicity_binary )
+    ,class_median = median( stability_index, na.rm = TRUE )
+    ,class_min = min( stability_index, na.rm = TRUE )
+    ,class_max = max( stability_index, na.rm = TRUE )
+  ) %>%
+  dplyr::left_join(
+    N_profession_ethnicity_binary %>%
+      dplyr::filter(
+        year_end == year_of_interest
+        ,ethnicity_binary %in% plot_data$ethnicity_binary
+      )
+    ,by = join_by( Profession == `Care setting`, ethnicity_binary )
+  )
+
+# Data for statistical significance indicators.
+signif_plot_data <- 
+  posterior_summaries_ethnicity_binary %>%
+  dplyr::filter( Profession %in% professions_of_interest ) %>%
+  dplyr::select( Profession, ethnicity_binary2 = ethnicity_binary, is_median_diff, is_iqr_diff ) %>%
+  dplyr::mutate( ethnicity_binary1 = factor( "White", levels = c( "White", "Non-white" ) ) ) %>%
+  dplyr::relocate( ethnicity_binary1, .before = ethnicity_binary2 ) %>%
+  dplyr::mutate(
+    signif_median = dplyr::if_else( is_median_diff, "*", "" )
+    ,signif_iqr = dplyr::if_else( is_iqr_diff, "†", "" )
+    ,y = match( ethnicity_binary1, levels( plot_data$ethnicity_binary ) )
+    ,yend = ( length( unique( plot_data$ethnicity_binary ) ) )
+    ,x_median = 1.08
+    ,xend_median = x_median - 0.05
+    ,x_iqr = xend_median + 0.18
+    ,xend_iqr = x_iqr - 0.05
+  )
+p_signif <- func__make_significance_plot_layer( signif_plot_data )
+
+# Make plot.
+p <-
+  plot_data %>%
+  ggplot(
+    aes(
+      x = stability_index
+      ,y = ethnicity_binary
+    ) ) +
+  p_grey_pts_and_boxplot +
+  geom_point(
+    data = sumstat_plot_data
+    ,aes( x = class_median, y = forcats::fct_rev( ethnicity_binary ), size = N )
+    ,colour = "coral"
+  ) +
+  geom_text(
+    data = sumstat_plot_data
+    ,aes( x = class_median, y = forcats::fct_rev( ethnicity_binary ) )
+    ,label = round( sumstat_plot_data$class_median, 2 )
+    ,colour = "coral"
+    ,size = 3
+    ,vjust = -1
+  ) +
+  p_signif +
+  p_scale_and_facet_options +
+  labs(
+    x = "Stability index"
+    # ,title =
+    #   stringr::str_wrap(
+    #     paste0(
+    #       "Distribution of stability index for the largest* professions"
+    #       ," in 2025, stratified by Ethnic Group."
+    #     )
+    #     ,50
+    #   )
+    # ,subtitle = "Median stability index shown as a coral dot."
+    # ,caption =
+    #   stringr::str_wrap(
+    #     paste0(
+    #       "*Size of profession was determined as the count of that staff role"
+    #       ," at the start of the year."
+    #     )
+    #     ,100
+    #   )
+  ) +
+  p_theme_preferences
+
+
+# Save plot.
+ggsave(
+  plot = p
+  ,filename =
+    paste0(
+      "Plots/Paper 1/plot__distribution_of_si_stratified_by_binary_ethnicity__topProfessions.png"
     )
   ,dpi = 300
   ,width = 22
@@ -2261,16 +2271,6 @@ choropleth_vacancy_data <-
     tc_shp
     ,by = join_by( orgname )
   ) %>%
-  # Remove the Trusts that do not exist in our vacancy dataset.
-  dplyr::filter(
-    !orgname %in% tolower(
-      c(
-        'Yeovil District Hospital NHS Foundation Trust' 
-        ,'Northern Devon Healthcare NHS Trust'
-        ,'Southport and Ormskirk Hospital NHS Trust' 
-      )
-    )
-  ) %>%
   dplyr::mutate( vacancy = vacancy * 100 )
 # ## Create a spine of all the Trusts so that we can identify which Trusts have no count of particular
 # ## professions.
@@ -2293,7 +2293,7 @@ choropleth_vacancy_data <-
 # Set plot range parameters.
 y_axis_range <- c( -100, 100 )
 
-# Plot map: Stability index for all pay bands.
+# Plot map.
 p <-
   choropleth_vacancy_data %>%
   ggplot() +
@@ -2303,7 +2303,7 @@ p <-
       ,fill = vacancy
     )
   ) +
-  scale_fill_gradient2( limits = y_axis_range ) +
+  scale_fill_gradient2( limits = y_axis_range, na.value = "black" ) +
   facet_wrap( ~Profession, labeller = label_wrap_gen( 15 )) +
   labs(
     fill = "Mean monthly vacancy rate in preceding 12 months"
@@ -2395,7 +2395,8 @@ choropleth_vacancy_data <-
 
 # Set plot range parameters.
 y_axis_range <- c( -100, 100 )
-# Plot map: Stability index for all pay bands.
+
+# Plot map.
 p <-
   choropleth_vacancy_data %>%
   ggplot() +
@@ -2405,7 +2406,7 @@ p <-
       ,fill = vacancy
     )
   ) +
-  scale_fill_gradient2( limits = y_axis_range ) +
+  scale_fill_gradient2( limits = y_axis_range, na.value = "black" ) +
   facet_wrap( ~Profession, labeller = label_wrap_gen( 15 )) +
   labs(
     fill = "Mean monthly vacancy rate in preceding 12 months"
