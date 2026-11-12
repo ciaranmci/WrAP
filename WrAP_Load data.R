@@ -78,25 +78,30 @@ tryCatch(
     # df_churn_from_NHS_Grade <-
     #   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Grade" ) %>%
     #   dplyr::filter( Type == 'HC' ) %>%
-    #   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+    #   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) ) %>%
+    # dplyr::filter( !stringr::str_detect( `Care setting`, pattern = "Transport|Educ" ) )
     # df_churn_from_NHS_Gender <-
     #   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Gender" ) %>%
     #   dplyr::filter( Type == 'HC' ) %>%
-    #   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+    #   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) ) %>%
+    # dplyr::filter( !stringr::str_detect( `Care setting`, pattern = "Transport|Educ" ) )
     # df_churn_from_NHS_AgeBand <-
     #   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Age band" ) %>%
     #   dplyr::filter( Type == 'HC' ) %>%
-    #   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+    #   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) ) %>%
+    # dplyr::filter( !stringr::str_detect( `Care setting`, pattern = "Transport|Educ" ) )
     # df_churn_from_NHS_EthnicGroup <-
     #   readxl::read_xlsx( path = "xls_churn_from_NHS.xlsx", sheet = "Ethnic group" ) %>%
     #   dplyr::filter( Type == 'HC' ) %>%
-    #   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+    #   dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) ) %>%
+    # dplyr::filter( !stringr::str_detect( `Care setting`, pattern = "Transport|Educ" ) )
     # ## Churn within NHS.
     df_churn_within_NHS_Grade <-
       readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Grade" ) %>%
       dplyr::filter( Type == 'HC' ) %>%
       dplyr::select( -Type ) %>%
-      dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+      dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) ) %>%
+      dplyr::filter( !stringr::str_detect( `Care setting`, pattern = "Transport|Educ" ) )
     df_churn_within_NHS_Grade$`AfC band` <-
       factor(
         df_churn_within_NHS_Grade$`AfC band`
@@ -108,12 +113,14 @@ tryCatch(
       readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Gender" ) %>%
       dplyr::filter( Type == 'HC' ) %>%
       dplyr::select( -Type ) %>%
-      dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+      dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) ) %>%
+      dplyr::filter( !stringr::str_detect( `Care setting`, pattern = "Transport|Educ" ) )
     df_churn_within_NHS_AgeBand <-
       readxl::read_xlsx( path = "xls_churn_within_NHS.xlsx", sheet = "Age band" ) %>%
       dplyr::filter( Type == 'HC' ) %>%
       dplyr::select( -Type ) %>%
-      dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) )
+      dplyr::filter( !`Care setting` %in% c( "Call Handling", "Emergency Care" ) ) %>%
+      dplyr::filter( !stringr::str_detect( `Care setting`, pattern = "Transport|Educ" ) )
     df_churn_within_NHS_AgeBand$`Age band` <-
       factor(
         df_churn_within_NHS_AgeBand$`Age band`

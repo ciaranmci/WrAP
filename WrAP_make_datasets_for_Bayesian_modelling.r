@@ -241,6 +241,21 @@ tryCatch(
           )
         ,ethnicity_binary = 
           forcats::fct_relevel( ethnicity_binary, "Non-white", after = Inf )
+        ,ethnicity = 
+          factor(
+            ethnicity
+            ,levels =
+              c(
+                "Asian or Asian British"
+                ,"Black or Black British"
+                ,"Chinese"
+                ,"White"
+                ,"Mixed"             
+                ,"Any Other Ethnic Group"
+                ,"Not Stated"
+                ,"Unknown"
+              )
+            )
       )
     model_data_ethnicity <-
       model_data_ethnicity %>%

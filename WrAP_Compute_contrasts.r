@@ -1,4 +1,4 @@
-# compute_contrasts.r
+# WrAP_Compute_contrasts.r
 #
 # The purpose of this script is to compute the desired contrasts from the
 # posterior distribution of the models.
@@ -222,7 +222,7 @@ fnc__compute_contrasts <-
     # Drop levels from any factors.
     df <- dplyr::mutate( df, across( where( is.factor ), droplevels ) )
     
-    # Set the scenarios for which we want contrasts.
+    # Set the scenarios for which we want draws.
     my_newdata <-
       tidyr::expand_grid(
         orgcode = unique( df$orgcode )
@@ -232,6 +232,7 @@ fnc__compute_contrasts <-
     colnames( my_newdata ) <- c( "orgcode", "Profession",  covar_name )
     
     # Draw posterior distributional parameters.
+    t1 <- Sys.time()
     # # Setting `re_formula = NULL` retains organisation-specific random effects.
     # tryCatch(
     #   expr = {
@@ -307,8 +308,6 @@ fnc__compute_contrasts <-
     
     # Calculate the marginal posterior medians and IQRs using our user-defined 
     # function.
-    
-    t1<-Sys.time()
     posterior_draws <-
       posterior_draws %>%
       dplyr::ungroup() %>%
@@ -343,7 +342,11 @@ fnc__compute_contrasts <-
         
         ,iqr = q75 - q25
       )
-    message( "Posterior draws took:");Sys.time() - t1
+    message(
+      "Posterior draws took: "
+      ,round( difftime( Sys.time(),  t1, units = "mins" ), 2 )
+      ," minutes"
+    )
     # # Update-save posterior_draws. 
     saveRDS(
       posterior_draws
@@ -353,23 +356,104 @@ fnc__compute_contrasts <-
     
     # Calculate the posterior contrasts.
     t1 <- Sys.time()
-    posterior_contrasts <-
-      posterior_draws %>%
-      tidyr::drop_na() %>%
-      dplyr::arrange( .draw, orgcode, Profession, .row, !!sym( covar_name ) ) %>%
-      dplyr::group_by( .draw, orgcode, Profession ) %>% 
-      dplyr::mutate(
-        subsequent_difference_of_medians = lead( median ) - median
-        ,subsequent_difference_of_iqrs = lead( iqr ) - iqr
-      ) %>% 
-      dplyr::ungroup() %>%
-      tidyr::drop_na()
-    message( "Calculating posterior contrasts took:")
-    Sys.time() - t1
-    # # Save contrasts. 
-    saveRDS(
-      posterior_contrasts
-      ,paste0( "Processed datasets/Paper 1/posterior_contrasts_", covar_name, ".RDS" )
+    if( !!sym( covar_name ) != "ethnicity" )
+    {
+      posterior_contrasts <-
+        posterior_draws %>%
+        tidyr::drop_na() %>%
+        dplyr::arrange( .draw, orgcode, Profession, .row, !!sym( covar_name ) ) %>% 
+        dplyr::group_by( .draw, orgcode, Profession ) %>% 
+        dplyr::mutate(
+          difference_of_medians = lead( median ) - median
+          ,difference_of_iqrs = lead( iqr ) - iqr
+        ) %>% 
+        dplyr::ungroup() %>%
+        tidyr::drop_na()
+    } else {
+      
+      # Specify the contrasts of interest.
+      ethnicity_contrasts_of_interest <-
+        tidyr::expand_grid(
+          ethnicity1 = unique( df$ethnicity )
+          ,ethnicity2 = unique( df$ethnicity )
+        ) %>%
+        dplyr::filter( ethnicity1 != ethnicity2 ) %>%
+        dplyr::rowwise() %>%
+        dplyr::mutate(
+          sorted_concat =
+            paste( sort( c( ethnicity1, ethnicity2 ) ), collapse = ", " )
+          ) %>%
+        dplyr::ungroup() %>%
+        dplyr::distinct( sorted_concat ) %>%
+        tidyr::separate_wider_delim(
+          cols = sorted_concat
+          ,delim = ", "
+          ,names = c( "ethnicity1", "ethnicity2" )
+          ) %>%
+        dplyr::arrange( ethnicity1, ethnicity2 )
+      
+      for( i_profession in unique( posterior_draws$Profession ) )
+      {
+        # Extract the data subset of interest.
+        data_subset <-
+          posterior_draws %>%
+          dplyr::filter( Profession == i_profession )
+        # Explicate the contrasts of interest and calculate them.
+        assign(
+          paste0(
+            "posterior_contrasts_ethnicity_"
+            ,i_profession %>%
+              stringr::str_replace_all( pattern= "/", replacement = "_" ) %>%
+              stringr::str_replace_all( pattern= " ", replacement = "." )
+            )
+          ,ethnicity_contrasts_of_interest %>%
+            dplyr::left_join(
+              data_subset
+              ,by = join_by( ethnicity1 == ethnicity )
+              ,relationship = "many-to-many"
+            ) %>%
+            dplyr::left_join(
+              data_subset
+              ,by = join_by( .draw, orgcode, Profession, ethnicity2 == ethnicity )
+              ,suffix = c( ".ethnicity1", ".ethnicity2" )
+            ) %>%
+            dplyr::group_by( .draw, orgcode, Profession ) %>% 
+            dplyr::mutate(
+              difference_of_medians = median.ethnicity1 - median.ethnicity2
+              ,difference_of_iqrs = iqr.ethnicity1 - iqr.ethnicity2
+            ) %>%
+            dplyr::ungroup() %>%
+            tidyr::drop_na() %>%
+            dplyr::select(
+              -c( "mu.ethnicity2", "phi.ethnicity2", "cutzero.ethnicity2", "cutone.ethnicity2"
+                  ,"model_weighting.ethnicity2", ".row.ethnicity2" )
+            ) %>%
+            dplyr::rename(
+              .row = .row.ethnicity1
+              ,mu = mu.ethnicity1
+              ,phi = phi.ethnicity1
+              ,cutzero = cutzero.ethnicity1
+              ,cutone = cutone.ethnicity1
+              ,model_weighting = model_weighting.ethnicity1
+              )
+          ) %>%
+        # Save contrasts for this profession. 
+        saveRDS(
+          paste0(
+            "Processed datasets/Paper 1/posterior_contrasts_ethnicity_"
+            ,i_profession %>%
+              stringr::str_replace_all( pattern= "/", replacement = "_" ) %>%
+              stringr::str_replace_all( pattern= " ", replacement = "." )
+            , ".RDS"
+            )
+        )
+      } # End of FOR LOOP of professions for contrasts.
+      
+    } # End of IF statement for contrasts.
+    message(
+      "Calculating posterior contrasts took: "
+      ,round( difftime( Sys.time(),  t1, units = "mins" ), 2 )
+      ," minutes"
     )
     
     # Provide summaries of the contrasts for inference.
@@ -377,47 +461,111 @@ fnc__compute_contrasts <-
     # # then we infer that there is no difference between the observed levels of the
     # # covariate.
     t1 <- Sys.time()
-    posterior_summaries <-
-      posterior_contrasts %>%
-      dplyr::reframe(
-        .by = c( Profession, !!sym( covar_name ) )
-        ,median_diff_in_medians = median( subsequent_difference_of_medians, na.rm = TRUE )
-        ,hdi_low_diff_in_medians = bayestestR::hdi( subsequent_difference_of_medians )$CI_low
-        ,hdi_high_diff_in_medians = bayestestR::hdi( subsequent_difference_of_medians )$CI_high
-        ,median_diff_in_iqr = median( subsequent_difference_of_iqrs, na.rm = TRUE )
-        ,hdi_low_diff_in_iqr = bayestestR::hdi( subsequent_difference_of_iqrs )$CI_low
-        ,hdi_high_diff_in_iqr = bayestestR::hdi( subsequent_difference_of_iqrs )$CI_high
-      ) %>%
-      dplyr::mutate(
-        is_median_diff = !( hdi_low_diff_in_medians <= 0 & hdi_high_diff_in_medians >= 0 )
-        ,is_iqr_diff =  !( hdi_low_diff_in_iqr <= 0 & hdi_high_diff_in_iqr >= 0 )
-      ) %>%
-      dplyr::arrange( Profession, !!sym( covar_name ) ) %>%
-      dplyr::relocate( is_median_diff, .after = !!sym( covar_name ) ) %>%
-      dplyr::relocate( is_iqr_diff, .after = is_median_diff )
-    message( "Calculating posterior summaries took:");Sys.time() - t1
-    # # Save posterior summaries 
-    saveRDS(
-      posterior_summaries
-      ,paste0( "Processed datasets/Paper 1/posterior_summaries_", covar_name, ".RDS" )
+    if( !!sym( covar_name ) != "ethnicity" )
+    {
+      posterior_summaries <-
+        posterior_contrasts %>%
+        dplyr::reframe(
+          .by = c( Profession, !!sym( covar_name ) )
+          ,median_diff_in_medians = median( difference_of_medians, na.rm = TRUE )
+          ,hdi_low_diff_in_medians = bayestestR::hdi( difference_of_medians )$CI_low
+          ,hdi_high_diff_in_medians = bayestestR::hdi( difference_of_medians )$CI_high
+          ,median_diff_in_iqr = median( difference_of_iqrs, na.rm = TRUE )
+          ,hdi_low_diff_in_iqr = bayestestR::hdi( difference_of_iqrs )$CI_low
+          ,hdi_high_diff_in_iqr = bayestestR::hdi( difference_of_iqrs )$CI_high
+        ) %>%
+        dplyr::mutate(
+          is_median_diff = !( hdi_low_diff_in_medians <= 0 & hdi_high_diff_in_medians >= 0 )
+          ,is_iqr_diff =  !( hdi_low_diff_in_iqr <= 0 & hdi_high_diff_in_iqr >= 0 )
+        ) %>%
+        dplyr::arrange( Profession, !!sym( covar_name ) ) %>%
+        dplyr::relocate( is_median_diff, .after = !!sym( covar_name ) ) %>%
+        dplyr::relocate( is_iqr_diff, .after = is_median_diff )
+      
+      # # Save posterior summaries 
+      saveRDS(
+        posterior_summaries
+        ,paste0( "Processed datasets/Paper 1/posterior_summaries_", covar_name, ".RDS" )
+      )
+      
+    } else {
+      
+      # Define storage.
+      posterior_summaries_ethnicity <-
+        data.frame(
+          Profession = character()
+          ,ethnicity1 = character()
+          ,ethnicity2 = character()
+          ,is_median_diff = logical()
+          ,is_iqr_diff = logcal()
+          ,median_diff_in_medians = numeric()
+          ,hdi_low_diff_in_medians = numeric()
+          ,hdi_high_diff_in_medians = numeric()
+          ,median_diff_in_iqr = numeric()
+          ,hdi_low_diff_in_iqr = numeric()
+          ,hdi_high_diff_in_iqr = numeric()
+          )
+      
+      # Calculate summaries.
+      for( i_profession in unique( posterior_draws$Profession ) )
+      {
+        posterior_summaries_ethnicity <-
+          get(
+            paste0(
+              "posterior_contrasts_ethnicity_"
+              ,i_profession %>%
+                stringr::str_replace_all( pattern= "/", replacement = "_" ) %>%
+                stringr::str_replace_all( pattern= " ", replacement = "." )
+              )
+            ) %>%
+            dplyr::reframe(
+              .by = c( Profession, ethnicity1, ethnicity2 )
+              ,median_diff_in_medians = median( difference_of_medians, na.rm = TRUE )
+              ,hdi_low_diff_in_medians = bayestestR::hdi( difference_of_medians )$CI_low
+              ,hdi_high_diff_in_medians = bayestestR::hdi( difference_of_medians )$CI_high
+              ,median_diff_in_iqr = median( difference_of_iqrs, na.rm = TRUE )
+              ,hdi_low_diff_in_iqr = bayestestR::hdi( difference_of_iqrs )$CI_low
+              ,hdi_high_diff_in_iqr = bayestestR::hdi( difference_of_iqrs )$CI_high
+            ) %>% 
+            dplyr::mutate(
+              is_median_diff = !( hdi_low_diff_in_medians <= 0 & hdi_high_diff_in_medians >= 0 )
+              ,is_iqr_diff =  !( hdi_low_diff_in_iqr <= 0 & hdi_high_diff_in_iqr >= 0 )
+            ) %>%
+            dplyr::arrange( Profession , ethnicity1, ethnicity2 ) %>%
+            dplyr::relocate( is_median_diff, .after = ethnicity2 ) %>%
+            dplyr::relocate( is_iqr_diff, .after = is_median_diff ) %>%
+          dplyr::bind_rows( posterior_summaries_ethnicity )
+      } # End of FOR LOOP of professions for summaries.
+      
+      # Save summaries.
+      saveRDS(
+        posterior_summaries_ethnicity
+        ,"Processed datasets/Paper 1/posterior_summaries_ethnicity.RDS"
+        )
+    } # End of IF statement for summaries.
+    message(
+      "Calculating posterior summaries took: "
+      ,round( difftime( Sys.time(),  t1, units = "mins" ), 2 )
+      ," minutes"
     )
     
-    
-  }
+    } # End of function definition.
 # ----
 
 ##################
 ## Load models. ##
 ##################
 # ----
-if( !exists( "model_payband" ) )
-{ model_payband <- readRDS( "Models/Paper 1/model_payband.RDS" ) }
-if( !exists( "model_ageband" ) )
-{ model_ageband <- readRDS( "Models/Paper 1/model_ageband.RDS" ) }
+if( !exists( "model_payband_nonMon" ) )
+{ model_payband_nonMon <- readRDS( "Models/Paper 1/model_payband_nonMon.RDS" ) }
+if( !exists( "model_ageband_nonMon" ) )
+{ model_ageband_nonMon <- readRDS( "Models/Paper 1/model_ageband_nonMon.RDS" ) }
 if( !exists( "model_sex" ) )
 { model_sex <- readRDS( "Models/Paper 1/model_sex.RDS" ) }
 if( !exists( "model_ethnicity" ) )
 { model_ethnicity <- readRDS( "Models/Paper 1/model_ethnicity.RDS" ) }
+if( !exists( "model_ethnicity_all_ethnicities_nonMon" ) )
+{ model_ethnicity_all_ethnicities_nonMon <- readRDS( "Models/Paper 1/model_ethnicity_all_ethnicities_nonMon.RDS" ) }
 # ----
 
 
@@ -427,6 +575,7 @@ if( !exists( "model_ethnicity" ) )
 # ----
 fnc__compute_contrasts( model = model_payband_nonMon )
 fnc__compute_contrasts( model = model_ageband_nonMon )
-fnc__compute_contrasts( model = model_ethnicity )
 fnc__compute_contrasts( model = model_sex )
+fnc__compute_contrasts( model = model_ethnicity )
+fnc__compute_contrasts( model = model_ethnicity_all_ethnicities_nonMon )
 # ----
